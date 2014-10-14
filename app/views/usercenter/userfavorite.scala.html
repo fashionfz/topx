@@ -1,0 +1,32 @@
+@main("收藏夹 -- 个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('userFavoriteCss','css');
+    </script>
+} {
+    <div id="content" class="clearfix">
+        @left("userfavorite")
+        <div class="main">
+            <div class="user-info">
+                <ul class="tab-menu clearfix">
+                    <li class="tab-menu-btn current"><a class="tab-menu-left" href="javascript:">收藏夹</a></li>
+                </ul>
+                <div class="tab-loading hide">
+                    <span></span>
+                    <em></em>
+                </div>
+                <div class="clearfix">
+
+                    <table class="tab-table fav-list" width="100%">
+                    </table>
+                    <div class="page page-user-bottom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('userFavoriteJs','js');
+    </script>
+}

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>充值中心</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/icon.css" rel="stylesheet" />
+    <link href="../css/button.css" rel="stylesheet" />
+    <link href="../css/form.css" rel="stylesheet" />
+    <link href="../css/search-bar.css" rel="stylesheet" />
+    <link href="../css/user-base.css" rel="stylesheet" />
+    <link href="../css/user-info.css" rel="stylesheet" />
+    <link href="../css/dialog.css" rel="stylesheet" />
+    <link href="../css/dialog-simple.css" rel="stylesheet" />
+    <link href="../css/charge-center.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="top">
+        <div class="header-nav clearfix">
+            <div class="search-logo-left">
+                <a href="/"><img src="../img/logo-search.png" width="200" height="49" alt="海螺"></a>
+            </div>
+            <div class="search-logo-right">
+                <p class="search-one">
+                    <span class="header-nav-line"></span>
+                    <span class="header-nav-title">平台充值</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="content" class="clearfix">
+        <!--#include virtual="../pay-info.html"-->
+        <div class="pay-info-block">
+            <div class="account"><span>充值账户：</span><strong>yaoyuquan@@helome.com</strong></div>
+            <div class="balance">
+                <span>账户余额：</span>
+                <strong>￥1234.43元</strong>
+            </div>
+        </div>
+        <div class="pay-form">
+            <div class="user-info-block clearfix pay-success">
+                <div class="pay-success-icon"></div>
+                <div class="pay-success-text">恭喜你，充值成功！</div>
+            </div>
+            <div class="user-info-block clearfix">
+                <div class="info-key">
+                    <div class="top6">充值方式：</div>
+                </div>
+                <div class="info-value">
+                    <div class="icon-pay icon-pay-ali"></div>
+                    <!--<a href="/charge/choice" class="chose-more">更换付款方式</a>-->
+                </div>
+            </div>
+            <div class="user-info-block clearfix">
+                <div class="info-key">充值金额：</div>
+                <div class="info-value">100元</div>
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/core/jquery172.js"></script>
+    <script src="../js/common/jquery.artDialog.js"></script>
+    <script src="../js/common/artDialog.plugins.js"></script>
+    <script src="../js/page/page_chargefromalipay.js"></script>
+</body>
+</html>

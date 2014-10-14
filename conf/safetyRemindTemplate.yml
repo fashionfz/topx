@@ -1,0 +1,111 @@
+CHANGE_EMAIL.BY_SMS: "亲爱的${oldUser.getUserNameOrEmail()}，您的嗨啰平台的登录邮箱 ${oldUser.email}，于${now.get('yyyy')}年${now.get('MM')}月${now.get('dd')}日${now.get('HH')}点${now.get('mm')}分被更换为 ${newUser.email}。如果您未曾修改登录邮箱，请登录嗨啰服务交易平台检查您的帐号安全性。【嗨啰科技】"
+
+CHANGE_EMAIL.BY_MSG: "亲爱的${oldUser.getUserNameOrEmail()}，您的嗨啰•觅平台的登录邮箱于${now.get('yyyy')}年${now.get('MM')}月${now.get('dd')}日${now.get('HH')}点${now.get('mm')}分被更换为 ${newUser.email}。如果您未曾修改登录邮箱，请检查您的帐号安全性。"
+
+CHANGE_EMAIL.BY_EMAIL: >
+  <div style="width:980px; background: url(${cdnUrl}topx/assets/misc/skin/v1.0.0/i/mail-bg.png);height: 380px; margin: 100px auto;padding-top: 28px;"><div style="width:478px; height: 380px;border: 1px solid #c2dbff;margin: 0 auto;border-radius: 5px;-moz-box-shadow:0 2px 0 rgba(224, 237, 255, 0.6); -webkit-box-shadow:0 2px 0 rgba(224, 237, 255, 0.6); box-shadow:0 2px 0 rgba(224, 237, 255, 0.6);"><div style="width: 458px;height: 69px;background: #5c93e1;FILTER: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorStr=#5c93e1,endColorStr=#2f69c9);background: linear-gradient(top, #5c93e1, #2f69c9);background: -moz-linear-gradient(top, #5c93e1, #2f69c9);background: -ms-linear-gradient(top,  #5c93e1 0%,#2f69c9 100%);background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5c93e1), to(#2f69c9));border-radius: 3px 3px 0 0;-webkit-border-radius: 3px 3px 0 0;padding-left: 20px;"><ul style="margin:0; padding: 0;list-style-type: none;width: 458px;height: 69px;line-height: 79px;overflow: hidden;"><li style="list-style-type:none;float:left;height:69px;padding-right:20px;font-family:Arial,Helvetica,sans-serif;font-size: 16px;color: #8fb4ec;font-weight: bold;"><a href="http://www.helome.com" target="_blank"><img style="border: 0;" src="${cdnUrl}topx/assets/misc/images/logo.png" ></a></li><li style="list-style-type: none;float: left;height: 69px;padding-right: 20px;font-family: Arial, Helvetica, sans-serif;font-size: 16px;color: #8fb4ec;font-weight: bold;">|</li><li style="list-style-type: none;float:left;height: 69px;padding-right: 20px;font-family: Arial, Helvetica, sans-serif;font-size: 16px;color: #8fb4ec;font-weight: bold;">
+    登录帐号修改</li></ul></div><div style="width:458px;padding: 20px 0 0 20px;"><div style="font-size: 16px;color: #40526a;font-weight: bold;">
+    亲爱的${oldUser.getUserNameOrEmail()}:</div><div style="margin: 27px 0 0 25px;line-height: 20px;color: #40526a;font-family: Arial, Helvetica, sans-serif;font-size: 12px;">
+    欢迎使用嗨啰•觅平台。<br /><br />
+    您的嗨啰•觅平台的登录邮箱 ${oldUser.email}，于${now.get('yyyy')}年${now.get('MM')}月${now.get('dd')}日${now.get('HH')}点${now.get('mm')}分被更换为 ${newUser.email}。<br/>
+    如果您未曾修改登录邮箱，请登录嗨啰•觅服务交易平台检查您的帐号安全性。<br/><br/>
+    此致<br/>
+    嗨啰•觅团队敬上<br/>
+    ${now.get('yyyy-MM-dd')}<br/><br/>
+    <span style="color: #a9b2bf;">请注意，该电子邮件地址不接受回复邮件</span></div></div></div></div>
+
+CHANGE_PHONE_NUM.BY_SMS: >
+    亲爱的${oldUser.getUserNameOrEmail()}，
+    #if($oldUser.phoneNumber && $oldUser.phoneNumber != "")
+    您的嗨啰平台的绑定手机号${oldUser.phoneNumber}，于${now.get('yyyy')}年${now.get('MM')}月${now.get('dd')}日${now.get('HH')}点${now.get('mm')}分被更换为${newUser.phoneNumber}。
+    #else
+    您的嗨啰平台的绑定手机号于${now.get('yyyy')}年${now.get('MM')}月${now.get('dd')}日${now.get('HH')}点${now.get('mm')}分被设置为${newUser.phoneNumber}。
+    #end
+    如果您未曾修改绑定手机号，请登录嗨啰服务交易平台检查您的帐号安全性。【嗨啰科技】
+    
+CHANGE_PHONE_NUM.BY_MSG: >
+    亲爱的${oldUser.getUserNameOrEmail()}，
+    #if($oldUser.phoneNumber && $oldUser.phoneNumber != "")
+    您的嗨啰•觅平台的绑定手机号${oldUser.phoneNumber}，于${now.get('yyyy')}年${now.get('MM')}月${now.get('dd')}日${now.get('HH')}点${now.get('mm')}分被更换为${newUser.phoneNumber}。
+    #else
+    您的嗨啰•觅平台的绑定手机号于${now.get('yyyy')}年${now.get('MM')}月${now.get('dd')}日${now.get('HH')}点${now.get('mm')}分被设置为${newUser.phoneNumber}。
+    #end
+    如果您未曾修改绑定手机号，请检查您的帐号安全性。
+
+CHANGE_PHONE_NUM.BY_EMAIL: >
+  <div style="width:980px; background: url(${cdnUrl}topx/assets/misc/skin/v1.0.0/i/mail-bg.png);height: 380px; margin: 100px auto;padding-top: 28px;"><div style="width:478px; height: 380px;border: 1px solid #c2dbff;margin: 0 auto;border-radius: 5px;-moz-box-shadow:0 2px 0 rgba(224, 237, 255, 0.6); -webkit-box-shadow:0 2px 0 rgba(224, 237, 255, 0.6); box-shadow:0 2px 0 rgba(224, 237, 255, 0.6);"><div style="width: 458px;height: 69px;background: #5c93e1;FILTER: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorStr=#5c93e1,endColorStr=#2f69c9);background: linear-gradient(top, #5c93e1, #2f69c9);background: -moz-linear-gradient(top, #5c93e1, #2f69c9);background: -ms-linear-gradient(top,  #5c93e1 0%,#2f69c9 100%);background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5c93e1), to(#2f69c9));border-radius: 3px 3px 0 0;-webkit-border-radius: 3px 3px 0 0;padding-left: 20px;"><ul style="margin:0; padding: 0;list-style-type: none;width: 458px;height: 69px;line-height: 79px;overflow: hidden;"><li style="list-style-type:none;float:left;height:69px;padding-right:20px;font-family:Arial,Helvetica,sans-serif;font-size: 16px;color: #8fb4ec;font-weight: bold;"><a href="http://www.helome.com" target="_blank"><img style="border: 0;" src="${cdnUrl}topx/assets/misc/images/logo.png" ></a></li><li style="list-style-type: none;float: left;height: 69px;padding-right: 20px;font-family: Arial, Helvetica, sans-serif;font-size: 16px;color: #8fb4ec;font-weight: bold;">|</li><li style="list-style-type: none;float:left;height: 69px;padding-right: 20px;font-family: Arial, Helvetica, sans-serif;font-size: 16px;color: #8fb4ec;font-weight: bold;">
+   绑定手机更改</li></ul></div><div style="width:458px;padding: 20px 0 0 20px;"><div style="font-size: 16px;color: #40526a;font-weight: bold;">
+    亲爱的${oldUser.getUserNameOrEmail()}:</div><div style="margin: 27px 0 0 25px;line-height: 20px;color: #40526a;font-family: Arial, Helvetica, sans-serif;font-size: 12px;">
+    欢迎使用嗨啰•觅平台。<br /><br />
+    #if($oldUser.phoneNumber && $oldUser.phoneNumber != "")
+    您的嗨啰•觅平台的绑定手机号${oldUser.phoneNumber}，于${now.get('yyyy')}年${now.get('MM')}月${now.get('dd')}日${now.get('HH')}点${now.get('mm')}分被更换为${newUser.phoneNumber}。<br/>
+    #else
+    您的嗨啰•觅平台的绑定手机号于${now.get('yyyy')}年${now.get('MM')}月${now.get('dd')}日${now.get('HH')}点${now.get('mm')}分被设置为${newUser.phoneNumber}。<br/>
+    #end
+    如果您未曾修改绑定手机号，请登录嗨啰•觅服务交易平台检查您的帐号安全性。<br/><br/>
+    此致<br/>
+    嗨啰•觅团队敬上<br/>
+    ${now.get('yyyy-MM-dd')}<br/><br/>
+    <span style="color: #a9b2bf;">请注意，该电子邮件地址不接受回复邮件</span></div></div></div></div>
+
+CHANGE_PASSWORD.BY_SMS: "亲爱的${oldUser.getUserNameOrEmail()}，您的嗨啰平台帐号 ${oldUser.email}于${now.get('yyyy')}年${now.get('MM')}月${now.get('dd')}日${now.get('HH')}点${now.get('mm')}分被修改了密码。若非本人操作，请登录嗨啰服务交易平台检查您的帐号安全性。【嗨啰科技】"
+
+CHANGE_PASSWORD.BY_MSG: "亲爱的${oldUser.getUserNameOrEmail()}，您的嗨啰•觅平台帐号于${now.get('yyyy')}年${now.get('MM')}月${now.get('dd')}日${now.get('HH')}点${now.get('mm')}分被修改了密码。若非本人操作，请检查您的帐号安全性。"
+
+CHANGE_PASSWORD.BY_EMAIL: >
+  <div style="width:980px; background: url(${cdnUrl}topx/assets/misc/skin/v1.0.0/i/mail-bg.png);height: 380px; margin: 100px auto;padding-top: 28px;"><div style="width:478px; height: 380px;border: 1px solid #c2dbff;margin: 0 auto;border-radius: 5px;-moz-box-shadow:0 2px 0 rgba(224, 237, 255, 0.6); -webkit-box-shadow:0 2px 0 rgba(224, 237, 255, 0.6); box-shadow:0 2px 0 rgba(224, 237, 255, 0.6);"><div style="width: 458px;height: 69px;background: #5c93e1;FILTER: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorStr=#5c93e1,endColorStr=#2f69c9);background: linear-gradient(top, #5c93e1, #2f69c9);background: -moz-linear-gradient(top, #5c93e1, #2f69c9);background: -ms-linear-gradient(top,  #5c93e1 0%,#2f69c9 100%);background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5c93e1), to(#2f69c9));border-radius: 3px 3px 0 0;-webkit-border-radius: 3px 3px 0 0;padding-left: 20px;"><ul style="margin:0; padding: 0;list-style-type: none;width: 458px;height: 69px;line-height: 79px;overflow: hidden;"><li style="list-style-type:none;float:left;height:69px;padding-right:20px;font-family:Arial,Helvetica,sans-serif;font-size: 16px;color: #8fb4ec;font-weight: bold;"><a href="http://www.helome.com" target="_blank"><img style="border: 0;" src="${cdnUrl}topx/assets/misc/images/logo.png" ></a></li><li style="list-style-type: none;float: left;height: 69px;padding-right: 20px;font-family: Arial, Helvetica, sans-serif;font-size: 16px;color: #8fb4ec;font-weight: bold;">|</li><li style="list-style-type: none;float:left;height: 69px;padding-right: 20px;font-family: Arial, Helvetica, sans-serif;font-size: 16px;color: #8fb4ec;font-weight: bold;">
+    密码修改</li></ul></div><div style="width:458px;padding: 20px 0 0 20px;"><div style="font-size: 16px;color: #40526a;font-weight: bold;">
+    亲爱的${oldUser.getUserNameOrEmail()}:</div><div style="margin: 27px 0 0 25px;line-height: 20px;color: #40526a;font-family: Arial, Helvetica, sans-serif;font-size: 12px;">
+    欢迎使用 嗨啰•觅平台。<br /><br />
+    您的 嗨啰•觅平台帐号 ${oldUser.email}于${now.get('yyyy')}年${now.get('MM')}月${now.get('dd')}日${now.get('HH')}点${now.get('mm')}分被修改了密码。若非本人操作，请登录 嗨啰•觅服务交易平台检查您的帐号安全性。<br/><br/>
+    此致<br/><br/>
+    嗨啰•觅团队敬上<br/>
+    ${now.get('yyyy-MM-dd')}<br/><br/>
+    <span style="color: #a9b2bf;">请注意，该电子邮件地址不接受回复邮件</span></div></div></div></div>
+
+DIFFERENT_PLACE_LOGIN.BY_SMS: "亲爱的${oldUser.getUserNameOrEmail()}，您的嗨啰平台帐号 ${oldUser.email}于${now.get('yyyy')}年${now.get('MM')}月${now.get('dd')}日${now.get('HH')}点${now.get('mm')}分在异地登录了。若非本人操作，请登录嗨啰•觅服务交易平台检查您的帐号安全性。【嗨啰科技】"
+
+DIFFERENT_PLACE_LOGIN.BY_MSG: "亲爱的${oldUser.getUserNameOrEmail()}，您的嗨啰•觅平台帐号于${now.get('yyyy')}年${now.get('MM')}月${now.get('dd')}日${now.get('HH')}点${now.get('mm')}分在异地登录了。若非本人操作，请检查您的帐号安全性。"
+
+DIFFERENT_PLACE_LOGIN.BY_EMAIL: >
+  <div style="width:980px; background: url(${cdnUrl}topx/assets/misc/skin/v1.0.0/i/mail-bg.png);height: 380px; margin: 100px auto;padding-top: 28px;"><div style="width:478px; height: 380px;border: 1px solid #c2dbff;margin: 0 auto;border-radius: 5px;-moz-box-shadow:0 2px 0 rgba(224, 237, 255, 0.6); -webkit-box-shadow:0 2px 0 rgba(224, 237, 255, 0.6); box-shadow:0 2px 0 rgba(224, 237, 255, 0.6);"><div style="width: 458px;height: 69px;background: #5c93e1;FILTER: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorStr=#5c93e1,endColorStr=#2f69c9);background: linear-gradient(top, #5c93e1, #2f69c9);background: -moz-linear-gradient(top, #5c93e1, #2f69c9);background: -ms-linear-gradient(top,  #5c93e1 0%,#2f69c9 100%);background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5c93e1), to(#2f69c9));border-radius: 3px 3px 0 0;-webkit-border-radius: 3px 3px 0 0;padding-left: 20px;"><ul style="margin:0; padding: 0;list-style-type: none;width: 458px;height: 69px;line-height: 79px;overflow: hidden;"><li style="list-style-type:none;float:left;height:69px;padding-right:20px;font-family:Arial,Helvetica,sans-serif;font-size: 16px;color: #8fb4ec;font-weight: bold;"><a href="http://www.helome.com" target="_blank"><img style="border: 0;" src="${cdnUrl}topx/assets/misc/images/logo.png" ></a></li><li style="list-style-type: none;float: left;height: 69px;padding-right: 20px;font-family: Arial, Helvetica, sans-serif;font-size: 16px;color: #8fb4ec;font-weight: bold;">|</li><li style="list-style-type: none;float:left;height: 69px;padding-right: 20px;font-family: Arial, Helvetica, sans-serif;font-size: 16px;color: #8fb4ec;font-weight: bold;">
+    帐号异地登录</li></ul></div><div style="width:458px;padding: 20px 0 0 20px;"><div style="font-size: 16px;color: #40526a;font-weight: bold;">
+    亲爱的${oldUser.getUserNameOrEmail()}:</div><div style="margin: 27px 0 0 25px;line-height: 20px;color: #40526a;font-family: Arial, Helvetica, sans-serif;font-size: 12px;">
+    欢迎使用嗨啰•觅平台。<br /><br />
+    您的嗨啰•觅平台帐号 ${oldUser.email}于${now.get('yyyy')}年${now.get('MM')}月${now.get('dd')}日${now.get('HH')}点${now.get('mm')}分在异地登录了。若非本人操作，请登录嗨啰•觅服务交易平台检查您的帐号安全性。<br/><br/>
+    此致<br/><br/>
+    嗨啰•觅团队敬上<br/>
+    ${now.get('yyyy-MM-dd')}<br/><br/>
+    <span style="color: #a9b2bf;">请注意，该电子邮件地址不接受回复邮件</span></div></div></div></div>
+
+BOOKING_REMIND.BY_SMS: >
+    亲爱的${oldUser.getUserNameOrEmail()}，
+    #if($isExpert)
+    ${userName}向您预约的咨询
+    #else
+    您向${expertName}预约的咨询
+    #end
+    将于${serviceTime.get('yyyy')}年${serviceTime.get('MM')}月${serviceTime.get('dd')}日${serviceTime.get('HH')}点${serviceTime.get('mm')}分到期。请您及时上线，参与咨询。【嗨啰科技】
+BOOKING_REMIND.BY_MSG:  >
+    亲爱的${oldUser.getUserNameOrEmail()}，
+    #if($isExpert)
+    ${userName}向您预约的咨询 
+    #else
+    您向${expertName}预约的咨询
+    #end
+    将于${serviceTime.get('yyyy')}年${serviceTime.get('MM')}月${serviceTime.get('dd')}日${serviceTime.get('HH')}点${serviceTime.get('mm')}分到期。请您及时上线，参与咨询。
+BOOKING_REMIND.BY_EMAIL: >
+  <div style="width:980px; background: url(${cdnUrl}topx/assets/misc/skin/v1.0.0/i/mail-bg.png);height: 380px; margin: 100px auto;padding-top: 28px;"><div style="width:478px; height: 380px;border: 1px solid #c2dbff;margin: 0 auto;border-radius: 5px;-moz-box-shadow:0 2px 0 rgba(224, 237, 255, 0.6); -webkit-box-shadow:0 2px 0 rgba(224, 237, 255, 0.6); box-shadow:0 2px 0 rgba(224, 237, 255, 0.6);"><div style="width: 458px;height: 69px;background: #5c93e1;FILTER: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorStr=#5c93e1,endColorStr=#2f69c9);background: linear-gradient(top, #5c93e1, #2f69c9);background: -moz-linear-gradient(top, #5c93e1, #2f69c9);background: -ms-linear-gradient(top,  #5c93e1 0%,#2f69c9 100%);background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5c93e1), to(#2f69c9));border-radius: 3px 3px 0 0;-webkit-border-radius: 3px 3px 0 0;padding-left: 20px;"><ul style="margin:0; padding: 0;list-style-type: none;width: 458px;height: 69px;line-height: 79px;overflow: hidden;"><li style="list-style-type:none;float:left;height:69px;padding-right:20px;font-family:Arial,Helvetica,sans-serif;font-size: 16px;color: #8fb4ec;font-weight: bold;"><a href="http://www.helome.com" target="_blank"><img style="border: 0;" src="${cdnUrl}topx/assets/misc/images/logo.png" ></a></li><li style="list-style-type: none;float: left;height: 69px;padding-right: 20px;font-family: Arial, Helvetica, sans-serif;font-size: 16px;color: #8fb4ec;font-weight: bold;">|</li><li style="list-style-type: none;float:left;height: 69px;padding-right: 20px;font-family: Arial, Helvetica, sans-serif;font-size: 16px;color: #8fb4ec;font-weight: bold;">
+    咨询预约提醒</li></ul></div><div style="width:458px;padding: 20px 0 0 20px;"><div style="font-size: 16px;color: #40526a;font-weight: bold;">
+    亲爱的${oldUser.getUserNameOrEmail()}:</div><div style="margin: 27px 0 0 25px;line-height: 20px;color: #40526a;font-family: Arial, Helvetica, sans-serif;font-size: 12px;">
+    欢迎使用嗨啰•觅平台。<br /><br />
+    #if($isExpert)
+    ${userName}向您预约的咨询 
+    #else
+    您向${expertName}预约的咨询
+    #end
+    将于${serviceTime.get('yyyy')}年${serviceTime.get('MM')}月${serviceTime.get('dd')}日${serviceTime.get('HH')}点${serviceTime.get('mm')}分到期。请您及时上线，参与咨询。<br/><br/>
+    此致<br/><br/>
+    嗨啰•觅团队敬上<br/>
+    ${now.get('yyyy-MM-dd')}<br/><br/>
+    <span style="color: #a9b2bf;">请注意，该电子邮件地址不接受回复邮件</span></div></div></div></div>

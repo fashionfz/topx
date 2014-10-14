@@ -1,0 +1,53 @@
+@charset "utf-8";
+/*
+* @description: 500、404页面
+* @author: Young.foo@helome.com
+* @update: Young.foo@helome.com
+*/
+
+.error-main {
+	width: 348px;
+	text-align: center;
+	float: none;
+	margin: 30px auto;
+	border: 1px #e5e5e5 solid;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background: #ffffff;
+	padding: 20px 30px;
+}
+.error-tit {
+	font-size: 14px;
+	color: #4e4e4e;
+	font-weight: 600;
+	margin-top: 10px;
+}
+.icon-error {
+	background-image: url(i/icon-error.png);
+	background-repeat: no-repeat;
+}
+.error-bg {
+	width: 188px;
+	height: 200px;
+	margin: 10px auto;
+}
+.error-500 {
+	background-position: -188px 0;
+}
+.error-404 {
+	background-position: 0 0;
+}
+.error-act a {
+	color: #626262;
+	font-size: 14px;
+	text-decoration: none;
+	padding-left: 20px;
+}
+.return {
+	background-position: -418px -11px;
+	margin-right: 40px;
+}
+.back {
+	background-position: -418px -34px;
+}

@@ -1,0 +1,40 @@
+/**
+ * 系统用户编辑
+ */
+Ext.define('Topx.view.TemplateEditWin', {
+	extend : 'Ext.window.Window',
+	alias : 'widget.templateeditwin',
+	height : 500,
+	width : 800,
+	iconCls : 'helome-app-edit',
+	title : '邮件模板编辑',
+	modal : true,
+	
+	constructor: function (config) {
+		this.templateId = config.templateId;
+        this.content = config.content;
+        this.callParent();
+    },
+
+
+	initComponent : function() {
+		var me = this;
+		var editor;
+		Ext.applyIf(me, {
+			items : [		            
+			    new Ext.Panel({html:'<textarea id="ta" style="text-align:center;width:980px;height:500px;visibility:hidden;">'+me.content+'</textarea>'})  
+			],
+			listeners:{  
+	            render:function(){  
+	                setTimeout(function(){  
+	                   editor  = KindEditor.create('#ta');  
+	                },1000);  
+	            }  
+	                  
+	              
+	        }
+		});
+		me.callParent(arguments);
+	}
+
+});

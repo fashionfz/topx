@@ -1,0 +1,76 @@
+@(gid:java.lang.String,groupName:java.lang.String,isNew:java.lang.String)
+@main("邀请入群 -- 我的群组-- 个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('userGroupsCss','css');
+    </script>
+} {
+    <div id="content" class="clearfix">
+        @usercenter.left("groups")
+        <div class="main">
+            <div class="user-info">
+                <ul class="tab-menu clearfix">
+                    <li class="tab-menu-btn current"><a class="tab-menu-left" href="javascript:;">我建立的</a></li>
+                    <li class="tab-menu-btn"><a href="/user/group/join">我加入的</a></li>
+                    <li class="tab-menu-btn"><a href="/user/group/multi">多人会话</a></li>
+                </ul>
+                <div class="user-info-block color-blue-grey">
+                    <div class="f16 user-nav">
+                        <strong class="pl20">邀请入群 <a href="groupList" class="color-blue f12"><< 返回我建立的列表</a></strong>
+                    </div>
+                    <div class="f16 pl20">
+                        @if(isNew=="1"){
+                        <span class="icon good"></span>
+                        <strong>
+                            您已成功创建“<span class="color-blue group-name">@groupName</span>”,
+                            请邀请您圈中的联系人加入，也可立即<a class="color-blue" href="/group/detail/@gid" target="_blank">进入群详情页面</a>,
+                            或<a class="color-blue J-open-chat" href="javascript:">群聊</a>。
+                        </strong>
+                        }else{
+                        <strong>邀请您圈中的联系人加入“<span class="color-blue group-name">@groupName</span>”。</strong>
+                        }
+                    </div>
+                </div>
+                <div class="add-content">
+                    <div class="user-info-block color-blue-grey">
+                        <div class="user-box fl">
+                            <div class="user-box-top">
+                                <p class="f14"><strong>圈的联系人</strong></p>
+                                <div class="like-txt m10">
+                                    <span class="icon icon-search-gray"></span>
+                                    <input type="text" class="searchAt" value="" placeholder="搜索好友">
+                                </div>
+
+                            </div>
+                            <ul class="user-list">
+
+                            </ul>
+                        </div>
+                        <div class="fl"><span class="icon go-right"></span></div>
+                        <div class="user-box fl">
+                            <div class="user-box-top">
+                                <p class="f14"><strong>一次性只能邀请50个联系人，已选&nbsp;<span class="color-blue">0</span>&nbsp;个</strong></p>
+                            </div>
+                            <ul class="user-list">
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="user-info-block clearfix clear pt20">
+                        <div class="info-value add-member-btn">
+                            <input id="addMemberBtn" class="btn-default btn-lg btn-green w150" type="button" value="发送邀请">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="btn-default btn-lg btn-white w150 btn-user-info-save" href="/user/group/groupList">返回我建立的列表</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('userGroupAddMemberJs','js');
+    </script>
+}

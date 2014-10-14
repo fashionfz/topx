@@ -1,0 +1,34 @@
+@main("设置密码成功 -- helome服务交流平台"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('singleCss','css');
+    </script>
+} {
+ 	<div id="content">
+        <div class="main clearfix">
+            <!--LOGO开始-->
+            <div class="main-logo"></div>
+            <!--LOGO结束-->
+            <!--重设密码表单开始-->
+            <div class="main-panel find-password-succeed-main">
+                <p class="success-msg find-password-succeed-tips">
+                    <span class="bg"></span>
+                    <span class="password-congr">恭喜你，修改密码成功!</span><br/>
+                    <span class="seconds-return">
+                        <span class="seconds-return-num">3</span>秒后自动返回首页
+                    </span>
+                </p>
+                <p class="forword-mail">
+                    <a href="@controllers.routes.Application.login()" class="btn-default btn-lg btn-green goLogin main-inner-btn">返回登录</a>
+                </p>
+            </div>
+            <!--重设密码表单结束-->
+            @downloadBlock()
+            
+        </div>
+    </div>
+	<script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('resetSuccessJs','js');
+	</script>
+}

@@ -1,0 +1,49 @@
+@(userId: Long,headUrl: String)
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8"/>
+    <title>helome用户注册协议 -- helome服务交流平台</title>
+    <meta name="keywords" content="注册helome,me2me,服务交易,服务咨询,在线视频咨询,在线服务,开始使用helome">
+    <meta name="description"
+          content="helome是一个涵盖IT、教育、医疗、法律等众多领域的Me2Me模式综合服务交流平台。helome，来源于英文中的”Hello, Me”，寓意在互联网世界里的每个Me（个体）都可以参与到服务中，提升自我，实现价值。">
+    <script type="text/javascript" src="@routes.Assets.at("misc/dist/v20131021/ued.import.js")" charset="utf-8"></script>
+    <link rel="icon" href="@routes.Assets.at("/misc/images/favicon.ico")"/>
+    <!--[if IE]><script type="text/javascript"> ued_import('canvasJs','js'); </script><![endif]-->
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('userDetailCss','css');
+        window.userId = @userId;
+    </script>
+
+</head>
+<body>
+<div id="wrap" data-id="@userId">
+    <div id="container" class="doc">
+
+        <div id="content" class="clearfix">
+            <div class="img-full none" src="@headUrl"></div>
+            <div class="main">
+                <div class="user-info user-detail" id="user-info">
+                    <ul class="tab-menu clear">
+                        <li><a class="tab-menu-left" href="/resume/base?userId=@userId">个人信息</a></li>
+                        <li class="current"><a href="/resume/userhead?userId=@userId">个人头像</a></li>
+                        <li><a href="/resume/workinfo?userId=@userId">职业经历</a></li>
+                        <li><a href="/resume/eduinfo?userId=@userId">教育经历</a></li>
+                    </ul>
+                    <div class="user-content clearfix">
+                        <div id="altContent"></div>
+                        <div id="avatar_priview"></div>
+                        <span class="save-ok save-ok-head none"><em class="icon"></em><span></span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    ued_import('commonJs', 'js');
+    ued_import('resumeUserHeadJs', 'js');
+</script>
+</body>
+</html>

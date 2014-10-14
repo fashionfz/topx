@@ -1,0 +1,170 @@
+@(page:vo.expertpage.EPage[vo.ExpertListVO])
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn" xml:lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="baidu-site-verification" content="Xlb3LlwZJV" />
+    <title>搜索@page.getFt()的结果 -- helome服务交流平台</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <script type="text/javascript" src="@routes.Assets.at("misc/dist/v20131021/ued.import.js")" charset="utf-8"></script>
+    <link rel="icon" href="@routes.Assets.at("/misc/images/favicon.ico")"/>
+    <!--[if IE]><script type="text/javascript"> ued_import('canvasJs','js'); </script><![endif]-->
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('searchCss','css');
+    </script>
+</head>
+<body>
+<div id="wrap">
+    @head(page.getFt())
+    <div id="container">
+	<div id="content" class="clearfix">
+
+		<div class="filter-block">
+			<span class="filter">
+				<span class="filter-select">
+					<span class="filter-name icon-more">
+						<span class="filter-name-area">@page.getCf<em class="search-icon search-icon-direction-down"></em></span>
+						<ul class="filter-list">
+                        	<li><a href="javascript:void(0);" onclick="showEncodePage('@page.getCf("")')">全部</a></li>
+                        	@for(e <- page.getCountryList()) {
+                            <!-- <li><a href="@page.getCf("1")@e">@e</a></li> -->
+                            <li><a href="javascript:void(0);" onclick="showEncodePage('@page.getCf("1")@e')">@e</a></li>
+                            }
+                        </ul>
+					</span>
+				</span>
+				<span class="filter-select">
+					<span class="filter-name icon-more">
+						<span class="filter-name-area">@page.getEf<em class="search-icon search-icon-direction-down"></em></span>
+						<ul class="filter-list">
+                            <li><a href="@page.getEfHref("")">全部</a></li>
+							<li><a href="@page.getEfHref("0")">免费</a></li>
+							<li><a href="@page.getEfHref("1")">面议</a></li>
+						</ul>
+					</span>
+				</span>
+				<span class="filter-select">
+					<span class="filter-name icon-more">
+						<span class="filter-name-area">@page.getGf<em class="search-icon search-icon-direction-down"></em></span>
+						<ul class="filter-list">
+                            <li><a href="@page.getGfHref("")">全部</a></li>
+							<li><a href="@page.getGfHref("0")">男性</a></li>
+							<li><a href="@page.getGfHref("1")">女性</a></li>
+						</ul>
+					</span>
+				</span>
+			</span>
+			<span class="filter">
+				<a class="sort-name @page.getOClass("")" id="averageDefault" href="@page.getOHref("")">
+					默认排序
+				</a>
+				<!--  
+				<a class="sort-name @page.getOClass("dealNum")" id="dealNum" href="@page.getOHref("dealNum")">
+					按交易次数<em class="search-icon search-icon-sort-down" ></em>
+				</a>
+				-->
+				<a class="sort-name @page.getOClass("commentNum")" id="dealNum" href="@page.getOHref("commentNum")">
+					按评价次数<em class="search-icon search-icon-sort-down" ></em>
+				</a>
+				<a class="sort-name @page.getOClass("averageScore")" id="averageScore" href="@page.getOHref("averageScore")">
+					按好评率<em class="search-icon search-icon-sort-down"></em>
+				</a>
+
+			</span>
+			<span class="page page-top">
+			</span>
+		</div>
+
+	 @if(page.getTotalRowCount != 0) {
+		<div class="search-list">
+            <input type="hidden" name="totalCount" id="totalCount" value="@page.getTotalRowCount">
+            <input type="hidden" name="curPage" id="curPage" value="@page.getPageIndex">
+			@for(expertListVO <- page.getList()) {
+			<div class="search-block clearfix">
+				<div class="search-head">
+					<a href="@expertListVO.getLinkUrl()" target="_blank"><img src="@expertListVO.getHeadUrl()" height="190" width="190" class="search-head-img" /></a>
+	                <div class="search-country">
+	                    <span class="country-flag flag @expertListVO.getCountryUrl" title="@expertListVO.getCountry()"></span>
+	                    @if(expertListVO.getGender().name() == "MAN"){
+	                    	<img alt="男" title="男" src="@routes.Assets.at("misc/images/male.png")" class="country-sex" width="13" height="13">
+	                	}else{
+	                		<img alt="女" title="女" src="@routes.Assets.at("misc/images/female.png")" class="country-sex" width="13" height="13">
+	                	}
+	                </div>
+				</div>
+
+				<div class="search-center">
+					<div class="name clearfix">
+                        <a href="@expertListVO.getLinkUrl()" target="_blank" title="@expertListVO.getUserName()">@Html(expertListVO.getUserName())</a>
+                        <span class="job" title="@expertListVO.getJobNoMark()">@Html(expertListVO.getJob())</span>
+                        @if(expertListVO.getIsOnline){
+                        	<em class="search-icon search-icon-online" title="在线"></em>
+                        }
+                    </div>
+                    <p class="introduce">
+                    @Html(expertListVO.getPersonalInfo())
+                    </p>
+					<p class="skill clearfix">
+					@for(st <- expertListVO.getSkillsTags()){
+                        <a href="@controllers.routes.ExpertApp.search()?ft=@st.getNoMarkedTag">@Html(st.getTag)</a>
+					}
+					</p>
+				</div>
+				<div class="search-right">
+					@if(!expertListVO.getIsSelf){
+						@if(expertListVO.getUserId() != null){
+                        	<p class="consult">
+                        		<span class="btn-default btn-green btn-lg btn-consult" data-id="@expertListVO.getUserId()"><i class="index-icon icon-btn-chat"></i>联 系</span>
+                        		@if(expertListVO.getIsFavorite()){
+<!--                         			<span class="btn-default btn-gray btn-lg btn-fav" data-id="@expertListVO.getUserId()" data-isfavorite="1"><i class="icon icon-btn-fav"></i><span class="btn-text">已收藏</span></span> -->
+                        		}else{
+<!--                         			<span class="btn-default btn-white btn-lg btn-fav" data-id="@expertListVO.getUserId()" data-isfavorite="0"><i class="icon icon-btn-fav"></i><span class="btn-text">收 藏</span></span> -->
+                        		}
+                        	</p>
+                        }
+					}
+					<!-- 总宽度90px 最后宽度=18*分数-->
+					<p class="stars">
+						<span class="icon icon-star-base" title="平均分：@expertListVO.getAverageScore()">
+							<span class="icon icon-star-on" style="width:@{expertListVO.getAverageScore()/5*73}px;"></span>
+						</span>
+						<a href="@expertListVO.getLinkUrl()#comments" class="star-num" target="_blank">(@if(expertListVO.getCommentNum==0){<b>暂无评价</b>}else{@expertListVO.getCommentNum})</a>
+					</p>
+					<p class="tariff">
+                        资费：<span>@expertListVO.getExpenses()</span>
+                    </p>
+				</div>
+			</div>
+			}
+		</div>
+		<!-- 没有搜索结果开始 -->
+		}else{
+		<div class="no-result">
+			<p class="no-result-one clearfix"><em></em><span>抱歉！没有找到"&nbsp;@Html(page.getNoResultStr())"相关的服务者</span></p>
+			<p class="no-result-two">建议您：</p>
+			<p class="no-result-three">·看看文字是否输入有误</p>
+			<p class="no-result-three">·调整关键字</p>
+			<p class="no-result-three">·去其他地方逛逛<a href="@controllers.skilltag.routes.SkillTagApp.list()">所有服务者</a></p>
+		</div> 
+		}
+	</div>
+    </div>
+</div>
+@foot()
+	<!--搜索中间结束-->
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('searchJs','js');
+    </script>
+    <script type="text/javascript">
+	    function showEncodePage(url){
+			url = encodeURI(url);
+			//alert(url);
+			location.href = url;
+		}
+    </script>
+</body>
+</html>

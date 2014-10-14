@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>成功案例</title>
+	<link rel="stylesheet" type="text/css" href="style/base.css"/>
+	<link rel="stylesheet" type="text/css" href="style/head.css"/>   
+    <link rel="stylesheet" type="text/css" href="style/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="style/success.css"/>
+</head>
+
+<body>
+	<div id="wrap">    	 	
+		<!--#include file="head.html"-->
+        <!--成功案例开始-->
+       <div class="content">
+       		<div class="content-top">成功案例</div>
+            <div class="dev-cont clearfix">
+            	<div class="dev-cont-left clearfix">
+                	<img src="images/imge-1.png" width="180" height="180" alt="" />
+                    <div class="cont-txt">
+                    	<i class="marks-top"></i>
+                    	<span class="txt-list">我们公司的组织架构庞杂，员工经常找不到其他部门的接口人，增加了内部沟通成本。但是，企业QQ的内部组织架构功能可以清晰列出公司各层同事，大大提升员工沟通效率。</span>
+                        <i class="marks-bottom"></i>
+                        <p class="txt-mes">迈思信息科技有限公司</p>
+                    </div>
+                </div>
+                <div class="dev-cont-right">
+                	<img src="images/imge-1.png" width="180" height="180" alt="" />
+                    <div class="cont-txt">
+                    	<i class="marks-top"></i>
+                    	<span class="txt-list">我们公司的组织架构庞杂，员工经常找不到其他部门的接口人，增加了内部沟通成本。但是，企业QQ的内部组织架构功能可以清晰列出公司各层同事，大大提升员工沟通效率。</span>
+                        <i class="marks-bottom"></i>
+                        <p class="txt-mes">迈思信息科技有限公司</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dev-cont">
+            	<div class="dev-cont-left">
+                	<img src="images/imge-1.png" width="180" height="180" alt="" />
+                    <div class="cont-txt">
+                    	<i class="marks-top"></i>
+                    	<span class="txt-list">我们公司的组织架构庞杂，员工经常找不到其他部门的接口人，增加了内部沟通成本。但是，企业QQ的内部组织架构功能可以清晰列出公司各层同事，大大提升员工沟通效率。</span>
+                        <i class="marks-bottom"></i>
+                        <p class="txt-mes">迈思信息科技有限公司</p>
+                    </div>
+                </div>
+                <div class="dev-cont-right">
+                	<img src="images/imge-1.png" width="180" height="180" alt="" />
+                    <div class="cont-txt">
+                    	<i class="marks-top"></i>
+                    	<span class="txt-list">我们公司的组织架构庞杂，员工经常找不到其他部门的接口人，增加了内部沟通成本。但是，企业QQ的内部组织架构功能可以清晰列出公司各层同事，大大提升员工沟通效率。</span>
+                        <i class="marks-bottom"></i>
+                        <p class="txt-mes">迈思信息科技有限公司</p>
+                    </div>
+                </div>
+            </div>
+            
+       </div>
+         <div id="right-box">
+            	<span class="go-top"></span>
+            </div>
+        <!--成功案例开始-->
+          <!--#include file="footer.html"--> 
+    </div>
+</body>
+</html>

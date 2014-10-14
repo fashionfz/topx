@@ -1,0 +1,139 @@
+@(page:vo.expertpage.RPage[vo.RequireListVO],cts:org.apache.commons.collections.map.ListOrderedMap)
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn" xml:lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="baidu-site-verification" content="Xlb3LlwZJV" />
+    <title>需求搜索@page.getFt()的结果 -- helome服务交流平台</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <script type="text/javascript" src="@routes.Assets.at("misc/dist/v20131021/ued.import.js")" charset="utf-8"></script>
+    <link rel="icon" href="@routes.Assets.at("/misc/images/favicon.ico")"/>
+    <!--[if IE]><script type="text/javascript"> ued_import('canvasJs','js'); </script><![endif]-->
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('requireSearchCss','css');
+    </script>
+</head>
+<body>
+<div id="wrap">
+    @head(page.getFt())
+    <div id="container">
+    <div id="content" class="clearfix">
+        <div class="filter-block">
+            <span class="filter">
+                <span class="filter-select">
+                    <span class="filter-name icon-more">
+                        <span class="filter-name-area">@page.getInfStr<em class="search-icon search-icon-direction-down"></em></span>
+                        <ul class="filter-list" style="display: none;">
+                           @for((key, value) <- cts) {
+                            <li><a href="@page.getInfHref(key.toString())">@value</a></li>
+                           }
+                        </ul>
+                    </span>
+                </span>
+                <span class="filter-select">
+                    <span class="filter-name icon-more">
+                        <span class="filter-name-area">@page.getCfStr<em class="search-icon search-icon-direction-down"></em></span>
+                        <ul class="filter-list">
+                        	<li><a href="@page.getCfHref("")">全部</a></li>
+                        	@for(e <- page.getCountryList()) {
+                            	<li><a href="@page.getCfHref(e.toString())">@e</a></li>
+                            }
+                        </ul>
+                    </span>
+                </span>
+                <span class="filter-select">
+                    <span class="filter-name icon-more">
+                        <span class="filter-name-area">@page.getGfStr<em class="search-icon search-icon-direction-down"></em></span>
+                        <ul class="filter-list">
+                            <li><a href="@page.getGfHref("")">全部</a></li>
+                            <li><a href="@page.getGfHref("0")">男性</a></li>
+                            <li><a href="@page.getGfHref("1")">女性</a></li>
+                        </ul>
+                    </span>
+                </span>
+            </span>
+            <span class="filter">
+                <a class="sort-name active @page.getOClass("")" id="averageDefault" href="@page.getOHref("")">
+                    默认排序
+                </a>
+                <a class="sort-name @page.getOClass("budget")" id="dealPrice" href="@page.getOHref("budget")">
+                    按价格<em class="search-icon search-icon-sort-down" ></em>
+                </a>
+                <a class="sort-name @page.getOClass("createDate")" id="averageScore" href="@page.getOHref("createDate")">
+                    按发布时间<em class="search-icon search-icon-sort-down"></em>
+                </a>
+            </span>
+            <span class="page page-top">
+            </span>
+        </div>
+      @if(page.getTotalRowCount != 0) {
+        <div class="search-list require-list">
+  			<input type="hidden" name="totalCount" id="totalCount" value="@page.getTotalRowCount">
+            <input type="hidden" name="curPage" id="curPage" value="@page.getPageIndex">
+
+            @for(svo <- page.getList()) {
+            <div class="search-block clearfix">
+                <div class="reqSer-info">
+                    <div class="reqSer-title"><a href="/require/detail/@svo.getId" target="_blank">@Html(svo.getTitle)</a></div>
+                    <div class="reqSer-introduction">
+                        @Html(svo.getInfo)
+                    </div>
+                    <div class="reqSer-user clearfix">
+
+                        <a href="@routes.ExpertApp.detail(svo.getOwnerUserId)" class="user-head">
+                            <em></em>
+                            <img src="@svo.getHeadUrl()" width="41" height="41">
+                        </a>
+                        <div class="user-name"><a href="@routes.ExpertApp.detail(svo.getOwnerUserId)">@svo.getOwnerUserName</a></div>
+                        <div class="user-job">@svo.getJob</div>
+                        <div class="user-country flag @svo.getCountryUrl" title="@svo.getCountry()"></div>
+
+                        @if(svo.getGender().name() == "MAN"){
+                            <img alt="男" title="男" src="@routes.Assets.at("misc/images/male.png")" class="user-gender" width="13" height="13">
+                        }else{
+                            <img alt="女" title="女" src="@routes.Assets.at("misc/images/female.png")" class="user-gender" width="13" height="13">
+                        }
+                    
+                    </div>
+                </div>
+                <div class="reqSer-right">
+                    <div class="reqSer-price">
+                        @if(svo.getBudget == null || svo.getBudget == ""){
+                            面议
+                        }else{
+                            @if(svo.getBudget == 0.0 || svo.getBudget == "0.0"){
+                                免费
+                            }else{
+                                ￥@svo.getBudget
+                            }
+                        }
+                    </div>
+                    <div class="reqSer-date">@svo.getCreateDate()发布</div>
+                </div>
+            </div>
+			}
+
+        </div>
+     } else{
+
+        <div class="no-result">
+            <p class="no-result-one clearfix"><em></em><span>抱歉！没有找到相关的需求</span></p>
+            <p class="no-result-two">建议您：</p>
+            <p class="no-result-three">·看看文字是否输入有误</p>
+            <p class="no-result-three">·调整关键字</p>
+            <p class="no-result-three">·去其他地方逛逛<a href="/require">需求分类浏览</a></p>
+        </div>
+        
+     }
+    </div>
+    </div>
+</div>
+@foot()
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('requireSearchJs','js');
+    </script>
+</body>
+</html>

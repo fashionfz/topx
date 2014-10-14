@@ -1,0 +1,22 @@
+/**
+ * 请求接口参数
+ * page 当前页码/请求的页码 0开始
+ * pageSize 分页大小 默认10
+ * type 信息类型 默认0
+ */
+{
+    "status": 1, //接口处理状态
+    "totalCount": 120, // 记录总数
+    "list": [ // 数据json数组
+    	{"id": 1, "isRead": false, "content": "把你的CT发给我看看"},
+        {"id": 2, "isRead": false, "content": "把你的CT发给我看看"},
+        {"id": 3, "isRead": false, "content": "把你的CT发给我看看"},
+        {"id": 4, "isRead": false, "content": "把你的CT发给我看看"},
+        {"id": 5, "isRead": true, "content": "把你的CT发给我看看"},
+        {"id": 6, "isRead": true, "content": "把你的CT发给我看看"},
+        {"id": 7, "isRead": true, "content": "把你的CT发给我看看"},
+        {"id": 8, "isRead": true, "content": "把你的CT发给我看看"},
+        {"id": 9, "isRead": true, "content": "把你的CT发给我看看"},
+        {"id": 10, "isRead": true, "content": "把你的CT发给我看看"}
+    ]
+}

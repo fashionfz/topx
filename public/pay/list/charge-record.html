@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>充值中心</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/button.css" rel="stylesheet" />
+    <link href="../css/user-base.css" rel="stylesheet" />
+    <link href="../css/user-table.css" rel="stylesheet" />
+    <link href="../css/tab-switch.css" rel="stylesheet" />
+    <link href="../css/dialog.css" rel="stylesheet" />
+    <link href="../css/dialog-simple.css" rel="stylesheet" />
+    <link href="../css/charge-center.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="main">
+        <div class="search-title"><span class="title-name">充值中心</span></div>
+
+        <div class="personal-center clearfix">
+            <div class="personal-left">
+                <div class="personal-head">
+                    <a href="/developer.shtml">
+                        <img class="head-s" src="../img/dev-head-default2.png" alt="UI设计师steven" />
+                    </a>
+                </div>
+            </div>
+            <div class="personal-main clearfix">
+                <div class="charge-money-left">
+                    <div>账户余额</div>
+                    <div class="red bold money">￥135123.22元</div>
+                </div>
+                <div class="charge-btn-box">
+                    <a href="../pay/chargefromalipay.scala.html" class="charge-btn btn-default btn-mid btn-green">充值</a>
+                    <a href="../pay/chargewithdrawtoalipay.scala.html" class="charge-btn btn-default btn-mid btn-yellow">提现</a>
+                    <a href="../pay/chargetransfer.scala.html" class="charge-btn btn-default btn-mid btn-yellow">转账</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab">
+            <p class="tab-head clearfix">
+                <span class="tab-menu">
+                    <span class="current tab-menu-btn">交易记录<em></em></span>
+                    <span class="tab-menu-btn">充值记录<em></em></span>
+                    <span class="tab-menu-btn">提现记录<em></em></span>
+                </span>
+                <!--<span class="user-search">
+                    <span class="tag-container">
+                        <input type="text" class="txt-five" placeholder="项目名称、订单编号"/>
+                    </span>&nbsp;
+                    <input type="button" class="btn-five" value="查询" />
+                </span>-->
+            </p>
+
+            <!--我预约的-->
+            <table class="tab-table">
+                <tr><th>服务时间</th><th>交易号</th><th>咨询用户</th><th>专家</th><th>服务时长</th><th>收入/支出</th><th>操作</th></tr>
+                <tr class="odd">
+                    <td>2013-09-20</td>
+                    <td>15487878655</td>
+                    <td>我</td>
+                    <td>张三</td>
+                    <td>10分钟</td>
+                    <td class="red">-￥15.00</td>
+                    <td class="trade-operate">
+                        <a href="javascript:;" class="btn-delete">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2013-09-20</td>
+                    <td>15487878655</td>
+                    <td>小明</td>
+                    <td>我</td>
+                    <td>10分钟</td>
+                    <td class="green">+￥15.00</td>
+                    <td class="trade-operate">
+                        <a href="javascript:;" class="btn-delete">删除</a>
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td>2013-09-20</td>
+                    <td>15487878655</td>
+                    <td>Lady GaGa</td>
+                    <td>李四</td>
+                    <td>10分钟</td>
+                    <td class="red">-￥15.00</td>
+                    <td class="trade-operate">
+                        <a href="javascript:;" class="btn-delete">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2013-09-20</td>
+                    <td>15487878655</td>
+                    <td>我</td>
+                    <td>张三</td>
+                    <td>10分钟</td>
+                    <td class="red">-￥15.00</td>
+                    <td class="trade-operate">
+                        <a href="javascript:;" class="btn-delete">删除</a>
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td>2013-09-20</td>
+                    <td>15487878655</td>
+                    <td>我</td>
+                    <td>张三</td>
+                    <td>10分钟</td>
+                    <td class="red">-￥15.00</td>
+                    <td class="trade-operate">
+                        <a href="javascript:;" class="btn-delete">删除</a>
+                    </td>
+                </tr>
+            </table>
+            <!--预约我的-->
+            <table class="tab-table hide">
+                <tr><th>充值时间</th><th>交易号</th><th>充值渠道</th><th>充值金额</th><th>账户金额</th><th>操作</th></tr>
+                <tr class="odd">
+                    <td>2013-09-20</td>
+                    <td>15487878655</td>
+                    <td>建设银行信用卡</td>
+                    <td class="green">+￥125.00</td>
+                    <td>￥1000.00</td>
+                    <td class="trade-operate">
+                        <a href="javascript:;" class="btn-delete">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2013-09-20</td>
+                    <td>15487878655</td>
+                    <td>建设银行信用卡</td>
+                    <td class="green">+￥125.00</td>
+                    <td>￥1000.00</td>
+                    <td class="trade-operate">
+                        <a href="javascript:;" class="btn-delete">删除</a>
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td>2013-09-20</td>
+                    <td>15487878655</td>
+                    <td>建设银行信用卡</td>
+                    <td class="green">+￥125.00</td>
+                    <td>￥1000.00</td>
+                    <td class="trade-operate">
+                        <a href="javascript:;" class="btn-delete">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2013-09-20</td>
+                    <td>15487878655</td>
+                    <td>建设银行信用卡</td>
+                    <td class="green">+￥125.00</td>
+                    <td>￥1000.00</td>
+                    <td class="trade-operate">
+                        <a href="javascript:;" class="btn-delete">删除</a>
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td>2013-09-20</td>
+                    <td>15487878655</td>
+                    <td>建设银行信用卡</td>
+                    <td class="green">+￥125.00</td>
+                    <td>￥1000.00</td>
+                    <td class="trade-operate">
+                        <a href="javascript:;" class="btn-delete">删除</a>
+                    </td>
+                </tr>
+            </table>
+            <!--已完成的-->
+            <table class="tab-table hide">
+                <tr><th>提现时间</th><th>交易号</th><th>提现渠道</th><th>提现金额</th><th>账户金额</th><th>操作</th></tr>
+                <tr class="odd">
+                    <td>2013-09-20</td>
+                    <td>15487878655</td>
+                    <td>建设银行信用卡</td>
+                    <td class="red">-￥125.00</td>
+                    <td>￥1000.00</td>
+                    <td class="trade-operate">
+                        <a href="javascript:;" class="btn-delete">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2013-09-20</td>
+                    <td>15487878655</td>
+                    <td>建设银行信用卡</td>
+                    <td class="red">-￥125.00</td>
+                    <td>￥1000.00</td>
+                    <td class="trade-operate">
+                        <a href="javascript:;" class="btn-delete">删除</a>
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td>2013-09-20</td>
+                    <td>15487878655</td>
+                    <td>建设银行信用卡</td>
+                    <td class="red">-￥125.00</td>
+                    <td>￥1000.00</td>
+                    <td class="trade-operate">
+                        <a href="javascript:;" class="btn-delete">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2013-09-20</td>
+                    <td>15487878655</td>
+                    <td>建设银行信用卡</td>
+                    <td class="red">-￥125.00</td>
+                    <td>￥1000.00</td>
+                    <td class="trade-operate">
+                        <a href="javascript:;" class="btn-delete">删除</a>
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td>2013-09-20</td>
+                    <td>15487878655</td>
+                    <td>建设银行信用卡</td>
+                    <td class="red">-￥125.00</td>
+                    <td>￥1000.00</td>
+                    <td class="trade-operate">
+                        <a href="javascript:;" class="btn-delete">删除</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="page page-user-bottom">
+            <a href="#" class="previous">上一页</a>
+            <a href="#" class="">1</a>
+            <a href="#" class="">2</a>
+            <a href="#" class="current">3</a>
+            <span class="more">...</span>
+            <a href="#" class="">4</a>
+            <a href="#" class="">5</a>
+            <a href="#" class="">6</a>
+            <a href="#" class="next">下一页</a>
+        </div>
+    </div>
+
+    <script src="../js/core/jquery172.js"></script>
+    <script src="../js/common/jquery.artDialog.js"></script>
+    <script src="../js/common/artDialog.plugins.js"></script>
+    <script src="../js/core/require.js"></script>
+    <script src="../js/page/page_charge.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/*
+* @description: 开发者详情页样式
+* @author: Young Foo (young.foo@helome.com)
+* @update: Young Foo (young.foo@helome.com)
+*/
+
+.search-list{
+	margin: 0px auto;
+	position: relative;
+	width: 935px;
+}
+
+.search-list .search-center{
+	width: 580px;
+}

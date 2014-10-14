@@ -1,0 +1,159 @@
+/* CSS Document */
+.content {
+	width: 100%;
+	min-width: 1000px;
+	background: #e5e8ec;
+	padding: 50px 0;
+}
+.dev-cont {
+	width: 930px;
+	margin: 0 auto;
+	padding: 0 35px;
+}
+.apply-top {
+	width: 878px;
+	height: 58px;
+	border: 1px solid #d3d3d3;
+	background: linear-gradient(top, #f6f6f6, #f0f0f0);
+    background: -moz-linear-gradient(top, #f6f6f6, #f0f0f0);
+    background: -ms-linear-gradient(top,  #f6f6f6 0%,#f0f0f0 100%);/*适合IE10+ */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f6f6f6), to(#f0f0f0));
+    FILTER: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorStr=#f6f6f6,endColorStr=#f0f0f0); /*IE*/
+}
+.apply-txt {
+	font-family: "Microsoft YaHei";
+	font-size: 24px;
+	color: #333;
+	font-weight: bold;
+	padding-left: 50px;
+	line-height: 58px;
+}
+.apply-center {
+	width: 930px;
+	height: 477px;
+	background: #fff;
+	padding-top: 47px;
+}
+.apply-center h5 {
+	font-family: "Microsoft YaHei";
+	font-size: 20px;
+	color: #333;
+	width: 420px;
+	height: 34px;
+	padding-left: 40px;
+	margin: 0 auto;
+	background: url(../images/apply-icon.png) no-repeat left center;
+}
+.apply-table {
+	width: 455px;
+	margin: 40px auto;
+	padding-left: 20px;
+}
+.apply-table tr {
+	height: 55px;
+}
+input {
+	width: 250px;
+	height: 34px;
+	border: 1px solid #c5c5c5;
+	font-size: 14px;
+	color: #333;
+}
+label {
+	color: #F00;
+}
+select {
+	width: 123px;
+	height: 36px;
+	border: 1px solid #c5c5c5;
+}
+.list-td {
+	text-align: right;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+	color: #333;
+	padding-right: 20px;
+}
+.list-input {
+	width: 92px;
+	font-size: 14px;
+}
+.list-icon {
+	margin-top: -36px;
+	display: block;
+	padding-left: 110px;
+	cursor: pointer;
+}
+.list-a {
+	margin-top: -20px;
+	display: block;
+	padding-left: 227px;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+	color: #4a5566;
+	text-decoration:underline;
+}
+.apply-bottom {
+	width: 930px;
+	height: 76px;
+	margin: 0 auto;
+	background: #f6f6f6;
+	border-top: 1px solid #f0f0f0;
+	box-shadow: 0 2px 1px #d4d7da;
+	padding: 25px 0;
+}
+.apply-but {
+	width: 330px;
+	margin: 0 auto;
+}
+.but {
+	width: 190px;
+	height: 50px;
+	margin: 0 auto;
+	background: linear-gradient(left, #3bb680, #40c187);
+    background: -moz-linear-gradient(left, #3bb680, #40c187);
+    background: -ms-linear-gradient(left,  #3bb680 0%,#40c187 100%);/*适合IE10+ */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3bb680), to(#40c187));
+    FILTER: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorStr=#3bb680,endColorStr=#40c187); /*IE*/
+	border-radius: 4px;
+	text-align: center;
+	line-height: 50px;
+	font-family: "Microsoft YaHei";
+	font-size: 24px;
+	color: #fff;
+	text-shadow: 1px 1px 1px #38aa77;
+	cursor: pointer;
+}
+.apply-but p{
+	text-align: center;
+	line-height: 35px;
+	color: #d06125;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

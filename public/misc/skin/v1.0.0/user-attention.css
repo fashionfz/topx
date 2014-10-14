@@ -1,0 +1,38 @@
+@charset "utf-8";
+/*
+* @description: 个人中心我的关注样式
+* @author:Zhang Guanglin(@maesinfo.com)
+* @update:
+*/
+.user-attention-search {
+	margin-top: 10px;
+	padding-left: 18px;
+}
+.user-attention-search .filter {
+	float: left;
+}
+.user-attention-list .search-block {
+	background: #f0f0f0;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px dashed #ddd;
+	padding-top: 15px;
+}
+.user-attention-list .search-center {
+	padding-right: 0;
+	border-right: none;
+}
+.operate-divide {
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px dashed #ddd;
+}
+.user-attention-list .good-rate {
+	position: absolute;
+	right: 10px;
+	top: -25px;
+}
+.user-attention-list .good-rate span {
+	position: relative;
+	top: 18px;
+	margin-left: 8px;
+}

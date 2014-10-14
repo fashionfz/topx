@@ -1,0 +1,24 @@
+@import _root_.common.Global
+@import ext.usercenter.UserAuthService
+@main("我的钱包—个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('chargeCss','css');
+    </script>
+}  {
+    <div id="content" class="clearfix">
+        @usercenter.left("tradecenter")
+
+    <!-- <iframe src="http://172.16.1.182:8081/cas-server-webapp/pay/account/records?token=@UserAuthService.getTokenInSession(session())&id=@User.getFromSession(session()).id" name="ibox" id="ibox" frameborder="0" framescroll="no" width="795" height="630"></iframe> -->
+        <iframe name="ibox" id="ibox" frameborder="0" width="795" height="630" scrolling="yes" align="left" src="@Global.payCenterUrl/pay/account/records?token=@UserAuthService.getTokenInSession(session())&id=@User.getFromSession(session()).id"></iframe>
+    </div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('chargeJs','js');
+    </script>
+}
+
+<!-- 测试数据，请不要删除 -->
+<!--         <iframe name="ibox" id="ibox" frameborder="0" width="780" height="630" scrolling="yes" align="left" src="@Global.payCenterUrl/pay/account/records?token=@UserAuthService.getTokenInSession(session())&id=@User.getFromSession(session()).id"></iframe> -->
+
+<!--     <iframe src="http://localhost:3716/innerPage.html" name="ibox" id="ibox" width="780" style="height:630px !important"></iframe> -->

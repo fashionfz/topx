@@ -1,0 +1,55 @@
+@charset "utf-8";
+/*
+* @description: 邀请
+* @author:tintao.li@helome.com
+* @update:
+*/
+
+.tab-table td, .tab-table th {
+    height: 156px;
+    padding: 10px 0;
+}
+.search-center{
+    width: 530px;
+    margin: 0;
+    padding-left: 20px;
+}
+.search-head{
+    margin-left: 20px;
+}
+
+.invited-box {
+    padding: 20px 20px 500px 20px;
+    min-height: 40px;
+}
+.invited-box .invited-top {
+    font-size: 13px;
+    color: #40526a;
+    padding-bottom: 10px;
+    font-weight: bolder;
+}
+.invited-box .invited-left {
+    position: relative;
+    width: 616px;
+    border: 2px solid #d4d9df;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #40526a;
+    background: #fff;
+    padding: 0 10px;
+    height: 38px;
+    line-height: 38px;
+}
+.invited-box .invited-right {
+    width: 98px;
+    text-align: right;
+}
+.invited-box .invited-right .btn-default {
+    width: 86px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0;
+}

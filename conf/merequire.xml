@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+<fields>
+		<field name="industryId" type="int" stored="true" indexed="true"/>
+		<field name="ownerUserId" type="int" stored="true" indexed="true"/>
+		<field name="ownerUserName" type="string" stored="true" indexed="true"/>
+		<field name="gender" type="int" stored="true" indexed="true"/>
+		<field name="job" type="string" stored="true" indexed="true"/>
+		<field name="title" type="text_ik" stored="true" indexed="true"/>
+		<field name="info" type="text_ik" stored="true" indexed="true"/>
+		<field name="budget" type="float" stored="true" indexed="true"/>
+		<field name="country" type="string" stored="true" indexed="true"/>
+		<field name="createDate" type="long" stored="true" indexed="true"/>
+		<field name="tags"  type="string" stored="true" indexed="true"/>
+		<field name="headUrl" type="string" stored="true" indexed="true"/>
+</fields>
+</config>

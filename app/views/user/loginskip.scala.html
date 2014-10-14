@@ -1,0 +1,33 @@
+@import org.apache.commons.lang3.StringUtils
+@main("登录-禁用 -- helome服务交流平台"){
+<script type="text/javascript">
+    ued_import('commonCss','css');
+    ued_import('singleCss','css');
+</script>
+} {
+<div id="content">
+    <div class="main">
+
+        <div class="main-panel main-panel-center">
+
+            <div class="main-head">
+                <span class="span-left">账号被禁用</span>
+                <span class="span-right">
+                    <a href="@controllers.routes.Application.register()">注册</a>
+                    <a href="@controllers.routes.Application.login()">登录</a>
+                </span>
+            </div>
+
+            <p class="main-panel-tips">
+                <span class="dialog-msg-bg"></span>
+                对不起，您的账号已被禁用<br>
+                您可以发邮件到<strong>hi@Html("@")helome.com</strong>进行申诉。如能进行详细描述或提供截图等证据，将有利于加快我们的处理速度，谢谢！
+            </p>
+        </div>
+        
+    </div>
+</div>
+<script type="text/javascript">
+    ued_import('commonJs','js');
+</script>
+}

@@ -1,0 +1,112 @@
+########v2.0
+### 需求服务
+POST        /:f/rns/createRequire              mobile.controllers.RNSApp.createRequire(f)
+POST        /:f/rns/createService              mobile.controllers.RNSApp.createService(f)
+POST        /:f/rns/updateRequire              mobile.controllers.RNSApp.updateRequire(f)
+POST        /:f/rns/updateService              mobile.controllers.RNSApp.updateService(f)
+POST        /:f/rns/uploadServicePic           mobile.controllers.RNSApp.uploadServicePic(f, serviceId:Long?=-1)
+POST        /:f/rns/updateRequireAttachment    mobile.controllers.RNSApp.updateRequireAttachment(f, requireId:Long?=-1, filename:String)
+POST        /:f/rns/deleteMyRequire            mobile.controllers.RNSApp.deleteMyRequire(f)
+POST        /:f/rns/deleteMyService            mobile.controllers.RNSApp.deleteMyService(f)
+POST        /:f/rns/requireDetail              mobile.controllers.RNSApp.getRequireDetail(f)
+POST        /:f/rns/serviceDetail              mobile.controllers.RNSApp.getServiceDetail(f)
+POST        /:f/rns/serviceList                mobile.controllers.RNSApp.getServiceList(f)
+POST        /:f/rns/requireList                mobile.controllers.RNSApp.getRequireList(f)
+
+### 用户
+POST        /:f/user/basicInfo             mobile.controllers.UserApp.getUserBasicInfo(f)
+POST        /:f/user/detailInfo            mobile.controllers.UserApp.getUserDetailInfo(f)
+POST        /:f/user/topList               mobile.controllers.UserApp.getTopUserList(f)
+POST        /:f/user/list                  mobile.controllers.UserApp.getUserList(f)
+GET         /:f/skilltag/queryByKeyword    mobile.controllers.UserApp.getSkillTagListByKeyword(f,keyword: String)      
+GET         /:f/skilltags                  mobile.controllers.UserApp.getIndustryTagList(f)
+GET         /:f/smalltag                   mobile.controllers.UserApp.getSkillTagListByIndustry(f,i:Long)
+POST        /:f/user/onlineTranslatorList  mobile.controllers.UserApp.getOnlineTranslatorList(f)
+
+### 用户设置
+POST        /:f/user/usersetting/changePassword                  mobile.controllers.UserSettingApp.changePassword(f)
+GET         /:f/user/usersetting/safetyReminderCfg               mobile.controllers.UserSettingApp.querySafetyReminderCfg(f)
+POST        /:f/user/usersetting/modifySafetyReminder            mobile.controllers.UserSettingApp.modifySafetyReminder(f)
+POST        /:f/user/usersetting/bindMobilePhone                 mobile.controllers.UserSettingApp.bindMobilePhone(f)
+POST        /:f/user/usersetting/phoneNumExists                  mobile.controllers.UserSettingApp.phoneNumExists(f)
+POST        /:f/user/usersetting/sendPhoneVerificationCode       mobile.controllers.UserSettingApp.sendPhoneVerificationCode(f)
+GET         /:f/user/usersetting/connectedSNS                    mobile.controllers.UserSettingApp.queryConnectedSNS(f)
+GET         /:f/user/usersetting/bindSNSPage                     mobile.controllers.UserSettingApp.toBindSNSPage(f,p: String, r: String)
+POST        /:f/user/usersetting/unbindSNS                       mobile.controllers.UserSettingApp.unbindSNS(f)
+
+### 评论
+POST        /:f/comment/info               mobile.controllers.CommentApp.getCommentInfo(f)
+POST        /:f/comment/list               mobile.controllers.CommentApp.getCommentList(f)
+POST        /:f/comment/detail             mobile.controllers.CommentApp.getCommentDetail(f)
+POST        /:f/comment/comment            mobile.controllers.CommentApp.comment(f)
+POST        /:f/comment/reply              mobile.controllers.CommentApp.reply(f)
+
+### 个人
+POST        /:f/self/info                  mobile.controllers.SelfInfoApp.getSelfInfo(f)
+POST        /:f/self/completeInfo          mobile.controllers.SelfInfoApp.completeUserInfo(f)    
+POST        /:f/self/saveJobExp            mobile.controllers.SelfInfoApp.saveJobExp(f) 
+POST        /:f/self/saveEducationExp      mobile.controllers.SelfInfoApp.saveEducationExp(f)  
+POST        /:f/self/addEduExp             mobile.controllers.SelfInfoApp.addEduExp(f)
+POST        /:f/self/deleteEduExp          mobile.controllers.SelfInfoApp.deleteEduExp(f)
+POST        /:f/self/addJobExp             mobile.controllers.SelfInfoApp.addJobExp(f)
+POST        /:f/self/deleteJobExp          mobile.controllers.SelfInfoApp.deleteJobExp(f)
+POST        /:f/user/saveUserInfo          mobile.controllers.SelfInfoApp.saveUserInfo(f)
+POST        /:f/user/saveServiceTag        mobile.controllers.SelfInfoApp.saveServiceTag(f)
+POST        /:f/user/savePersonalInfo      mobile.controllers.SelfInfoApp.savePersonalInfo(f)
+POST        /:f/user/uploadAvatar          mobile.controllers.SelfInfoApp.uploadAvatar(f)
+
+### 消息
+POST        /:f/self/msg/newNum            mobile.controllers.MessageApp.newMsgNum(f)
+POST        /:f/self/msg/markRead          mobile.controllers.MessageApp.markRead(f)
+POST        /:f/self/msg/markRead2         mobile.controllers.MessageApp.markRead2(f)
+POST        /:f/self/msg/chatMessage       mobile.controllers.MessageApp.getChatMessage(f)
+POST        /:f/self/msg/systemMessage     mobile.controllers.MessageApp.getSystemMessage(f)
+POST        /:f/user/msg/delete            mobile.controllers.MessageApp.deleteMessage(f)
+POST        /:f/user/msg/deletes           mobile.controllers.MessageApp.deleteMessages(f)
+
+### 群
+POST        /:f/group/createTranslateGroup   mobile.controllers.GroupApp.createTranslateGroup(f)
+POST        /:f/group/getGroupMember         mobile.controllers.GroupApp.getGroupMember(f)
+POST        /:f/group/list                   mobile.controllers.GroupApp.getGroupList(f)
+POST        /:f/group/detail                 mobile.controllers.GroupApp.getGroupDetail(f)
+POST        /:f/group/myGroupList            mobile.controllers.GroupApp.getMyGroupList(f)
+POST        /:f/group/createNormalGroup      mobile.controllers.GroupApp.createNormalGroup(f)
+POST        /:f/group/updateNormalGroup      mobile.controllers.GroupApp.updateNormalGroup(f)
+POST        /:f/group/updateGroupAvatar      mobile.controllers.GroupApp.updateGroupAvatar(f,groupId:Long)
+POST        /:f/group/inviteJoinGroup        mobile.controllers.GroupApp.inviteJoinGroup(f)
+POST        /:f/group/agreeJoinGroupInvite   mobile.controllers.GroupApp.agreeJoinGroupInvite(f)
+POST        /:f/group/joinPublicGroup        mobile.controllers.GroupApp.joinPublicGroup(f)
+POST        /:f/group/applyJoinGroup         mobile.controllers.GroupApp.applyJoinGroup(f)
+POST        /:f/group/agreeJoinGroupApply    mobile.controllers.GroupApp.agreeJoinGroupApply(f)
+POST        /:f/group/removeGroupMember      mobile.controllers.GroupApp.removeGroupMember(f)
+POST        /:f/group/quitGroup              mobile.controllers.GroupApp.quitGroup(f)
+POST        /:f/group/deleteGroup            mobile.controllers.GroupApp.deleteGroup(f)
+POST        /:f/group/createMultiCommunicate mobile.controllers.GroupApp.createMultiCommunicate(f)
+POST        /:f/group/updateGroupName        mobile.controllers.GroupApp.updateGroupName(f)
+POST        /:f/group/inviteJoinMultiCommunicate  mobile.controllers.GroupApp.inviteJoinMultiCommunicate(f)
+
+### 聊天
+POST        /:f/self/chat/sendFile          mobile.controllers.ChatApp.sendChatFile(f,filename:String,receiverId:String,filetype:String?="file",multimediaLength:String?=null)
+POST        /:f/chat/autoTranslate          mobile.controllers.ChatApp.autoTranslate(f)
+
+### 圈
+POST        /:f/circle/inviteFriend        mobile.controllers.FriendsApp.inviteFriend(f)
+POST        /:f/circle/batchInviteFriend   mobile.controllers.FriendsApp.batchInviteFriend(f)
+POST        /:f/circle/acceptInvite        mobile.controllers.FriendsApp.acceptInvite(f)
+POST        /:f/circle/friendList          mobile.controllers.FriendsApp.getFriends(f)
+POST        /:f/circle/deleteFriend        mobile.controllers.FriendsApp.deleteFriend(f)
+
+### 其他
+GET         /:f/introImgs                  mobile.controllers.MobileApp.getIntroImgs(f)
+GET         /:f/hotKeywords                mobile.controllers.MobileApp.getHotKeywords(f)
+POST        /$f<(android)>/clientVersion   mobile.controllers.MobileApp.getClientVersion(f)
+POST        /:f/uploadLog                  mobile.controllers.MobileApp.uploadLog(f,comment:String)
+POST        /:f/hotCountryList             mobile.controllers.MobileApp.getHotCountryList(f)
+
+### 登录、注册
+POST        /:f/login                      mobile.controllers.AuthApp.login(f)
+GET         /:f/thirdPartyLogin            mobile.controllers.AuthApp.toThirdPartyLoginPage(f,p: String, r: String)
+POST        /:f/logout                     mobile.controllers.AuthApp.logout(f)
+POST        /:f/register                   mobile.controllers.AuthApp.register(f)
+POST        /:f/forgetPassword             mobile.controllers.AuthApp.forgetPassword(f)
+POST        /:f/validateEmailExist         mobile.controllers.AuthApp.validateEmailExist(f)

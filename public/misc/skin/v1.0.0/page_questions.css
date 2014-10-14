@@ -1,0 +1,18 @@
+@charset "utf-8";
+/*
+* @description: 常见问题样式
+* @author: Young Foo (young.foo@helome.com)
+* @update: Young Foo (young.foo@helome.com)
+*/
+
+.doc-block{
+	margin: 5px 0 15px 0;
+}
+
+.doc-block p{
+	margin-left: 15px;
+}
+
+.doc-block .box-sub-title{
+	font-weight: bold;
+}

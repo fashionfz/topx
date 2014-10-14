@@ -1,0 +1,180 @@
+@charset "utf-8";
+/*
+ * @description: 评价回复
+ * @author: YoungFoo(young.foo@helome.com)
+ * @update: YoungFoo(young.foo@helome.com)
+ * @data: 2013/11/1
+ */
+
+/****** comment-top *****/
+.comment-top {
+	border:1px solid #d4d9df;
+	border-radius: 5px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.comment-top .search-left {
+	width: 114px;
+}
+
+.comment-top .search-center {
+	width: 780px;
+	text-align: left;
+}
+.comment-top .search-center .country {
+	margin-left: 10px;
+	vertical-align: middle;
+}
+.comment-top .search-center .skill{
+	margin-top: 15px;
+}
+.comment-top .search-center .skill-title{
+	float: left;
+	color: #707070;
+}
+.comment-top .search-center .skill a {
+    margin: 0 5px 5px 0;
+}
+
+.service-top{
+	margin-bottom: 20px;
+}
+
+.service-top .reqSer-info{
+	width: 575px;
+	padding-left: 20px;
+}
+/******* comment-content ****************/
+.comment-reply{
+	border-top: 1px dotted #d4d9df;
+	padding: 20px;
+}
+
+.comment-reply .portrait{
+	float: left;
+	width: 90px;
+}
+
+.comment-reply .portrait-img {
+	height: 88px;
+	width: 88px;
+	overflow: hidden;
+	position: relative;
+	border: 1px solid #ddd;
+    border-radius: 44px;
+	background: #eee;
+}
+
+.comment-reply .portrait-img img {
+	height: 80px;
+	width: 80px;
+    border-radius: 40px;
+	margin: 4px auto auto 4px;
+}
+
+.comment-reply .portrait-name{
+	font-size: 16px;
+	color: #4083a9;
+	text-align: center;
+	font-weight: bold;
+    width: 90px;
+    margin-top: 5px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.comment-reply .comment{
+	border-radius: 5px;
+	border: 1px solid #d4d9df;
+	background-color: #fff;
+	margin-left: 120px;
+	position: relative;
+}
+
+.comment-reply .comment-content{
+	
+}
+
+.comment .comment-title{
+	padding: 15px 20px 8px 20px;
+    height: 18px;
+}
+.comment .comment-title .star-title{
+	color: #627690;
+	vertical-align: middle;
+	margin: 0px 0px 0px 5px;
+}
+.comment .comment-title .icon-star-base,
+.comment .comment-title .date{
+	vertical-align: middle;
+}
+
+.comment .comment-title i{
+	height: 15px;
+	width: 15px;
+	display: inline-block;
+	margin-right: 5px;
+	background: url(i/icon-red.png) no-repeat -137px -131px;
+	position: relative;
+	top: 3px;
+}
+.comment .good i{
+    background-position: -103px -131px;
+}
+.comment .neutral i{
+    background-position: -120px -131px;
+}
+.comment .bad i{
+    background-position: -137px -131px;
+}
+
+.comment .comment-title .date,
+.comment .comment-reply .finish-date{
+	color: #91a0b3;
+	margin-left: 10px;
+}
+
+.comment .comment-content{
+	padding: 0px 22px 15px 22px;
+}
+.comment .comment-content .item,
+.comment-reply .finish-content{
+    word-wrap: break-word;
+    color: #40526a;
+    word-break: break-all;
+}
+
+.comment-reply .finish-content{
+    display: inline-block;
+    max-width: 741px;
+}
+
+.comment-reply .start,
+.comment-reply .finish{
+	margin: 10px 0px;
+}
+
+.comment-reply .finish{
+	position: relative;
+	min-height: 25px;
+}
+.comment-reply .finish .finish-main{
+	display: inline-block;
+	vertical-align: middle;
+}
+.comment-reply .finish>a{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 8px;
+}
+.comment-reply .finish img{
+	display: block;
+}
+.comment-reply .finish>a,
+.comment-reply .finish img{
+	width: 25px;
+	height: 25px;
+}
+.comment-reply .start .comment-reply-input{
+	*width: 97%;
+}

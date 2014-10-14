@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+<fields>
+		<field name="country" type="text_ik" stored="true" indexed="true"/>
+		<field name="educationExp" type="text_ik" stored="true" indexed="true"/>
+		<field name="job" type="text_ik" stored="true" indexed="true"/>
+		<field name="jobExp" type="text_ik" stored="true" indexed="true"/>
+		<field name="personalInfo" type="text_ik" stored="true" indexed="true"/>
+		<field name="skillsTags" type="text_ik" stored="true" indexed="true"/>
+		<field name="userName" type="text_ik" stored="true" indexed="true"/>
+		<field name="expenses" type="float" stored="true" indexed="true"/>
+		<field name="joinDate" type="long" stored="true" indexed="true"/>
+		<field name="gender" type="int" stored="true" indexed="true"/>
+		<field name="headUrl" type="string" stored="true" indexed="true"/>
+		<field name="dealNum" type="int" stored="true" indexed="true"/>
+		<field name="commentNum" type="int" stored="true" indexed="true"/>
+		<field name="averageScore" type="float" stored="true" indexed="true"/>
+		<field name="userId" type="long" stored="true" indexed="true"/>
+		<field name="isOnline" type="int" stored="true" indexed="true"/>
+		<field name="ipLocal" type="string" stored="true" indexed="true"/>
+		<field name="payType" type="string" stored="true" indexed="true"/>
+</fields>
+</config>

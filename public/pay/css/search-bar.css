@@ -1,0 +1,158 @@
+/*所有有搜索头部页面的样式开始*/
+#top {
+    width: 100%;
+    text-align: center;
+    background: #79a3e1;
+    padding: 20px 0;
+}
+.search  {
+    margin: 0 auto
+}
+/*所有有搜索头部页面的样式结束*/
+
+
+/*搜索框样式开始*/
+.search-form {
+    width: 836px;
+    margin: 0 auto;
+    text-align: left;
+}
+.search-logo-left {
+    position: relative;
+    top: -3px;
+    margin-right: 10px;
+    float: left;
+}
+.search-logo-right {
+    float: left;
+}
+.search-one {
+    position: relative;
+    height: 44px;
+    font-size: 14px;
+    left: 0px;
+}
+.search-one .txt-one {
+    position: absolute;
+    left: 0;
+    top: 0px;
+}
+.search-one .btn-one {
+    position: absolute;
+    left: 475px;
+    top: 0px;
+}
+.search-two {
+    margin-top: 12px;
+}
+.search-two span{
+    float: left;
+    display: inline-block;
+}
+.search-two .search-hot-title{
+    color: #fff;
+}
+.search-two .search-hot-tag{
+    width: 400px;
+    height: 18px;
+    overflow: hidden;
+}
+.search-two .search-hot-tag a {
+    color: #fff;
+    margin-right: 13px;
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+}
+.search-two .search-hot-tag a:hover {
+
+}
+.search-two .search-hot-tag a.red {
+    color: #e06b64;
+}
+.search-two .search-hot-change{
+
+}
+.search-two .hot-tag-place{
+    color: #fff!important;
+    text-decoration: underline!important;
+}
+
+/* 首页search */
+.search-index .search-two .search-hot-tag a {
+    color: #626262;
+}
+
+.search-index .search-two .search-hot-title{
+    color: #626262;
+}
+
+.search-index .search-two .hot-tag-place{
+    color: #5287cd!important;
+    text-decoration: underline!important;
+}
+
+.txt-s-warp {
+    border :3px solid #e3e4e6;
+    border-radius: 5px;
+    display: inline-block;
+}
+.txt-search {
+    border: 1px solid #d3d4d6;
+    width: 505px;
+    height: 22px;
+    line-height: 30px;
+    padding: 5px 0 5px 10px;
+    font-size: 14px;
+    color: #999;
+    background: #fff;  
+}
+
+.btn-search {
+    height: 40px;
+    width: 102px;
+    background: url(i/icon-red.png) left top no-repeat;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+    position: absolute;
+    left: 529px;
+    top: 0px;
+}
+/*.search-one .triangle {
+    border-right: solid 1px #FFF;
+    display: inline-block;
+    background: url(i/icon-red.png) -43px -100px no-repeat;
+    width: 6px;
+    height: 12px;
+    position: absolute;
+    left: -5px;
+    top: 13px;
+    overflow: hidden;
+}*/
+/*搜索框样式结束*/
+
+/*header-nav样式开始*/
+.header-nav{
+    width: 980px;
+    margin: 0 auto;
+}
+.header-nav-line{
+    background-color: #fff;
+    display: inline-block;
+    width: 1px;
+    height: 25px;
+    position: relative;
+    top: 8px;
+}
+
+.header-nav-title{
+    color: #fff;
+    padding: 12px 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/*header-nav样式结束*/

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript">
+
+        var isMobile = {
+            Android: function() {
+                return /Android/i.test(navigator.userAgent);
+            },
+            BlackBerry: function() {
+                return /BlackBerry/i.test(navigator.userAgent);
+            },
+            iOS: function() {
+                return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+            },
+            Windows: function() {
+                return /IEMobile/i.test(navigator.userAgent);
+            },
+            any: function() {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
+            }
+        };
+
+        if(isMobile.iOS()) {
+            alert("iOS");
+        }else if(isMobile.Android()){
+            alert("Android");
+        }else{
+            alert("detect failure");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

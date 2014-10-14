@@ -1,0 +1,47 @@
+@(detail:vo.ExpertDetail,serviceDetails:List[vo.ServiceDetailVO])
+
+
+@main("Ta的服务-- helome服务交流平台"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('developerCss','css');
+    </script>
+} {
+	<div id="content" class="clearfix">
+
+		<div class="developer clearfix">
+			@expert.detailLeft(detail)
+
+            <div class="doc-list developer-detail">
+
+				@expert.tabTop(detail, "service")
+				
+				<ul class="service-block clearfix">
+<!-- 						<li class="service-item">
+							<img src="">
+							<div class="service-main">
+								<div class="service-info">
+									<div class="service-price">￥12</div>
+									<div class="service-star">
+										<span class="icon icon-star-base" title="5分">
+	                                        <span class="icon icon-star-on" style=""></span>
+	                                    </span>
+	                                    <span class="star-num"></span>
+									</div>
+								</div>
+								<div class="service-intro"></div>
+							</div>
+						</li> -->
+
+				</ul>
+				
+				<div class="page page-bottom"></div>	
+            </div>
+		</div>
+	</div>
+	<!--搜索中间结束-->
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('developerServiceJs','js');
+    </script>
+}

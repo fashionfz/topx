@@ -1,0 +1,112 @@
+@(detail:vo.GroupDetail)
+@import org.joda.time.DateTime
+@import models.Group.GroupPriv
+@main("群组详情 -- helome服务交流平台"){
+    <style type="text/css">
+        #banner-img{
+            background-image: url(@detail.getGroup().getBackgroudUrl());
+        }
+    </style>
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('groupDetailCss','css');
+    </script>
+} {
+    <div class="banner">
+        <div id="banner-img"></div>
+        <img id="banner-img-ie" src="@detail.getGroup().getBackgroudUrl()">
+    <div class="banner-inner container">
+            <div class="banner-left">
+                <img src="@detail.getGroup().headUrl" />
+
+                <div class="banner-info">
+                    <h1>@detail.getGroup().groupName</h1>
+                    <div class="banner-content">
+                        <span>分类：@detail.getGroup().industryName</span>
+                        <span>成员数：@{detail.getGroup().countMem}人</span>
+                        <span>创建时间：@{new DateTime(detail.getGroup().createDate).toString("yyyy-MM-dd")}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner-right">
+                @if(detail.getGroup().getIsJoin() == true) {
+                <div class="btn-default btn-lg btn-green btn-contact" group-id="@detail.getGroup().getId()" group-name="@detail.getGroup().getGroupName()" group-islock="@GroupPriv.APPLY.name().equalsIgnoreCase(detail.getGroup().getGroupPriv())"><i class="index-icon icon-btn-chat"></i>群 聊</div>
+                } else { 
+                <div class="btn-default btn-lg btn-green btn-join" group-id="@detail.getGroup().getId()" group-name="@detail.getGroup().getGroupName()" group-islock="@GroupPriv.APPLY.name().equalsIgnoreCase(detail.getGroup().getGroupPriv())"></i>加 入</div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="clearfix">
+	@if(detail.getGroupOwner()!=null && detail.getGroupOwner().getUserId()!=null){
+        <div class="group-left">
+            <div class="panel">
+                <div class="panel-title">群主信息</div>
+                <div class="panel-content">
+                    <div class="group-top clearfix">
+                        <a href="@routes.ExpertApp.detail(detail.getGroupOwner().getUserId())" target="_blank"><img src="@detail.getGroupOwner().getHeadUrl()" /></a>
+                        <div class="group-info">
+                            <a href="@routes.ExpertApp.detail(detail.getGroupOwner().getUserId())" target="_blank" class="name"><strong>@detail.getGroupOwner().getUserName()</strong></a>
+                            <div class="job">@detail.getGroupOwner().getJob()</div>
+                            <div class="star">
+                                <span class="icon icon-star-base">
+                                    <span class="icon icon-star-on" style="width:@{detail.getGroupOwner().getAverageScore()*20}%"></span>
+                                </span>
+                                <span class="star-num">(<a href="@routes.ExpertApp.detail(detail.getGroupOwner().getUserId())#comments" target="_blank">@detail.getGroupOwner().getCommentCount()</a>)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+		}
+        <div class="group-right">
+            <div class="doc-list developer-detail">
+                <div class="doc-list-block">
+                    <h2><em></em><span class="title">群说明</span></h2>
+                    <div class="content">
+                        <pre>@detail.getGroup().groupInfo</pre>
+                    </div>
+                </div>
+                <div class="doc-list-block">
+                    <h2><em></em><span class="title">群标签</span></h2>
+                    <div class="content clearfix skill">
+                        @for(skilltag<-detail.getGroup().tags) {
+                        <!-- <a href="###">@skilltag</a> -->
+                            <span>@skilltag</span>
+                        }
+                    </div>
+                </div>
+                <div class="doc-list-block">
+                    <h2><em></em><span class="title">群成员</span></h2>
+                    <div class="content J-group-member-box">
+                        @for(member<-detail.getGroupMemberList()) {
+                        <div class="group-member clearfix">
+                            <a href="@routes.ExpertApp.detail(member.getUserId())" target="_blank"><img src="@member.getMediumHeadUrl()" /></a>
+                            <div class="group-info">
+                                <div><a href="@routes.ExpertApp.detail(member.getUserId())" target="_blank"><strong>@member.getUserName()</strong></a>@member.getJob()</div>
+                                <div class="group-intro">
+                                    @member.getPersonalInfo()
+                                </div>
+                            </div>
+                        </div>
+                        }
+                        <div class="mt20 mb20 J-load-wrapper">
+                            <div class="btn-default btn-white btn-lg load-more-btn" id="load-more-btn" group-id="@detail.getGroup().getId()">加载更多</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+	<script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('groupDetailJs','js');
+	</script>
+
+}

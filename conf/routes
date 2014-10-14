@@ -1,0 +1,420 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                                                  controllers.Application.index()
+GET         /timezone                                          controllers.Application.setTimeZoneOffset2Session()
+
+
+#CDN
+#GET         //172.16.4.96/topx/assets/*file                   controllers.Assets.at(path="/public", file)
+#GET         //115.28.44.61/topx/assets/*file                  controllers.Assets.at(path="/public", file)
+#NONE CDN
+GET          /assets/*file                  				   controllers.Assets.at(path="/public", file)
+
+
+GET         /$file<FaustCplus.swf>                			   controllers.Assets.at(path="/public", file)
+GET         /$file<no190x190.jpg>                			   controllers.Assets.at(path="/public", file)
+GET         /$file<crossdomain.xml>                			   controllers.Assets.at(path="/public", file)
+GET         /$file<expressInstall.swf>                		   controllers.Assets.at(path="/public", file)
+
+
+
+# charge center
+->          /charge                                            charge.Routes
+# system manager
+->          /system											   system.Routes
+# 手机移动端
+->          /mobile     									   mobile.Routes
+
+
+#个人信息之基本资料
+GET         /user/userdetail/base                              controllers.user.UserDetailApp.baseview()
+#个人信息之上传头像
+GET         /user/userdetail/userhead                          controllers.user.UserDetailApp.userhead()
+#个人信息之职业生涯
+GET         /user/userdetail/workinfo                          controllers.user.UserDetailApp.workinfo()
+#个人信息之教育经历
+GET         /user/userdetail/eduinfo                           controllers.user.UserDetailApp.eduinfo()
+#保存个人信息
+POST        /user/userdetail/personalinfo                      controllers.user.UserDetailApp.savePersonalInfo()
+
+####################海外简历个人信息 for 英文版
+#个人信息之基本资料
+GET         /resume/base                              	      controllers.user.UserResumeApp.baseview()
+#个人信息之头像
+GET         /resume/userhead                              	  controllers.user.UserResumeApp.userhead()
+#个人信息之职业生涯
+GET         /resume/workinfo                                  controllers.user.UserResumeApp.workinfo()
+#个人信息之教育经历
+GET         /resume/eduinfo                                   controllers.user.UserResumeApp.eduinfo()
+#保存个人信息
+POST        /resume/personalinfo                              controllers.user.UserResumeApp.savePersonalInfo()
+
+
+#####################################################
+
+#历史记录#聊天记录#会话记录
+GET         /record/person                               controllers.user.UserRecordApp.user()
+GET         /record/person_detail                        controllers.user.UserRecordApp.userDetail()
+GET         /record/person_search                        controllers.user.UserRecordApp.userSearch()
+
+GET         /record/group                                controllers.user.UserRecordApp.group()
+GET         /record/group_detail                         controllers.user.UserRecordApp.groupDetail()
+GET         /record/group_search                         controllers.user.UserRecordApp.groupSearch()
+
+
+#收藏夹
+GET         /user/favorite                                    controllers.user.UserFavoriteApp.view()
+#用户收藏
+GET         /user/addFavorite/:userId                         controllers.user.UserFavoriteApp.addFavorite(userId : Long)
+GET         /user/deleteFavorite/:userId                      controllers.user.UserFavoriteApp.deleteFavorite(userId : Long)
+GET         /user/favorite/queryFavorite                      controllers.user.UserFavoriteApp.queryFavorite()
+# 个人消息
+GET         /user/usermessage                                 controllers.user.UserMessageApp.list()
+
+#群组 （我建立，我加入的，多人会话）
+GET         /user/group/groupList                             controllers.user.UserGroupsApp.list()
+#群组 - 填写信息
+GET         /user/group/writeInfo                             controllers.user.UserGroupsApp.writeInfo()
+#群组 - 编辑信息
+GET         /user/group/editInfo                              controllers.user.UserGroupsApp.editInfo()
+#群组 - 我加入的
+GET         /user/group/join                                  controllers.user.UserGroupsApp.join()
+#群组 - 多人会话
+GET         /user/group/multi                                 controllers.user.UserGroupsApp.multi()
+#群组 - 成员列表
+GET         /user/group/memberList                            controllers.user.UserGroupsApp.memberList()
+#群组 - 添加成员
+GET         /user/group/addMember                             controllers.user.UserGroupsApp.addMember()
+#群组 - 添加成员成功
+GET         /user/group/addMemberSuccess                      controllers.user.UserGroupsApp.addMemberSuccess()
+#群组 - 创建与修改群组
+POST        /user/group/createOrUpdateGroup                   controllers.user.UserGroupsApp.createOrUpdateGroup()
+#群组 - 上传头像
+POST        /user/group/uploadavatar                          controllers.user.UserGroupsApp.uploadAvatar()
+#群组 - 上传头部背景
+POST        /user/group/uploadHeadBackGround                  controllers.user.UserGroupsApp.uploadHeadBackGround()
+#群组 - 分类查询用户建立的群组（类别：公开自由加入、需要申请加入）
+GET         /user/group/queryCreatedGroups                    controllers.user.UserGroupsApp.queryCreatedGroups()
+#群组 - 分类查询用户加入的群组（类别：公开自由加入、需要申请加入）
+GET         /user/group/queryJoinedGroups                     controllers.user.UserGroupsApp.queryJoinedGroups()
+#群组 - 查询临时群组（包括翻译群组）
+GET         /user/group/queryTempGroups                       controllers.user.UserGroupsApp.queryTempGroups()
+#群组 - 根据群组id查询群组
+GET         /user/group/queryGroup/:groupId                   controllers.user.UserGroupsApp.queryGroupById(groupId : Long)
+#群组 - 根据群组id删除群组（解散群组）
+GET         /user/group/deleteGroup/:groupId                  controllers.user.UserGroupsApp.deleteGroup(groupId : Long)
+#群组 - 移除群组成员
+GET         /user/group/removeMember                 		  controllers.user.UserGroupsApp.removeMember()
+#群组 - 退出群组
+GET         /user/group/quitGroup/:groupId                    controllers.user.UserGroupsApp.quitGroup(groupId : Long)
+
+#################### 多人会话  #################################
+#群组 - 创建与修改群组
+POST        /user/group/createMultiCommunicate                controllers.user.UserGroupsApp.createMultiCommunicate()
+POST        /user/group/updateMultiCommunicateName            controllers.user.UserGroupsApp.updateMultiCommunicateName()
+
+
+# 圈
+GET         /user/at                                           controllers.user.FriendsApp.list()
+# 添加圈中好友
+GET         /user/at/addFriend                       		   controllers.user.FriendsApp.addFriend()
+# 删除圈中好友,isBothDeleted为true表示双方都删除
+GET         /user/at/deleteFriend/:friendId/:isBothDeleted     controllers.user.FriendsApp.deleteFriend(friendId : Long,isBothDeleted : Boolean)
+# 分页查询用户对应的圈中好友
+GET         /user/at/queryFriends                      		   controllers.user.FriendsApp.queryFriends()
+# 邀请好友
+POST         /user/at/inviteFriends                      	   controllers.user.FriendsApp.inviteFriends()
+##########################邀请###########################
+# 邀请
+GET         /user/invitation                                   controllers.user.InvitationApp.list()
+
+#######################服务和需求#########################
+#需求
+GET        /require/detail/:id                                 controllers.require.RequireApp.detail(id:Long)
+GET        /require/search                                     controllers.require.RequireApp.search()
+GET        /require                                            controllers.require.RequireApp.index()
+#服务
+GET        /services/detail/:id                                controllers.services.ServicesApp.detail(id:Long)
+GET        /services/search                                    controllers.services.ServicesApp.search()
+GET        /services                                           controllers.services.ServicesApp.index()
+
+#个人中心需求
+GET        /user/require                                       controllers.user.UserRequireApp.list()
+GET        /user/require/write                                 controllers.user.UserRequireApp.write()
+#个人中心服务
+GET        /user/service                                       controllers.user.UserServiceApp.list()
+GET        /user/service/write                                 controllers.user.UserServiceApp.write()
+#创建或修改服务
+POST       /user/service/createOrUpdateService                 controllers.user.UserServiceApp.createOrUpdateService()
+#服务的查询
+POST       /user/service/queryServices                		   controllers.user.UserServiceApp.queryServices()
+#服务的删除
+POST       /user/service/delete/:serviceId				       controllers.user.UserServiceApp.deleteService(serviceId: Long)
+
+
+#创建或修改需求
+POST       /user/require/createOrUpdateRequire                 controllers.user.UserRequireApp.createOrUpdateRequire()
+#需求的查询
+POST       /user/require/queryRequires                		   controllers.user.UserRequireApp.queryRequires()
+#需求的删除
+POST       /user/require/delete/:requireId				       controllers.user.UserRequireApp.deleteRequire(requireId: Long)
+#Ta的服务
+GET        /user/service/servicesOfTa                          controllers.services.ServicesApp.servicesOfTa()
+#Ta的需求
+GET        /user/require/requiresOfTa                          controllers.require.RequireApp.requiresOfTa()
+
+#######################个人中心#########################
+# 个人设置
+GET         /user/usersetting                                  controllers.user.UserSettingApp.detail()
+# 个人SNS
+GET         /user/sns                                          controllers.user.UserSettingApp.queryConnectedSNS()
+# 个人第三方登录设置
+GET         /user/thirdaccountsetting                          controllers.user.UserSettingApp.thirdaccountsetting()
+# 头像上传
+POST        /user/uploadavatar                                 controllers.user.UserAvatarApp.upload()
+#显示头像
+GET         /user/avatar/:id/:size                             controllers.user.UserAvatarApp.show(id: Long, size: Int)
+#用户设置
+#由于安全问题，禁止用户修改email
+#POST        /user/usersetting/changeEmail                     controllers.user.UserSettingApp.changeEmail()
+POST        /user/usersetting/changePassword                   controllers.user.UserSettingApp.changePassword()
+POST        /user/usersetting/modifySafetyReminder             controllers.user.UserSettingApp.modifySafetyReminder()
+POST        /user/usersetting/modifyBookingReminder            controllers.user.UserSettingApp.modifyBookingReminder()
+POST        /user/usersetting/bindMobilePhone                  controllers.user.UserSettingApp.bindMobilePhone()
+POST        /user/usersetting/phoneNumExists                   controllers.user.UserSettingApp.phoneNumExists()
+POST        /user/usersetting/sendPhoneVerificationCode        controllers.user.UserSettingApp.sendPhoneVerificationCode()
+POST        /user/usersetting/completeUserInfo                 controllers.user.UserSettingApp.completeUserInfo()
+GET         /user/usersetting/sendEmail                        controllers.user.UserSettingApp.sendEmail()
+#根据email获取用户id
+POST        /user/userAvatar/queryIdByEmail                    controllers.user.UserAvatarApp.queryIdByEmail()
+#向原手机号发送邮件成功页面
+GET         /user/usersetting/phonemailsuccess				   controllers.user.UserSettingApp.phoneMailSuccess()
+
+#修改手机号成功页面
+GET         /user/usersetting/phoneresetsuccess				   controllers.user.UserSettingApp.phoneResetSuccess()
+#修改手机页面
+GET		    /user/usersetting/phonechange/:key				   controllers.user.UserSettingApp.phoneChange(key)
+
+#向原手机发送验证码
+POST        /user/usersetting/sendVerificationCodeByPhone      controllers.user.UserSettingApp.sendVerificationCodeByPhone()
+
+#修改手机号
+POST         /user/usersetting/updateMobilePhone               controllers.user.UserSettingApp.updateMobilePhone()
+
+#发送修改链接到用户邮箱
+#POST       /user/usersetting/sendUdpByEmail                   controllers.user.UserSettingApp.sendUdpByEmail()
+
+#绑定新手机
+POST       /user/usersetting/bindNewPhone                      controllers.user.UserSettingApp.bindNewPhone()
+#向新手机号发送验证码
+POST       /user/usersetting/sendVerificationCodeByNewPhone    controllers.user.UserSettingApp.sendVerificationCodeByNewPhone()
+#请求OAuth授权
+GET         /user/requestAuth                                  controllers.user.OAuthApp.requestAuth(p: String, r: String, t:String)
+GET         /user/auth                                         controllers.user.OAuthApp.authBack()
+POST        /user/auth/directLogin                             controllers.user.OAuthApp.directLogin()
+POST        /user/auth/bindAccountLogin                        controllers.user.OAuthApp.bindAccountLogin()
+POST        /user/auth/newAccountLogin                         controllers.user.OAuthApp.newAccountLogin()
+GET         /user/revokeAuth                                   controllers.user.OAuthApp.revokeAuth(p: String, r: String)
+
+#上传附件文件 对应于反馈、建议、服务、需求模块附件上传    type ---> feedback：反馈， suggestion：建议，service：服务，require：需求
+POST        /attach/upload/:type                               controllers.attachment.AttachUploadApp.fileUpload(type: String)
+# 附件下载（本机下载方式）
+GET         /attach/download/:attachId/:type                   controllers.attachment.AttachDownloadApp.fileDownload(attachId: Long,type: String)
+
+
+#文件上传
+#POST        /upload                                            controllers.attachment.FileUploadApp.multipartUpload()
+
+################################################
+#验证码
+GET         /captcha                                           controllers.CaptchaApp.captcha()
+#验证码校验
+POST        /captcha                                           controllers.CaptchaApp.validate()
+################################################
+
+################################################
+#单页
+GET         /aboutus                                           controllers.Application.aboutus()
+GET         /aboutme2me                                        controllers.Application.aboutMeToMe()
+GET         /groupagreement                                    controllers.Application.groupAgreement()
+GET         /questions                                         controllers.Application.frequentlyQuestions()
+GET         /feedback                                          controllers.Application.feedback()
+GET         /tradeprocess                                      controllers.Application.tradeprocess()
+GET         /legalnotice                                       controllers.Application.legalnotice()
+GET         /regagreement                                      controllers.Application.regAgreement()
+GET         /serviceagreement                                  controllers.Application.serviceAgreement()
+GET         /wap                                               controllers.Application.wap()
+GET 		/phone											   controllers.Application.phone()
+GET 		/qrcodetransfer									   controllers.Application.qrcodeTransfer()
+################################################
+
+################################################
+#注册 && 登录
+GET         /register                                          controllers.Application.register()
+GET         /register/:uid                                     controllers.Application.invitedRegister(uid: String)
+GET         /regsuccess                                        controllers.Application.regsuccess()
+POST        /register                                          controllers.user.UserApp.save()
+POST        /login                                             controllers.user.UserApp.login()
+GET         /login                                             controllers.Application.login()
+POST        /forgetMe                                          controllers.user.UserApp.forgetMe()
+
+#################################################
+GET         /logout                                            controllers.user.UserApp.logout()
+POST        /emailexists                                       controllers.user.UserApp.emailexists()
+
+GET         /loginskip                                         controllers.Application.loginskip()
+
+
+################################################
+
+################################################
+#忘记密码
+GET         /forgetpwd                                         controllers.Application.forgetpwd()
+GET         /sendsuccess                                       controllers.Application.sendsuccess()
+POST        /forgetpwd                                         controllers.ForgetPasswordApp.receiveAddress()
+#重置密码
+GET         /resetpwd/:email/:code                             controllers.Application.resetpwd(email : String, code : String)
+GET         /resetsuccess                                      controllers.Application.resetsuccess()
+POST        /resetpwd                                          controllers.ForgetPasswordApp.resetPassword()
+#重置密码校验不通过
+POST		/resetpwdValidFailure/:email/:code				   controllers.Application.resetpwdValidFailure(email : String, code : String)
+################################################
+#所有标签
+GET         /skilltags                                         controllers.skilltag.SkillTagApp.list()
+GET         /skilltags/tagmore                                 controllers.skilltag.SkillTagApp.listMore()
+GET         /skilltags/query                                   controllers.skilltag.SkillTagApp.AssociativeQuery()
+GET         /skilltags/change                                  controllers.skilltag.SkillTagApp.change(i : Long,seq : Int )
+#专家搜索
+GET         /expertsearch                                      controllers.ExpertApp.search()
+
+#标签完全匹配搜索
+GET         /tagsearch                                         controllers.ExpertApp.searchTag()
+#用户预约专家
+GET         /expert/reserve/:id                                controllers.ExpertApp.reserve(id:Long)
+
+#专家信息                                     
+GET         /expert/expertInfo/:expertId                       controllers.ExpertApp.getExpertInfo(expertId:Long)
+
+
+#专家详情
+GET         /expert/detail/:userId                   		   controllers.ExpertApp.detail(userId:Long)
+#用户的所有服务
+GET         /expert/service/:userId                   		   controllers.ExpertApp.service(userId:Long)
+#用户的所有需求
+GET         /expert/require/:userId                   		   controllers.ExpertApp.require(userId:Long)
+#所有专家
+GET         /expertall                                         controllers.ExpertApp.all()
+#关键词
+GET         /k/keywords                   					   controllers.ExpertApp.listkw()
+
+##################聊天#############################
+
+#实时发起咨询
+GET         /chat/:userId                                      controllers.ChatApp.chat(userId: Long)
+#实时发起咨询 - 聊天记录查询
+GET         /chat/chatMsg/chatMsgQuery                         controllers.ChatApp.chatMsgQuery()
+#判断用户是否在聊天室 
+GET         /chat/whetherInChat/:sendId/:receiveId             controllers.ChatApp.whetherInChat(sendId:Long,receiveId:Long)
+#判断用户是否在线 
+GET         /chat/whetherOnline/:userId                        controllers.ChatApp.whetherOnline(userId:Long)
+#清除聊天数目 
+GET         /chat/cleanChatNum/:userId/:receiveId              controllers.ChatApp.cleanChatNum(userId:Long,receiveId:String)
+#清除群聊天数目 
+GET         /chat/cleanGroupChatNum/:groupId/:receiveId        controllers.ChatApp.cleanGroupChatNum(groupId:String,receiveId:String)
+
+##################咨询评论#############################
+#评论
+POST        /comment/saveComment                               controllers.user.CommentApp.saveComment()
+#回复评论
+POST        /comment/addReply                                  controllers.user.CommentApp.addReply()
+#专家详细信息页面评论列表
+POST        /comment/list                                      controllers.user.CommentApp.list()
+#评论详细页面
+GET         /comment/detail/:id                                controllers.user.CommentApp.detailComment(id : Long)
+####################################################
+#聊天记录
+GET         /msg/queryChatMessage                              ext.msg.controllers.MessageApp.queryChatMessage()
+#未读消息详情
+GET         /msg/queryUnread                                   ext.msg.controllers.MessageApp.queryMessageUnReadAll()
+#聊天记录内容根据条件查询
+GET         /msg/queryChatMessageByCondition                   ext.msg.controllers.MessageApp.queryChatMessageByCondition()
+#聊天记录内容上下文查询
+GET         /msg/queryChatMessageContext                       ext.msg.controllers.MessageApp.queryChatMessageContext()
+#消息中心
+GET         /msg/query                                         ext.msg.controllers.MessageApp.queryMessage()
+#消息中心
+POST         /msg/pushts                                       ext.msg.controllers.MessageApp.pushTS()
+#简历翻译完成通知接口
+POST        /msg/pushrs                                        ext.msg.controllers.MessageApp.pushRS()
+#消息中心poll
+#GET         /msg/poll                                         ext.msg.controllers.MessageApp.pollMsg(times: String)
+#查看新的消息数目
+GET         /msg/new                                           ext.msg.controllers.MessageApp.newMessage()
+#查看未读聊天消息信息
+GET         /msg/chatMsgUnReadInfo                             ext.msg.controllers.MessageApp.chatMsgUnReadInfo()
+#查看通知消息数目
+GET         /msg/notice                                        ext.msg.controllers.MessageApp.noticeMessage()
+#消息中心设置全部为已读
+POST        /msg/updateread                                     ext.msg.controllers.MessageApp.updateRead()
+#消息中心delete
+POST        /msg/delete                                        ext.msg.controllers.MessageApp.deleteMessage()
+#信息中心的tell
+GET         /msg/tell										   ext.msg.controllers.TellApp.tellMessage(messageType:String,jsonObj:String,ids:String)
+#信息中心的tell
+GET         /msg/consultClear								   ext.msg.controllers.TellApp.tellClear()
+#消息中心 群组信息   访问链接与国际组一样（/public/queryAllGroup.do?page=1）
+GET 		/public/queryAllGroup.do						   ext.msg.controllers.MessageApp.allGroupInfo()
+#######################用户反馈#############################
+#用户建议
+POST        /feedback/suggestion                               controllers.feedback.FeedbackApp.addSuggestion()
+#########################################################
+#翻译
+POST        /tl/autotl                                         ext.translate.controllers.TranslateApp.autots()
+#########################################################
+#群组
+#群组首页
+GET         /group                                             controllers.group.GroupApp.group(ind:String?=null,pri:String?=null)
+#群组列表
+GET         /groupList                                         controllers.group.GroupApp.groupList(p:Integer,ind:String?=null,pri:String?=null)
+#群组成员列表
+GET         /group/memberList                                  controllers.group.GroupApp.groupMemberList(p:Integer,groupId:Long)
+#群组详细
+GET         /group/detail/:id                                  controllers.group.GroupApp.groupDetail(id:Long)
+#群组搜索
+GET         /searchgroup                                       controllers.group.GroupApp.searchResult()
+#添加用户和翻译者到群组
+GET        /msg/group/addUserToGroup/:userId/:translatorId     controllers.ChatApp.createTranslateGroup(userId:Long,translatorId:Long)
+#查询群组下面的成员
+GET		  /msg/group/queryUserUnderGroup/:groupId			   controllers.ChatApp.queryUserUnderGroup(groupId:Long)
+#查询群组下面的成员 (提供分页)
+GET		  /msg/group/queryMemberUnderGroup					   controllers.ChatApp.queryMemberUnderGroup()
+#查询当前用户聊过天的联系人或群组
+GET		  /msg/queryRelationship			   				   controllers.ChatApp.queryRelationship()
+# 查询翻译者
+GET       /msg/queryCustomerServices					       controllers.ChatApp.queryTranslatorServices()
+# 群组 - 新增成员
+POST       /msg/group/appendMemberToGroup					   controllers.ChatApp.appendMemberToGroup()
+
+
+#########################################################
+#海外简历 - 新增简历
+POST		/resume/create			   				   		   controllers.user.OverseasResumeApp.create()
+GET			/resume/addTaskForChinese			   			   controllers.user.OverseasResumeApp.addTaskForChinese()
+
+
+#########################################################
+#群主消息接口
+#同意邀请
+GET		/groupmsg/agreeInvit                                    controllers.group.GroupMsgApp.agreeInvit()
+#同意申请
+GET		/groupmsg/agreeApply                                    controllers.group.GroupMsgApp.agreeApply()
+#拒绝
+GET		/groupmsg/reject                                   controllers.group.GroupMsgApp.reject()
+#申请加入
+GET		/groupmsg/apply                                    controllers.group.GroupMsgApp.apply()
+#邀请多人加入
+POST    /groupmsg/invitmembers                             controllers.group.GroupMsgApp.invitMembers()
+

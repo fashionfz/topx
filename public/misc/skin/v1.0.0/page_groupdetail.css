@@ -1,0 +1,161 @@
+/*
+* @description: 开发者详情页样式
+* @author: Young Foo (young.foo@helome.com)
+* @update: Young Foo (young.foo@helome.com)
+*/
+
+.banner{
+	height: 180px;
+	position: relative;
+	background-position: center;
+	overflow: hidden;
+}
+.banner #banner-img{
+	width: 100%;
+	height: 180px;
+	background-position: center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+}
+
+.banner #banner-img-ie{
+	width: 100%;
+	position: absolute;
+	display: none;
+}
+
+.banner-inner{
+	position: absolute;
+	overflow: hidden;
+	top: 0px;
+	left: 50%;
+	margin-left: -490px;
+}
+
+.banner .banner-left{
+	margin: 30px 0px 0px 0px;
+	float: left;
+	width: 600px;
+}
+
+.banner-left img{
+	height: 116px;
+	width: 116px;
+	border:4px solid #e1e1e1;
+	border-radius: 116px;
+	background-color: #fff;
+	float: left;
+}
+
+.banner-info{
+	color: #fff;
+	text-shadow: 0px 0px 3px #000;
+	float: left;
+	margin: 25px;
+}
+
+.banner-info h1{
+	font-size: 25px;
+}
+
+.banner-info .banner-content{
+	margin: 5px 0px;
+}
+
+.banner-info .banner-content span{
+	margin-right: 15px;
+}
+
+
+.banner-right{
+	float: right;
+	margin-top: 65px;
+}
+
+.banner-right .btn-default{
+	width: 80px;
+}
+
+
+.group-left{
+	width: 250px;
+	float: left;
+	position: absolute;
+}
+
+.group-member img,
+.group-top img{
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	float: left;
+}
+
+.group-top .group-info{
+	float: left;
+	width: 150px;
+	margin-left: 10px;
+	line-height: 14px;
+	color: #40526a;
+	font-size: 14px;
+}
+
+.group-member .group-info strong,
+.group-top .group-info .name{
+	color: #3a7cdb;
+	margin-right: 10px;
+}
+.group-top .group-info .name strong{
+	word-break:break-all;
+	word-wrap:break-word;
+}
+.group-top .group-info .job{
+	margin-top: 6px;
+	font-size: 12px;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+.group-top .group-info .star{
+	margin: 12px 0px 5px 0px;
+}
+.group-top .group-info .star-num{
+	color: #3a7cdb;
+	display: inline-block;
+	vertical-align: top;
+}
+.group-intro{
+	font-size: 12px;
+	margin:10px 0px 0px 0px;
+	color: #627690;
+	line-height: 1.6em;
+}
+
+.group-left .skill span{
+	max-width: 202px;
+	overflow: hidden;
+	word-break: break-all;
+	white-space: nowrap;
+	word-wrap: break-word;
+	text-overflow: ellipsis;
+}
+
+.group-right{
+	float: right;
+	margin-left: 20px;
+	width: 710px;
+}
+
+.group-member{
+	padding: 20px 0px;
+	border-bottom: 1px dashed #d4d9df;
+}
+.group-member .group-info{
+	float: left;
+	width: 600px;
+	margin-left: 10px;
+	line-height: 14px;
+	color: #40526a;
+	font-size: 14px;
+}

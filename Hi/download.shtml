@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>下载</title>
+	<link rel="stylesheet" type="text/css" href="style/base.css"/>
+	<link rel="stylesheet" type="text/css" href="style/head.css"/>   
+    <link rel="stylesheet" type="text/css" href="style/footer.css"/>
+  	<link rel="stylesheet" type="text/css" href="style/download.css"/>
+</head>
+
+<body>
+	<div id="wrap">    	 	
+		<!--#include file="head.html"-->
+        <!--下载开始-->
+       	<div class="content">
+        	<div class="dev-cont">
+            	<div class="dev-cont-top cont-top-font">软件下载</div>
+                <div class="dev-cont-left clearfix">
+                	<div class="android-down clearfix">
+                    	<img src="images/icon-7.png" width="135" height="143" alt="安卓下载" />
+                        <div class="android-down-txt">
+                        	<h4>Hi for Android</h4>
+                            <p>版本信息：1.2.12.5</p>
+                            <p>发布日期：2013-11-06</p>
+                            <p>文件大小：5.6M</p>
+                            <p>系统要求：安卓2.5以上</p>
+                            <a href="#"><div class="but-down">下载</div></a>
+                        </div>
+                    </div>
+                    <div class="micro-letter-down">
+                    	<img src="images/icon-9.png" width="126" height="122" alt="微信下载" />
+                        <div class="android-down-txt micro-letter-txt">
+                        	<h4>Hi for Android</h4>
+                            <p>用手机二维码扫描软件拍摄二维码即可快速下载Hi最新Android版</p>                                                    
+                        </div>
+                    </div>
+                </div>
+                <div class="dev-cont-right">
+                	<img src="images/icon-8.png"  width="122" height="145" alt="apple下载" />
+                     <div class="android-down-txt dev-cont-right-txt">
+                        	<h4>Hi for Apple</h4>
+                            <p>版本信息：——</p>
+                            <p>发布日期：2014-05-06</p>
+                            <p>文件大小：——</p>
+                            <p>系统要求：——</p>
+                            <div class="but-down but-apple">敬请期待</div>
+                        </div>
+                </div>
+            </div>
+        </div>       
+        <!--下载开始-->
+          <!--#include file="footer.html"--> 
+    </div>
+</body>
+</html>

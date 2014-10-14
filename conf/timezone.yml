@@ -1,0 +1,404 @@
+- !!vo.TimeZone
+  uid: AB1ABF0F7C3CF1FF9D7EE15A85DC458C
+  offset: 780
+  displayName: (UTC+13:00)萨摩亚群岛
+- !!vo.TimeZone
+  uid: 3020D0FD98DC25BA4AA4AD2F490B9921
+  offset: 780
+  displayName: (UTC+13:00)努库阿洛法
+- !!vo.TimeZone
+  uid: 907EFB7934A637104BD49D704D418FA2
+  offset: 720
+  displayName: (UTC+12:00)斐济
+- !!vo.TimeZone
+  uid: A2E889DD96EF1B1D8E8B24D27F84DE35
+  offset: 720
+  displayName: (UTC+12:00)彼得罗巴甫洛夫斯克-堪察加 - 旧用
+- !!vo.TimeZone
+  uid: F78423FDA62DC2A4A1FF21E51DA35A1A
+  offset: 720
+  displayName: (UTC+12:00)马加丹
+- !!vo.TimeZone
+  uid: BBB7509DCDE6B4C8C89FDA2E1BB34713
+  offset: 720
+  displayName: (UTC+12:00)奥克兰，惠灵顿
+- !!vo.TimeZone
+  uid: C76EDFCE82515F18227C438A8E0098CD
+  offset: 720
+  displayName: (UTC+12:00)协调世界时+12
+- !!vo.TimeZone
+  uid: CE7BE5CE5DE49CD9940C6D22B03EAC44
+  offset: 660
+  displayName: (UTC+11:00)所罗门群岛，新喀里多尼亚
+- !!vo.TimeZone
+  uid: 70DAC3684115CD0CFEFB6B4680B492B4
+  offset: 660
+  displayName: (UTC+11:00)符拉迪沃斯托克
+- !!vo.TimeZone
+  uid: 0732B6638AC8116019571B3457871A62
+  offset: 600
+  displayName: (UTC+10:00)堪培拉，墨尔本，悉尼
+- !!vo.TimeZone
+  uid: A3E71AC8131E6B8E35BE262720484FE5
+  offset: 600
+  displayName: (UTC+10:00)布里斯班
+- !!vo.TimeZone
+  uid: E2D1A03FC554106A9ABCDC3DDE478088
+  offset: 600
+  displayName: (UTC+10:00)霍巴特
+- !!vo.TimeZone
+  uid: 13EBB560A0C806D65DDA02CE8F64A4B9
+  offset: 600
+  displayName: (UTC+10:00)关岛，莫尔兹比港
+- !!vo.TimeZone
+  uid: 033B932EE74B466438F83D3BB77D7A91
+  offset: 600
+  displayName: (UTC+10:00)雅库茨克
+- !!vo.TimeZone
+  uid: 0D85AF793DC5879439DCFD075B94BD9D
+  offset: 570
+  displayName: (UTC+09:30)达尔文
+- !!vo.TimeZone
+  uid: AFF6B24CD847745996A92CB9C315DC3D
+  offset: 570
+  displayName: (UTC+09:30)阿德莱德
+- !!vo.TimeZone
+  uid: 7AB6C0332FB711033CF81E0BC860677C
+  offset: 540
+  displayName: (UTC+09:00)首尔
+- !!vo.TimeZone
+  uid: D88D772BB130D0C2A00535BE38E4DF9C
+  offset: 540
+  displayName: (UTC+09:00)伊尔库茨克
+- !!vo.TimeZone
+  uid: 904BB0EDD64297E2F5D41EF69FCE2E6D
+  offset: 540
+  displayName: (UTC+09:00)大阪，札幌，东京
+- !!vo.TimeZone
+  uid: B61F76930B16D90B06FE68E38A61219E
+  offset: 480
+  displayName: (UTC+08:00)北京，重庆，香港特别行政区，乌鲁木齐
+- !!vo.TimeZone
+  uid: DFB1BF96BE9624B6A2B5207CFF540C7F
+  offset: 480
+  displayName: (UTC+08:00)克拉斯诺亚尔斯克
+- !!vo.TimeZone
+  uid: 4C9CAFFA3A13CF90E0E359B06A5836C1
+  offset: 480
+  displayName: (UTC+08:00)吉隆坡，新加坡
+- !!vo.TimeZone
+  uid: C3B0C947A0780D6EBA1BC7510FD4C193
+  offset: 480
+  displayName: (UTC+08:00)台北
+- !!vo.TimeZone
+  uid: A707DEE716527B44C7C1AAF8B766A443
+  offset: 480
+  displayName: (UTC+08:00)乌兰巴托
+- !!vo.TimeZone
+  uid: 67458EA2B46A8468361F54535D85104B
+  offset: 480
+  displayName: (UTC+08:00)珀斯
+- !!vo.TimeZone
+  uid: EA37BEC2F1506FBFEFF25F537FE66C16
+  offset: 420
+  displayName: (UTC+07:00)新西伯利亚
+- !!vo.TimeZone
+  uid: 7AC1968CE0F0B05A8FC78F31A43A1F68
+  offset: 420
+  displayName: (UTC+07:00)曼谷，河内，雅加达
+- !!vo.TimeZone
+  uid: 7F3237FDBA00F5546DCBC663B78CD85D
+  offset: 390
+  displayName: (UTC+06:30)仰光
+- !!vo.TimeZone
+  uid: 4E81E04101643815B658682B370F1804
+  offset: 360
+  displayName: (UTC+06:00)达卡
+- !!vo.TimeZone
+  uid: 93E290D319471CF90951A0325B6B448A
+  offset: 360
+  displayName: (UTC+06:00)阿斯塔纳
+- !!vo.TimeZone
+  uid: 920D20CEBBA913074EED690AEB4FD31F
+  offset: 360
+  displayName: (UTC+06:00)叶卡捷琳堡
+- !!vo.TimeZone
+  uid: 5907CC8414A0389BCB0E104FA4358803
+  offset: 345
+  displayName: (UTC+05:45)加德满都
+- !!vo.TimeZone
+  uid: 081279EAFE7E0E217302988321DF9FED
+  offset: 330
+  displayName: (UTC+05:30)钦奈，加尔各答，孟买，新德里
+- !!vo.TimeZone
+  uid: DDF3FF67F8757EC34810477E2065B01B
+  offset: 330
+  displayName: (UTC+05:30)斯里加亚渥登普拉
+- !!vo.TimeZone
+  uid: 2F50BDDFE5F442255C2D9D3D07A93103
+  offset: 300
+  displayName: (UTC+05:00)伊斯兰堡，卡拉奇
+- !!vo.TimeZone
+  uid: 03366434AAFABC04E2868C2E0FAA2AAD
+  offset: 300
+  displayName: (UTC+05:00)塔什干
+- !!vo.TimeZone
+  uid: 7C73D002D59DACB29395F91F046C12C9
+  offset: 270
+  displayName: (UTC+04:30)喀布尔
+- !!vo.TimeZone
+  uid: 163D17EA3D8164B383C21E7B2CB69CD8
+  offset: 240
+  displayName: (UTC+04:00)阿布扎比，马斯喀特
+- !!vo.TimeZone
+  uid: F5EB69587075866A7D5FB35FDB7A820D
+  offset: 240
+  displayName: (UTC+04:00)巴库
+- !!vo.TimeZone
+  uid: 28C246F0DFC50ACBB01E78938823F884
+  offset: 240
+  displayName: (UTC+04:00)埃里温
+- !!vo.TimeZone
+  uid: 7D471E32FB53F876E1711695CC8D6E04
+  offset: 240
+  displayName: (UTC+04:00)第比利斯
+- !!vo.TimeZone
+  uid: DD571ECCED3A6F4B4DD313912492161C
+  offset: 240
+  displayName: (UTC+04:00)路易港
+- !!vo.TimeZone
+  uid: 9300D6484FE137C064E345B4FE11B4AF
+  offset: 240
+  displayName: (UTC+04:00)莫斯科，圣彼得堡，伏尔加格勒
+- !!vo.TimeZone
+  uid: 84656423049449AA030486BC4D41B43A
+  offset: 210
+  displayName: (UTC+03:30)德黑兰
+- !!vo.TimeZone
+  uid: F33D684ABCA36AFD9A0907AFC5A1A145
+  offset: 180
+  displayName: (UTC+03:00)科威特，利雅得
+- !!vo.TimeZone
+  uid: 4D4915C0871FF6B15E6E01D6BE6F7361
+  offset: 180
+  displayName: (UTC+03:00)巴格达
+- !!vo.TimeZone
+  uid: 949660DCB421FBCE61BD5D08B5A8AD6E
+  offset: 180
+  displayName: (UTC+03:00)内罗毕
+- !!vo.TimeZone
+  uid: 27A2BAAB25F78A857E113134CC2416FE
+  offset: 180
+  displayName: (UTC+03:00)加里宁格勒，明斯克
+- !!vo.TimeZone
+  uid: 0D09B24D01291917A7F3E6C42EDA1770
+  offset: 120
+  displayName: (UTC+02:00)尼科西亚
+- !!vo.TimeZone
+  uid: 4AB99EA1FB0DE52E0770B509CFA807E0
+  offset: 120
+  displayName: (UTC+02:00)开罗
+- !!vo.TimeZone
+  uid: 2E93B2333A318D771A5E469131B5F42E
+  offset: 120
+  displayName: (UTC+02:00)赫尔辛基，基辅，里加，索非亚，塔林，维尔纽斯
+- !!vo.TimeZone
+  uid: 900637928E8974E43628E32933321473
+  offset: 120
+  displayName: (UTC+02:00)雅典，布加勒斯特
+- !!vo.TimeZone
+  uid: 1F4DC74B6A063B71E2E3110A658E5279
+  offset: 120
+  displayName: (UTC+02:00)耶路撒冷
+- !!vo.TimeZone
+  uid: 27898F8C6CAD38AA492900B991F33DB6
+  offset: 120
+  displayName: (UTC+02:00)安曼
+- !!vo.TimeZone
+  uid: 5745FFFE99BCDABD5B624E4CAB7FA4DD
+  offset: 120
+  displayName: (UTC+02:00)贝鲁特
+- !!vo.TimeZone
+  uid: F500BDDE6B8384372512DD434EDF6E36
+  offset: 120
+  displayName: (UTC+02:00)哈拉雷，比勒陀利亚
+- !!vo.TimeZone
+  uid: 3BC27D843048720C6D1DD4370E854890
+  offset: 120
+  displayName: (UTC+02:00)大马士革
+- !!vo.TimeZone
+  uid: AFEEF3E38DB0BC3ADD6766A678914023
+  offset: 120
+  displayName: (UTC+02:00)伊斯坦布尔
+- !!vo.TimeZone
+  uid: C9B02163F2585763F00256FAEFA95352
+  offset: 60
+  displayName: (UTC+01:00)贝尔格莱德，布拉迪斯拉发，布达佩斯，卢布尔雅那，布拉格
+- !!vo.TimeZone
+  uid: FB052986C6622539E1DB7C225E12001C
+  offset: 60
+  displayName: (UTC+01:00)萨拉热窝，斯科普里，华沙，萨格勒布
+- !!vo.TimeZone
+  uid: 79BBC67F3A4C4631514174281083246E
+  offset: 60
+  displayName: (UTC+01:00)温得和克
+- !!vo.TimeZone
+  uid: 2B389D756B14E3AAAA3B96E0FB883067
+  offset: 60
+  displayName: (UTC+01:00)布鲁塞尔，哥本哈根，马德里，巴黎
+- !!vo.TimeZone
+  uid: 39FF558FC664A73E31BF7FDD924A928B
+  offset: 60
+  displayName: (UTC+01:00)中非西部
+- !!vo.TimeZone
+  uid: E83430FD4FFCA1A21D4A69B39839168E
+  offset: 60
+  displayName: (UTC+01:00)阿姆斯特丹，柏林，伯尔尼，罗马，斯德哥尔摩，维也纳
+- !!vo.TimeZone
+  uid: A41CB2A899906CEC70290977960BD838
+  offset: 0
+  displayName: (UTC)都柏林，爱丁堡，里斯本，伦敦
+- !!vo.TimeZone
+  uid: D436CB13EE6A2676783E0DBDB3A173CF
+  offset: 0
+  displayName: (UTC)蒙罗维亚，雷克雅未克
+- !!vo.TimeZone
+  uid: 331ABC4CFF76D4CDAAFE1FA7F1BDF26F
+  offset: 0
+  displayName: (UTC)卡萨布兰卡
+- !!vo.TimeZone
+  uid: 2C05A48C7D112C8A1109397BE4348D2F
+  offset: 0
+  displayName: (UTC)协调世界时
+- !!vo.TimeZone
+  uid: 9CD980477F1FBE1D21EE45D5E512FF26
+  offset: -60
+  displayName: (UTC-01:00)亚速尔群岛
+- !!vo.TimeZone
+  uid: 43288C3C1B0997ED5E1CB550BF531B5F
+  offset: -60
+  displayName: (UTC-01:00)佛得角群岛
+- !!vo.TimeZone
+  uid: DA083041DDAC83A23AD772C80A9429F9
+  offset: -120
+  displayName: (UTC-02:00)中大西洋
+- !!vo.TimeZone
+  uid: 84F3F33045F65A3CA1022B45B229D142
+  offset: -120
+  displayName: (UTC-02:00)协调世界时-02
+- !!vo.TimeZone
+  uid: 2ABE9176908E9784CB238775C20365E6
+  offset: -180
+  displayName: (UTC-03:00)布宜诺斯艾利斯
+- !!vo.TimeZone
+  uid: 143E9861250CA18DF39F15BFFE2C3C86
+  offset: -180
+  displayName: (UTC-03:00)萨尔瓦多
+- !!vo.TimeZone
+  uid: BF4CCBE41E37D9924DF7A2AFE67424B7
+  offset: -180
+  displayName: (UTC-03:00)巴西利亚
+- !!vo.TimeZone
+  uid: 03E90ABF6810B04CC42398A021C6DB4C
+  offset: -180
+  displayName: (UTC-03:00)格陵兰
+- !!vo.TimeZone
+  uid: A01EF1FE8AD692650EEE6CA5708BC457
+  offset: -180
+  displayName: (UTC-03:00)蒙得维的亚
+- !!vo.TimeZone
+  uid: 6BA7C7B208C99646927B97976C3F833E
+  offset: -180
+  displayName: (UTC-03:00)卡宴，福塔雷萨
+- !!vo.TimeZone
+  uid: D16FBB1F9A9320F0650A35A3FBB6E5B8
+  offset: -210
+  displayName: (UTC-03:30)纽芬兰
+- !!vo.TimeZone
+  uid: 7240C42C847D0CA1C92B05B84ECAB5B1
+  offset: -240
+  displayName: (UTC-04:00)大西洋时间(加拿大)
+- !!vo.TimeZone
+  uid: BA0440202D0241AF38FDFDE0552EEEE8
+  offset: -240
+  displayName: (UTC-04:00)库亚巴
+- !!vo.TimeZone
+  uid: 138E176C90FB62A12E0D12F64179AE8E
+  offset: -240
+  displayName: (UTC-04:00)圣地亚哥
+- !!vo.TimeZone
+  uid: BF4FD5CAF65F812C542DCBE5B6D53140
+  offset: -240
+  displayName: (UTC-04:00)亚松森
+- !!vo.TimeZone
+  uid: 95D3C61573906CEB8848B64F5753ABDF
+  offset: -240
+  displayName: (UTC-04:00)乔治敦，拉巴斯，马瑙斯，圣胡安
+- !!vo.TimeZone
+  uid: A746D652D8B52456F2B4568D88F22196
+  offset: -270
+  displayName: (UTC-04:30)加拉加斯
+- !!vo.TimeZone
+  uid: B7AB4B0A41F92CC95690A557DB7C158B
+  offset: -300
+  displayName: (UTC-05:00)东部时间(美国和加拿大)
+- !!vo.TimeZone
+  uid: F801CAC07A9B23386E933B5CF6A3A599
+  offset: -300
+  displayName: (UTC-05:00)波哥大，利马，基多
+- !!vo.TimeZone
+  uid: F630BAB05162A59C3002355549033B10
+  offset: -300
+  displayName: (UTC-05:00)印地安那州(东部)
+- !!vo.TimeZone
+  uid: EACA054D9924333D309684CBD6B878A9
+  offset: -360
+  displayName: (UTC-06:00)萨斯喀彻温
+- !!vo.TimeZone
+  uid: 1AE09E70FA7895BE0F376A0B3A6294AB
+  offset: -360
+  displayName: (UTC-06:00)中美洲
+- !!vo.TimeZone
+  uid: A25BF09201A90E74738A3FA7F25B0A20
+  offset: -360
+  displayName: (UTC-06:00)中部时间(美国和加拿大)
+- !!vo.TimeZone
+  uid: D47360EC0528D023947732A8AF946898
+  offset: -360
+  displayName: (UTC-06:00)瓜达拉哈拉，墨西哥城，蒙特雷
+- !!vo.TimeZone
+  uid: 66871297459809D8A3DC77C111D71D41
+  offset: -420
+  displayName: (UTC-07:00)山地时间(美国和加拿大)
+- !!vo.TimeZone
+  uid: 3FCD6777DEBDF7AB64276576EFE4B1B8
+  offset: -420
+  displayName: (UTC-07:00)奇瓦瓦，拉巴斯，马萨特兰
+- !!vo.TimeZone
+  uid: 751DF4C84E76F25A04C65B1F042B7AF5
+  offset: -420
+  displayName: (UTC-07:00)亚利桑那
+- !!vo.TimeZone
+  uid: 545C3D0B14665510A6ADDBB4FCAE5020
+  offset: -480
+  displayName: (UTC-08:00)太平洋时间(美国和加拿大)
+- !!vo.TimeZone
+  uid: 68CFA702EDFAB61001E9C92C4E12CC93
+  offset: -480
+  displayName: (UTC-08:00)下加利福尼亚州
+- !!vo.TimeZone
+  uid: AE2D7330E91031F5908C4AEE0FE32115
+  offset: -540
+  displayName: (UTC-09:00)阿拉斯加
+- !!vo.TimeZone
+  uid: 3F23FBA000898C65BCCDA5117752CCE1
+  offset: -600
+  displayName: (UTC-10:00)夏威夷
+- !!vo.TimeZone
+  uid: 2A9ACBA0606C395DB46D93398433C2F0
+  offset: -660
+  displayName: (UTC-11:00)协调世界时-11
+- !!vo.TimeZone
+  uid: 9CF8EFC694573C6D89FBCCE7CEE03304
+  offset: -720
+  displayName: (UTC-12:00)国际日期变更线西

@@ -1,0 +1,40 @@
+@main("我的圈-- 个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('userAtCss','css');
+    </script>
+} {
+    <div id="content" class="clearfix">
+        @usercenter.left("at")
+        <div class="main">
+            <div class="user-info">
+                <ul class="tab-menu clearfix">
+                    <li class="tab-menu-btn current"><a class="tab-menu-left" href="javascript:;">我的圈</a></li>
+                </ul>
+                <div class="tab-loading hide">
+                    <span></span>
+                    <em></em>
+                </div>
+                <div class="search-box pb10">
+                    <div class="txt search-left like-txt dib">
+                        <div class="search-left-top tl">
+                            <input class="p10" id="keyWord"  type="text" value="" placeholder="搜索圈中好友">
+                        </div>
+                    </div>
+                    <span class="btn-default btn-blue btn-lg fr"><em class="icon"></em></span>
+                </div>
+                <div class="user-info-map"><p class="user-info-map-content"><strong>我的圈成员列表</strong></p></div>
+                <div class="J-tab-content clearfix">
+                    <table class="tab-table system-message" width="100%">
+                    </table>
+                    <div class="page page-user-bottom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('userAtJs','js');
+    </script>
+}

@@ -1,0 +1,175 @@
+@(spage:vo.SPage)
+@main("所有服务者 -- helome服务交流平台"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('skillTagsAllCss','css');
+    </script>
+}{
+	<div id="content">
+		<div class="tags-experts">
+			<div class="tags">
+				<div class="tags-category clearfix">
+					@for(is <- spage.getIs()) {
+						<a class="@{if(is.getIsCurr == true) "current" else ""}" href="@is.getHref">@is.getTagName</a>
+					}
+				</div>
+                <div class="tags-panel clearfix">
+                    @if(spage.getSs().size()>0){
+                        <div class="tags-list J-tags-list">
+                            @for(ss <- spage.getSs()) {
+                            <a class="@{if(ss.getIsCurr == true) "current" else ""}" href="@ss.getHref">@ss.getTagName</a>
+                            }
+                        </div>
+                        <div class="tags-change">
+                            <a href="javascript:" class="changeTags J-change-tags" data-type="0" data-seq="1"><i class="search-icon search-icon-refresh"></i>换一批</a>
+                        </div>
+                        <div class="tags-line"></div>
+                    }else{
+                        <div class="no-tags">
+                            <span class="icon icon-no-tags"></span><br/>该行业暂时没有服务标签分类！
+                        </div>
+                    }
+                </div>
+			</div>
+			<div class="experts clearfix">
+                    <div class="filter-block clearfix">
+                        <span class="filter">
+                            <span class="filter-select">
+                                <span class="filter-name icon-more">
+                                    <span class="filter-name-area">@spage.getCf<em class="search-icon search-icon-direction-down"></em></span>
+                                    <!--  
+                                    <span class="continent none">
+                                        <span class="continent-tit clearfix">
+                                            <span class="continent-name current" data-continent="often">常选国家</span>
+                                            <span class="continent-name" data-continent="asia">亚洲</span>
+                                            <span class="continent-name" data-continent="europe">欧洲</span>
+                                            <span class="continent-name" data-continent="america">美洲</span>
+                                            <span class="continent-name" data-continent="africa">非洲</span>
+                                            <span class="continent-name" data-continent="oceania">大洋洲</span>
+                                        </span>
+                                        <span class="continent-line"></span>
+                                    </span>
+                                    -->
+                                    <ul class="filter-list">
+                                    	<li><a href="javascript:void(0);" onclick="showEncodePage('@spage.getCf("")')">全部</a></li>
+                                    	@for(e <- spage.getCountryList()) {
+                                        <!-- <li><a href="@spage.getCf("1")@e" id="countryHref">@e</a></li> -->
+                                        <li><a href="javascript:void(0);" onclick="showEncodePage('@spage.getCf("1")@e')">@e</a></li>
+                                        }
+                                    </ul>
+                                </span>
+                            </span>
+                            <!-- 
+                            <span class="filter-select">
+                                <span class="filter-name icon-more">
+                                    <span class="filter-name-area">@spage.getSsf<em class="search-icon search-icon-direction-down"></em></span>
+                                    <ul class="filter-list">
+                                        <li><a href="@spage.getSsfHref("")">全部</a></li>
+                                        <li><a href="@spage.getSsfHref("0")">离线</a></li>
+                                        <li><a href="@spage.getSsfHref("1")">在线</a></li>
+                                    </ul>
+                                </span>
+                            </span>
+                             -->
+                            <span class="filter-select">
+                                <span class="filter-name icon-more">
+                                    <span class="filter-name-area">@spage.getEf<em class="search-icon search-icon-direction-down"></em></span>
+                                    <ul class="filter-list">
+                                        <li><a href="@spage.getEfHref("")">全部</a></li>
+                                        <li><a href="@spage.getEfHref("0")">免费</a></li>
+                                        <li><a href="@spage.getEfHref("1")">面议</a></li>
+                                    </ul>
+                                </span>
+                            </span>
+                            <span class="filter-select">
+                                <span class="filter-name icon-more">
+                                    <span class="filter-name-area">@spage.getGf<em class="search-icon search-icon-direction-down"></em></span>
+                                    <ul class="filter-list">
+                                        <li><a href="@spage.getGfHref("")">全部</a></li>
+                                        <li><a href="@spage.getGfHref("0")">男性</a></li>
+                                        <li><a href="@spage.getGfHref("1")">女性</a></li>
+                                    </ul>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="filter">
+                            <a class="sort-name@spage.getOClass("")" id="averageDefault" href="@spage.getOHref("")">
+                                默认排序
+                            </a>
+                            <!-- 
+                            <a class="sort-name@spage.getOClass("dealNum")" id="dealNum" href="@spage.getOHref("dealNum")">
+                                按交易次数<em class="search-icon search-icon-sort-down" ></em>
+                            </a>
+                             -->
+                             <a class="sort-name@spage.getOClass("commentNum")" id="dealNum" href="@spage.getOHref("commentNum")">
+                                按评价次数<em class="search-icon search-icon-sort-down" ></em>
+                            </a>
+                            <a class="sort-name @spage.getOClass("averageScore")" id="averageScore" href="@spage.getOHref("averageScore")">
+                                按好评率<em class="search-icon search-icon-sort-up"></em>
+                            </a>
+
+                        </span>
+                    </div>
+                    <input type="hidden" name="totalCount" id="totalCount" value="200">
+                    <input type="hidden" name="i" id="i" value="@spage.getI">
+                    <input type="hidden" name="s" id="s" value="@spage.getS">
+                
+                    <div class="expert-list">
+                    @for(e <- spage.getExperts()) {
+    					<!--<div class="expert">
+    						<div class="expert-head">
+    							<a href="@e.getLinkUrl()"><img src="@e.getHeadUrl()" width="110" height="110"/></a>
+    						</div>
+    						<div class="expert-name"><a href="@e.getLinkUrl()" title="@e.getUserName()" target="_blank">@e.getUserName()</a>&nbsp;<span class="country flag @e.getCountryUrl" title="@e.getCountry"></span></div>
+    						<div class="expert-job" title="@e.getJob()">@e.getJob()</div>
+    					</div>-->
+                        <a href="@e.getLinkUrl()" title="@e.getUserName() 的名片" class="expert clearfix">
+                            <div class="expert-head">
+                                <em></em>
+                                <img src="@e.getHeadUrl()" width="110" height="110"/>
+                            </div>
+                            <div class="expert-info">
+                                <div class="expert-name">
+                                    <span>@e.getUserName()</span>&nbsp;
+                                    @if(e.getIsOnline){
+                                    	<em class="search-icon search-icon-online" title="在线"></em>
+                                    }
+                                </div>
+                                <div class="expert-job">
+                                    <span class="icon icon-star-base" title="平均分：@e.getAverageScore()">
+                                        <span class="icon icon-star-on" style="width:@(e.getAverageScore()/5*73)px"></span>
+                                    </span>
+                                    <span class="star-num">(@if(e.getCommentNum() == null){0}else{@e.getCommentNum())}</span>
+                                </div>
+                                <div class="expert-expense" title="@e.getExpenses()">@e.getExpenses()</div>
+                            </div>
+                            <div class="expert-tags clearfix">
+                            	@for(st <- e.getSkillsTags()){
+    								<span>@st.getTag</span>
+    							}
+                            </div>
+                        </a>
+    				}
+                    </div>
+                
+                @if(spage.getExperts().size==0&&spage.getSs().size()>0) {
+                    <div class="no-expert">
+                        <span class="icon icon-no-expert"></span><br/>暂时没有服务者属于该服务标签分类！
+                    </div>
+                }
+			</div>
+		</div>
+	</div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('skillTagsAllJs','js');
+    </script>
+    <script type="text/javascript">
+	    function showEncodePage(url){
+			url = encodeURI(url);
+			//alert(url);
+			location.href = url;
+		}
+    </script>
+    <div id="right-box"><span class="go-top"></span></div>
+}

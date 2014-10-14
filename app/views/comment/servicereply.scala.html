@@ -1,0 +1,97 @@
+@(svo :vo.ServiceListVO, first : vo.CommentVO, comments : List[vo.CommentVO], isCommentAble : java.lang.Boolean)
+@main("咨询评价回复 -- helome服务交流平台"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('serviceCommentCss','css');
+    </script>
+} {
+	<div id="content">
+		<div class="search-block service-top clearfix">
+            <div class="search-block clearfix">
+                <a href="/services/detail/@svo.getId" class="reqSer-head" target="_blank"><img src="@svo.getCoverUrl"></a>
+                <div class="reqSer-info">
+                    <div class="reqSer-title"><a href="/services/detail/@svo.getId" target="_blank">@svo.getTitle</a></div>
+                    <div class="reqSer-introduction">@svo.getInfo
+                    </div>
+                    <div class="reqSer-user clearfix">
+                        <a href="@routes.ExpertApp.detail(svo.getOwnerUserId)" class="user-head" target="_blank">
+                            <em></em>
+                            <img src="@svo.getHeadUrl()" width="41" height="41">
+                        </a>
+                        <a href="@routes.ExpertApp.detail(svo.getOwnerUserId)" class="user-name" target="_blank">@svo.getOwnerUserName</a>
+                        <div class="user-job">@svo.getJob</div>
+
+                        <div class="user-country flag @svo.getCountryUrl" title="@svo.getCountry()"></div>
+                        @if(svo.getGender().name() == "MAN"){
+                            <img alt="男" title="男" src="@routes.Assets.at("misc/images/male.png")" class="user-gender" width="13" height="13">
+                        }else{
+                            <img alt="女" title="女" src="@routes.Assets.at("misc/images/female.png")" class="user-gender" width="13" height="13">
+                        }
+                    </div>
+                </div>
+                <div class="reqSer-right">
+                    <div class="reqSer-price">
+                        @if(svo.getPrice() == null || svo.getPrice() == ""){
+                            面议
+                        }else{
+                            @if(svo.getPrice() == 0.0 || svo.getPrice() == "0.0"){
+                                免费
+                            }else{
+                                ￥@svo.getPrice()
+                            }
+                        }
+                    </div>
+                    <div class="reqSer-level">
+                        <span class="icon icon-star-base" title="@svo.getAverageScoreCompute()分">
+                            <span class="icon icon-star-on" style="width:@{Double.valueOf(svo.getAverageScoreCompute())/5*73}px;"></span>
+                        </span>
+                        <span class="star-num"><a href="/services/detail/@svo.getId#comments" target="_blank">(@svo.getCommentNum)</a></span>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="comment-reply">
+			<div class="portrait">
+				<div class="portrait-img"><a href="/expert/detail/@first.getUserId()" target="_blank"><img src="@first.getHeadUrl" height="190" width="190" alt="@first.getToCommentUserName"/></a></div>
+				<div class="portrait-name"><a href="/expert/detail/@first.getUserId()" target="_blank">@first.getCommentUserName</a></div>
+			</div>
+			<div class="comment">
+				<div class="triangle-left"></div>
+				<div class="comment-title clearfix">
+                    
+                    <span class="icon icon-star-base"><span class="icon icon-star-on" style="width: @first.getLevel()%;"></span></span>
+                    <span class="date">@first.getCommentTime()</span>
+
+				</div>
+				<div class="comment-content">
+					<div class="item">@first.getContent()</div>
+				</div>
+                <div class="comment-reply clearfix">
+                    @for(comment <- comments) {
+                        <div class="finish">
+                            <a href="/expert/detail/@comment.getUserId()" target="_blank"><img src="@comment.getHeadUrl(22)" alt=""></a>
+                            <div class="finish-main">
+                                <span class="finish-content">@comment.getContent()<span class="finish-date">@comment.getCommentTime()</span></span>
+                            </div>
+                        </div>
+                    }
+
+                    @if(isCommentAble.booleanValue() == true) {
+                        <div class="start">
+                            <input type="hidden" name="parentId" id="parentId" value="@first.getId">
+                            <textarea class="textarea comment-reply-input" placeholder="请输入回复内容"></textarea>
+                        </div>
+                        <div class="mb10">
+                            <input type="button" class="btn-default btn-lg btn-green comment-reply-btn" value="回复">
+                            <span class="red tips">&nbsp; 回复内容限制135个字符，还可以输入<b>135</b>个字符</span>
+                        </div>
+                    }
+                </div>
+			</div>
+		</div>
+	</div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('serviceCommentJs','js');
+    </script>
+}

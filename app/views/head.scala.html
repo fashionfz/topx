@@ -1,0 +1,207 @@
+@(ft:String,user: User = User.getFromSession(session))
+@import ext.usercenter.UserAuthService
+<div id="header">
+<div class="container header-inner header-top clearfix">
+<ul class="header-left clearfix">
+    <li><a href="/" class="index-logo">
+        <img src='@routes.Assets.at("misc/images/logo.png")' class="logo" title="helome首页" alt="helome首页" />
+    </a></li>
+    <li>
+        <div class="index-icon index-icon-slogan"></div>
+    </li>
+
+    <li>
+        <form class="header-search clearfix" action="@routes.ExpertApp.search" method="GET">
+            <input type="hidden" name="p" value="1|1" />
+            <div class="search-type">
+                <div class="search-type-btn"></div>
+                <ul class="search-type-panel">
+                    <li class="search-type-user"><i class="icon icon-user-gray"></i><span>服务者</span></li>
+                    <li class="search-type-group"><i class="icon icon-group-gray"></i><span>群组</span></li>
+                    <li class="search-type-service"><i class="icon icon-service-gray"></i><span>服务</span></li>
+                    <li class="search-type-require"><i class="icon icon-require-gray"></i><span>需求</span></li>
+                </ul>
+            </div>
+            <input type="text" id="ft" name="ft" value="@ft"
+                   class="form J-header-search-input" placeholder="请输入姓名或服务标签"
+                   maxlength="100" />
+            <input type="hidden" name="type" value="html" />
+            <button type="submit" class="form index-icon index-icon-search-button search-btn"></button>
+        </form>
+    </li>
+
+    <li><a href="/skilltags">服务者</a></li>
+    <li><a href="/group">群组</a></li>
+    <li><a href="/services">服务</a></li>
+    <li><a href="/require">需求</a></li>
+    <li><a href="/tradeprocess">使用说明</a></li>
+</ul>
+
+<ul class="header-left header-left-index">
+    <li><a href="/skilltags">服务者</a></li>
+    <li><a href="/group">群组</a></li>
+    <li><a href="/services">服务</a></li>
+    <li><a href="/require">需求</a></li>
+    <li><a href="/tradeprocess">使用说明</a></li>
+</ul>
+
+@if(user != null) {
+<input type="hidden" name="currentId" id="currentId" value="@user.getId()">
+<input type="hidden" name="token" id="token" value="@UserAuthService.getTokenInSession(session)">
+<ul class="header-right J-login-mark">
+        <!-- <li><a id="J-header-msg" href="@controllers.user.routes.UserMessageApp.list()" title="消息记录"><i class="index-icon index-icon-center-msg"></i></a></li> -->
+    
+    <li id="J-header-msg">
+        <a href="javascript:;" title="消息"><i class="index-icon index-icon-center-msg"></i></a>
+    </li>
+     
+    <li class="user-center">
+        <div class="home" id="user-center">
+            <a class="home-head" href="@controllers.user.routes.UserDetailApp.baseview()">
+                <em id="headPng"></em>
+                <img class="img-full" src="@user.getAvatar(70)">
+            </a>
+
+            <div class="index-icon index-icon-home-triangle home-triangle"></div>
+            <ul class="home-panel">
+                <li>
+                    <a href="/user/userdetail/base" title="我的资料">
+                        <i class="index-icon index-icon-center-user"></i>
+                        <span>我的资料</span>
+                    </a>
+                </li>
+                @******************
+                <li>
+                    <a href="/record/person" title="会话记录">
+                        <i class="index-icon index-icon-center-chat"></i>
+                        <span>会话记录</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/user/usermessage" title="消息" >
+                        <i class="index-icon index-icon-center-msg"></i>
+                        <span>我的消息</span>
+                    </a>
+                </li>
+                ********************@
+                <li>
+                    <a href="/user/service" title="服务管理">
+                        <i class="index-icon index-icon-center-service"></i>
+                        <span>服务管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/user/require" title="需求管理">
+                        <i class="index-icon index-icon-center-require"></i>
+                        <span>需求管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/user/group/groupList" title="我的群组">
+                        <i class="index-icon index-icon-center-groups"></i>
+                        <span>我的群组</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/user/at" title="我的圈" >
+                        <i class="index-icon index-icon-center-at"></i>
+                        <span>我的圈</span>
+                    </a>
+                </li>
+                <li>
+	                <a href="@controllers.charge.routes.ChargeApp.chargeCenter()" title="我的钱包">
+                    <i class="index-icon index-icon-center-purse"></i>
+                    <span>我的钱包</span>
+                </a>
+                </li>
+                <li>
+	                <a href="@controllers.user.routes.UserSettingApp.detail()" title="设置">
+                    <i class="index-icon index-icon-center-set"></i>
+                    <span>设置</span>
+                </a>
+                </li>
+                <li>
+	                <a href="@controllers.user.routes.UserApp.logout()" title="安全退出">
+                    <i class="index-icon index-icon-center-power"></i>
+                    <span>安全退出</span>
+                </a>
+                </li>
+            </ul>
+
+        </div>
+    </li>
+
+<!--     <li class="ml20">
+        <i class="icon icon-multi-lan"></i>
+        <a href="http://www.helome.us">English</a>
+    </li> -->
+</ul>
+} else {
+<ul class="header-right clearfix">
+    <li class="header-login">
+        <i class="index-icon index-icon-login"></i>
+        <a href="@controllers.routes.Application.login()" class="login">登录</a>
+        <span>|</span>
+        <a href="@controllers.routes.Application.register()" class="register"><span>注册</span></a>
+    </li>
+    <li class="ml20">
+        <i class="icon icon-multi-lan"></i>
+<!--         <a href="http://www.helome.cn">中文版</a>
+        <span>|</span> -->
+        <a href="http://www.helome.us">English</a>
+    </li>
+</ul>
+
+}
+
+<div class="msg">
+    <div class="index-icon msg-tri"></div>
+    <div class="msg-box">
+        <div class="msg-header">
+            <div class="msg-header-block">
+                <div class="icon icon-msg-gray active"></div>
+            </div>
+            <div class="msg-header-block">
+                <div class="icon icon-at-gray"></div>
+            </div>
+            <div class="msg-header-block">
+                <div class="icon icon-group-gray"></div>
+            </div>
+        </div>
+
+        <div class="msg-main msg-system">
+            <div class="msg-content" id="msg-system-content">
+                <!-- <div class="msg-item">
+                    <div class="msg-item-inner">
+                        <a href="" class="mr5">吕倩</a>给你转入了 ￥0.01
+                    </div>
+                    <div class="msg-item-btnbox">
+                        <div class="icon icon-delete"></div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="msg-footer">
+                <a href="/user/usermessage">查看全部已读消息 ></a>
+            </div>
+        </div>
+
+        <div class="msg-main hide msg-at">
+            <div class="msg-content" id="msg-at-content">
+            </div>
+            <div class="msg-footer">
+                <a href="/user/usermessage?type=at">查看全部 ></a>
+            </div>
+        </div>
+
+        <div class="msg-main hide msg-group">
+            <div class="msg-content" id="msg-group-content">
+            </div>
+            <div class="msg-footer">
+                <a href="/user/usermessage?type=group">查看全部 ></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>

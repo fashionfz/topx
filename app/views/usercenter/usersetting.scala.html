@@ -1,0 +1,243 @@
+@(user : User, passwordSecurityGrade : ext.usercenter.UserCenterService.PasswordSecurityGrade)
+@import models.service.reminder.Item
+@import models.service.reminder.Option
+@import ext.usercenter.UserCenterService.PasswordSecurityGrade
+@import controllers.user.routes.OAuthApp
+@import controllers.user.routes.UserSettingApp
+@import ext.sns.service.ProviderType
+@import ext.sns.service.UserOAuthService
+
+@isCheckedOption(item:Item,option:Option) = @{
+    var cfgMap = user.getSafetyReminderCfgMap();
+    if (item == Item.BOOKING_REMIND) {
+       cfgMap = user.getBookingReminderCfgMap();
+    }
+	if (cfgMap != null && cfgMap.get(item) != null) {
+	    cfgMap.get(item).contains(option);
+	} else false;
+}
+
+@main("设置 -- 个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('userSettingCss', 'css');
+    </script>
+} {
+	<div id="content" class="clearfix">
+		@left("usersetting")
+		<div class="main">
+            <div class="user-info">
+                <ul class="tab-menu clearfix">
+                    <li class="tab-menu-btn current"><a class="tab-menu-left" href="javascript:">设置</a></li>
+                </ul>
+                <div class="J-tab-content clearfix">
+                    <table class="setting-table">
+                    <tr>
+                        <td class="right">登录邮箱：</td>
+                        <td class="w234"><span>@user.getMaskEmail()</span></td>
+                        <!--<td><a href="javascript:" class="blue btn-edit">修改</a></td>-->
+                    </tr>
+                    <!--<tr class="hide">
+                        <td class="right vt">登录邮箱：</td>
+                        <td colspan="2" class="edit-email">
+                            <div class="setting-div"><span class="tag-container"><input type="text" name="oldEmail" data-check="email" id="oldEmail" class="txt txt-long" maxlength="200" placeholder="输入旧注册邮箱"/></span><span class="tips"></span></div>
+                            <div class="setting-div"><span class="tag-container"><input type="text" name="newEmail" data-check="new-email" id="newEmail" class="txt txt-long" maxlength="200" placeholder="输入新邮箱"/></span><span class="tips"></span></div>
+                            <div class="setting-div"><span class="tag-container"><input type="password" name="loginEmailPwd" data-check="pwd" id="loginEmailPwd" maxlength="18" class="txt txt-long" placeholder="输入原登录密码"/></span><span class="tips"></span></div>
+                            <div class="setting-div"><a href="javascript:" class="btn-default btn-lg btn-green btn-lock btn-save">保存修改</a>&nbsp;
+                                    <a href="javascript:" class="btn-default btn-lg btn-white btn-lock btn-cancel">取消</a></div>
+                        </td>
+                    </tr>-->
+                    <tr class="phone-block">
+                        <td class="right">绑定手机：</td>
+                        <td><span class="phone-num">@if(user.isBindMobilePhone()){@user.getMaskPhoneNum()}else{未绑定}</span></td>
+                        <td>
+                            <div class="pr">
+                                @if(user.isBindMobilePhone()){<a href="javascript:" class="blue btn-phone-panel">修改}else{<a href="javascript:" class="blue btn-edit">绑定}</a>
+                                <div class="phone-panel">
+                                    <span class="icon icon-triangle-top"></span>
+                                    <a href="javascript:;" class="btn-phone-modify">原号码可以接收短信</a>
+                                    <a href="javascript:;" class="last J-sendMail-btn">原号码不能接收短信</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="hide">
+                        <td class="right vt">绑定手机：</td>
+                        <td colspan="2" class="J-edit-phone">
+                            <div class="setting-div">
+                                <span class="tag-container">
+                                    <input type="text" id="editPhoneInput" class="txt txt-long" maxlength="50" data-check="new-phone" placeholder="输入手机号码"/>
+                                </span>
+                                <span class="tips"></span>
+                            </div>
+                            <div class="setting-div">
+                                <span class="tag-container mr10">
+                                    <input type="text" id="editPhoneCode" class="txt txt-mid" data-check="code" maxlength="8" placeholder="验证码"/>
+                                </span>
+                                <input type="button" value="发送验证码" class="btn-default btn-sm btn-white btn-with-input btn-sendCode">
+                                <span class="tips"></span>
+                            </div>
+                            <div class="setting-div"><a href="javascript:" class="btn-default btn-lg btn-green btn-lock btn-save">保存修改</a>&nbsp;
+                                <a href="javascript:" class="btn-default btn-lg btn-white btn-lock btn-cancel">取消</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="hide">
+                        <td class="right vt">绑定手机：</td>
+                        <td colspan="2" class="J-modify-phone">
+                            <div class="setting-div">
+                                <div>
+                                    <span class="tag-container mr10">
+                                        <input type="text" id="modifyPhoneCode" class="txt txt-mid" data-check="code" maxlength="8" placeholder="验证码"/>
+                                    </span>
+                                    <input type="button" value="发送验证码" class="btn-default btn-sm btn-white btn-with-input btn-modify-sendCode">
+                                    <span class="tips"></span>
+                                </div>
+                                <div class="phone-modify-state mt5"></div>
+
+                            </div>
+
+                            <div class="setting-div">
+                                <span class="tag-container">
+                                    <input type="text" id="modifyPhoneInput" class="txt txt-long" maxlength="50" data-check="new-phone" placeholder="输入新手机号码"/>
+                                </span>
+                                <span class="tips"></span>
+                            </div>
+
+                            <div class="setting-div"><a href="javascript:" class="btn-default btn-lg btn-green btn-lock btn-save">保存修改</a>&nbsp;
+                                <a href="javascript:" class="btn-default btn-lg btn-white btn-lock btn-phone-modify-cancel">取消</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right">密码安全：</td>
+                        <td>
+                            <span class="edit-pwd-strength">
+                                <span class="password-status">
+                                    <span class="password-strength password-@{passwordSecurityGrade match {
+                                        case PasswordSecurityGrade.WEAK => "one"
+                                        case PasswordSecurityGrade.MEDIUM => "two"
+                                        case PasswordSecurityGrade.STRONG => "three"
+                                    }}">
+                                    </span>
+                                    <span class="strength-text">@{passwordSecurityGrade match {
+                                        case PasswordSecurityGrade.WEAK => "弱"
+                                        case PasswordSecurityGrade.MEDIUM => "中"
+                                        case PasswordSecurityGrade.STRONG => "强"
+                                    }}</span>
+                                </span>
+                            </span>
+                        </td>
+                        <td><a href="javascript:" class="blue btn-edit">修改密码</a></td>
+                    </tr>
+                    <tr class="hide">
+                        <td class="right vt">密码安全：</td>
+                        <td colspan="2" class="J-edit-pwd">
+                            <div class="setting-div">
+                                <span class="tag-container">
+                                    <input type="password" name="needOldPwd" id="needOldPwd" class="txt txt-long" maxlength="18" placeholder="输入旧密码"/>
+                                </span>
+                                <span class="tips"></span>
+                            </div>
+                            <div class="setting-div">
+                                <span class="tag-container main-block">
+                                    <input type="password" name="needNewPwd" id="needNewPwd" class="txt txt-long" maxlength="18" placeholder="输入新密码"/>
+                                </span>
+                                <span class="tips"></span>
+                            </div>
+                            <div class="setting-div">
+                                <span class="tag-container">
+                                    <input type="password" name="confirmPwd" id="confirmPwd" class="txt txt-long" maxlength="18" placeholder="再次输入新密码"/>
+                                </span>
+                                <span class="tips"></span>
+                            </div>
+                            <div class="setting-div"><a href="javascript:" class="btn-default btn-lg btn-green btn-lock btn-save">保存修改</a>&nbsp;
+                                <a href="javascript:" class="btn-default btn-lg btn-white btn-lock btn-cancel">取消</a></div>
+                        </td>
+                    </tr>
+                    <tr><td class="right">安全提醒：</td><td><span>@if(user.isCfgSafetyReminder()){已设置}else{未设置}</span></td><td><a href="javascript:" class="blue btn-edit">@if(user.isCfgSafetyReminder()){修改}else{设置}</a></td></tr>
+                    <tr class="hide">
+                        <td class="right vt">安全提醒：</td>
+                        <td colspan="2" class="J-edit-tips">
+                            <table class="safe-tips-table">
+                                <tr>
+                                    <th class="left">安全提醒内容</th>
+                                    <th>短信提醒</th>
+                                    <th>邮件提醒</th>
+                                    <!--<th>站内消息提醒</th>-->
+                                    <!--<th>不提醒</th>-->
+                                </tr>
+                                <tr>
+                                    <td class="left">更换绑定手机</td>
+                                    <td><label><input type="checkbox" name="changePhoneNum" value="sms" @if(isCheckedOption(Item.CHANGE_PHONE_NUM,Option.BY_SMS)){checked} @if(!user.isBindMobilePhone()){disabled="disabled"}></label></td>
+                                    <td><label><input type="checkbox" name="changePhoneNum" value="email" @if(isCheckedOption(Item.CHANGE_PHONE_NUM,Option.BY_EMAIL)){checked}></label></td>
+                                    <!--<td><label><input type="checkbox" name="changePhoneNum" value="msg" @if(isCheckedOption(Item.CHANGE_PHONE_NUM,Option.BY_MSG)){checked}></label></td>-->
+                                    <!--<td><label><input type="radio" name="changePhoneNum" value="none"></label></td>-->
+                                </tr>
+                                <tr>
+                                    <td class="left">修改密码</td>
+                                    <td><label><input type="checkbox" name="changePassword" value="sms" @if(isCheckedOption(Item.CHANGE_PASSWORD,Option.BY_SMS)){checked} @if(!user.isBindMobilePhone()){disabled="disabled"}></label></td>
+                                    <td><label><input type="checkbox" name="changePassword" value="email" @if(isCheckedOption(Item.CHANGE_PASSWORD,Option.BY_EMAIL)){checked}></label></td>
+                                    <!--<td><label><input type="checkbox" name="changePassword" value="msg" @if(isCheckedOption(Item.CHANGE_PASSWORD,Option.BY_MSG)){checked}></label></td>-->
+                                    <!--<td><label><input type="radio" name="changePassword" value="none"></label></td>-->
+                                </tr>
+                                <tr>
+                                    <td class="left">异地登录</td>
+                                    <td><label><input type="checkbox" name="differentPlaceLogin" value="sms" @if(isCheckedOption(Item.DIFFERENT_PLACE_LOGIN,Option.BY_SMS)){checked} @if(!user.isBindMobilePhone()){disabled="disabled"}></label></td>
+                                    <td><label><input type="checkbox" name="differentPlaceLogin" value="email" @if(isCheckedOption(Item.DIFFERENT_PLACE_LOGIN,Option.BY_EMAIL)){checked}></label></td>
+                                    <!--<td><label><input type="checkbox" name="differentPlaceLogin" value="msg" @if(isCheckedOption(Item.DIFFERENT_PLACE_LOGIN,Option.BY_MSG)){checked}></label></td>-->
+                                    <!--<td><label><input type="radio" name="differentPlaceLogin" value="none"></label></td>-->
+                                </tr>
+                            </table>
+                            <div class="setting-div mt10"><a href="javascript:" class="btn-default btn-lg btn-green btn-lock btn-save">保存修改</a>&nbsp;
+                                <a href="javascript:" class="btn-default btn-lg btn-white btn-lock btn-cancel">取消</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right vt">SNS绑定：</td>
+                        <td colspan="2">
+                            <ul class="sns-bind">
+                                @defining(UserOAuthService.getValidByUserId(user.id)) { userOAuthMap =>
+                                @if(userOAuthMap.containsKey("sinaWeibo")) {
+                                <li class="bind-sina-weibo"><em></em><span>已绑定新浪微博</span><a href="@OAuthApp.revokeAuth("sinaWeibo", UserSettingApp.detail().url)" class="blue btn-unbind">@@@userOAuthMap.get("sinaWeibo").nickname，取消绑定</a></li>
+                                } else {
+                                <li class="bind-sina-weibo"><em></em><a href="@OAuthApp.requestAuth("sinaWeibo", UserSettingApp.detail().url, ProviderType.SNS)" class="blue">绑定新浪微博</a></li>
+                                }
+                                
+                                @if(userOAuthMap.containsKey("tencentWeibo")) {
+                                <li class="bind-tencent-weibo"><em></em><span>已绑定腾讯微博</span><a href="@OAuthApp.revokeAuth("tencentWeibo", UserSettingApp.detail().url)" class="blue btn-unbind">@@@userOAuthMap.get("tencentWeibo").nickname，取消绑定</a></li>
+                                } else {
+                                <li class="bind-tencent-weibo"><em></em><a href="@OAuthApp.requestAuth("tencentWeibo", UserSettingApp.detail().url, ProviderType.SNS)" class="blue">绑定腾讯微博</a></li>
+                                }
+                                
+                                @if(userOAuthMap.containsKey("douban")) {
+                                <li class="bind-douban"><em></em><span>已绑定豆瓣</span><a href="@OAuthApp.revokeAuth("douban", UserSettingApp.detail().url)" class="blue btn-unbind">@@@userOAuthMap.get("douban").nickname，取消绑定</a></li>
+                                } else {
+                                <li class="bind-douban"><em></em><a href="@OAuthApp.requestAuth("douban", UserSettingApp.detail().url, ProviderType.SNS)" class="blue">绑定豆瓣</a></li>
+                                }
+                                
+                                <!-- @if(userOAuthMap.containsKey("renren")) {
+                                <li class="bind-renren"><em></em><span>已绑定人人网</span><a href="@OAuthApp.revokeAuth("renren", UserSettingApp.detail().url)" class="blue btn-unbind">@@@userOAuthMap.get("renren").nickname，取消绑定</a></li>
+                                } else {
+                                <li class="bind-renren"><em></em><a href="@OAuthApp.requestAuth("renren", UserSettingApp.detail().url, ProviderType.SNS)" class="blue">绑定人人网</a></li>
+                                } -->
+                                
+                                <!-- 
+                                <li class="bind-facebook"><em></em><a href="javascript:;" class="blue">绑定facebook</a></li>
+                                <li class="bind-twitter"><em></em><a href="javascript:;" class="blue">绑定Twitter</a></li>
+                                 -->
+                                }
+                            </ul>
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+            </div>
+		</div>
+	</div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('userSettingJs', 'js');
+    </script>
+}
+

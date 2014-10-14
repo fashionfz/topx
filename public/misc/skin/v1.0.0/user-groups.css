@@ -1,0 +1,162 @@
+@charset "utf-8";
+/*
+* @description: 用户中心 群组
+* @author:zhiqiang.zhou@helome.com
+* @update:
+*/
+#addMember {
+    font-weight: normal;
+}
+.i-group-invite {
+    width: 22px;
+    height: 16px;
+    background-position: -48px -260px;
+    position: relative;
+    top: 2px;
+    right: 10px;
+}
+.group-top {
+    margin: 0 20px;
+    padding: 20px 0;
+    border-bottom: 1px dashed;
+}
+.good {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    background-position: -145px 0;
+}
+.like-txt input {
+    width: 616px;
+}
+.image-item {
+    width: 598px!important;
+}
+.image-item td {
+    width: 598px!important;
+}
+.image-item img {
+    max-width: 598px!important;
+    max-height: none!important;
+}
+
+/* 添加联系人 */
+.user-box {
+    border: solid 1px #d4d9df;
+    border-radius: 5px;
+    width: 310px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 3px 3px 10px -1px #d4d9df;
+}
+.user-box .like-txt input {
+    width: 248px;
+}
+.user-box .check{
+    padding: 17px 5px 0 10px;
+    width: 16px;
+    height: 16px;
+}
+.user-box .user-box-top{
+    height: auto;
+    border-bottom: solid 1px #e6eaef;
+}
+.user-box .user-box-top p{
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-bottom: solid 1px #e6eaef;
+}
+.user-box .user-box-top .like-txt{
+    height: 45px;
+    line-height: 45px;
+
+}
+.user-box .user-box-top .like-txt span.icon{
+    float:left;
+    margin: 15px 10px 0 10px;
+}
+.go-right{
+    margin: 60px 20px 0 20px;
+    width: 17px;
+    height: 30px;
+    cursor: pointer;
+    background-position: -76px -98px;
+}
+
+.add-content{
+    margin-bottom: 15px;
+    padding: 5px 0 10px 35px;
+    position: relative;
+}
+.add-member-btn .btn-default{
+    padding: 8px 0;
+}
+/*end  添加联系人 */
+
+.user-group-head {
+    border: solid 5px #e1e1e1;
+    width: 128px;
+    height: 128px;
+    border-radius: 69px;
+}
+.user-group-head img {
+    border-radius: 64px;
+}
+.user-group-upload-head {
+    padding-left: 20px;
+}
+/*群成员列表*/
+.user-group-member {
+    border-top: dashed 1px #d4d9df;
+    min-height: 98px;
+}
+.user-group-member .user-common {
+    padding: 20px 0;
+}
+.user-group-member .user-head {
+    margin-left: 20px;
+}
+.user-group-member .search-center {
+    margin-left: 10px;
+    line-height: 21px;
+    width: 615px;
+}
+.user-group-member .search-center .name {
+    padding-top: 6px;
+    font-size: 14px;
+}
+.user-group-member .search-center .job {
+    color: #40526a!important;
+}
+.user-group-member .search-center .introduce {
+    margin: 0;
+    color: #627690!important;
+}
+/*多人会话列表*/
+.multi-group-list {
+
+}
+.multi-group-list .search-head {
+    width: 41px;
+    height: 41px;
+    border-radius: 22px;
+}
+.multi-group-list .search-center {
+    margin-left: 10px;
+    width: 580px;
+}
+.multi-group-list .search-center .info {
+    color: #91a0b3;
+    margin-top: 1px;
+}
+.upload-data,.image-item {
+    height: 73px!important;
+    margin-bottom: 0!important;
+}
+.image-item {
+    border-radius: 0!important;
+}
+.image-item td {
+    height: 73px!important;
+}

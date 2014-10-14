@@ -1,0 +1,15 @@
+{
+    "status": 1,
+    "content": [
+    	{"type":"text","msg":"把你的CT发给我看看"},
+    	{"type":"file","url":"/assets/misc/images/head/2.jpg","name":"诊断书.jpg","size":"300"},
+    	{"type":"text","msg":"把你的CT发给我看看，把你的CT发给我看看，把你的CT发给我看看"},
+    	{"type":"file","url":"/assets/misc/images/head/2.jpg","name":"诊断书2.jpg","size":"400"},
+    	{"type":"text","msg":"病入膏肓，没得救了啊"},
+    	{"type":"file","url":"/assets/misc/images/head/2.jpg","name":"诊断书3.jpg","size":"500"},
+    	{"type":"text","msg":"完了，人没救了，你们看这CT，不用再检查了，赶紧准备后事吧。"},
+    	{"type":"file","url":"/assets/misc/images/head/2.jpg","name":"诊断书4.jpg","size":"600"},
+    	{"type":"text","msg":"你是外科病还是内科病？"},
+    	{"type":"file","url":"/assets/misc/images/head/2.jpg","name":"诊断书5.jpg","size":"700"}
+    ]
+}

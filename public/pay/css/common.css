@@ -1,0 +1,342 @@
+@charset "utf-8";
+/*
+* @description: 通用样式
+* @author:Zhang Guanglin(@maesinfo.com)
+* @update:
+*/
+
+.tag-container {
+    position: relative;
+    display: inline-block;
+}
+.tag-container .placeholder {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    color: #959595;
+}
+.tag-container .error-tip,
+.tag-container .right-tip{
+    position: absolute;
+    right: 1px;
+    top: 2px;
+    height: 14px;
+    padding: 6px 8px;
+    width: 14px;
+    overflow: hidden;
+    background: #ffffff;
+    border: solid 1px #ffffff;
+    border-radius: 5px;
+}
+.d-dialog .tag-container .error-tip,
+.d-dialog .tag-container .right-tip{
+    padding: 7px 9px;
+}
+.tag-container .error-tip em,
+.tag-container .right-tip em{
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    background: url(i/icon-red.png) no-repeat;
+}
+.tag-container .error-tip em{
+    background-position: -94px -258px;
+}
+.tag-container .right-tip em{
+    background-position: -94px -274px;
+}
+
+html, body{
+    color:#333333;
+    background:#fff;
+}
+html, body, #wrap {height: 100%;}
+body > #wrap {height: auto; min-height: 100%;}
+
+#content {
+    margin: 10px auto;
+    width: 980px;
+    text-align: left;
+}
+
+#container {
+    padding-bottom: 93px;
+}
+
+/*当前位置样式开始*/
+#position {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+.position-inner {
+    width: 980px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 13px;
+    color: #999;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.position-inner span {
+    color: #666;
+}
+.position-inner a {
+    color: #999;
+    text-decoration: none;
+}
+/*当前位置样式结束*/
+
+/********* 主标题开始 ********/
+.search-title {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    height: 26px;
+}
+.search-title span{
+    display: inline-block;
+    border-bottom: 1px solid #333;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    font-size: 14px;
+    padding-bottom: 1px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+.search-title a {
+    color: #4083a9;
+    font-size: 14px;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+/********* 主标题结束 ********/
+
+/*分页样式start*/
+
+.page {
+    font-size: 12px;
+}
+.page a{
+    padding: 2px 5px;
+    text-decoration: none;
+    color: #707070;
+    +margin: 0 4px;
+    display: inline-block;
+    float: left;
+    margin-left: 5px;
+}
+.page span{
+    float: left;
+    margin-left: 5px;
+    line-height: 24px;
+    display: inline-block;
+}
+.page .more{
+    font-weight: 600;
+}
+.page a.current{
+    cursor: default;
+    color: #666;
+    font-weight: 600;
+}
+.page a span {
+    display: inline-block;
+    background: url(i/icon-red.png) no-repeat;
+    height: 7px;
+    margin: 6px 2px 5px 2px;
+    *padding-bottom: 5px;
+}
+.page .first span{
+    background-position: -42px -70px;
+    width: 12px;
+}
+.page .previous span{
+    background-position: -28px -70px;
+    width: 5px;
+}
+.page .next span{
+    background-position: -28px -56px;
+    width: 5px;
+}
+.page .last span{
+    background-position: -42px -56px;
+    width: 12px;
+}
+/*分页样式end*/
+
+
+/*返回顶部样式开始*/
+#right-box {
+    width: 35px;
+    position: fixed;
+    right: 30px;
+    bottom: 103px;
+    z-index: 100;
+}
+.go-top {
+    display: block;
+    background: url(i/icon-red.png) -120px -238px no-repeat;
+    cursor: pointer;
+    height: 35px;
+}
+/*返回顶部样式结束*/
+
+/*pay页面 info-block 开始*/
+.pay-info-block{
+    background-color: #fcf9ec;
+    border: 1px solid #ebe8dd;
+    padding: 30px;
+    font-size: 14px;
+}
+.pay-info-block .account,
+.pay-info-block .balance{
+    display: inline-block;
+}
+.pay-info-block .account{
+    margin-right: 100px;
+}
+
+.pay-info-block strong{
+    color: #df6962;
+}
+
+.pay-info-block span{
+    color: #1b1b1b
+}
+
+/*pay页面 info-block 结束*/
+
+/*个人信息 start*/
+.head-xs{
+    height: 25px;
+    width: 25px;
+}
+.head-s {
+    width: 70px;
+    height: 70px;
+}
+.head-mid{
+    width: 90px;
+    height: 90px;
+}
+
+.personal-center{
+    margin: 20px auto;
+    background: #fcf9ec;
+    border: 1px solid #ebe8dc;
+    padding: 10px;
+}
+
+.personal-left{
+    overflow: hidden;
+    position: relative;
+    float: left;
+    margin-right: -100px;
+}
+
+.personal-head{
+    border: 1px solid #ddd;
+    background: #eee;
+    width: 78px;
+    height: 78px;
+}
+.personal-head img{
+    margin: 4px 0px 0px 4px
+}
+
+.personal-main{
+    margin-left: 100px;
+    font-size: 14px;
+    padding-right: 20px;
+}
+
+/*个人信息 end*/
+
+.w122 { width: 122px; }
+.w234 { width: 234px; }
+
+.height20,
+td.height20{
+    height: 20px!important;
+}
+.top0 {
+    top: 0!important;
+    position: relative;
+}
+.top1 {
+    top: 1px !important;
+    position: relative;
+}
+.top6 {
+    top: 6px!important;
+    position: relative;
+}
+.top4 {
+    top: 4px!important;
+    position: relative;
+}
+.top3 {
+    top: 3px!important;
+    position: relative;
+}
+.top-back6{
+    top: -6px !important;
+    position: relative;
+}
+.top-back2{
+    top: -2px !important;
+    position: relative;
+}
+.fl{
+    float: left;
+}
+.fr {
+    float: right;
+}
+
+/*********** 颜色描述开始 ************/
+.red{
+    color: #df6962 !important;
+}
+
+.green{
+    color: #2da11d !important;
+}
+
+.bold{
+    font-weight: bold !important;
+}
+
+/*********** 颜色描述结束 *********/
+.opacity0 {
+    opacity :0;
+    filter:alpha(opacity=0);
+}
+.mt10{ margin-top: 10px; }
+.mr10{ margin-right: 10px; }
+.ml10{ margin-left: 10px; }
+.mb10{ margin-bottom: 10px; }
+.mr5{ margin-right: 5px; }
+.ml5{ margin-left: 5px; }
+.mb5{ margin-bottom: 5px; }
+.mt5{ margin-top: 5px; }
+.mb0 { margin-bottom: 0!important; }
+.w300{ width: 300px }
+.valign-top {
+    vertical-align: top!important;
+}
+.border-none {
+    border:none!important;
+}
+/*社交分享图标*/
+.share {
+    float: right;
+}
+.share a {
+    height: 33px;
+    width: 32px;
+    float: left;
+    margin-left: 5px;
+}

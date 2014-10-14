@@ -1,0 +1,169 @@
+@(detail:vo.ExpertDetail,args:Map[Integer, Long])
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn" xml:lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="baidu-site-verification" content="Xlb3LlwZJV" />
+    <title>@detail.getUserName()的详细资料 -- helome服务交流平台</title>
+    <meta name="keywords" content="@for(skillTag <- detail.getSkillsTags()) {@skillTag.getTag,}">
+    <meta name="description" content="@detail.getShortPersonalInfo(200)">
+    <script type="text/javascript" src="@routes.Assets.at("misc/dist/v20131021/ued.import.js")" charset="utf-8"></script>
+    <link rel="icon" href="@routes.Assets.at("/misc/images/favicon.ico")"/>
+    <!--[if IE]><script type="text/javascript"> ued_import('canvasJs','js'); </script><![endif]-->
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('developerCss','css');
+    </script>
+</head>
+<body>
+<div id="wrap">
+    @head("")
+    <div id="container">
+
+	<!-- 搜索框结束 -->
+	<div id="content">
+
+		<div class="developer clearfix">
+
+            @expert.detailLeft(detail)
+
+            <div class="doc-list developer-detail">
+
+                @expert.tabTop(detail, "detail")
+
+                <div class="doc-list-block">
+                    <h2><em></em><span class="title">个人说明</span></h2>
+                    <div class="content">
+                        @if(detail.getPersonalInfo() != null && detail.getPersonalInfo() != ""){
+                        <pre>@detail.getPersonalInfo()</pre>
+                        }else{
+                        暂未填写
+                        }
+                    </div>
+                </div>
+                <div class="doc-list-block">
+                    <h2><em></em><span class="title">服务标签</span></h2>
+                    <div class="content clearfix skill-tags">
+                        @if(detail.getSkillsTags().size() != 0) {
+                            @for(skillTag <- detail.getSkillsTags()) {
+                            <a href="@controllers.routes.ExpertApp.search()?ft=@skillTag.getNoMarkedTag" target="_blank">@skillTag.getTag</a>
+                            }
+                        }else{
+                        暂未填写
+                        }
+                    </div>
+                </div>
+                <div class="doc-list-line"></div>
+                <div class="doc-list-block">
+                    <h2><em></em><span class="title">职业经历</span></h2>
+                    <div class="content">
+                        @if(detail.getJobExp() != null && detail.getJobExp().size() != 0){
+                            @for((jobexp, index) <- detail.getJobExp().zipWithIndex) {
+                            <div class="user-exp clearfix">
+                                <div class="user-exp-index"><span class="icon">@{index+1}</span></div>
+                                <div class="user-exp-main">
+                                    <div class="duty">@jobexp.getDuty()</div>
+                                    <div class="company">@jobexp.getCompany()</div>
+                                    <div class="job-time txt-lighter">
+                                        @jobexp.getBeginYear()年@jobexp.getBeginMonth()月 -
+                                        @if(jobexp.getEndYear() == "至今"){
+                                            @jobexp.getEndYear()
+                                        }else{
+                                            @jobexp.getEndYear()年@jobexp.getEndMonth()月
+                                        }
+                                    </div>
+                                    <div class="edu-info-box">
+                                        @if(jobexp.getWorkInfo()){
+                                        <span class="edu-info">@jobexp.getWorkInfo()</span>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            }
+                        }else{
+                        暂未填写
+                        }
+                    </div>
+                </div>
+                <div class="doc-list-block">
+                    <h2><em></em><span class="title">教育经历</span></h2>
+                    <div class="content">
+                        @if(detail.getEducationExp() != null && detail.getEducationExp().size() != 0){
+                            @for((education, index) <- detail.getEducationExp().zipWithIndex) {
+                            <div class="user-exp clearfix">
+                                <div class="user-exp-index"><span class="icon">@{index+1}</span></div>
+                                <div class="user-exp-main">
+                                    <div class="school txt-bold">@education.getSchool()</div>
+                                    <div class="user-exp-text clearfix">
+                                        @if(education.getMajor()){
+                                        <span class="prof">@education.getMajor()</span>
+                                        }
+                                        @if(education.getAcademicDegree()  && education.getAcademicDegree() != "" ){
+                                        <span class="degree">@education.getAcademicDegree()</span>
+                                        }
+                                    </div>
+                                    @if(education.getYear() || education.getYearEnd()){
+                                    <div class="edu-time txt-lighter">@education.getYear()年-@education.getYearEnd()年</div>
+                                    }
+                                    @if(education.getEduInfo() && education.getEduInfo() != ""){
+                                    <p class="edu-info-box">
+                                        <span class="edu-info">@education.getEduInfo()</span>
+                                    </p>
+                                    }
+                                </div>
+                            </div>
+                            }
+                        }else{
+                        暂未填写
+                        }
+                    </div>
+                </div>
+                <div class="doc-list-line"></div>
+                <div class="doc-list-block">
+                    <h2><em></em><span class="title">用户评价</span></h2>
+                    <div class="content">
+                        @if(!detail.getIsSelf){
+                            <div class="developer-toComment">
+                               请对服务者进行评价!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a class="btn-default btn-green btn-lg btn-toComment" href="javascript:">评价</a>
+                            </div>
+                        }
+                        <div class="developer-comment" id="comments">
+                            <input type="hidden" name="userId" id="userId" value="@detail.getUserId()">
+                            <div class="tab">
+                                <p class="tab-head clearfix">
+                                    <span class="tab-menu">
+                                        <span class="tab-menu-btn current" data-level="0">全部评价<em></em></span>
+                                        <span class="tab-menu-btn" data-level="5">五星(@args.get(5))<em></em></span>
+                                        <span class="tab-menu-btn" data-level="4">四星(@args.get(4))<em></em></span>
+                                        <span class="tab-menu-btn" data-level="3">三星(@args.get(3))<em></em></span>
+                                        <span class="tab-menu-btn" data-level="2">二星(@args.get(2))<em></em></span>
+                                        <span class="tab-menu-btn" data-level="1">一星(@args.get(1))<em></em></span>
+                                    </span>
+                                </p>
+                                <div class="tab-loading hide">
+                                    <span></span>
+                                    <em></em>
+                                </div>
+                                <div class="comment-list clearfix">
+
+                                </div>
+                            </div>
+                            <div class="page page-comment clearfix">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+		</div>
+	</div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('developerJs','js');
+    </script>
+    </div>
+</div>
+@foot()
+</body>
+</html>

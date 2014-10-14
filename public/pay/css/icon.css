@@ -1,0 +1,282 @@
+﻿@charset "utf-8";
+/*
+* @description: 所有icon的样式集
+* @author: Young Foo (young.foo@helome.com)
+* @update: Young Foo (young.foo@helome.com)
+* @date: 2013/11/5
+*/
+
+/*
+ * icon description start
+ * for pay icon (combo2.png)
+ */
+
+.icon-pay{
+	background-image:url(i/combo2.png);
+	background-repeat: no-repeat;
+	height: 36px;
+	width: 126px;
+	display: inline-block;
+}
+
+.icon-pay-ali{
+	background-position:0px 0px;
+}
+
+.icon-pay-caifu{
+	background-position: 0px -36px;
+}
+
+/*
+ * icon description end
+ * for pay icon (combo2.png)
+ */
+
+/*
+ * icon description start
+ * for bank icon (combo.png)
+ */
+
+ /************** bank ****************/
+.icon-bank{
+	background-image:url(i/combo.png);
+	background-repeat: no-repeat;
+	height: 36px;
+	width: 126px;
+	display: inline-block;
+}
+
+.icon-bank-nongye{
+	background-position:0px 0px;
+}
+
+.icon-bank-zhongguo{
+	background-position: 0px -36px;
+}
+
+.icon-bank-baoshang{
+	background-position: 0px -72px;
+}
+.icon-bank-jianshe{
+	background-position: 0px -108px;
+}
+.icon-bank-chengdu{
+	background-position: 0px -144px;
+}
+.icon-bank-nongshang{
+	background-position: 0px -180px;
+}
+.icon-bank-guangda{
+	background-position: 0px -216px;
+}
+.icon-bank-nanchong{
+	background-position: 0px -252px;
+}
+.icon-bank-xingye{
+	background-position: 0px -288px;
+}
+.icon-bank-zhongxin{
+	background-position: 0px -324px;
+}
+.icon-bank-zhaoshang{
+	background-position: 0px -360px;
+}
+.icon-bank-minsheng{
+	background-position: 0px -396px;
+}
+.icon-bank-jiaotong{
+	background-position: 0px -432px;
+}
+.icon-bank-chongqing{
+	background-position: 0px -468px;
+}
+.icon-bank-cqnongcun{
+	background-position: 0px -504px;
+}
+.icon-bank-deyang{
+	background-position: 0px -540px;
+}
+.icon-bank-hengfeng{
+	background-position: 0px -576px;
+}
+.icon-bank-guangfa{
+	background-position: 0px -612px;
+}
+.icon-bank-guiyang{
+	background-position: 0px -648px;
+}
+.icon-bank-huifeng{
+	background-position: 0px -664px;
+}
+.icon-bank-huaxia{
+	background-position: 0px -720px;
+}
+.icon-bank-gongshang{
+	background-position: 0px -756px;
+}
+.icon-bank-kunlun{
+	background-position: 0px -792px;
+}
+.icon-bank-leshan{
+	background-position: 0px -828px;
+}
+.icon-bank-youzheng{
+	background-position: 0px -864px;
+}
+.icon-bank-panzhihua{
+	background-position: 0px -900px;
+}
+.icon-bank-zhada{
+	background-position: 0px -936px;
+}
+.icon-bank-nongcun{
+	background-position: 0px -972px;
+}
+.icon-bank-shenzhen{
+	background-position: 0px -1008px;
+}
+.icon-bank-shanghai{
+	background-position: 0px -1044px;
+}
+.icon-bank-pingan{
+	background-position: 0px -1080px;
+}
+.icon-bank-pufa{
+	background-position: 0px -1116px;
+}
+.icon-bank-yibin{
+	background-position: 0px -1152px;
+}
+.icon-bank-zigong{
+	background-position: 0px -1188px;
+}
+
+/*
+ * icon description end
+ * for bank icon (combo.png)
+ */
+
+/*
+ * icon description start
+ * for credit card icon (combo1.png)
+ */
+
+.icon-credit{
+	background-image:url(i/combo1.png);
+	background-repeat: no-repeat;
+	height: 36px;
+	width: 126px;
+	display: inline-block;
+}
+
+.icon-credit-jcb{
+	background-position:0px 0px;
+}
+
+.icon-credit-mc{
+	background-position:0px -36px;
+}
+
+.icon-credit-pps{
+	background-position:0px -72px;
+}
+
+.icon-credit-visa{
+	background-position: 0px -108px
+}
+
+/*
+ * icon description end
+ * for credit card icon (combo1.png)
+ */
+
+/*
+ * icon description start
+ * for credit card icon (icon-red.png)
+ */
+.icon{
+	background: url(i/icon-red.png) 0 0 no-repeat;
+	display: inline-block;
+}
+
+.icon-alipay{
+	background-position: -235px -171px;
+	width: 67px;
+	height: 22px;
+}
+
+.icon-edit{
+	background-position: -23px -131px;
+	height: 16px;
+	width: 19px;
+}
+
+.icon-triangle-left{
+	height: 12px;
+	width: 6px;
+	position: absolute;
+	top: 10px;
+	left: -6px;
+	background-position: -43px -100px;
+}
+/*社交分享图标*/
+.icon-sina-weibo {
+	background-position: -1px -399px;
+}
+.icon-tencent-weibo {
+	background-position: -43px -399px;
+}
+.icon-renren {
+	background-position: -85px -399px;
+}
+.icon-douban {
+	background-position: -127px -399px;
+}
+.icon-facebook {
+	background-position: -169px -399px;
+}
+.icon-twitter {
+	background-position: -211px -399px;
+}
+/*社交分享图标灰色*/
+.icon-sina-weibo-unuse {
+	background-position: -1px -433px;
+}
+.icon-tencent-weibo-unuse {
+	background-position: -43px -433px;
+}
+.icon-renren-unuse {
+	background-position: -85px -433px;
+}
+.icon-douban-unuse {
+	background-position: -127px -433px;
+}
+.icon-facebook-unuse {
+	background-position: -169px -433px;
+}
+.icon-twitter-unuse {
+	background-position: -211px -433px;
+}
+
+/*
+* @description: 评论、评价等级样式
+* @author: Zhang Guanglin
+* @update: 
+*/
+/* comment rank */
+.icon.comment-rank{
+	height: 15px;
+	width: 15px;
+	margin-right: 5px;
+	position: relative;
+	top: 3px;
+}
+.icon.rank-good{
+	background-position: -103px -131px;
+}
+.icon.rank-middle{
+	background-position: -120px -131px;
+}
+.icon.rank-bad{
+	background-position: -137px -131px;
+}

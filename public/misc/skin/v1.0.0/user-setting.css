@@ -1,0 +1,177 @@
+@charset "utf-8";
+/*
+* @description: 个人设置
+* @author:Zhang Guanglin(@maesinfo.com)
+* @update:
+*/
+.setting-table {
+	width: 100%;
+	text-align: left;
+	font-size: 14px;
+	color: #8c8c8c;
+}
+.setting-table .right {
+	width: 98px;
+	color: #434343;
+}
+.setting-table .tips {
+    display: inline-block;
+    padding-left: 10px;
+    color: red;
+}
+.setting-table a.blue{
+	color: #4083a9;
+	text-decoration: none;
+	position: relative;
+	*top: 3px;
+}
+.setting-table td {
+	height: 36px;
+	padding: 10px 2px;
+	vertical-align: middle;
+	border-bottom: 1px dashed #ddd;
+	position: relative;
+}
+.edit-pwd-strength .password-status {
+    margin-left: 0;
+}
+
+.sns-bind li {
+	height: 36px;
+}
+.sns-bind li span {
+	margin-right: 10px;
+}
+.sns-bind em {
+	width: 16px;
+	height: 17px;
+	display: inline-block;
+	background: url(i/icon-red.png) no-repeat;
+	position: relative;
+	top: 4px;
+	margin-right: 10px;
+}
+.bind-sina-weibo em {
+	background-position: -155px -279px;
+}
+.bind-tencent-weibo em {
+	background-position: -119px -279px;
+}
+.bind-douban em {
+	background-position: -137px -279px;
+}
+.bind-facebook em {
+	background-position: -173px -279px;
+}
+.bind-renren em {
+	background-position: -209px -279px;
+}
+.bind-twitter em {
+	background-position: -191px -279px;
+}
+
+.setting-div {
+	margin-bottom: 14px;
+}
+.setting-div .main-block{
+    display: inline-block;
+}
+
+.safe-tips-table {
+	width: 435px;
+	font-size: 14px;
+	color: #8c8c8c;
+	text-align: center;
+}
+.safe-tips-table th {
+	color: #d5544e;
+	font-weight: normal;
+	text-align: center;
+}
+.safe-tips-table td.left {
+	width: 90px;
+	color: #434343;
+}
+.safe-tips-table td {
+	height: 24px;
+	padding: 5px 2px;
+	vertical-align: middle;
+	border-bottom: none;
+}
+
+/*第三方登录设置*/
+.third-setting-table td {
+	border-bottom :none;
+	padding: 6px 2px;
+}
+.setting-table .login-error {
+    margin: 0 0 8px 0;
+}
+
+
+.third-login .setting-div {
+    padding-left: 116px;
+}
+
+/********** 修改手机panel **********/
+
+.phone-panel {
+	background: #fff;
+	border: 1px solid #c4c4c4;
+	border-radius: 5px;
+	position: absolute;
+	padding: 10px;
+	left: -64px;
+	top: 30px;
+	z-index: 50;
+	display: none;
+}
+.phone-panel a {
+	border-radius: 3px;
+	padding: 4px 10px;
+	color: #fff;
+	background: #f4f4f4;
+	font-size: 13px;
+	margin: 0 5px 0 0;
+	display: inline-block;
+	width: 43px;
+	float: left;
+	background-color: #48ab23;
+	text-shadow: 0 1px 0 #147305;
+	border: solid 1px #48ab23;
+	border-bottom: solid 3px #147305;
+	text-decoration: none;
+}
+
+.phone-panel a.last{
+	margin: 0;
+}
+
+.icon-triangle-top {
+	background-position: -1px -24px;
+	height: 7px;
+	width: 12px;
+	position: absolute;
+	top: -6px;
+	right: 72px;
+}
+
+#booking-panel {
+    padding-top: 5px!important;
+}
+.booking-tips-table {
+    width: 435px;
+    text-align: left;
+    font-size: 14px;
+    color: #8c8c8c;
+}
+.booking-tips-table td.left {
+    width: 90px;
+    color: #434343;
+}
+.booking-tips-table td {
+    height: 24px;
+    padding: 5px 2px;
+    vertical-align: middle;
+    border-bottom: none;
+}

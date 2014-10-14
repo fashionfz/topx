@@ -1,0 +1,488 @@
+@charset "utf-8";
+/*
+* @description: 所有icon的样式集
+* @author: Young Foo (young.foo@helome.com)
+* @update: Young Foo (young.foo@helome.com)
+* @data: 2013/11/5
+*/
+
+/*
+ * icon description start
+ * for credit card icon (icon-red.png)
+ */
+.icon{
+	background: url(i/icon-red.png) no-repeat;
+	display: inline-block;
+}
+
+.icon-edit{
+	background-position: -23px -131px;
+	height: 16px;
+	width: 19px;
+}
+
+.icon-triangle-left{
+	height: 12px;
+	width: 6px;
+	position: absolute;
+	top: 10px;
+	left: -6px;
+	background-position: -43px -100px;
+}
+
+/* 搜索排序 */
+.icon-sort-regular{
+    width: 7px;
+    height: 9px;
+    background-position: -35px -45px;
+}
+
+.icon-sort-reserve{
+    width: 7px;
+    height: 9px;
+    background-position: -46px -45px;
+}
+
+/*
+* @description: 评论、评价等级样式
+* @author: Zhang Guanglin
+* @update: 
+*/
+/* comment rank */
+.icon.comment-rank{
+	height: 15px;
+	width: 15px;
+	margin-right: 5px;
+	position: relative;
+	top: 3px;
+}
+.icon.rank-good{
+	background-position: -103px -131px;
+}
+.icon.rank-middle{
+	background-position: -120px -131px;
+}
+.icon.rank-bad{
+	background-position: -137px -131px;
+}
+
+/* index icon */
+.index-icon{
+	background-image:url("i/index.png");
+	background-repeat: no-repeat;
+}
+.index-icon-logo{
+	height: 31px;
+	width: 156px;
+	background-position: 0px 0px;
+}
+.index-icon-footlogo{
+	width: 107px;
+    height: 26px;
+    background-position: 0px -31px;
+}
+.index-icon-search-button{
+	width: 35px;
+    height: 30px;
+    background-position: -257px -198px;
+}
+
+.index-icon-login{
+	height: 16px;
+	width: 16px;
+	background-position: -361px -31px;
+}
+.index-icon-serve{
+	height: 16px;
+	width: 16px;
+	background-position: -329px -31px;
+}
+.index-icon-phone{
+	height: 16px;
+	width: 16px;
+	background-position: -345px -31px;
+}
+.index-icon-i{
+	height: 16px;
+	width: 16px;
+	background-position: -123px -31px;
+}
+
+.index-icon-center-set{
+	height: 18px;
+	width: 17px;
+	background-position: -140px -31px;
+}
+
+.index-icon-center-power{
+	height: 18px;
+	width: 17px;
+	background-position: -158px -31px;
+}
+
+.index-icon-center-purse{
+	height: 18px;
+	width: 17px;
+	background-position: -175px -31px;
+}
+
+/* 信封 */
+.index-icon-center-msg {
+	height: 18px;
+	width: 17px;
+	/*background-position: -193px -31px;*/
+    background-position: -289px -31px;
+}
+
+.index-icon-center-groups {
+    height: 18px;
+    width: 22px;
+    background-position: -401px -32px;
+}
+
+.index-icon-center-service {
+    height: 18px;
+    width: 22px;
+    background-position: -196px -53px;
+}
+
+.index-icon-center-require {
+    height: 18px;
+    width: 18px;
+    background-position: -215px -53px;
+}
+
+.index-icon-center-at {
+    height: 18px;
+    width: 18px;
+    background-position: -380px -31px;
+}
+
+.index-icon-center-favorite {
+    height: 18px;
+    width: 17px;
+    background-position: -311px -31px;
+}
+
+.index-icon-center-shop{
+	height: 18px;
+	width: 17px;
+	background-position: -212px -31px;
+}
+
+.index-icon-center-user{
+	height: 18px;
+	width: 17px;
+	background-position: -229px -31px;
+}
+
+.index-icon-center-chat {
+    height: 18px;
+    width: 18px;
+    /*background-position: -193px -31px;*/
+    background-position: -265px -32px;
+}
+
+.index-icon-home-triangle{
+	background-position: -335px -0px;
+	width: 10px;
+	height: 7px;
+}
+
+/* 消息提示 */
+.index-icon-center-tips{
+	background-position: -265px -31px;
+	height: 17px;
+	width: 18px;
+}
+
+.index-icon-msg-noread{
+    background-position: -369px -9px;
+    height: 7px;
+    width: 7px;
+}
+
+/**
+ * @description: 搜索/列表图标样式
+ * @author: TinTao
+ * @update:
+ */
+.search-icon {
+    background: url(i/icon-search.png) no-repeat;
+    display: inline-block;
+}
+.search-icon-refresh {
+    width: 14px;
+    height: 16px;
+    background-position: -1px -1px;
+}
+.search-icon-direction-down {
+    width: 8px;
+    height: 4px;
+    background-position: -1px -24px;
+}
+.search-icon-direction-up {
+    width: 8px;
+    height: 4px;
+    background-position: -1px -18px;
+}
+.search-icon-sort-down {
+    width: 8px;
+    height: 10px;
+    background-position: -10px -18px;
+}
+.search-icon-sort-up {
+    width: 8px;
+    height: 10px;
+    background-position: -19px -18px;
+}
+.search-icon-online {
+    width: 10px;
+    height: 14px;
+    background-position: -15px -1px;
+}
+
+.icon-msg-item {
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-position: -169px -326px;
+}
+
+
+.icon-delete:hover {  background-position: -220px -325px;}
+.icon-delete {
+    display: inline-block;
+    background-position: -220px -304px;
+    height: 19px;
+    width: 19px;
+}
+.icon-right:hover {    background-position: -148px -325px;}
+.icon-right {
+    display: inline-block;
+    background-position: -148px -304px;
+    height: 19px;
+    width: 19px;
+}
+.icon-edit:hover {    background-position: -191px -325px;}
+.icon-edit {
+    display: inline-block;
+    background-position: -191px -304px;
+    height: 19px;
+    width: 19px;
+}
+.icon-man:hover {    background-position: -22px -367px;}
+.icon-man{
+    display: inline-block;
+    background-position: -22px -346px;
+    height: 19px;
+    width: 19px;
+}
+.icon-chat:hover {    background-position: -0px -367px;}
+.icon-chat{
+    display: inline-block;
+    background-position: -0px -346px;
+    height: 19px;
+    width: 19px;
+}
+
+/* btn icon */
+.icon-btn-chat{
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    background-position: -265px -31px;
+	vertical-align: middle;
+	margin: 0px 5px 3px 0px;
+}
+
+.icon-btn-fav{
+	background-position: -106px -304px;
+	width: 17px;
+	height: 17px;
+	vertical-align: middle;
+	margin: 0px 5px 5px 0px;
+}
+.icon-btn-at{
+    background-position: -325px -304px;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin: 0px 5px 5px 0px;
+}
+
+.icon-btn-add-group{
+    display: inline-block;
+    background-position: -0px -279px;
+    width: 17px;
+    height: 17px;
+    vertical-align: middle;
+    margin: 0px 5px 2px 0px;
+}
+
+/* star */
+.icon-star-base {
+    text-align: left;
+    background-position: -251px -298px;
+}
+.icon-star-base,
+.icon-star-on,
+.icon-star-on-red {
+    width: 73px;
+    height: 14px;
+}
+.icon-star-on {
+    background-position: -251px -280px;
+}
+.icon-star-on-red {
+    background-position: -251px -317px;
+}
+
+.icon-group-lock{
+	width: 12px;
+	height: 16px;
+	display: inline-block;
+	background-position: -0px -257px;
+	vertical-align: middle;
+    margin-right: 5px;
+}
+.icon-search-white{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-position: -16px -24px;
+}
+.icon-search-gray{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-position: -38px -24px;
+}
+.icon-pen-white{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-position: -54px -282px;
+}
+
+/* 消息面板 */
+.icon-at-gray{
+    height: 18px;
+    width: 20px;
+    display: inline-block;
+    background-position: -325px -304px;
+}
+.icon-at-gray.active{
+    height: 18px;
+    width: 20px;
+    display: inline-block;
+    background-position: -325px -325px;
+}
+.icon-msg-gray{
+    height: 18px;
+    width: 20px;
+    display: inline-block;
+    background-position: -367px -304px;
+}
+.icon-msg-gray.active{
+    height: 18px;
+    width: 20px;
+    display: inline-block;
+    background-position: -367px -325px;
+}
+.icon-group-gray{
+    height: 18px;
+    width: 23px;
+    display: inline-block;
+    background-position: -345px -304px;
+}
+.icon-group-blue,
+.icon-group-gray.active{
+    height: 18px;
+    width: 23px;
+    display: inline-block;
+    background-position: -345px -325px;
+}
+.icon-group-white{
+    height: 18px;
+    width: 23px;
+    display: inline-block;
+    background-position: -345px -283px;
+}
+
+.icon-user-white{
+    background-position: -325px -283px;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+}
+.icon-user-gray {
+    background-position: 1px -303px;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+}
+.icon-user-blue {
+    background-position: 1px -325px;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+}
+
+.icon-service-white {
+    background-position: -68px -346px;
+    height: 8px;
+    width: 20px;
+    display: inline-block;
+}
+.icon-service-gray {
+    background-position: -44px -346px;
+    height: 8px;
+    width: 20px;
+    display: inline-block;
+}
+.icon-service-blue {
+    background-position: -44px -356px;
+    height: 8px;
+    width: 20px;
+    display: inline-block;
+}
+.icon-require-white {
+    background-position: -46px -368px;
+    height: 18px;
+    width: 12px;
+    display: inline-block;
+}
+.icon-require-gray {
+    background-position: -60px -368px;
+    height: 18px;
+    width: 12px;
+    display: inline-block;
+}
+.icon-require-blue {
+    background-position: -74px -368px;
+    height: 18px;
+    width: 12px;
+    display: inline-block;
+}
+
+.icon-upload-close {
+    background-position: -74px -257px;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+}
+
+.icon-currency-cny {
+    background-position: -19px -279px;
+    height: 15px;
+    width: 11px;
+    display: inline-block;
+}
+
+.icon-multi-lan{
+    background-position: -34px -279px;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+}

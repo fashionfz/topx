@@ -1,0 +1,80 @@
+@(page:vo.expertpage.EPage[vo.ExpertListVO])
+
+@main("嗨啰在线客服 -- helome服务交流平台"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('searchCss','css');
+    </script>
+} {
+	<div id="content" class="clearfix">
+
+	 @if(page.getTotalRowCount != 0) {
+		<div class="search-list">
+            <input type="hidden" name="totalCount" id="totalCount" value="@page.getTotalRowCount">
+            <input type="hidden" name="curPage" id="curPage" value="@page.getPageIndex">
+			@for(expertListVO <- page.getList()) {
+			<div class="search-block clearfix">
+				<div class="search-head">
+					<a href="@expertListVO.getLinkUrl()" target="_blank"><img src="@expertListVO.getHeadUrl()" height="190" width="190" class="search-head-img" /></a>
+	                <div class="search-country">
+	                    <span class="country-flag flag @expertListVO.getCountryUrl" title="@expertListVO.getCountry()"></span>
+                        @if(expertListVO.getGender().name() == "MAN"){
+                        <img alt="男" title="男" src="@routes.Assets.at("misc/images/male.png")" class="country-sex" width="13" height="13">
+                        }
+                        @if(expertListVO.getGender().name() == "WOMAN"){
+                        <img alt="女" title="女" src="@routes.Assets.at("misc/images/female.png")" class="country-sex" width="13" height="13">
+                        }
+	                </div>
+				</div>
+
+				<div class="search-center">
+					<div class="name clearfix">
+                        <a href="@expertListVO.getLinkUrl()" target="_blank" title="@expertListVO.getUserName()">@Html(expertListVO.getUserName())</a>
+                        <span class="job" title="@expertListVO.getJob()">@Html(expertListVO.getJob())</span>
+                        @if(expertListVO.getIsOnline){
+                        	<em class="search-icon search-icon-online" title="在线"></em>
+                        }
+                    </div>
+                    <p class="introduce">
+                    @Html(expertListVO.getPersonalInfo())
+                    </p>
+					<p class="skill clearfix">
+					@for(st <- expertListVO.getSkillsTags()){
+                        <a href="@controllers.routes.ExpertApp.search()?ft=@st.getNoMarkedTag">@Html(st.getNoEncodeTag)</a>
+					}
+					</p>
+				</div>
+				<div class="search-right">
+					@if(!expertListVO.getIsSelf){
+						@if(expertListVO.getUserId() != null){
+                        	<p class="consult">
+                        		<span class="btn-default btn-green btn-lg btn-consult" data-id="@expertListVO.getUserId()"><i class="index-icon icon-btn-chat"></i>联系</span>
+                        	</p>
+                        }
+					}
+					<!-- 总宽度90px 最后宽度=18*分数-->
+					<p class="stars"><span class="icon icon-star-base" title="平均分：@expertListVO.getAverageScore()"><span class="icon icon-star-on" style="width:@(expertListVO.getAverageScore()/5*73)px;"></span></span><a href="@expertListVO.getLinkUrl()#comments" class="star-num" target="_blank">(@if(expertListVO.getCommentNum==0){<b>暂无评价</b>}else{@expertListVO.getCommentNum})</a></p>
+					<p class="tariff">
+                          	  资费：<span>@expertListVO.getExpenses()</span>
+                    </p>
+				</div>
+			</div>
+			}
+		</div>
+		<!-- 没有搜索结果开始 -->
+		}else{
+		<div class="no-result">
+			<p class="no-result-one clearfix"><em></em><span>抱歉！没有客服在线。</span></p>
+			<p class="no-result-two">建议您：</p>
+			<p class="no-result-three">·直接给我们发邮件：service@Html("@")helome.com</p>
+			<p class="no-result-three">·直接拨打客服热线：400-869-3599</p>
+			<p class="no-result-three">·去其他地方逛逛<a href="@controllers.skilltag.routes.SkillTagApp.list()">所有服务者</a></p>
+		</div> 
+		}
+	</div>
+	<!--搜索中间结束-->
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('serviceOnlineJs','js');
+    </script>
+}

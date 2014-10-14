@@ -1,0 +1,46 @@
+@main("我建立的 -- 我的群组 -- 个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('userGroupsCss','css');
+    </script>
+} {
+    <div id="content" class="clearfix">
+        @usercenter.left("groups")
+        <div class="main">
+            <div class="user-info">
+                <ul class="tab-menu clearfix">
+                    <li class="tab-menu-btn current"><a class="tab-menu-left" href="javascript:;">我建立的</a></li>
+                    <li class="tab-menu-btn"><a href="/user/group/join">我加入的</a></li>
+                    <li class="tab-menu-btn"><a href="/user/group/multi">多人会话</a></li>
+                </ul>
+                <div class="tab-loading hide">
+                    <span></span>
+                    <em></em>
+                </div>
+                <div class="search-box">
+                    <div class="txt search-left like-txt dib">
+                        <div class="search-left-top tl">
+                            <input class="p10" id="keyGroup" type="text" value="" placeholder="搜索我建立的群">
+                        </div>
+                    </div>
+                    <span id="searchGroup" class="btn-default btn-blue btn-lg fr"><em class="icon"></em></span>
+                </div>
+                <div class="tab-group-title">
+                    <a href="writeInfo" class="btn-default btn-white btn-lg" type="button" value="&nbsp;">
+                        <em class="icon add-group"></em> 新建群组
+                    </a>
+                </div>
+                <div class="J-tab-content clearfix">
+                    <table class="tab-table system-message" width="100%">
+                    </table>
+                    <div class="page page-user-bottom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('userGroupsJs','js');
+    </script>
+}

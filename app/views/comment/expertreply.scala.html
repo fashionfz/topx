@@ -1,0 +1,76 @@
+@(ec :vo.ExpertCommentVO, first : vo.CommentVO, comments : List[vo.CommentVO], isCommentAble : java.lang.Boolean)
+@main("咨询评价回复 -- helome服务交流平台"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('commentReplyCss','css');
+    </script>
+} {
+	<div id="content">
+		<div class="search-block comment-top clearfix">
+			<div class="search-left">
+				<div class="search-head">
+                    <a href="@controllers.routes.ExpertApp.detail(ec.getUserId())"><img src="@ec.getHeadUrl()" alt="@ec.getUserName()" class="search-head-img"/></a>
+                </div>
+			</div>
+			<div class="search-center">
+				<div class="name clearfix">
+                    <a href="@controllers.routes.ExpertApp.detail(ec.getUserId())">@ec.getUserName()</a>
+                    <span class="job">@ec.getJob()</span>
+                    <span class="country flag @ec.getCountryUrl()"></span>
+                </div>
+				<div class="skill clearfix">
+                    <span class="skill-title">服务标签：</span>
+					@if(ec.getSkillsTags() != null && ec.getSkillsTags().size() != 0) {
+						@for(skillTag <- ec.getSkillsTags()) {
+							<a href="@controllers.routes.ExpertApp.search()?ft=@skillTag.getNoMarkedTag" target="_blank">@skillTag.getTag</a>
+						}
+					}else{
+                        暂未设置
+                    }</div>
+			</div>
+		</div>
+		<div class="comment-reply">
+			<div class="portrait">
+				<div class="portrait-img"><a href="/expert/detail/@first.getUserId()" target="_blank"><img src="@first.getHeadUrl" height="190" width="190" alt="@first.getToCommentUserName"/></a></div>
+				<div class="portrait-name"><a href="/expert/detail/@first.getUserId()" target="_blank">@first.getCommentUserName</a></div>
+			</div>
+			<div class="comment">
+				<div class="triangle-left"></div>
+				<div class="comment-title clearfix">
+                    
+                    <span class="icon icon-star-base"><span class="icon icon-star-on" style="width: @first.getLevel()%;"></span></span>
+                    <span class="date">@first.getCommentTime()</span>
+
+				</div>
+				<div class="comment-content">
+					<div class="item">@first.getContent()</div>
+				</div>
+                <div class="comment-reply clearfix">
+                        @for(comment <- comments) {
+                            <div class="finish">
+                                <a href="/expert/detail/@comment.getUserId()" target="_blank"><img src="@comment.getHeadUrl(22)" alt=""></a>
+                                <div class="finish-main">
+                                    <span class="finish-content">@comment.getContent()<span class="finish-date">@comment.getCommentTime()</span></span>
+                                </div>
+                            </div>
+                        }
+                        
+                        @if(isCommentAble.booleanValue() == true) {
+                            <div class="start">
+                                <input type="hidden" name="parentId" id="parentId" value="@first.getId">
+                                <textarea class="textarea comment-reply-input" placeholder="请输入回复内容"></textarea>
+                            </div>
+                            <div class="mb10">
+                                <input type="button" class="btn-default btn-lg btn-green comment-reply-btn" value="回复">
+                                <span class="red tips">&nbsp; 回复内容限制135个字符，还可以输入<b>135</b>个字符</span>
+                            </div>
+                        }
+                </div>
+			</div>
+		</div>
+	</div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('commentReplyJs','js');
+    </script>
+}

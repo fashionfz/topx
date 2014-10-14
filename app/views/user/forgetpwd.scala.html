@@ -1,0 +1,51 @@
+@main("找回密码 -- helome服务交流平台"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('singleCss','css');
+    </script>
+} {
+ 	<div id="content">
+        <div class="main clearfix">
+
+            <!--找回密码表单开始-->
+            <div class="main-panel forget-password-main">
+                <h2 class="main-slogan">找回您的密码！</h2>
+                <form class="forget-password-form">
+
+                    <div class="main-block">
+                        <div class="tag-container">
+                            <input type="text" class="txt" name="fEmail" id="fEmail" maxlength="200" placeholder="邮箱" />
+                        </div>
+                    </div>
+
+                    <div class="main-block main-block-code">
+                        <div class="tag-container">
+                            <input type="text" class="txt txt-short" name="fCode" id="fCode" maxlength="4" placeholder="验证码" />
+                        </div>
+                        <img src="" class="code" height="34" width="70" />
+                        <a href="javascript:" class="replace-code">换一个</a>
+                    </div>
+
+                    <div class="main-block">
+                        <div class="error-msg hide"></div>
+                    </div>
+                    
+                    <div class="main-block">
+                        <input type="button" value="找回密码" class="btn-default btn-lg btn-green btn-forget" />
+                    </div>
+                    <div class="main-block">
+                        <a href="/" class="btn-default btn-lg btn-white btn-forget main-inner-btn">返回首页</a>
+                    </div>
+                </form>
+            </div>
+
+            @downloadBlock()
+
+            <!--找回密码表单结束-->
+        </div>
+    </div>
+	<script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('forgetPwdJs','js');
+	</script>
+}

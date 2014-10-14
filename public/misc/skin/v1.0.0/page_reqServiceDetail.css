@@ -1,0 +1,380 @@
+@charset "utf-8";
+/*
+ * @description: 服务/需求详情页样式
+ * @author: TinTao(tintao.li@helome.com)
+ * @update:
+ */
+#content {
+    margin-top: 0;
+}
+.reqService {
+    width: 936px;
+    margin: auto;
+}
+.reqService .doc-list-block .content {
+    color: #627690;
+}
+.reqService-detail {
+	float: left;
+	width: 656px;
+    padding-top: 25px;
+}
+.reqService-detail .doc-list-block h1 .title {
+    width: 632px;
+    word-wrap: break-word;
+    vertical-align: middle;
+}
+.reqService-industry {
+    height: 28px;
+    line-height: 28px;
+}
+.reqService-industry,
+.reqService-addTime,
+.reqService-share,
+.share-txt {
+    height: 28px;
+    line-height: 28px;
+}
+.reqService-addTime {
+
+}
+.reqService-share {
+    width: 300px;
+}
+.reqService-price {
+    padding-top: 5px;
+}
+.reqService-currency {
+    background: #df4253;
+    border-radius: 5px 0 0 5px;
+    height: 26px;
+    line-height: 26px;
+    display: inline-block;
+    text-align: center;
+    padding: 0 8px;
+}
+.reqService-currency .icon-currency-cny {
+    position: relative;
+    top: 4px;
+}
+.reqService-charges,
+.reqService-costs {
+    background: #ed5565;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    font: bolder 14px "Microsoft YaHei";
+    padding: 0 10px;
+    height: 26px;
+    line-height: 26px;
+    display: inline-block;
+}
+.reqService-costs {
+    border-radius: 5px;
+}
+.reqService-slide {
+    margin-top: 30px;
+    position: relative;
+}
+#slide {
+    position: relative;
+    width: 630px;
+    height: 475px;
+    overflow: hidden;
+    border: solid 1px #d4d9df;
+}
+.reqService-slide .slide-list {
+
+}
+.reqService-slide .slide-list li {
+    float: left;
+    width: 630px;
+}
+.reqService-slide .slide-list li img{
+    width: 630px;
+}
+.switchable-triggers {
+    text-align: center;
+    margin: auto;
+}
+.switchable-triggers li {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin: 0 1px;
+    color: #c2dbff;
+    font-size: 42px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.switchable-triggers li.current {
+    color:#3a7cdb;
+}
+.reqService-right {
+    float: right;
+    width: 250px;
+    overflow: hidden;
+}
+.reqService .skill-tags a,
+.posted-tags a {
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    display: inline-block;
+    background: #6191df;
+    float: left;
+    margin-right: 5px;
+    white-space: nowrap;
+}
+.posted-tags a {
+    max-width: 188px;
+    overflow: hidden;
+    word-break: break-all;
+    word-wrap: break-word;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url("ellipsis.xml#ellipsis");
+}
+.reqService .skill-tags a:hover,
+.posted-tags a:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #3a75d7;
+}
+.reqService-attachments {
+    /*padding-top: 5px;*/
+}
+.reqService-attachments a {
+    display: inline-block;
+    margin: 0px 5px 10px 0;
+    padding: 6px 10px;
+    border: solid 1px #e1e1e1;
+    border-radius: 3px;
+    color: #40526a;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #ffffff),
+        color-stop(1, #ededed)
+    );
+    background-image: -o-linear-gradient(bottom, #ffffff 0%, #ededed 100%);
+    background-image: -moz-linear-gradient(bottom, #ffffff 0%, #ededed 100%);
+    background-image: -webkit-linear-gradient(bottom, #ffffff 0%, #ededed 100%);
+    background-image: -ms-linear-gradient(bottom, #ffffff 0%, #ededed 100%);
+    background-image: linear-gradient(to bottom, #ffffff 0%, #ededed 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ffffff,endcolorstr=#ededed,gradientType=1);
+    background-color: #ffffff;
+}
+.reqService .btn-toComment {
+    padding: 8px 54px;;
+}
+.reqService-posted {
+    border: solid 1px #d4d9df;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+.posted-title {
+    height: 52px;
+    border-bottom: solid 1px #dadbdc;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #ffffff),
+        color-stop(1, #f0f0f0)
+    );
+    background-image: -o-linear-gradient(bottom, #ffffff 0%, #f0f0f0 100%);
+    background-image: -moz-linear-gradient(bottom, #ffffff 0%, #f0f0f0 100%);
+    background-image: -webkit-linear-gradient(bottom, #ffffff 0%, #f0f0f0 100%);
+    background-image: -ms-linear-gradient(bottom, #ffffff 0%, #f0f0f0 100%);
+    background-image: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ffffff,endcolorstr=#f0f0f0,gradientType=1);
+    background-color: #ffffff;
+    text-indent: 20px;
+    font: bolder 14px "microsoft yahei";
+    line-height: 52px;
+    color: #627690;
+    border-radius: 5px 5px 0 0;
+}
+.posted-detail {
+    padding: 20px 20px 10px 20px;
+    border-top: solid 1px #c8cacc;
+}
+.posted-head {
+    width: 41px;
+    height: 41px;
+    overflow: hidden;
+    border-radius: 22px;
+    display: block;
+}
+.posted-head em {
+    width: 41px;
+    height: 41px;
+    background: url(i/small002.png) no-repeat center center;
+    position: absolute;
+}
+
+.posted-info{
+    width: 155px;
+    float: left;
+    padding-left: 10px;
+}
+.posted-name,
+.posted-job {
+    display: block;
+    font-size: 14px;
+    overflow: hidden;
+    word-break: break-all;
+    word-wrap: break-word;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url("ellipsis.xml#ellipsis");
+
+}
+.posted-stars {
+    margin-top: 4px;
+}
+.posted-description {
+    padding: 5px 20px;
+    line-height: 22px;
+    color: #627690;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.posted-tags {
+    padding: 0 20px;
+}
+.posted-chat {
+    padding: 15px 0 10px 0;
+}
+
+/***********  comment   ***********/
+.comment {
+	margin-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px dashed #d4d9df;
+}
+.comment-left {
+	float: left;
+	width: 80px;
+}
+
+.comment .comment-head {
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	position: relative;
+	background: #e1e1e1;
+	text-align: left!important;
+	border-radius: 114px;
+	margin: 0px auto 5px auto;
+	border: 1px solid #e1e1e1;
+}
+.comment .comment-head img {
+	height: 40px;
+	width: 40px;
+}
+
+.comment .dev-name {
+	text-align: center;
+	color: #707070;
+	font-size: 12px;
+    width: 80px;
+    overflow: hidden;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.comment .dev-name a {
+    color: #3a7cdb;
+}
+.comment-right {
+	float: left;
+	width: 542px;
+	position: relative;
+	font-size: 12px;
+	color: #999;
+	margin-left: 10px;
+}
+
+.comment-tit .comment-rank {
+	float: left;
+	margin-top: 2px;
+	line-height: 1em;
+}
+
+.comment-tit .comment-date {
+	float: right;
+}
+.comment-cont {
+	margin-top: 5px;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: #40526a;
+}
+.comment-cont .cont-more {
+	float: right;
+	text-decoration: underline;
+	color: #5287cd;
+	margin-top: 2px;
+}
+
+.page-comment {
+	float: right;
+	margin: 20px 3px 0 0;
+}
+
+/* 无评价 */
+.no-comment {
+    line-height: 30px;
+    padding-top: 20px;
+    color: #c0c6ce;
+    font-weight: 800;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+.no-comment .icon-no-comment {
+    background-position: -134px -76px;
+    height: 48px;
+    width: 48px;
+}
+
+/** 服务评价弹窗 **/
+.reqService-toComment {
+	border: solid 1px #d4d9df;
+	border-radius: 5px;
+	color: #627690;
+	font-size: 14px;
+    font-weight: bolder;
+	text-align: center;
+	padding: 16px;
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=#ffffff, endColorStr=#f0f0f0);
+	background: linear-gradient(top,#fff,#f0f0f0);
+	background: -moz-linear-gradient(top,#fff,#f0f0f0);
+	background: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#f0f0f0));
+	background: -ms-linear-gradient(top,#fff,#f0f0f0);
+}
+
+.comm-right .icon-star-base,
+.comm-right .icon-star-on-red {
+	width: 14px;
+	vertical-align: top;
+}
+
+.comment-panel{
+	padding: 20px;
+}
+.comment-table td {
+	padding-top: 10px;
+}
+.comment-table .comm-tr-two td{
+    padding: 0;
+}

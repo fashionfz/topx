@@ -1,0 +1,52 @@
+@(user: models.User)
+@main("注册成功 -- helome服务交流平台"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('registerCss','css');
+    </script>
+} {
+ 	<div id="content">
+        <div class="clearfix reg-suc">
+
+            <div class="reg-suc-top clearfix">
+                <div class="success-msg clearfix">
+                    <div class="bg"></div>
+                    <div class="ctn">
+                        <div class="txt">恭喜你，注册成功！</div>
+                        <div class="acc">您的帐号：<strong>@if(user != null) {@user.getEmail()}</strong></div>
+                    </div>
+                </div>
+                <h1>欢迎加入全球首家Me2Me服务交流平台</h1>
+            </div>
+
+            <div class="reg-suc-handle clearfix">
+                <div class="reg-suc-block">
+                    <h2>我可以提供专业服务</h2>
+                    <h3>如果您有各种技能需要找发挥的平台</h3>
+                    <p>1.请完善个人资料<br />2.发布海外简历，可方便国内外用户更方便地找到您 <a href="/questions#question_translate">查看帮助</a><br />3.发布服务让用户搜索到您的专业服务</p>
+                    <div class="reg-suc-btnblock">
+                        <a href="/user/userdetail/base" class="btn-default btn-lg btn-green main-inner-btn"><i class="icon icon-user-white"></i>完善资料</a>
+                        <a href="/user/service" class="btn-default btn-lg btn-green main-inner-btn"><i class="icon icon-service-white"></i>发布服务</a>
+                    </div>
+                    <div class="reg-suc-img reg-suc-service-img"></div>
+                </div>
+
+                <div class="reg-suc-block reg-suc-block-require">
+                    <h2>我需要找人解决问题</h2>
+                    <h3>如果您有各种疑难杂症苦于找寻解决方法</h3>
+                    <p>1.随便逛逛，搜索并联系服务者<br />2.发布自己的需求，让服务者联系您</p>
+                    <div class="reg-suc-btnblock">
+                        <a href="/" class="btn-default btn-lg btn-green main-inner-btn"><i class="icon icon-search-white"></i>随便逛逛</a>
+                        <a href="/user/require" class="btn-default btn-lg btn-green main-inner-btn"><i class="icon icon-require-white"></i>发布需求</a>
+                    </div>
+                    <div class="reg-suc-img reg-suc-require-img"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+	<script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('registerJs','js');
+	</script>
+}

@@ -1,0 +1,22 @@
+@(loginState:String,key:String,avatarUrl:String,username:String)
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript">
+        /** 
+         * loginSkip 方法
+         * login: boolean(1 直接跳过, 0 填写资料绑定)
+         * userId: 用户ID
+         * url: 用户头像 img
+         * name: 用户头像
+         */
+        window.opener.loginSkip("@loginState", "@key", "@avatarUrl", "@username");
+        window.close();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

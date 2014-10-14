@@ -1,0 +1,50 @@
+@charset "utf-8";
+/*
+* @description: 用户预约专家页面
+* @author:Zhang Guanglin(@maesinfo.com)
+* @update:2013-12-02
+*/
+
+
+#content {
+	margin: 10px auto;
+	text-align: left;
+}
+/*.user-order {
+	text-align: center;
+}*/
+.user-order .search-block {
+	background: #fff;
+	padding: 20px;
+}
+.user-order .search-left {
+	width: 201px;
+}
+.user-order .search-head {
+	height: 199px;
+	width: 199px;
+	overflow: hidden;
+	position: relative;
+	border:1px solid #ddd;
+	background: #eee;
+}
+.user-order .search-head img{
+	height: 191px;
+	width: 191px;
+	margin: 4px auto auto 4px;
+}
+.user-order .search-center {
+	border-right: none;
+	width: 690px;
+	text-align: left;
+}
+.cost {
+	float: right;
+	color: #a0a0a0;
+	font-weight: 600;
+	font-size: 14px;
+	position: relative;
+}
+.cost span {
+	color: #e06b64;
+}

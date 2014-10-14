@@ -1,0 +1,95 @@
+@(tags:List[models.SkillTag],industryId:Long,groupPriv:models.Group.GroupPriv,page:vo.page.Page[vo.GroupVO])
+@import models.Group.GroupPriv
+@import org.joda.time.DateTime
+@main("群组 -- helome服务交流平台"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('groupHomeCss','css');
+    </script>
+} {
+    <div class="banner">
+        <div class="banner-inner container">
+            <div class="banner-left">
+                <h1>Me2Me  让联系更紧密</h1>
+                <h4>交流根本停不下来？创建群组，让你和你的小伙伴们都聊起来吧！</h4>
+                <a href="/user/group/writeInfo" target="_blank" class="btn-default btn-lg btn-blue">立即创建群组</a>
+            </div>
+
+            <div class="banner-img"></div>
+        </div>
+    </div>
+    <div id="content" class="clearfix">
+        <div class="group-left">
+            <div class="panel">
+                <div class="panel-title">分类</div>
+                <div class="panel-list">
+                    <ul>
+                        @for(tag <- tags){
+                            @if(tag.id.equals(industryId)) {
+                                <li class="current"><a href="group?ind=@tag.id&pri=@groupPriv">@tag.tagName</a><span class="active"></span></li>
+                            } else {
+                                <li><a href="group?ind=@tag.id&pri=@groupPriv">@tag.tagName</a></li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-title">权限</div>
+                <div class="panel-list">
+                    <ul>
+                        <li @if(groupPriv==null){class="current"}><a href="group?ind=@industryId&pri=">全部</a>@if(groupPriv==null){<span class="active"></span>}</li>
+                        <li @if(groupPriv==GroupPriv.PUBLIC){class="current"}><a href="group?ind=@industryId&pri=@GroupPriv.PUBLIC">公开自由加入</a>@if(groupPriv==GroupPriv.PUBLIC){<span class="active"></span>}</li>
+                        <li @if(groupPriv==GroupPriv.APPLY){class="current"}><a href="group?ind=@industryId&pri=@GroupPriv.APPLY">需要申请加入</a>@if(groupPriv==GroupPriv.APPLY){<span class="active"></span>}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="group-right list-block">
+            @for(group<-page.getList()) {
+            <div class="search-block clearfix">
+                <a href="@controllers.group.routes.GroupApp.groupDetail(group.id)" target="_blank" class="search-head"><img src="@group.headUrl" height="190" width="190" class="search-head-img" /></a>
+
+                <div class="search-center">
+                    <div class="name clearfix">
+                        @if(GroupPriv.APPLY.name().equalsIgnoreCase(group.groupPriv)){<span class="icon icon-group-lock" title="需要申请加入"></span>}<a href="@controllers.group.routes.GroupApp.groupDetail(group.id)" target="_blank" title="">@group.groupName</a>
+                    </div>
+
+                    <div class="info">
+                        <span>分类：@group.industryName </span>
+                        <span>成员数：@{group.countMem}人</span>
+                        <span>创建时间：@{new DateTime(group.createDate).toString("yyyy-MM-dd")}</span>
+                    </div>
+
+                    <p class="introduce">
+                        @group.groupInfo
+                    </p>
+                    
+                    <div class="skill clearfix">
+                        @for(skilltag<-group.tags) {
+                            <span>@skilltag</span>
+                        }
+                    </div>
+                </div>
+                <div class="search-right">
+                    <div class="btn-block">
+                        @if(group.getIsJoin() == true) {
+                            <span class="btn-default btn-green btn-lg btn-contact" group-id="@group.getId()" group-name="@group.getGroupName()" group-islock="@GroupPriv.APPLY.name().equalsIgnoreCase(group.getGroupPriv())"><i class="index-icon icon-btn-chat"></i>群 聊</span>
+                        } else {
+                            <span class="btn-default btn-green btn-lg btn-join" group-id="@group.getId()" group-name="@group.getGroupName()" group-islock="@GroupPriv.APPLY.name().equalsIgnoreCase(group.getGroupPriv())"><i class="icon icon-btn-add-group"></i>加 入</span>
+                        }
+                    </div>
+                </div>
+            </div>
+            }
+
+            <div class="mt20 mb20 J-load-wrapper">
+                <div class="btn-default btn-white btn-lg load-more-btn">加载更多</div>
+            </div>
+        </div>
+    </div>
+	<script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('groupHomeJs','js');
+	</script>
+}

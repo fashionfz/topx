@@ -1,0 +1,24 @@
+@(content : String, backUrl : String, title : String)
+@main(if(title == null){"500，服务器未知错误 -- helome服务交流平台"}else{title}){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('errorCss','css');
+    </script>
+} {
+ 	<div id="content">
+        <div class="main">
+            <!--LOGO开始-->
+            <div class="main-logo"></div>
+            <!--LOGO结束-->
+            <div class="main-panel error-main">
+                <div class="error-tit">@if(content == null){我们遇到了一些小问题，不过很快就会恢复哟~}else{@content}</div>
+                <div class="error-bg icon-error error-500"></div>
+                <div class="error-act"><a href="/" class="icon-error return">返回主页</a><a href="@if(backUrl == null){javascript:history.go(-2)}else{@backUrl}" class="icon-error back">后退一步</a></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('docPageJs','js');
+    </script>
+}

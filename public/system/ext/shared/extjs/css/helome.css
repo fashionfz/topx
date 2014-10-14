@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+
+#app-header {
+
+    font-family: "Microsoft YaHei" ! important;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 8px 15px;
+}
+
+.helome-add {
+    background-image:url(../images/fam/add.png);
+}
+
+.helome-seq {
+    background-image:url(../images/fam/seq.png);
+}
+
+.helome-move {
+    background-image:url(../images/fam/cut_red.png);
+}
+
+.helome-delete {
+    background-image:url(../images/fam/delete.png);
+}
+
+.helome-save {
+    background-image:url(../images/fam/action_save.gif);
+}
+
+.helome-app-edit {
+    background-image:url(../images/fam/paintbrush.png);
+}
+
+
+
+

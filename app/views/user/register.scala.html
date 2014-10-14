@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn" xml:lang="zh-cn">
+    <head>
+        <meta charset="utf-8" />
+        <title>注册 -- helome服务交流平台</title>
+        <meta name="keywords" content="helome,me2me,服务交易,服务咨询,在线视频咨询,在线服务,服务交流平台">
+        <meta name="description" content="helome是一个涵盖IT、教育、医疗、法律等众多领域的Me2Me模式综合服务交流平台。helome，来源于英文中的”Hello, Me”，寓意在互联网世界里的每个Me（个体）都可以参与到服务中，提升自我，实现价值。">
+        <script type="text/javascript" src="@routes.Assets.at("misc/dist/v20131021/ued.import.js")" charset="utf-8"></script>
+        <link rel="icon" href="@routes.Assets.at("/misc/images/favicon.ico")"/>
+
+        <script type="text/javascript">
+            ued_import('commonCss','css');
+            ued_import('registerCss','css');
+        </script>
+    </head>
+
+    <body>
+        <div id="wrap" class="register-page">
+            <!--头部开始-->
+            @head("")
+            <!--头部结束-->
+            <div id="container">
+
+             	<div id="content">
+                    <div class="main clearfix">
+
+                        <!--注册表单开始-->
+                        <div class="main-panel reg-main">
+                            <div class="main-title clearfix">
+                                <a href="/login" class="main-title-txt ">登录</a>
+                                <span class="main-title-txt highlight">注册</span>
+                            </div>
+                            <h2 class="main-slogan">期待解决自己的和别人的问题，请加入helome!</h2>
+                            <form class="reg-form">
+
+                                <div class="main-block main-block-rel">
+                                    <div class="tag-container">
+                                        <input type="text" class="txt" name="rEmail" id="rEmail" maxlength="200" placeholder="您的邮箱账号" />
+                                    </div>
+                                </div>
+
+                                <div class="main-block">
+                                    <div class="tag-container">
+                                        <input type="password" class="txt" name="rPwd" id="rPwd" maxlength="18" placeholder="密码" />
+                                    </div>
+                                </div>
+
+                                <div class="main-block">
+                                    <div class="tag-container">
+                                        <input type="password" class="txt" name="rConfirmPwd" id="rConfirmPwd" maxlength="18" placeholder="确认密码" />
+                                    </div>
+                                </div>
+
+                                <div class="main-block main-block-code">
+                                    <div class="tag-container">
+                                        <input type="text" class="txt txt-short" name="rCode" id="rCode" maxlength="4" placeholder="验证码" />
+                                    </div>
+                                    <img src="" class="code" height="34" width="70" /><a href="javascript:" class="replace-code">换一个</a>
+                                </div>
+
+                                <div class="main-block">
+                                    <label for="regAgreement">
+                                        <input id="regAgreement" type="checkbox" name="regAgreement" />
+                                        <span>我已阅并接受</span>
+                                    </label>
+                                    <a href="/regagreement" target="_blank" class="f14">《helome用户注册协议》</a>
+                                    <div class="error-msg hide"></div>
+                                </div>
+                                
+                                <div class="main-block">
+                                    <input type="button" value="立即注册" class="btn-default btn-lg btn-green btn-reg" />
+                                </div>
+
+                            </form>
+                        </div>
+                        <!--注册表单结束-->
+                        @downloadBlock()
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+        @foot()
+        <script type="text/javascript">
+            ued_import('commonJs','js');
+            ued_import('registerJs','js');
+        </script>
+    </body>
+</html>

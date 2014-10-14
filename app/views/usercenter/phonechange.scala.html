@@ -1,0 +1,58 @@
+@(key: String)
+@main("修改手机号码 -- 个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('chargeCss','css');
+    </script>
+} {
+    <div id="top" class="sub-header">
+        <div class="sub-header-inner container clearfix">
+            <div class="sub-header-left">
+                <div class="sub-header-title">修改手机号码</div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="content" class="clearfix">
+        <div class="pay-form info-maxlong-key">
+
+            <div class="user-info-block clearfix">
+                <div class="info-key">
+                    <div>请输入新手机号码：</div>
+                </div>
+                <div class="info-value">
+                    <span class="tag-container">
+                        <input type="text" class="txt txt-mid" id="new-num" data-check="new-phone"/>
+                    </span>
+                    <span class="tips red"></span>
+                </div>
+            </div>
+
+            <div class="user-info-block clearfix">
+                <div class="info-key">
+                    <div>请输入短信验证码：</div>
+                </div>
+                <div class="info-value">
+                    <div>
+                        <input type="text" class="txt txt-short phone-code" id="phone-code"/>
+                        <input type="button" class="btn-default btn-mid btn-white btn-sendCode" value="发送验证码" />
+                        <span class="tips red"></span>
+                    </div>
+                    <div class="mt5 phone-modify-state"></div>
+                </div>
+            </div>
+
+            <div class="user-info-block clearfix">
+                <div class="info-key">&nbsp;<input type="hidden" id="changeToken" value="@key"></div>
+                <div class="info-value">
+                    <a href="javascript:;" class="btn-default btn-lg btn-green btn-save">确定修改</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('phoneModifyJs','js');
+    </script>
+}

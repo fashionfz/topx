@@ -1,0 +1,101 @@
+@charset "utf-8";
+/*
+* @description: 个人中心页面公用样式
+* @author:Zhang Guanglin(@maesinfo.com)
+* @update:
+*/
+.main {
+	float: left;
+	margin-left: 15px;
+	width: 780px;
+}
+
+.left-bar {
+	float: left;
+	width: 185px;
+}
+.user-center-title {
+	font-size: 14px;
+	color: #e06b64;
+	font-weight: 600;
+	position: relative;
+	background: url(i/icon-red.png) 0 -345px repeat-x;
+	height: 54px;
+	border-left: 1px solid #f2d9d7;
+	border-right: 1px solid #f2d9d7;
+	text-align: center;
+	line-height: 54px;
+}
+.user-center-title em {
+	height: 20px;
+	width: 20px;
+	display: inline-block;
+	background: url(i/icon-red.png) 0 -175px no-repeat;
+	position: relative;
+	margin: auto 5px auto 25px;
+	top: 6px;
+}
+.title-list {
+	border: 1px solid #f2d9d7;
+    border-top: 0;
+	background: #fff;
+}
+.title-list li{
+    height: 52px;
+    padding-top: 1px;
+}
+.title-list a {
+	display: block;
+	height: 51px;
+	line-height: 51px;
+	font-size: 14px;
+	color: #434343;
+	text-align: left;
+	border-left: 2px solid #fff;
+}
+.title-list a:hover,.title-list a.current {
+	text-decoration: none;
+	background: #fcf6f6;
+	border-left: 2px solid #e2857c;
+    font-weight: bold;
+}
+.title-list a em{
+	position: relative;
+	top: 5px;
+	margin: auto 10px auto 32px;
+	display: inline-block;
+	height: 18px;
+	width: 18px;
+}
+.title-list em {
+    background: url(i/icon-red.png) no-repeat;
+}
+.title-list .title-one em {
+    background-position: -23px -175px;
+}
+.title-list .title-two em {
+    background-position: -46px -175px;
+}
+.title-list .title-three em {
+    background-position: -69px -177px;
+}
+.title-list .title-four em {
+    background-position: -91px -177px;
+}
+.title-list .title-five em {
+    background-position: -138px -156px;
+}
+.title-list .title-six em {
+    background-position: -138px -177px;
+}
+
+.page-user-bottom {
+	float: right;
+	margin: 10px 10px 0 0;
+}
+.user-search {
+	float: right;
+	margin-right: 10px;
+	position: relative;
+	top: 5px;
+}

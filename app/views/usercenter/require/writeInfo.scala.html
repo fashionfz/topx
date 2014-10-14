@@ -1,0 +1,159 @@
+@(tags:List[models.SkillTag],requireVO:vo.RequireDetailVO)
+@import org.apache.commons.lang3.StringUtils
+@import org.apache.commons.collections.CollectionUtils
+@main(if(requireVO.getId == null){"发布需求 -- 需求管理 -- 个人中心"}else{"编辑需求 -- 需求管理 -- 个人中心"}){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('userServiceWriteInfoCss','css');
+    </script>
+} {
+    <div id="content" class="clearfix">
+        @usercenter.left("require")
+        <div class="main">
+            <div class="user-info">
+                <ul class="tab-menu clearfix">
+                    <li class="tab-menu-btn current"><a class="tab-menu-left" href="javascript:;">需求管理</a></li>
+                </ul>
+                <div class="user-content user-base clearfix color-blue-grey">
+                    <div class="user-info-block">
+                        <div class="f16 user-nav">
+                            <strong>@if(requireVO.getId == null){发布需求}else{编辑需求}
+                                <a href="/user/require" class="color-blue f12"><< 返回我的需求列表</a></strong>
+                        </div>
+                        <div class="f16">
+                            @if(requireVO.getId == null){
+                                请填写下列需求信息，以便用户搜索到您的需求，以下信息将显示在<strong class="color-blue">需求详情页</strong>
+                            }else{
+                                编辑需求信息，以便用户搜索到您的需求，以下信息将显示在
+                                <a href="/require/detail/@requireVO.getId()" target="_blank">需求详情页</a>
+                            }
+
+                        </div>
+                    </div>
+                    <div class="user-info-block clearfix">
+                        <div class="info-key">
+                            <span class="red">*</span>所属分类：
+                        </div>
+                        <div class="info-value pl15">
+                            <select id="industry">
+                                <option value="">请选择</option>
+                                    @for(tag <- tags){
+                                    	@if(requireVO.getIndustryId()!=null && requireVO.getIndustryId()==tag.id){
+                                			<option value="@requireVO.getIndustryId()" selected>@requireVO.getIndustryName()</option>
+                                		}else{
+                                    		<option value="@tag.id">@tag.tagName</option>
+                                    	}
+                                    }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="user-info-block clearfix">
+                        <div class="info-key ">
+                            <span class="red">*</span>标题：
+                        </div>
+                        <div class="info-value pl15 w600">
+                            <input type="text" class="txt txt-long right-txt txt-verify" value="@requireVO.getTitle()" id="name" placeholder="我需要解决某件事情..." maxlength="56"/>
+                            <span class="tips tips-right"></span>
+                        </div>
+                    </div>
+                    <div class="user-info-block clearfix">
+                        <div class="info-key special">
+                            <span class="red"></span>需求说明：
+                        </div>
+                        <div class="info-value pl15 w600">
+                            <textarea class="textarea" id="instruction" style="resize: none" maxlength="500">@requireVO.getInfo()</textarea>
+                            <span class="tips tips-right"></span>
+                        </div>
+                    </div>
+
+                    <div class="user-info-block clearfix">
+                        <div class="info-key special">
+                            <span class="red"></span>需求附件：
+                        </div>
+                        <div class="info-value pl15 w600">
+                            <div class="pr">
+                                <form action="/attach/upload/require" method="post" enctype="multipart/form-data">
+                                    <input type="file" id="requireImg" name="certificate" multiple="multiple" value="上传附件">
+                                </form>
+                            </div>
+                            <div class="clear color-blue-light pt5">最多可添加5个附件,支持JPG、PNG、Word、Excel，大小不超过2M</div>
+                            <input type="hidden" id="groupBackUrl" value="">
+                            <span class="tips tips-right"></span>
+                        </div>
+                    </div>
+
+                    <div class="user-info-block clearfix">
+                        <div class="info-key">
+                            预算：
+                        </div>
+                        <div class="info-value pl15 w600">
+                            <input type="text" class="txt right-txt txt-verify txt-short" value="@requireVO.getBudget()"
+                                   id="price" maxlength="10" placeholder="金额"/>
+                            <span>元</span>
+                            <span class="tips tips-right"></span>
+                            <span class="color-blue-light">填“0”为“免费”，不填则为“面议”</span>
+                        </div>
+                    </div>
+
+                    <div class="user-info-block skill-tags clearfix">
+                        <div class="info-key special">
+                            <label><span class="red">*</span>标签：</label>
+                        </div>
+                        <div class="info-value pl15 w600">
+                            <ul class="textbox" id="skillTags">
+                            	@if(CollectionUtils.isNotEmpty(requireVO.getTags())){
+                             		@for(tag <- requireVO.getTags()){
+                             			<li class="textbox-item" data-value="@tag"><span>@tag</span><i title="删除标签"></i></li>
+                             		}
+	                            }
+                                <li><input type="text" class="textbox-input" id="tags-input" placeholder="输入标签并按回车键添加"></li>
+                            </ul>
+                            <div class="tips tips-bottom"></div>
+                        </div>
+                    </div>
+					
+
+                    <!--<div class="user-info-block clearfix">
+                        <div class="info-key">&nbsp;</div>
+                        <div class="info-value pl15">
+                            <label>
+                                @if(requireVO==null||requireVO.getId()==null){
+                                <input type="checkbox" class="agreement">
+                                }else{
+                                <input type="checkbox" checked="checked" class="agreement">
+
+                                }
+                                <span>我已经阅读并接受《helome服务需求协议》</span>
+                            </label>
+                            <span class="tips tips-right"></span>
+                        </div>
+                    </div>-->
+
+                    <div class="user-info-block clearfix">
+                        <div class="info-key">&nbsp;</div>
+                        <div class="info-value pl15">
+                            <input type="button" value="保存" class="btn-default btn-lg btn-green btn-padding-50 btn-group-info-save">
+                            <input type="button" value="取消" class="btn-default btn-lg btn-white btn-padding-50 btn-group-info-clean ml5">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var requireImg = [];
+        @if(CollectionUtils.isNotEmpty(requireVO.getAttachList())){
+            @for(attach <- requireVO.getAttachList()){
+                requireImg.push({
+                    attachId: '@attach.getAttachId()',
+                    path: '@attach.getPath()',
+                    pathsource: '@attach.getPathsource()',
+                    fileName: '@attach.getFileName()'
+                })
+            }
+        }
+        ued_import('commonJs','js');
+        ued_import('userRequireWriteInfoJs','js');
+    </script>
+}

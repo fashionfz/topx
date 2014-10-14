@@ -1,0 +1,99 @@
+@(page:vo.page.Page[vo.ServiceListVO],cts:org.apache.commons.collections.map.ListOrderedMap,currCategoryId:Long)
+@import org.apache.commons.collections.CollectionUtils
+@main("服务 -- helome服务交流平台"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('servicesCss','css');
+    </script>
+} {
+    <div class="banner">
+        <div class="banner-inner services-banner container">
+            <div class="banner-text">
+                <h1>Me2Me  实现你的价值</h1>
+                <h4>如果你介于牛A和牛C之间，发布服务让全世界都知道你牛B吧！</h4>
+                <a href="/user/service/write" target="_blank" class="btn-default btn-lg btn-blue">立即发布服务</a>
+            </div>
+        </div>
+    </div>
+    <div id="content" class="clearfix">
+        <div class="sub-left">
+            <input type="hidden" name="currentCatId" id="currentCatId" value="@currCategoryId">
+            <div class="panel">
+                <div class="panel-title">分类</div>
+                <div class="panel-list">
+                    <ul>
+                  		@for((key, value) <- cts) {
+                  		  	@if(currCategoryId == key){
+                            <li class="current"><a href="/services?categoryId=@key.toString()">@value</a></li>
+                            } else {
+                            <li><a href="/services?categoryId=@key.toString()">@value</a></li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sub-right">
+            <div class="list-block service-list">
+                @if(CollectionUtils.isNotEmpty(page.getList())){
+                    @for(svo <- page.getList()) {
+                        <div class="search-block clearfix">
+                            <a href="/services/detail/@svo.getId" class="reqSer-head" target="_blank"><img src="@svo.getCoverUrl"></a>
+                            <div class="reqSer-info">
+                                <div class="reqSer-title"><a href="/services/detail/@svo.getId" target="_blank">@svo.getTitle</a></div>
+                                <div class="reqSer-introduction">
+                                   @svo.getInfo
+                                </div>
+                                <div class="reqSer-user clearfix">
+                                    <a href="@routes.ExpertApp.detail(svo.getOwnerUserId)" class="user-head" target="_blank">
+                                        <em></em>
+                                        <img src="@svo.getHeadUrl" width="41" height="41">
+                                    </a>
+                                    <a href="@routes.ExpertApp.detail(svo.getOwnerUserId)" class="user-name" target="_blank">@Html(svo.getOwnerUserName)</a>
+                                    <div class="user-job">@svo.getJob</div>
+
+                                    <div class="user-country flag @svo.getCountryUrl" title="@svo.getCountry()"></div>
+                                  @if(svo.getGender().name() == "MAN"){
+                                    <img alt="男" title="男" src="@routes.Assets.at("misc/images/male.png")" class="user-gender" width="13" height="13">
+                                }else{
+                                    <img alt="女" title="女" src="@routes.Assets.at("misc/images/female.png")" class="user-gender" width="13" height="13">
+                                }
+                                </div>
+                            </div>
+                            <div class="reqSer-right">
+                                <div class="reqSer-price">
+                                    @if(svo.getPrice() == null || svo.getPrice() == ""){
+                                        面议
+                                    }else{
+                                        @if(svo.getPrice() == 0.0 || svo.getPrice() == "0.0"){
+                                            免费
+                                        }else{
+                                            ￥@svo.getPrice()
+                                        }
+                                    }
+                                </div>
+                                <div class="reqSer-level">
+                                    <span class="icon icon-star-base" title="@svo.getAverageScoreCompute()分">
+                                        <span class="icon icon-star-on" style="width:@{Double.valueOf(svo.getAverageScoreCompute())/5*73}px;"></span>
+                                    </span>
+                                    <span class="star-num"><a href="/services/detail/@svo.getId#comments" target="_blank">(@svo.getCommentNum)</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }else {
+                    <div class="no-item"><em class="icon icon-no-item"></em><br>暂时没有此类服务！</div>
+                }
+                
+                <div class="load-wrapper J-load-wrapper">
+                    <div class="btn-default btn-white btn-lg load-more-btn">加载更多</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+	<script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('servicesJs','js');
+	</script>
+}

@@ -1,0 +1,266 @@
+@charset "utf-8";
+/*
+* @description: 个人中心个人资料样式
+* @author:Young Foo (young.foo@helome.com)
+* @update:Young Foo (young.foo@helome.com)
+*/
+
+/*****************************************************/
+/* 用户base页面 */
+/*****************************************************/
+/* top */
+.user-base .base-top{
+	color: #40526a;
+	margin: 15px 37px;
+}
+.user-base .base-top a{
+	text-decoration: underline;
+	color: #3a75d7;
+}
+.user-base .base-top strong{
+	color: #3a75d7;
+	display: inline-block;
+	max-width: 200px;
+	overflow: hidden;
+	word-break: break-all; 
+	white-space: nowrap;
+	word-wrap: break-word;
+	text-overflow: ellipsis;
+	vertical-align: top;
+}
+/* 显示金额，预约状态 */
+.user-pay a{
+	display: inline-block;
+	position: relative;
+	top: -7px;
+}
+.user-pay-text{
+	top:-5px;
+	position: relative;
+}
+
+.info-value-service p {
+    width: 170px;
+    position: relative;
+}
+
+.icon-tips {
+    background-position: -186px -101px;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    right: -20px;
+    top: 2px;
+    cursor: pointer;
+}
+.base-top .icon-tips{
+    position: relative;
+    right: 0;
+    top: 5px;
+}
+.icon-tips:hover {
+    background-position: -186px -80px;
+}
+
+.tips-link {
+    color: #ffe100;
+    text-decoration: none;
+}
+
+/*
+* 洲选择覆盖样式
+*/
+.filter-select{
+    height: 43px !important;
+}
+.filter-name .filter-name-area {
+	border: 2px solid #d4d9df !important;
+	border-radius: 5px!important;
+	font-size: 13px;
+	height: 35px !important;
+	line-height: 35px !important;
+}
+
+.filter-name .continent{
+	top: 37px !important;
+}
+
+/* introduction */
+.introduction-tips{
+	color: #666 !important;
+}
+
+/* industry */
+.industry-tips,
+.tags-tips {
+	margin-bottom: 10px;
+	color: #40526a;
+}
+
+.industry-checkbox .checkbox-btn {
+	margin-right: 10px;
+	float: left;
+}
+.industry-checkbox .checkbox-btn .checkbox-title{
+	margin-left: 8px;
+}
+
+/*****************************************************/
+/* 用户详情页面 */
+/*****************************************************/
+.user-exp{
+	position: relative;
+	border-bottom: 1px dashed #b0bac7;
+	padding: 12px 0px 12px 0px;
+}
+
+.user-exp-index {
+	display: block;
+	float: left;
+	vertical-align: top;
+	width: 20px;
+	text-align: center;
+	padding-right: 20px;
+}
+.user-exp-index .icon {
+	background-position: -167px -304px;
+	height: 19px;
+	width: 20px;
+	color: #fff;
+}
+.user-exp-content {
+	float: left;
+	width: 730px;
+	position: relative;
+	font-size: 12px;
+	line-height: 1.7em;
+}
+
+.user-exp .user-edu-main,
+.user-exp .user-exp-main{
+    display: block;
+    vertical-align: middle;
+	color: #40526a;
+	width: 610px;
+	word-break: break-all;
+    float: left;
+}
+
+.user-exp .user-edu-main .school,
+.user-exp .user-exp-main .duty{
+    font-size: 14px;
+	font-weight: bold;
+    z-index: 1;
+}
+
+.user-exp .user-exp-text,
+.user-exp .user-exp-main .company {
+    margin-bottom: 2px;
+}
+
+.user-exp .user-exp-text span{
+	display: block;
+	float: left;
+}
+
+.user-exp .user-edu-main .edu-time,
+.user-exp .user-exp-main .job-time {
+    color: #999999;
+}
+
+.user-exp .user-edu-main .prof {
+    margin-right: 10px;
+}
+
+.user-exp .user-exp-content .user-exp-btnbox{
+	display: block;
+	float: left;
+	width: 58px;
+	padding: 4px 0px 0px 20px;
+	vertical-align: top;
+}
+
+.user-exp .user-exp-content .user-exp-btnbox > li{
+	float: left;
+	margin-left: 10px;
+}
+.user-exp .user-exp-content .user-exp-btnbox > li > a{
+	color: #e06b64;
+	font-size: 13px;
+}
+
+.user-delete {
+    display: none;
+}
+
+/* panel */
+#userWorkExp .collapse-pannel,
+#userEduExp .collapse-pannel{
+	margin: 10px 0 10px 27px;
+	position: relative;
+}
+
+.no-exp {
+	color: #c0c6ce;
+	font-weight: 800;
+	font-size: 14px;
+	width: 100%;
+	text-align: center;
+	margin: 20px 0;
+}
+.no-exp .icon-no-exp {
+	background-position: -134px -76px;
+	height: 48px;
+	width: 48px;
+}
+
+.icon-add-info {
+	background-position: -325px 0px;
+	height: 40px;
+	width: 40px;
+	cursor: pointer;
+	margin-left: 230px;
+}
+.icon-add-info:hover{
+	background-position: -325px -41px;
+}
+.icon-add-info:active{
+	background-position: -325px -82px;
+}
+
+.work-collapse,
+.edu-collapse{
+	position: relative;
+	background-color: #fff;
+	margin-top: 15px;
+	margin-left: 38px;
+}
+
+
+/* 个人中心-教育经历 */
+.user-info-block .info-value .year{
+    margin: 0 10px;
+}
+
+.user-info-block .info-value .tips-right,
+/* resume  for english */
+.en-resume-error{
+    display: inline-block;
+    font-size: 12px;
+    color: red;
+}
+.en-resume-box .btn-default{
+    margin:13px 15px auto auto;
+    padding: 6px 12px 5px 12px;
+}
+.btn-en-resume .icon{
+    margin: -2px 4px 0 0;
+}
+.resume-content .checkbox-title{
+    color: #40526a;
+    font-weight: normal;
+}
+.dialog-table .btn-en-resume-save{
+    padding: 8px 14px;
+}
+/*end the resume*/

@@ -1,0 +1,29 @@
+@(userName: String,roles: String)
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+	<head>
+    	<meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>嗨啰应用管理平台</title>
+    	<script type="text/javascript" src="@routes.Assets.at("system/ext/shared/include-ext.js?theme=classic")" charset="utf-8"></script>
+    	<script type="text/javascript" src="@routes.Assets.at("system/ext/ext-lang-zh_CN.js")" charset="utf-8"></script>
+    	<script type="text/javascript" src="@routes.Assets.at("system/ajax-override.js")" charset="utf-8"></script>
+    	<script type="text/javascript" src="@routes.Assets.at("system/app.js?username="+userName+"&roles="+roles)" charset="utf-8"></script>
+    	<link rel="stylesheet" type="text/css" href="@routes.Assets.at("system/ext/shared/extjs/css/helome.css")" />
+    	<style>
+    	.x-action-col-icon {
+		    height: 16px;
+		    width: 16px;
+		    margin-right: 5px;
+		}
+		.hidden {
+		    height: 0px;
+            width: 0px;
+            margin: 0;
+            padding: 0;
+		}
+    	</style>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,199 @@
+@charset "utf-8";
+/*
+* @description: 登陆样式
+* @author: Young.foo@helome.com
+* @update: Young.foo@helome.com
+*/
+.login-page .header-login{
+    display: none;
+}
+
+.login-left{
+    width: 280px;
+}
+.login-left .forget-password{padding-top: 4px}
+
+.login-right {
+    margin-top: 20px;
+}
+
+
+.login-right .login-right-title{
+    width: 75px;
+    height: 37px;
+    line-height: 37px;
+    float: left;
+    color: #40526a;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";
+}
+
+/* 第三方登录按钮 */
+.login-right ul {
+	margin-top: 6px;
+    width: 190px;
+    float: left;
+    margin: 0;
+}
+.login-right ul li {
+    height: 37px;
+    padding-top: 14px;
+    width: 47px;
+    float: left;
+    padding: 0;
+}
+.login-right li a {
+	height: 37px;
+	width: 37px;
+	display: inline-block;
+    overflow: hidden;
+}
+.login-right .sina-weibo {
+	background: url(i/login.png) 0 0 no-repeat;
+}
+.login-right .tencent-weibo {
+	background: url(i/login.png) -257px 0 no-repeat;
+}
+.login-right .renren {
+    background: url(i/login.png) -145px 0 no-repeat;
+}
+.login-right .douban {
+    background: url(i/login.png) -206px 0 no-repeat;
+}
+.login-right .qq-zone {
+	background: url(i/login.png) -89px 0 no-repeat;
+}
+.login-right .weixin {
+	background: url(i/login.png) -42px 0 no-repeat;
+}
+.login-right .facebook {
+    background: url(i/login.png) -318px 0 no-repeat;
+}
+.login-right .twitter {
+    background: url(i/login.png) -367px 0 no-repeat;
+}
+.login-right .sina-weibo-no {
+    cursor: default;
+    background: url(i/login.png) 0 -54px no-repeat;
+}
+.login-right .tencent-weibo-no {
+    cursor: default;
+    background: url(i/login.png) -257px -54px no-repeat;
+}
+.login-right .renren-no {
+    cursor: default;
+    background: url(i/login.png) -145px -54px no-repeat;
+}
+.login-right .douban-no {
+    cursor: default;
+    background: url(i/login.png) -206px -54px no-repeat;
+}
+.login-right .qq-zone-no {
+    cursor: default;
+    background: url(i/login.png) -89px -54px no-repeat;
+}
+.login-right .weixin-no {
+    cursor: default;
+    background: url(i/login.png) -42px -54px no-repeat;
+}
+.login-right .facebook-no {
+    cursor: default;
+    background: url(i/login.png) -318px -54px no-repeat;
+}
+.login-right .twitter-no {
+    cursor: default;
+    background: url(i/login.png) -367px -54px no-repeat;
+}
+
+.login-error {
+    background: #f2dede;
+    border: solid 1px #eed3d7;
+    border-radius: 5px;
+    margin: 0px auto 20px auto;
+    color: #b94a48;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    padding: 8px;
+    line-height: 16px;
+    width: 410px;
+}
+.login-error em{
+    display: inline-block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url(i/icon-red.png) no-repeat -140px -45px;
+    margin-right: 6px;
+}
+
+/* 第三方传递的信息 */
+
+.tl-info{
+    padding: 10px;
+    background-color: #f5f7f9;
+    color:#627690;
+    border:1px solid #d4d9df;
+    border-radius: 4px;
+}
+.tl-info .tl-head{
+    float: left;
+    height: 50px;
+    width: 50px;
+}
+.tl-info .tl-content{
+    float: left;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.tl-info .tl-content .title{
+    margin-bottom: 6px;
+}
+.tl-info .tl-content .name{
+    color: #3a75d7;
+    font-weight: bold;
+}
+
+/* 第三方左右两列 */
+.tl-third .btn-default[type="button"]{
+    width: 135px;
+    float: left;
+}
+
+.tl-third .btn-default.btn-left{
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tl-third .tl-third-benefit{
+    color: #91a0b3;
+    line-height: 1.9em; 
+}
+
+.tl-third .tl-third-right{
+    margin-left: 20px;
+    border-left: 1px dashed #e0e0e0;
+    padding-left: 20px;
+    width: 200px;
+    float: left;
+}
+
+/** 第三方跳转 **/
+.main.tl-skip{
+    width: 280px;
+    margin: 0px;
+    padding: 30px 30px;
+}
+
+/* 第三方完善资料 */
+.main.tl-reg{
+    width: 522px;
+    margin: 0px;
+    padding: 30px 30px;
+}
+
+/* 第三方绑定 */
+.main.tl-login{
+    width: 522px;
+    margin: 0px;
+    padding: 30px 30px;
+}

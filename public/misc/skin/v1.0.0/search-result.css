@@ -1,0 +1,325 @@
+@charset "utf-8";
+/*
+* @description: 搜索结果与开发者详情公用样式
+* @author: Young Foo (young.foo@helome.com)
+* @update: Young Foo
+* @date: 2014/5/28
+*/
+
+/*搜索结果*/
+.search-list {
+	margin: 20px auto 0px auto;
+	position: relative;
+	width: 935px;
+}
+.search-list .search-head{
+	margin: 0px;
+	float: left;
+}
+
+/***** 搜索结果详细页面左边个人信息 *****/
+.search-block {
+	margin-bottom: 15px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+	min-height: 130px;
+}
+
+.search-left,
+.search-center,
+.search-right {
+	float: left;
+}
+.search-left {
+	width: 250px;
+	position: relative;
+	text-align: center;
+}
+
+/* 头像 */
+.search-head {
+	height: 114px;
+	width: 114px;
+	position: relative;
+	background: #e1e1e1;
+	text-align: left!important;
+	border-radius: 136px;
+	margin:0 auto;
+}
+
+.search-head .search-head-img{
+	height: 106px;
+	width: 106px;
+	margin: 4px auto auto 4px;
+	border-radius: 128px;
+}
+
+/* 大头像 */
+.search-head.search-head-lg{
+	height: 136px;
+	width: 136px;
+}
+
+.search-head.search-head-lg .search-head-img{
+	height: 128px;
+	width: 128px;
+}
+
+/* 显示国家 */
+
+.search-country {
+    width: 60px;
+    height: 30px;
+    margin-left: -32px;
+    bottom: -18px;
+    left: 50%;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 45px;
+    position: absolute;
+    overflow: hidden;
+}
+.search-country .country-flag {
+	position:absolute;
+	top: 10px;
+	left:10px;
+}
+.search-country .country-sex {
+	position: absolute;
+	top: 10px;
+	left: 36px;
+}
+
+.search-left .name {
+	margin-top: 30px;
+}
+
+.search-left .btn-cooperation{
+	margin: 20px auto 10px auto;
+}
+
+
+/******************************************************/
+
+.search-center {
+	width: 570px;
+	margin-left: 30px;
+	font-size: 14px;
+	position: relative;
+}
+.search-center p,
+.search-left p {
+	margin-bottom: 5px;
+	color: #40526a;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+.search-center .name,
+.search-left .name {
+	color: #3a7cdb;
+	font-weight: bold;
+	position: relative;
+	font-size: 16px;
+}
+
+.introduce {
+	line-height: 1.8;
+	color: #91a0b3 !important;
+	font-size: 12px;
+	margin-top: 10px;
+    word-break: break-all;
+    word-wrap: break-word;
+    text-align: left!important;
+}
+
+.search-center .name a {
+	color: #3a7cdb;
+    display: inline-block;
+    max-width: 240px;
+    overflow: hidden;
+    word-break: break-all;
+    word-wrap: break-word;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url("ellipsis.xml#ellipsis");
+}
+
+.job {
+	font-size: 14px;
+	color: #707070;
+	font-weight: normal;
+	margin-left: 10px;
+    display: inline-block;
+    max-width: 240px;
+    overflow: hidden;
+    word-break: break-all;
+    word-wrap: break-word;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url("ellipsis.xml#ellipsis");
+}
+
+.skill a,
+.all-skill-tags a,
+.skill .search-marked,
+.all-skill-tags .search-marked .yinwenjie {
+	border-radius: 3px;
+	padding: 1px 6px;
+	color: #fff;
+	border: 1px solid #6191df;
+	background: #6191df;
+	font-size: 12px;
+	text-decoration: none;
+	margin: 5px 5px 0 0;
+	display: inline-block;
+	float: left;
+}
+
+.skill a:hover,
+.all-skill-tags a:hover {
+    background: #3a75d7;
+    border-color: #3a75d7;
+    color: #fff;
+}
+.skill span.yinwenjie{
+	color: #fff
+}
+
+/** 更多标签显示dialog **/
+.skill .all-tag {
+	background: none;
+	border: none;
+	color: #5287cd;
+	text-decoration: underline;
+    float: right;
+}
+
+.skill .all-tag:hover {
+    text-decoration: none;
+}
+
+.all-skill-tags {
+	background: #fff;
+	border: 1px solid #c4c4c4;
+	border-radius: 5px;
+	position: absolute;
+	width: 560px;
+	padding: 10px;
+	right: -23px;
+	z-index: 50;
+    box-shadow: 0 1px 5px #999;
+}
+
+.all-skill-tags .icon-triangle-top {
+	background-position: -1px -24px;
+	height: 7px;
+	width: 12px;
+	position: absolute;
+	top: -6px;
+	right: 56px;
+}
+
+/**** search-right ****/
+.consult,
+.order,
+.stars {
+	margin: 0 auto auto 0px;
+	text-align: center;
+}
+
+.btn-consult, .btn-fav, .btn-cooperation, .btn-at , .btn-ated{
+	width: 90px;
+	margin: auto auto 10px auto;
+	display: block;
+}
+
+/** 资费 **/
+
+.search-right {
+	width: 180px;
+	margin-left: 30px;
+	border-left: 1px #ddd dashed;
+	padding-left: 10px;
+}
+
+.tariff {
+	color: #a0a0a0;
+	font-size: 12px;
+	font-weight: 600;
+	margin-top: 10px;
+	text-align: center;
+}
+.tariff span{
+	color: #e06b64;
+    font-family: "microsoft yahei";
+}
+
+.star-num {
+	top: -3px;
+	position: relative;
+	margin-left: 0px;
+	color: #3a7cdb;
+}
+
+/* 搜索无结果 */
+.no-result {
+	clear: both;
+	/*width: 375px;*/
+	margin: 30px auto auto 250px;
+	display: inline-block;
+}
+.no-result-one {
+}
+.no-result-one span{
+	height: 43px;
+	line-height: 43px;
+	font-size: 16px;
+	font-family: 'Microsoft Yahei';
+	color: #1b1b1b;
+	display: inline-block;
+	float: left;
+}
+.no-result-one em {
+	height: 43px;
+	width: 42px;
+	display: inline-block;
+	background: url(i/icon-red.png) -57px -130px no-repeat;
+	margin-right: 20px;
+	float: left;
+}
+.no-result-two {
+	color: #e06b64;
+	font-weight: 600;
+	font-size: 14px;
+	margin: 0px auto auto 63px;
+}
+.no-result-three {
+	font-size: 14px;
+	color: #8a8a8a;
+	margin: 5px auto auto 60px;
+}
+.no-result-three a {
+	color: #4083a9;
+	font-size: 14px;
+	text-decoration: underline;
+	margin-left: 5px;
+}
+
+.noMore {
+    text-align: center;
+    padding: 10px 0;
+    background: #EEE;
+    border-radius: 5px;
+    color: #666;
+}
+
+.page-bottom{
+    float: right;
+    margin: 0px 18px 0px 0px;
+}

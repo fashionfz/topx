@@ -1,0 +1,234 @@
+@(expert: vo.ExpertDetailInfo,isForbidAddResumeTask:java.lang.String)
+@main("教育经历 -- 我的资料 -- 个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('userDetailCss','css');
+    </script>
+} {
+<div id="content" class="clearfix">
+	@usercenter.left("userdetail")
+	<div class="main">
+		<input type="hidden" id="isForbidAddResumeTask" value="@isForbidAddResumeTask"/>
+		<div class="user-info user-detail" id="user-info">
+			<ul class="tab-menu clear">
+				<li><a class="tab-menu-left" href="/user/userdetail/base">个人信息</a></li>
+				<li><a href="/user/userdetail/userhead">个人头像</a></li>
+				<li><a href="/user/userdetail/workinfo">职业经历</a></li>
+				<li class="current"><a href="javascript:;">教育经历</a></li>
+				<!--<li><a href="/user/userdetail/serviceinfo">收费方式</a></li>-->
+			</ul>
+			<div class="user-content clearfix">
+				<div class="user-info-block clearfix">
+					<div class="clearfix">
+					    <div class="mb5" id="userEduExp">
+							<div class="user-exp-box clearfix">
+							@if(expert.getEducationExp() != null && expert.getEducationExp().size() != 0) {
+								@for((education, index) <- expert.getEducationExp().zipWithIndex) {
+								<div class="user-exp clearfix">
+									<div class="user-exp-content">
+                                        <div class="clearfix">
+                                            <div class="user-exp-index"><span class="icon">@{index+1}</span></div>
+    							            <div class="user-edu-main"
+    							             data-eduYear="@education.getYear()"
+                                             data-eduYearEnd="@education.getYearEnd()"
+    							             data-eduInfo="@education.getEduInfo()"
+    							             data-eduUnit="@education.getSchool()"
+    							             data-professional="@education.getMajor()"
+    							             data-degree="@education.getAcademicDegree()">
+                                                <div class="school exp-in">@education.getSchool()</div>
+                                                <div class="user-exp-text clearfix">
+                                                    @if(education.getMajor()){
+                                                    <span class="prof">@education.getMajor()</span>
+                                                    }
+                                                    @if(education.getAcademicDegree()  && education.getAcademicDegree() != "" ){
+                                                    <span class="degree">@education.getAcademicDegree()</span>
+                                                    }
+                                                </div>
+                                                @if(education.getYear() || education.getYearEnd()){
+                                                    <div class="edu-time">@education.getYear()年-@education.getYearEnd()年</div>
+                                                }
+                                                @if(education.getEduInfo() && education.getEduInfo() != ""){
+                                                <div class="user-exp-info">
+                                                    <span class="info">@education.getEduInfo()</span>
+                                                </div>
+                                                }
+    							            </div>
+
+                                            <ul class="user-exp-btnbox">
+    						                	<li><a href="javascript:" class="btn-edit"><span class="icon icon-edit"></span></a></li>
+    						                	<li><a href="javascript:" class="btn-delete"><span class="icon icon-delete"></span></a></li>
+    						                </ul>
+                                        </div>
+										<div class="collapse-pannel hide">
+											<div class="user-info-block clearfix pr z5">
+												<div class="info-key">
+													<label><span class="red">*</span>在校时间：</label>
+												</div>
+												<div class="info-value">
+													<select class="select-year year-start" ></select>
+													<span class="year">年&nbsp;-</span>
+                                                    <select class="select-year year-end"></select>
+                                                    <span class="year">年</span>
+                                                    <span class="tips tips-right edu-date-tips"></span>
+												</div>
+											</div>
+											<div class="user-info-block clearfix">
+												<div class="info-key">
+													<label><span class="red">*</span>学校名称：</label>
+												</div>
+												<div class="info-value">
+													<input type="text"  class="txt txt-long txt-verify input-school" maxlength="64" placeholder="学校或单位名称">
+													<span class="tips tips-right"></span>
+												</div>
+											</div>
+											<div class="user-info-block clearfix">
+												<div class="info-key">
+													<label>所学专业：</label>
+												</div>
+												<div class="info-value">
+													<input type="text" class="txt txt-long txt-mid input-prof" maxlength="64"  placeholder="所学专业">
+													<span class="tips tips-right"></span>
+												</div>
+											</div>
+                                            <div class="user-info-block clearfix">
+                                                <div class="info-key">
+                                                    <label>获得学历：</label>
+                                                </div>
+                                                <div class="info-value">
+                                                    <select class="edu-degree" >
+                                                        <option value="">请选择</option>
+                                                        <option value="初中">初中</option>
+                                                        <option value="高中">高中</option>
+                                                        <option value="中技">中技</option>
+                                                        <option value="中专">中专</option>
+                                                        <option value="大专">大专</option>
+                                                        <option value="本科">本科</option>
+                                                        <option value="MBA">MBA</option>
+                                                        <option value="硕士">硕士</option>
+                                                        <option value="博士">博士</option>
+                                                        <option value="其他">其他</option>
+                                                    </select>
+                                                    <span class="tips tips-right"></span>
+                                                </div>
+                                            </div>
+                                            <div class="user-info-block clearfix">
+                                                <div class="info-key">
+                                                    <label>经历说明：</label>
+                                                </div>
+                                                <div class="info-value">
+                                                    <textarea class="textarea text-eduInfo" maxlength="500"
+                                                              placeholder="请提供教育经历相关的细节，以便用户纤细了解您的背景。"></textarea>
+                                                    <span class="tips tips-right"></span>
+                                                </div>
+                                            </div>
+											<div class="user-info-block clearfix">
+												<div class="info-key">&nbsp;</div>
+												<div class="info-value">
+													<input type="button" class="btn-default btn-green btn-lg btn-save" value="完成编辑">
+													<input type="button" class="btn-default btn-lg btn-white collapse-close-btn" value="取消">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								}
+							}else{
+                                <div class="no-exp"><em class="icon icon-no-exp"></em><br/>请添加您的教育信息！</div>
+                            }
+							</div>
+						</div>
+					</div>
+					<div class="collapse edu-collapse">
+						<span class="save-ok save-ok-list none"><em class="icon"></em><span></span></span>
+						<div class="collapse-pannel hide">
+                            <div class="user-info-block clearfix pr z5">
+                                <div class="info-key">
+                                    <label><span class="red">*</span>在校时间：</label>
+                                </div>
+                                <div class="info-value">
+                                    <select class="select-year year-start" id="eduYear"></select>
+                                    <span class="year">年&nbsp;-</span>
+                                    <select class="select-year year-end"  id="eduYearEnd"></select>
+                                    <span class="year">年</span>
+                                    <span class="tips tips-right edu-date-tips"></span>
+                                </div>
+                            </div>
+                            <div class="user-info-block clearfix">
+                                <div class="info-key">
+                                    <label><span class="red">*</span>学校名称：</label>
+                                </div>
+                                <div class="info-value">
+                                    <input type="text"  class="txt txt-long txt-verify input-school" id="eduSchool" maxlength="64" placeholder="学校或单位名称">
+                                    <span class="tips tips-right"></span>
+                                </div>
+                            </div>
+                            <div class="user-info-block clearfix">
+                                <div class="info-key">
+                                    <label>所学专业：</label>
+                                </div>
+                                <div class="info-value">
+                                    <input type="text" class="txt txt-long txt-mid input-prof" id="eduProfessional" maxlength="64" placeholder="所学专业">
+                                    <span class="tips tips-right"></span>
+                                </div>
+                            </div>
+                            <div class="user-info-block clearfix">
+                                <div class="info-key">
+                                    <label>获得学历：</label>
+                                </div>
+                                <div class="info-value">
+                                    <select class="edu-degree" id="eduDegree">
+                                        <option value="">请选择</option>
+                                        <option value="初中">初中</option>
+                                        <option value="高中">高中</option>
+                                        <option value="中技">中技</option>
+                                        <option value="中专">中专</option>
+                                        <option value="大专">大专</option>
+                                        <option value="本科">本科</option>
+                                        <option value="MBA">MBA</option>
+                                        <option value="硕士">硕士</option>
+                                        <option value="博士">博士</option>
+                                        <option value="其他">其他</option>
+                                    </select>
+                                    <span class="tips tips-right"></span>
+                                </div>
+                            </div>
+                            <div class="user-info-block clearfix">
+                                <div class="info-key">
+                                    <label>经历说明：</label>
+                                </div>
+                                <div class="info-value">
+                                    <textarea class="textarea text-eduInfo" id="eduInfo" maxlength="500"
+                                              placeholder="请提供教育经历相关的细节，以便用户纤细了解您的背景。"></textarea>
+                                    <span class="tips tips-right"></span>
+                                </div>
+                            </div>
+							<div class="user-info-block clearfix">
+								<div class="info-key">&nbsp;</div>
+								<div class="info-value mb20">
+									<input type="button" class="btn-default btn-lg btn-green btn-padding-50 btn-addEduExp" value="添加"/>
+									<input type="button" class="btn-default btn-lg btn-white btn-padding-50 collapse-close-btn" value="取消"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="collapse-btn-box">
+							<div class="user-info-block clearfix">
+								<div class="info-key">&nbsp;</div>
+								<div class="info-value">
+									<span class="icon icon-add-info collapse-show-btn"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+    ued_import('commonJs','js');
+    ued_import('userEduInfoJs','js');
+</script>
+
+}
+

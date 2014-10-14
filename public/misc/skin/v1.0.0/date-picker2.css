@@ -1,0 +1,453 @@
+@charset "utf-8";
+/*
+* @description: 模仿google日历样式
+* @author: Zhang Guanglin
+* @update: 2013-12-02
+*/
+.dialog-tit {
+}
+.day {
+	background: #fff;
+    border: 1px solid #cbdfff;
+	border-radius: 5px;
+}
+#dayAll table {
+	width:100%;
+	text-align:center;
+	border-collapse:collapse;
+	border-spacing:0;
+	line-height:30px;
+}
+#dayAll table th {
+	background:#efefef;
+	line-height:30px;
+	text-align: center; 
+	color: #707070;
+	font-weight: 600;
+	font-size: 14px;
+	font-family: 'microsoft yahei';
+    border-right: solid 1px #FFF;
+}
+#dayAll table th:nth-child(7) {
+    border-right-width: 0;
+}
+#dayAll .today {
+	border:2px solid #A0D468;
+}
+#dayAll table td {
+	font-weight: 600;
+	font-size: 12px;
+    width: 135px;
+	height: 105px;
+    color: #cbdfff;
+    border: solid 1px #cbdfff;
+	border-left-width: 0;
+	border-top-width: 0;
+	padding: 2px;
+}
+#dayAll table td .day-warp {
+    color: #707070;
+}
+#dayAll table td:nth-child(1) .day-warp,
+ #dayAll table td:nth-child(7) .day-warp,
+ #dayAll table th:nth-child(1) .day-warp,
+ #dayAll table th:nth-child(7) .day-warp {
+     color:#c00;
+ }
+.day-warp {
+	height: 99px;
+	line-height: 28px;
+	text-align: center;
+	z-index: 9;
+	font-size: 20px;
+	position: relative;
+	font-family: 'microsoft yahei'
+}
+#dayAll td .current {
+	background: #48ab23!important;
+	color: #FFF!important;
+	border: 3px solid #FFF;
+	cursor: pointer;
+}
+#dayAll td .current:hover {
+	border:3px solid #e06b64;
+}
+#dayAll tr td:nth-child(7)
+#dayAll tr th:nth-child(7) {
+    border-right-width: 0;
+}
+.btn-order-time {
+	position: absolute;
+	left: 5px;
+	bottom: 8px;
+	opacity: .9;
+	filter:alpha(opacity=90);
+	color: #fff!important;
+	padding: 3px 5px;
+}
+.btn-order-time:active {
+	top:auto!important;
+}
+.btn-order-time i {
+	margin-right: 4px;
+}
+.btn-order-time em {
+	position: relative;
+	top: -4px;
+	font-style: normal;
+}
+.day-select {
+	padding: 10px 15px;
+	background: #5f90dd;
+	border: 1px solid #5f90dd;
+	border-radius: 5px 5px 0 0;
+	color: #8c8c8c;
+	font-size: 14px;
+	text-align: center;
+	position: relative;
+	z-index: 10;
+}
+.day-warp .icon-order {
+    top: 2px;
+}
+.day-select .btn-three {
+	padding: 8px 15px;
+	margin-left: 20px;
+}
+/*.day-select i:hover {
+	color:#c00;
+}*/
+.lr i{
+	width:8px;
+	height: 10px;
+}
+.lr-l i {
+	background-position: -43px -118px;
+}
+.lr-r i {
+	background-position: -43px -134px;
+}
+.select-date { 
+	display:inline-block;
+	width:150px;
+	text-indent:10px;
+	position:relative;
+	margin-left: 292px!important;
+	color: #fff;
+	font-size: 18px;
+}
+.now {
+	color: #666!important;
+	font-weight: 600;
+}
+.day-num {
+	position: absolute;
+	bottom: 2px;
+	right: 4px;
+}
+.day-select .fl,
+.day-select .fr {
+	margin: auto 5px;
+}
+.icon-view-month,
+.icon-view-day {
+	width: 14px;
+	height: 15px;
+	cursor: pointer;
+	top: 5px;
+	position: relative;
+}
+.icon-view-month {
+	background-position: -62px -67px;
+}
+.icon-view-day {
+	background-position: -84px -67px;
+}
+.icon-view-month-current,
+.icon-view-month:hover {
+	background-position: -62px -45px;
+}
+.icon-view-day-current,
+.icon-view-day:hover {
+	background-position: -85px -45px;
+}
+#dayAll {
+	/*position: relative;*/
+	z-index: 15;
+}
+#sm {
+	width:70px;
+}
+#mm {
+	width:68px;
+}
+#yearAll li,#dateAll li{
+	line-height: 26px;
+	height: 26px;
+	font-size: 14px;
+	text-align: left;
+	padding-left: 15px;
+}
+.select-time {
+	position: absolute;
+	border:1px solid #ffd4d9;
+	background: #fff;
+	border-radius: 5px;
+	margin-left: 76px;
+	/*bottom: 3px;*/
+	text-align: left;
+	color: #707070;
+	font-weight: normal;
+	width: 202px;
+	z-index: 30;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+.select-time p {
+	margin:0 0 10px 10px!important;
+}
+.select-time em{
+    background: url(i/icon-red.png) no-repeat;
+    display: inline-block;
+    font-style: normal;
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-right: 8px;
+}
+.select-title {
+    background: #e06b64;
+    border-bottom: solid #d44655 3px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bolder;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-shadow: 1px 1px 1px #c52d27;
+    margin-bottom: 20px;
+}
+.select-time .txt-two {
+	width: 40px;
+	margin-right:5px; 
+	height: 20px;
+	line-height: 20px;
+}
+.select-time label {
+	margin-right: 5px;
+}
+.select-time .time-bg {
+	left: -6px;
+	background-position: -54px -100px;
+	height: 12px;
+	width: 6px;
+	display: inline-block;
+	position: absolute;
+	bottom: 42px;
+}
+.order-time-content {
+	color: #707070;
+	padding: 10px;
+	margin-top: 5px;
+}
+.order-time-content .order-tit {
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+.order-time-content .order-time {
+	margin-bottom: 5px;
+}
+.order-time a {
+	color: #dd6861;
+	margin-left: 8px;
+	text-decoration: underline;
+}
+.previous .day-num {
+	color: #b8b8b8!important;
+
+}
+.previous{
+	cursor: default;
+}
+.previous:hover{
+	background: none!important;
+}
+.selectTips {
+    height: 16px;
+    overflow: hidden;
+    line-height: 16px;
+    padding-left: 5px;
+    font-weight: bolder;
+}
+.totalTime {
+}
+.totalTime em {
+    background-position: -106px -45px;
+}
+.totalCost {
+}
+.totalCost em {
+    background-position: -123px -45px;
+}
+.existTime {
+    color: #e06b64;
+ }
+.existTime em {
+    background-position: -140px -45px;
+}
+.existTimeList {
+    padding-left: 40px;
+    font-weight: bolder;
+    line-height: 20px;
+}
+.bottom-btn {
+    text-align: center;
+    margin: 5px 0 20px 0;
+}
+.bottom-btn .btn-default {
+    padding: 5px 17px;
+    margin: auto 3px;
+}
+.current .reserve-list {
+    font-size: 12px;
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 128px;
+}
+.current .reserve-list li {
+    height: 20px;
+    line-height: 20px;
+    text-align: left;
+    padding-left: 5px;
+}
+.current .reserve-list .now{
+    background-position:-165px -188px;
+    height: 10px;
+    width: 10px;
+    margin-right: 5px;
+}
+/*进入具体时间段的预约*/
+#timeAll {
+	height: 700px;
+	overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+}
+#timeAll table {
+	width:100%;
+	text-align:center;
+	border-collapse:collapse;
+	border-spacing:0;
+	line-height:30px;
+}
+#timeAll table td {
+	font-size: 15px;
+	color: #707070;
+	/*padding: 2px;*/
+	font-family: 'microsoft yahei';
+	font-weight: 600;
+}
+.day-date {
+	background: #efefef;
+}
+.day-hour {
+	border-bottom: 1px solid #cbdfff;
+}
+.tr-open .day-hour {
+	cursor: pointer;
+}
+.minute-table {
+	width: 100%;
+	text-align: center;
+}
+.minute-table td {
+	border-bottom: solid 1px #cbdfff;
+	cursor: default;
+}
+.tr-open {
+	background: #fff7ca;
+}
+.tr-open-temp {
+	background: #fff;
+}
+.minute-table .tr-open .open-area {
+	cursor :crosshair;
+}
+.minute-table .hasOrderMinTr .open-area {
+	cursor: default;
+}
+.order-area-outer,
+.has-order-area-outer {
+	height: 30px;
+    width: 763px;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+.order-area {
+	position: absolute;
+	background: #48ab23;
+	width: 100%;
+    text-align: left;
+	left: 0;
+}
+.area-tit {
+	color: #fff;
+	font-size: 15px;
+	font-family: 'microsoft yahei';
+	/*position: absolute;
+	left: 10px;
+	top: 5px;*/
+    text-align: left;
+    padding-left: 10px;
+}
+.order-area .select-time {
+	font-size: 12px;
+	margin-left: 100px;
+	top: -33px;
+	cursor: auto;
+	width: 170px;
+	*left: 0;
+}
+.order-area .select-title {
+	margin-bottom: 8px;
+}
+.order-area .time-bg {
+	top: 48px;
+}
+.order-area .select-time p {
+	margin-bottom: 8px!important;
+	height: 22px;
+}
+.order-area .totalTime {
+	margin-top: 20px!important;
+}
+.hasOrderArea {
+	background: #48ab23;
+	width: 763px;
+	height: 30px;
+	text-align: left;
+    float: right;
+}
+.hasOrderArea span,.hasOrderMinArea span {
+	color: #fff;
+	margin-right: 20px;
+	margin-left: 10px;
+	font-weight: normal;
+}
+tr td {border-right: 0px none}
+.hasOrderMinArea {
+	background: #48ab23;
+	width: 763px;
+    *width: 749px;
+	text-align: left;
+	position: absolute;
+    margin-right: -2px ;
+    margin-right: -1px\9;
+    *margin-right: 0px;
+	right: 0;
+	top: 0;
+}

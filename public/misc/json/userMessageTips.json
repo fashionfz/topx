@@ -1,0 +1,14 @@
+/**
+ * 请求接口参数
+ * page 当前页码/请求的页码 0开始
+ * pageSize 分页大小 默认10
+ * type 信息类型 默认0
+ */
+{
+    "status": 1, //接口处理状态
+    "list": [ // 数据json数组
+    	{"count": 12, "type": 0, "url": "/user/usermessage"},
+        {"count": 123, "type": 1, "url": "/user/usertradelist"},
+        {"count": 123, "type": 2, "url": "/charge/center"}
+    ]
+}

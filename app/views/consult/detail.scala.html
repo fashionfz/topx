@@ -1,0 +1,74 @@
+@(search : Html)
+@main("咨询 -- helome服务交流平台"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('consultCss','css');
+    </script>
+} {
+	<!-- 初始化并保存用户信息开始 -->
+	<script type="text/javascript">
+		var me = {
+			'headUrl' : '/assets/misc/images/dev-head-default2.png',
+			'name' : '张三'
+		},
+		you = {
+			'headUrl' : '/assets/misc/images/dev-head2.png',
+			'name' : '张三'
+		};
+	</script>
+	<!-- 初始化并保存用户信息结束 -->
+	<div id="content" class="consult clearfix">
+		<div class="video-container">
+			<video id="myVideo" controls preload="auto" width="550" height="350" >
+			  <source src="/assets/misc/video/iceage4.mp4" type="video/mp4" />
+			  <source src="/assets/misc/video/iceage4.webm" type="video/webM" />
+			  <source src="/assets/misc/video/iceage4.ogv" type="video/ogg" />
+			  <p>对不起，您的浏览器不支持视频</p>
+			</video>
+			<div class="caption">
+				<span class="video-status">
+					<span class="current"></span>
+					<span class="net-status"><i></i><i></i><i></i></span>
+				</span>
+				<span class="icon-video icon-cost"></span>
+				<a href="javascript:;" class="icon info-btn"></a>
+			</div>
+			<div class="control clearfix">
+				<div class="control-left">
+					<div class="icon-video vocality-control" title="麦克风"></div>
+					<div class="voice-control">
+						<div class="volume" title="音量控制">
+							<span class="volume-bar"></span>
+						</div>
+						<div class="icon-volume-warp" title="音量">
+							<span class="icon-video icon-volume"></span>
+						</div>
+						<span class="icon-video volume-dot"></span>
+					</div>
+					<div class="icon-video video-control" title="自己画面"></div>
+				</div>
+				<span class="btn-default video-break"><i class="icon-video icon-break"></i>挂断</span>
+				<div class="control-right">
+					<span class="icon-video icon-full-screen" title="全屏"></span>
+					<span class="icon-video icon-show-me" title="显示我"></span>
+				</div>
+			</div>
+			<div class="loading"></div>
+			<div class="video-me">
+				<video preload="auto" poster="/assets/misc/images/poster.jpg" width="158" height="118" >
+				  <source src="/assets/misc/video/iceage4.webm" type="video/webM" />
+				  <source src="/assets/misc/video/iceage4.mp4" type="video/mp4" />
+				  <source src="/assets/misc/video/iceage4.ogv" type="video/ogg" />
+				  <p>对不起，您的浏览器不支持视频</p>
+				</video>
+			</div>
+		</div>
+		<div class="chat-container">
+			
+		</div>
+	</div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('consultJs','js');
+    </script>
+}

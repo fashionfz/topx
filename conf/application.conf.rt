@@ -1,0 +1,128 @@
+# This is the main configuration file for the application.
+# ~~~~~
+
+application.secret="tv6[hZ>B>ndNZRpKAdoFJ:L1pT6fbSU_PgMX^K]:Ba9dp[y?NM8`38E3VSUOE>Zm"
+application.langs="en"
+application.global=common.Global
+#play session cookie的domain属性，必须设置，否则子域名无法共享session
+#session.domain=".helome.com"
+trustxforwarded=true
+
+# Root logger:
+#logger.root=DEBUG
+
+# Logger used by the framework:
+#logger.play=DEBUG
+
+# Logger provided to your application:
+#logger.application=DEBUG
+#logger.ext=DEBUG
+#logger.common=DEBUG
+#logger.models=DEBUG
+#logger.controllers=DEBUG
+
+# 下面配置可开启memcached
+# 注意：在JAVA中，play2-memcached（当前0.4.0版）要求被缓存对象必须实现序列化接口，这将导致页面缓存（使用Cached注解）不可用
+memcached.host="cloud-helome-cache:11002"
+logger.memcached=ERROR
+ehcacheplugin=disabled
+#memcachedplugin=disabled
+
+
+#Database Configuration
+db.default.jndiName=DefaultDS
+db.default.driver=com.mysql.jdbc.Driver
+db.default.url="jdbc:mysql://cloud-helome-mysql:3306/class2?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true"
+db.default.user=class2
+db.default.password=class2
+db.default.autocommit=true
+#db.default.partitionCount=3
+#db.default.maxConnectionsPerPartition=200
+#db.default.minConnectionsPerPartition=50
+#db.default.acquireRetryDelay=2 seconds
+
+
+#Mail Server Configuration
+mail.smtp.host=smtp.exmail.sina.com
+mail.smtp.port=25
+mail.smtp.auth=true
+mail.fromEmail="admin@helome.com"
+mail.username="admin@helome.com"
+mail.password="28.28.31804"
+mail.subject=helome密码重置邮件
+
+#Web Context
+web.context.url="http://cloud-helome-class2-1:9000/"
+#Video Context
+web.video.url="http://cloud-helome-class2-2:9001/"
+
+#Mail valid link time out
+mail.timeout=30
+
+
+# JPA Configuration
+jpa.default=defaultPersistenceUnit	
+
+
+# AKKA
+akka.default-dispatcher.fork-join-executor.pool-size-max = 64
+
+
+# 用户中心配置
+# 请求超时时间，毫秒为单位
+userCenter.client.timeout = 10000
+# 用户中心服务地址
+userCenter.client.serverUrl = "http://cloud-helome-usercenter/"
+# token-uid缓存超时时间，秒为单位
+userCenter.cache.tokenUidCache.timeout = 1800
+# 发生异常时重定向的URL
+userCenter.exception.redirectUrl = "/"
+
+# 用户缓存超时时间，秒为单位
+userCache.timeout = 1800
+userCenter.client.product=helome
+
+#搜索引擎
+search.client.createUpdateUrl = "http://cloud-helome-search/index/createOrUpdateDocument"
+search.client.queryUrl = "http://cloud-helome-search/search/queryV01"
+search.client.advancedQueryUrl = "http://cloud-helome-search/search/query"
+search.client.what = "me"
+
+
+#文件上传配置
+#上传文件保存路径 需要手动配置
+#windows
+#upload.path = "N:\\resource\\topx\\uploadfile\\"
+#LINUX
+upload.path = "/mnt/nfs/resource/topx/uploadfile/"
+#上传文件大小  kb
+upload.size =  200000
+#上传文件类型
+upload.suffix = [".jpg",".jpeg",".gif",".png",".bmp"]
+#静态资源访问地址 + /topx/uploadfile/.....
+upload.url = "http://115.28.44.61/"
+
+#Akka配置
+akka.default-dispatcher.fork-join-executor.pool-size-max = 64
+akka.actor.debug.receive = on
+
+#百度IP定位API 密钥（ak）
+baidu.ipBasedLocation.ak=EBc297a3cd2e344097035ace91656f29
+
+#记住我过期时间(秒) 1209600=两周
+user.rememberMe.expires=1209600
+#记住我自动登录最小间隔
+user.rememberMe.autoLoginInterval=30
+#后台登录的用户名及密码
+system.userAccounts="admin"
+system.passwords="10nss2mmbxlznw"
+
+# 支付中心配置
+# 请求超时时间，毫秒为单位
+payCenter.client.timeout = 10000
+# 支付中心服务地址
+payCenter.client.serverUrl = "http://115.28.170.120/"
+# HAserver的唯一标示
+message.ip.local = "cloud-helome-class2-1"
+
+merchandise.number.seqName=seq_jy_number

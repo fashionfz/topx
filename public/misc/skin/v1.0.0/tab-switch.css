@@ -1,0 +1,156 @@
+@charset "utf-8";
+/*
+* @description: Tab切换公用样式
+* @author:Young Foo( Young.Foo@helome.com)
+* @update:Young Foo( Young.Foo@helome.com)
+* @date: 2014/5/7
+*/
+.tab {
+    position: relative;
+}
+.tab-head {
+	padding-bottom: 0px;
+	margin-top: 18px;
+	border: 1px solid #cee2ed;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.tab-head .tab-menu {
+	float: left;
+	font-size: 0;
+}
+.tab-menu span {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	color: #3a75d7;
+	font-size: 13px;
+	padding: 0 15px 0 17px;
+	cursor: pointer;
+	position: relative;
+    float: left;
+}
+.tab-menu span em {
+	height: 40px;
+	width: 1px;
+	display: inline-block;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #cee2ed;
+}
+.tab-menu span.current {
+	background-color: #3a75d7;
+	color: #fff;
+	text-shadow:1px 1px 1px #2e5eac;
+    font-weight: bold;
+}
+.tab-menu span:hover {
+    background-color: #3a75d7;
+    color: #fff;
+    text-shadow:1px 1px 1px #2e5eac;
+}
+
+
+/****** table *******/
+.tab-table {
+	width: 100%;
+}
+
+.tab-table td {
+    color: #40526a;
+    border-bottom: 1px dashed #ddd;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.tab-table th {
+    font-weight: 600;
+    color: #3a75d7;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-table td, .tab-table th {
+    height: 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.tab-table .odd {
+    background-color: #f5f7f9;
+}
+.tab-table .urgent{
+    background-color: #fcf9ec;
+}
+.tab-table .operate{
+	text-align: right;
+	padding: 0 20px;
+}
+.tab-table .operate a {
+	color: #df6962;
+	display: inline-block;
+	vertical-align: middle;
+    text-decoration: none;
+}
+.tab-table .operate .delete {
+	color: #9b9b9b;
+	margin-left: 10px;
+}
+.tab-table .operate .delete-unuse {
+	color: #c6c6c6;
+}
+.tab-table a{
+    display: block;
+}
+.tab-table a.btn-default{
+    color: #ffffff;
+    display: block;
+    margin: auto auto 4px auto;
+    width: auto;
+    cursor: pointer;
+}
+.tab-table a.btn-start{
+    width: 60px;
+}
+.tab-table a.btn-evaluation{
+    width: 36px;
+}
+.tab-table a.btn-share{
+    display: block;
+}
+
+.tab-loading {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+}
+.tab-loading span{
+    padding: 10px 30px;
+    width: 40px;
+    height: 10px;
+    background: #ffffff url(i/yuan-loading.gif) no-repeat center center;
+    text-align: center;
+    left: 50%;
+    margin-left: -52px;
+    top: 45%;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    border: solid 1px #ffffff;
+    border-radius: 5px;
+}
+.tab-loading em{
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.1;
+    filter: alpha(opacity=10);
+    display: block;
+    position: relative;
+    z-index: 9;
+}
+.tips-table {
+    width: 550px;
+}

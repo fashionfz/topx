@@ -1,0 +1,46 @@
+@(gid:java.lang.String,groupName:java.lang.String,countMem:java.lang.String)
+@main("群组成员 -- 我的群组 -- 个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('userGroupsCss','css');
+    </script>
+} {
+    <div id="content" class="clearfix">
+        @usercenter.left("groups")
+        <div class="main">
+            <div class="user-info">
+                <ul class="tab-menu clearfix">
+                    <li class="tab-menu-btn current"><a class="tab-menu-left" href="javascript:;">我建立的</a></li>
+                    <li class="tab-menu-btn"><a href="/user/group/join">我加入的</a></li>
+                    <li class="tab-menu-btn"><a href="/user/group/multi">多人会话</a></li>
+                </ul>
+
+                <div class="user-info-block color-blue-grey">
+                    <div class="f16 user-nav">
+                        <strong class="pl20">管理群成员 <a href="groupList" class="color-blue f12"><< 返回我建立的列表</a></strong>
+                    </div>
+                    <div class="f16 pl20">
+                        <strong>“<span class="color-blue">@groupName</span>”现共有<span class="color-blue J-count-member">@countMem</span>个群成员</strong>
+                        <a id="addMember" class="btn-default btn-lg btn-white ml10" href="/user/group/addMember?gid=@gid">
+                           <span class="icon i-group-invite"></span>邀请加入
+                        </a>
+                    </div>
+                </div>
+                <div class="tab-loading hide">
+                    <span></span>
+                    <em></em>
+                </div>
+                <div class="J-tab-content clearfix">
+                    <table class="tab-table user-group-member" width="100%">
+                    </table>
+                    <div class="page page-user-bottom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('userGroupMemberListJs','js');
+    </script>
+}

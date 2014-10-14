@@ -1,0 +1,270 @@
+@(topcates:List[vo.TopCate],user:User,keywords:List[java.lang.String])
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn" xml:lang="zh-cn">
+    <head>
+        <meta charset="utf-8" />
+        <title>helome - 全球首家Me2Me模式服务交流平台</title>
+        <meta name="keywords" content="helome,me2me,服务交易,服务咨询,在线视频咨询,在线服务,服务交流平台">
+        <meta name="description" content="helome是一个涵盖IT、教育、医疗、法律等众多领域的Me2Me模式综合服务交流平台。helome，来源于英文中的”Hello, Me”，寓意在互联网世界里的每个Me（个体）都可以参与到服务中，提升自我，实现价值。">
+        <script type="text/javascript" src="@routes.Assets.at("misc/dist/v20131021/ued.import.js")" charset="utf-8"></script>
+        <link rel="icon" href="@routes.Assets.at("/misc/images/favicon.ico")"/>
+
+        <script type="text/javascript">
+            ued_import('commonCss','css');
+            ued_import('indexCss','css');
+        </script>
+    </head>
+
+    <body>
+        <div id="wrap" class="index-page">
+            <!--头部开始-->
+            @head("")
+            <!--头部结束-->
+            <div id="container">
+
+                <div class="main">
+
+                    <div class="search-bar clearfix">
+                        <div class="search-bar-left">
+                            <div class="index-icon search-bar-logo"></div>
+                        </div>
+
+                        <div class="search-bar-center">
+                            <form action="@routes.ExpertApp.search" method="GET" class="search-form clearfix">
+
+                                <!--<ul class="search-type">
+                                    <li class="search-type-user" class="active"><i class="icon icon-user-gray"></i><span>服务者</span></li>
+                                    <li class="search-type-group"><i class="icon icon-group-gray"></i><span>群组</span></li>
+                                    <li class="search-type-service"><i class="icon icon-service-gray"></i><span>服务</span></li>
+                                    <li class="search-type-require"><i class="icon icon-require-gray"></i><span>需求</span></li>
+                                </ul> -->
+
+                                <div class="search-box">
+
+                                    <div class="search-type">
+                                        <div class="search-type-btn">
+                                            <i class="icon icon-user-white"></i>
+                                            <em class="index-icon index-icon-home-triangle"></em>
+                                        </div>
+                                        <ul class="search-type-panel">
+                                            <li class="search-type-user"><i class="icon icon-user-gray"></i><span>服务者</span></li>
+                                            <li class="search-type-group"><i class="icon icon-group-gray"></i><span>群组</span></li>
+                                            <li class="search-type-service"><i class="icon icon-service-gray"></i><span>服务</span></li>
+                                            <li class="search-type-require"><i class="icon icon-require-gray"></i><span>需求</span></li>
+                                        </ul>
+                                    </div>
+
+                                    <input type="hidden" name="p" value="1|1" />
+                                    <input type="text" class="search-input J-header-search-input" name="ft" id="ft" maxlength="100" placeholder="请输入服务者姓名或服务标签"/>
+                                    <input type="hidden" name="type" value="html" />
+                                    <button type="submit"  value="" class="search-btn" ><i class="index-icon icon-search"></i></button>
+                                </div>
+                                <div class="search-tag-box">
+                                    <span>热门标签：</span>
+                                     @for(kw <- keywords){
+                                     	<a href="javascript:void(0);" onclick="showEncodePage('/expertsearch?ft=@kw')">@kw</a>
+                                     }
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!--首页banner开始-->
+                    @if(user != null){
+                        <div class="banner banner-login" id="banner">
+                            <div class="container">
+                                <div class="banner-img"></div>
+                                <div class="banner-box">
+                                    <div class="banner-txt">
+                                    Me2Me: 跨境交流，诚信服务
+                                    </div>
+                                    <div class="banner-login-text">
+                                        <span class="banner-login-name">@user.getName</span>
+                                        <span>，您好！欢迎回到helome！</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }else{
+                        <div class="banner" id="banner">
+                            <div class="container">
+                                <div class="banner-img"></div>
+                                <div class="banner-box">
+                                    <div class="banner-txt">
+                                    Me2Me: 跨境交流，诚信服务
+                                    </div>
+                                    <div class="banner-btn-box">
+                                        <a href="/login" class="btn-default index-btn banner-btn-login">登&nbsp;&nbsp;录</a>
+                                        <a href="/register" class="btn-default index-btn banner-btn-login">注&nbsp;&nbsp;册</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <!--首页banner结束-->
+
+                    <!-- 导航nav开始-->
+                    <div class="dev-tab">
+                        <div class="dev-nav">
+                            <a href="@controllers.skilltag.routes.SkillTagApp.list()" title="更多" class="btn-default btn-white btn-lg dev-nav-more" target="_blank">更多</a>
+                            <ul>
+                            @for(topcate <- topcates){
+                            <!--<li><a class="item" href="/skilltags?p=1&i=@topcate.getId"> -->
+                                <li><a class="item">
+                                    <div class="index-icon dev-nav-mark"></div>
+                                    @topcate.getTagName
+                                </a></li>
+							}
+				            </ul>
+                        </div>
+
+                        <div class="dev-map tab-table">
+                            <!--首页专家介绍开始-->
+                            @for(topcate <- topcates){
+                                	<ul class="expert-box hide">
+                                	@for(expert <- topcate.getTopExperts){
+                                    	 <li>
+                                        	<a class="expert-por" href="@expert.getLinkUrl" target="_blank">
+
+                                                <img src="@expert.getHeadUrl()" alt="@expert.getUserName" title="@expert.getUserName" />
+
+                                                <div class="country">
+                                                    <span class="country-flag flag @expert.getCountryUrl" title="@expert.getCountry()"></span>
+                                                    @if(expert.getGender == 0){
+                                                    <img alt="男" title="男" src="@routes.Assets.at("misc/images/male.png")" class="country-sex" width="13" height="13"/>
+                                                    }
+                                                    @if(expert.getGender == 1){
+                                                    <img alt="女" title="女" src="@routes.Assets.at("misc/images/female.png")" class="country-sex" width="13" height="13"/>
+                                                    }
+                                                </div>
+                                            </a>
+
+	                                        <div class="info">
+	                                            <h5>
+                                                    <a href="@expert.getLinkUrl" title="@expert.getUserName" target="_blank">@expert.getUserName</a>
+                                                    <span title="从事职业：@expert.getJob">@expert.getJob</span>
+                                                </h5>
+
+                                                <div class="info-comment">
+                                                    <span class="icon icon-star-base" title="@expert.getAverageScore()分">
+                                                        <span class="icon icon-star-on" style="width:@(expert.getAverageScore()/5*73)px"></span>
+                                                    </span>
+                                                    <span class="star-num">(@expert.getCommentNum())</span>
+                                                </div>
+
+                                                <p class="info-intro">@expert.getPersonalInfo()</p>
+                                                <div class="info-tags clearfix">
+                                                	@for(st <- expert.getSkillsTagList){
+                                                    <span>@st</span>
+                                                    }
+                                                </div>
+	                                        </div>
+                                    	</li>
+                                	}
+                                	</ul>
+							}
+                            <!--首页专家介绍结束-->
+                        </div>
+                    </div>
+                    <!-- 导航nav结束--> 
+
+                    <div class="evaluate">
+                        <div class="e-img"></div>
+                        <div class="e-content clearfix">
+                            <div class="e-main">
+                                <div class="e-main-item">
+                                    <img src="@routes.Assets.at("misc/images/index-po1.png")" class="por" />
+                                    <div class="por-right">
+                                        <div class="head">
+                                            <strong>Michael.Liao</strong>
+                                            <span>医生(Doctor)</span>
+                                        </div>
+                                        <div class="details">“我是一名致力于癌症治疗方面的医生。由于本人在美国，感谢helome提供了一个如此好的平台，将我和国内的癌症患者连接起来，最大化的发挥了我的价值。”</div>
+                                    </div>
+                                </div>
+                                <div class="e-main-item">
+                                    <img src="@routes.Assets.at("misc/images/index-po2.png")" class="por" />
+                                    <div class="por-right">
+                                        <div class="head">
+                                            <strong>寒星小雨</strong>
+                                            <span>心理咨询师</span>
+                                        </div>
+                                        <div class="details">“我是一名国内资深职业心理咨询师，生于重庆，致力于婚恋情感、强迫症、交往恐惧等方面的分析和治疗，贵平台让我可以跟客户“面对面”自由交流，极大方便了我的咨询工作。”</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="e-sub">
+                                <div class="e-sub-col-left">
+                                    <div class="e-sub-item">
+                                        <div class="details">“我既是一名服务提供者，也是一名普通用户渴望得到他人的帮助。由于工作压力大，在这里，我得到了周老师对我的心理调节，让我很快走出了阴霾。感谢helome，因为有你，生活更精彩。”</div>
+                                        <div class="head">——
+                                            <strong>李莉</strong>
+                                            <span>理财顾问</span>
+                                        </div>
+                                    </div>
+                                    <div class="e-sub-item">
+                                        <div class="details">“我是经朋友介绍，知道了helome这个平台。在这里，我找到了我的家装设计师，通过咨询交流，解决了我的房子装修问题。”</div>
+                                        <div class="head">——
+                                            <strong>金龙</strong>
+                                            <span>教育培训</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="e-sub-col-right">
+                                    <div class="e-sub-item">
+                                        <div class="details">“我时常利用业余时间在这里学习英语，经过三个多月的学习，我的进步很大，给我的工作带来很多便利。还在这里认识了很多朋友，helome，一个很不错的平台。”</div>
+                                        <div class="head">——
+                                            <strong>赵如进</strong>
+                                            <span>证券/外汇经纪人</span>
+                                        </div>
+                                    </div>
+                                    <div class="e-sub-item">
+                                        <div class="details">“在这里，我得到了一些关于出国留学的建议，让我对于出国留学学校的选择和国外的生活有了进一步认识。”</div>
+                                        <div class="head">——
+                                            <strong>吴亚星</strong>
+                                            <span>学生</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    @if(user == null){
+                        <div class="join">
+                            <div class="join-inner">
+                                <div class="join-title">还等什么，立即加入helome</div>
+                                <div class="join-btn">
+                                    <a href="/login" class="btn-default index-btn">登录</a>
+                                </div>
+                                <div class="join-title">或</div>
+                                <div class="join-btn">
+                                    <a href="/register" class="btn-default index-btn">注册</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+            </div>
+            
+        </div>
+        @foot()
+        <script type="text/javascript">
+            ued_import('commonJs','js');
+            ued_import('indexJs','js');
+        </script>
+        <script type="text/javascript">
+        function showEncodePage(url){
+			url = encodeURI(url);
+			//alert(url);
+			location.href = url;
+		}
+    	</script>
+    </body>
+
+</html>
+

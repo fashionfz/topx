@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fields>
+	<inputs>
+		<!-- 
+		boost:
+			在该版搜索服务中，我们为每个字段提供相关的设置，来决定这个字段在搜索过程中的权重比，在默认排序的过程里面，权值越高的搜索匹配将被排在越前面。
+		defaultValue：
+			该字段如果没有传入值，这个属性将作为这个字段的默认值。另外，如果默认值与字段类型不匹配的话，在搜索期间会报错。
+		 -->
+		<field name="id" type="Integer" stored="true" index="true"></field>
+		<field name="country" type="String" stored="true" chinese="true"></field>
+		<field name="educationExp" type="String" stored="true" chinese="true"></field>
+		<field name="job" type="String" stored="true" boost="400.0" chinese="true"></field>
+		<field name="jobExp" type="String" stored="true" chinese="true"></field>
+		<field name="personalInfo" type="String" stored="true" boost="20.0" chinese="true"></field>
+		<field name="skillsTags" type="String" stored="true"  boost="8000.0" chinese="true"></field>
+		<field name="userName" type="String" stored="true" boost="160000.0" chinese="true"></field>
+		<field name="expenses" type="Float" stored="true"></field>
+		<field name="joinDate" type="Date" stored="true"></field>
+		<field name="gender" type="Integer" stored="true"></field>
+		<field name="headUrl" type="String" stored="true"></field>
+		<field name="dealNum" type="Integer" stored="true"></field>
+		<field name="commentNum" type="Integer" stored="true"></field>
+		<field name="averageScore" type="Float" stored="true"></field>
+		<field name="userId" type="Integer" stored="true"></field>
+		<field name="serveState" type="Integer" stored="true"></field>
+		<field name="ipLocal" type="String" stored="true"></field>
+	</inputs>
+	
+
+	<searchs>
+		<field name="country"></field>
+		<field name="educationExp"></field>
+		<field name="job"></field>
+		<field name="jobExp"></field>
+		<field name="personalInfo"></field>
+		<field name="skillsTags"></field>
+		<field name="userName"></field>
+		<field name="expenses"></field>
+		<field name="gender"></field>
+		<field name="serveState"></field>
+		<field name="ipLocal"></field>
+	</searchs>
+	<!--
+		markedTag：设置该字段是否需要进行匹配信息的标红显示
+		maxlength：该字段在显示时，最大可以现实的字符数量。
+	 -->
+	<outs>
+		<field name="id"></field>
+		<field name="country"></field>
+		<field name="job" markedTag="true"></field>
+		<field name="personalInfo"  markedTag="true" maxlength="150"></field>
+		<field name="skillsTags" markedTag="true"></field>
+		<field name="userName" markedTag="true"></field>
+		<field name="expenses"></field>
+		<field name="joinDate"></field>
+		<field name="headUrl"></field>
+		<field name="commentNum"></field>
+		<field name="averageScore"></field>	
+		<field name="userId"></field>
+		<field name="serveState"></field>
+		<field name="ipLocal"></field>
+	</outs>
+</fields>

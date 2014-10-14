@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script>
+
+        window.onload = function() {
+
+            var url = window.location.href;
+            if (url.indexOf('redirected=true') > -1) {
+                console.log("triger click event");
+                var str = location.hash;      //以#开头的信息  
+                if (str.length > 1) {
+                    str = str.substring(1);
+                }
+                
+                window.parent.parent.onExcute(str);
+                //window.location.href = 'http://localhost:9000/charge/iframecrossdomain';    //恢复状态，以方便B.html再次响应事件  
+                window.location.href = 'http://192.168.0.222:9000/charge/iframecrossdomain';
+                
+            }else{
+                //高度设置
+                try {
+                    console.log("set height");
+                    if (!parent || !parent.parent) {
+                        return;
+                    }
+                    var iObj = parent.parent.document.getElementById('ibox'); //A和main同域，所以可以访问节点
+                    if (iObj) {
+                        iObjH = location.hash; //访问自己的location对象获取hash值
+
+                        iObj.height = (parseInt(iObjH.split("#")[1]) + 20) //操作dom
+                        iObj.style.height = (parseInt(iObjH.split("#")[1]) + 20) + "px";
+                    }
+                } catch (e) { }
+            }
+        }
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

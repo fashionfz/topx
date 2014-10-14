@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hi首页</title>
+	<link rel="stylesheet" type="text/css" href="style/base.css"/>
+	<link rel="stylesheet" type="text/css" href="style/head.css"/>   
+	<link rel="stylesheet" type="text/css" href="style/index.css"/>
+    <link rel="stylesheet" type="text/css" href="style/footer.css"/>
+</head>
+
+<body>
+	<div id="wrap">
+    	<!--#include file="head.html"--> 
+    	<div class="main clearfix">  	
+        	<!--banner开始-->      	
+           <div class="banner clearfix">
+                <div class="banner-mobile" style=" display: block;">
+                    <img src="images/phone.png" width="394" height="513" alt="手机" />
+                </div>
+                <div class="banner-txt" style=" display: block;">
+                	<h1 class="work">工作有Hi,生活更嗨!</h1>
+                    <p class="work-en">Hi work, high life!</p>
+                   <!-- <p class="work-list">一款使用简单、安全、免费的企业专属实时通讯软件</p>-->
+                    <div class="download clearfix">
+                    	<a href="#">
+                            <div class="android">
+                                <span class="icon-ar"></span>
+                                <span class="android-txt">
+                                    <p class="down-txt">现在下载</p>
+                                    <p class="down-en">Hi for Android</p>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="iphone">
+                                <span class="icon-ih"></span>
+                                <span class="android-txt">
+                                    <p class="down-txt">敬请期待</p>
+                                    <p class="down-en">Hi for iPhone</p>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="code">
+                    	<img src="images/code.png" width="334" height="141" alt="二维码" />
+                    </div>                    
+                </div>
+                <!--banner2-->
+                 <!--<div class=" banner-mobile banner2-mobile" style=" display: block;">
+                    <img src="images/banner-pc.png" width="654" height="448" alt="" />
+                </div>
+                <div class=" banner-txt banner2-txt" style=" display: block;">
+                	<h1 class="work banner2-work">Hi，不只是实时通讯工具</h1>
+                    <p class="work-en banner2-work-en">也是便捷的员工管理工具</p> 
+                    <ul class="banner2-ul">
+                    	<li>轻松群发通知</li>
+                        <li>管理客户端通讯信息</li>
+                        <li>统一管理客户端通讯录</li>
+                        <li>权限管理</li>
+                    </ul>                                      
+                    <div class="download clearfix">                    	
+                        <a href="#" style=" text-decoration: none;">
+                            <div class="banner2-down">立即申请使用</div>
+                        </a>
+                    </div>                                      
+                </div>         -->      
+             </div>
+             <div class="banner-move clearfix">
+                 	<div class="showinde1"></div>
+                    <div class="showinde2"></div>
+             </div>
+             <!--banner结束-->          
+       </div>
+       <!--content开始-->
+             <div id="content">
+             	<div class="dev-trait">
+                	<span class="hi-trait"><i class="dev-hi">Hi</i>特点</span>
+                </div>
+                <div class="trait-bg">HI特点下的背景图片</div>
+                <div class="box-delta">下三角形</div>
+                <!--Hi特点开始-->
+                <div class="dev-cont clearfix">
+                	<span class="setline">竖分隔线</span>
+                    <span class="setline listline">竖分隔线</span>
+                    <span class="hline">横分隔线</span>
+               		 <ul class="cont-ul">
+                     	<li>
+                        	<img src="images/icon-1.png" width="96" height="95" alt="安全" />
+                            <h4>安全</h4>
+                            <p>具体文字介绍，不超过一定的字数，让用户更了解该特点</p>
+                        </li>
+                        <li><img src="images/icon-2.png" width="96" height="95" alt="安全" />
+                        	<h4>免费</h4>
+                            <p>具体文字介绍，不超过一定的字数，让用户更了解该特点</p>
+                       	</li>
+                        <li><img src="images/icon-3.png" width="96" height="95" alt="安全" />
+                       		<h4>信息主动权</h4>
+                            <p>具体文字介绍，不超过一定的字数，让用户更了解该特点</p>
+                        </li>
+                        <li><img src="images/icon-4.png" width="96" height="95" alt="安全" />
+                       		<h4>支持私有云</h4>
+                            <p>具体文字介绍，不超过一定的字数，让用户更了解该特点</p>
+                        </li>
+                        <li><img src="images/icon-5.png" width="96" height="95" alt="安全" />
+                        	<h4>定制服务</h4>
+                            <p>具体文字介绍，不超过一定的字数，让用户更了解该特点</p>
+                        </li>
+                        <li><img src="images/icon-6.png" width="96" height="95" alt="安全" />
+                        	<h4>全球化</h4>
+                            <p>具体文字介绍，不超过一定的字数，让用户更了解该特点</p>
+                        </li>
+                     </ul>
+                </div>
+                <!--Hi特点结束-->
+                <!--企业现状开始-->
+                <div class="dev-trait frim">
+                	<span class="hi-trait">企业现状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hi以后</span>
+                </div>
+                <div class="trait-bg">HI特点下的背景图片</div>
+                <div class="frim-delta">下三角形</div>
+                <div class="dev-frim clearfix">
+                	<div class="dev-frim-left">
+                    	<div class="dev-frim-txt"><i class="frim-txt">普通会议</i>所有人聚在一起</div>
+                        <img src="images/image-1.png" width="356" height="235" alt="" />
+                    </div>
+                    <div class="dev-frim-center"><img src="images/vs.png" width="153" height="150" alt="普通会议" /></div>
+                    <div class="dev-frim-right">
+                    	<div class="dev-frim-txt"><i class="frim-txt">远程会议</i>Hi让您随时随地参加会议</div>
+                        <img src="images/image-2.png" width="356" height="235" alt="" />
+                    </div>
+                </div>
+                
+                <div class="dev-frim clearfix">
+                	<div class="dev-frim-left">
+                    	<div class="dev-frim-txt"><i class="frim-txt">欠费中断通话</i>重要信息不能及时传达</div>
+                        <img src="images/image-3.png" width="356" height="381" alt="" />
+                    </div>
+                    <div class="dev-frim-center"><img src="images/vs.png" width="153" height="150" alt="普通会议" /></div>
+                    <div class="dev-frim-right">
+                    	<div class="dev-frim-txt"><i class="frim-txt">欠费保持通话</i>费时用Hi只要有wifi仍能通话</div>
+                        <img src="images/image-4.png" width="356" height="381" alt="" />
+                    </div>
+                </div>
+                
+                <div class="dev-frim clearfix">
+                	<div class="dev-frim-left">
+                    	<div class="dev-frim-txt"><i class="frim-txt">卡、顿、模糊</i>普通视频工具不给力</div>
+                        <img src="images/image-5.png" width="356" height="251" alt="" />
+                    </div>
+                    <div class="dev-frim-center"><img src="images/vs.png" width="153" height="150" alt="普通会议" /></div>
+                    <div class="dev-frim-right">
+                    	<div class="dev-frim-txt"><i class="frim-txt">清晰流畅</i>Hi视频通话非常给力</div>
+                        <img src="images/image-6.png" width="356" height="251" alt="" />
+                    </div>
+                </div>
+                
+                <div class="dev-frim clearfix">
+                	<div class="dev-frim-left">
+                    	<div class="dev-frim-txt"><i class="frim-txt">收费</i>普通企业通讯工具收费不菲</div>
+                        <img src="images/image-7.png" width="356" height="255" alt="" />
+                    </div>
+                    <div class="dev-frim-center"><img src="images/vs.png" width="153" height="150" alt="普通会议" /></div>
+                    <div class="dev-frim-right">
+                    	<div class="dev-frim-txt"><i class="frim-txt">免费</i>Hi所有功能均免费</div>
+                        <img src="images/image-8.png" width="356" height="255" alt="" />
+                    </div>
+                </div>
+                
+                <div class="dev-frim clearfix">
+                	<div class="dev-frim-left">
+                    	<div class="dev-frim-txt"><i class="frim-txt">手动</i>普通通讯工具手动单个添加联系人</div>
+                        <img src="images/image-9.png" width="356" height="235" alt="" />
+                    </div>
+                    <div class="dev-frim-center"><img src="images/vs.png" width="153" height="150" alt="普通会议" /></div>
+                    <div class="dev-frim-right">
+                    	<div class="dev-frim-txt"><i class="frim-txt">自动更新</i><i class="txt-list">Hi企业通讯录后台添加，前端统一实时自动更新</i></div>
+                        <img src="images/image-10.png" width="356" height="235" alt="" />
+                    </div>
+                </div>
+                
+                <div class="dev-frim clearfix">
+                	<div class="dev-frim-left">
+                    	<div class="dev-frim-txt"><i class="frim-txt">语言版本单一</i>母语不同，沟通不能</div>
+                        <img src="images/image-11.png" width="356" height="235" alt="" />
+                    </div>
+                    <div class="dev-frim-center"><img src="images/vs.png" width="153" height="150" alt="普通会议" /></div>
+                    <div class="dev-frim-right">
+                    	<div class="dev-frim-txt"><i class="frim-txt">国际化</i>Hi中英文两版</div>
+                        <img src="images/image-12.png" width="356" height="235" alt="" />
+                    </div>
+                </div>
+                
+                <div class="dev-frim clearfix">
+                	<div class="dev-frim-left">
+                    	<div class="dev-frim-txt"><i class="frim-txt">找不到专业人手</i>找不到专业人手</div>
+                        <img src="images/image-13.png" width="356" height="235" alt="" />
+                    </div>
+                    <div class="dev-frim-center"><img src="images/vs.png" width="153" height="150" alt="普通会议" /></div>
+                    <div class="dev-frim-right">
+                    	<div class="dev-frim-txt"><i class="frim-txt">技能找人</i>Hi快速找人，让员工人尽其才</div>
+                        <img src="images/image-14.png" width="356" height="235" alt="" />
+                    </div>
+                </div>
+                
+                <div class="dev-frim clearfix">
+                	<div class="dev-frim-left">
+                    	<div class="dev-frim-txt"><i class="frim-txt">没有后台</i>普通通讯工具没有后台管理</div>
+                        <img src="images/image-15.png" width="356" height="235" alt="" />
+                    </div>
+                    <div class="dev-frim-center"><img src="images/vs.png" width="153" height="150" alt="普通会议" /></div>
+                    <div class="dev-frim-right">
+                    	<div class="dev-frim-txt"><i class="frim-txt">后台管理</i>丰富的全免费后台管理功能</div>
+                        <img src="images/image-16.png" width="356" height="235" alt="" />
+                    </div>
+                </div>
+                
+                 <div class="dev-frim clearfix">
+                	<div class="dev-frim-left">
+                    	<div class="dev-frim-txt"><i class="frim-txt">他人品牌</i>一般通讯工具不能定制企业logo</div>
+                        <img src="images/image-17.png" width="356" height="235" alt="" />
+                    </div>
+                    <div class="dev-frim-center"><img src="images/vs.png" width="153" height="150" alt="普通会议" /></div>
+                    <div class="dev-frim-right">
+                    	<div class="dev-frim-txt"><i class="frim-txt">专属定制</i>Hi定制企业元素</div>
+                        <img src="images/image-18.png" width="356" height="235" alt="" />
+                    </div>
+                </div>
+                
+                 <div class="dev-frim clearfix">
+                	<div class="dev-frim-left">
+                    	<div class="dev-frim-txt"><i class="frim-txt">无二次开发</i>版本统一，不提供定制服务</div>
+                        <img src="images/image-19.png" width="356" height="235" alt="" />
+                    </div>
+                    <div class="dev-frim-center"><img src="images/vs.png" width="153" height="150" alt="普通会议" /></div>
+                    <div class="dev-frim-right">
+                    	<div class="dev-frim-txt"><i class="frim-txt">专业的二次开发</i>Hi提供定制服务</div>
+                        <img src="images/image-20.png" width="356" height="235" alt="" />
+                    </div>
+                </div>
+                 <!--企业现状结束-->
+                 <!--现在开始HI吧开始-->
+                 <div class="dev-start">
+                 	<h2>现在开始Hi吧</h2>
+                    <div class="dev-img clearfix">
+                    	<img src="images/pc.png" width="446" height="333" alt="" />
+                        <div class="start-txt">
+                        	<h4>工作有Hi，生活更嗨！</h4>
+                            <p>现在申请使用</p>
+							<p>体验便捷安全的通讯服务</p>
+							<p>和丰富的后台管理功能</p>
+                           <a href="apply.shtml"><i class="index-icon"></i></a>
+                        </div>
+                    </div>
+                    <div class="dev-bottom">
+                    	<div class="bottom-left">
+                        	<h4>客户端下载</h4>
+                            <p>现在开始Hi吧!</p>
+                        </div>
+                        <div class="bottom-center clearfix">
+                        	<img src="images/mcro-channel.png" width="120" height="120" alt="微信"  class="mcro"/>
+                            <div class="center-txt">
+                            	<h4>安卓版</h4>
+                                <a href="#"><div class="mcro-but">立即下载</div></a><i class="mcro-list">或</i>
+                                <p>扫描左侧二维码下载</p>
+                            </div>
+                        </div>
+                        <div class="bottom-right clearfix">
+                        	<img src="images/ios.png" width="124" height="120" alt="" class="mcro"/>
+                            <div class="center-txt">
+                            	<h4>IOS版</h4>
+                                <a href="#"><div class="mcro-ios">敬请期待</div></a>                              
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                 <!--现在开始HI吧结束-->
+             </div>
+            <div id="right-box">
+            	<span class="go-top"></span>
+            </div>
+             <!--content结束-->
+             <!--#include file="footer.html"--> 
+    </div>
+</body>
+</html>

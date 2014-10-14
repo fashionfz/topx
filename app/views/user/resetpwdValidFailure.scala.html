@@ -1,0 +1,49 @@
+@(email : String, code : String)
+@main("设置密码 -- helome服务交流平台"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('singleCss','css');
+    </script>
+} {
+ 	<div id="content">
+        <div class="main clearfix">
+            <!--LOGO开始-->
+            <div class="main-logo"></div>
+            <!--LOGO结束-->
+            <!--重设密码表单开始-->
+            <div class="main-panel reset-password-main">
+                <p class="dialog-tit">
+                    <span class="span-left">设置密码 - 链接无效</span>
+                    <span class="span-right">
+                        <a href="@controllers.routes.Application.register()">注册</a>
+                        <a href="@controllers.routes.Application.login()">登录</a>
+                    </span>
+                </p>
+                
+                <form class="reset-password-form">
+                    <table class="dialog-table">
+                        <tr>
+                            <td class="left reset-password-mail">您的登录邮箱：<span>@email</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="tag-container">
+                                	<!-- <span>该链接为无效链接。</span> -->
+                                	<span>@code<!-- <a href="@controllers.routes.Application.forgetpwd()" title="点击重新设置新密码">跳转到【重新设置新密码】页面</a>--></span> 
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!--重设密码表单结束-->
+
+            @downloadBlock()
+            
+        </div>
+    </div>
+	<script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('resetPwdJs','js');
+	</script>
+}

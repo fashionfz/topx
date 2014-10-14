@@ -1,0 +1,204 @@
+@(expert: vo.ExpertDetailInfo,isForbidAddResumeTask:java.lang.String)
+@main("职业经历 -- 我的资料 -- 个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('userDetailCss','css');
+    </script>
+} {
+	<div id="content" class="clearfix">
+		@usercenter.left("userdetail")
+		<div class="main">
+			<input type="hidden" id="isForbidAddResumeTask" value="@isForbidAddResumeTask"/>
+			<div class="user-info user-detail" id="user-info">
+				<ul class="tab-menu clear">
+					<li><a class="tab-menu-left" href="/user/userdetail/base">个人信息</a></li>
+					<li><a href="/user/userdetail/userhead">个人头像</a></li>
+					<li class="current"><a href="javascript:;">职业经历</a></li>
+					<li><a href="/user/userdetail/eduinfo">教育经历</a></li>
+					<!--<li><a href="/user/userdetail/serviceinfo">收费方式</a></li>-->
+				</ul>
+				<div class="user-content clearfix">
+					<div class="user-info-block clearfix" >
+						<div class="clearfix">
+
+						    <div class="mb5" id="userWorkExp">
+							@if(expert.getJobExp() != null && expert.getJobExp().size() != 0) {
+								@for((jobexp, index) <- expert.getJobExp().zipWithIndex) {
+								<div class="user-exp collapse  clearfix">
+									<div class="user-exp-content">
+										<div class="clearfix">
+	                                        <div class="user-exp-index"><span class="icon">@{index+1}</span></div>
+											<div class="user-exp-main"
+	                                            data-company = "@jobexp.getCompany()"
+	                                            data-workYear = "@jobexp.getBeginYear()"
+	                                            data-workMonth = "@jobexp.getBeginMonth()"
+	                                            data-workYearEnd = "@jobexp.getEndYear()"
+	                                            data-workMonthEnd = "@jobexp.getEndMonth()"
+	                                            data-duty = "@jobexp.getDuty()">
+												<div class="duty">@jobexp.getDuty()</div>
+												<div class="company">@jobexp.getCompany()</div>
+	                                            <div class="job-time">
+	                                                @jobexp.getBeginYear()年@jobexp.getBeginMonth()月 -
+	                                                @if(jobexp.getEndYear() == "至今"){
+	                                                @jobexp.getEndYear()
+	                                                }else{
+	                                                @jobexp.getEndYear()年@jobexp.getEndMonth()月
+	                                                }
+	                                            </div>
+	                                            <div class="user-exp-info">
+	                                                @if(jobexp.getWorkInfo()){
+	                                                    <span class="info">@jobexp.getWorkInfo()</span>
+	                                                }
+	                                            </div>
+											</div>
+							                <ul class="user-exp-btnbox">
+							                	<li><a href="javascript:;" class="btn-edit"><span class="icon icon-edit"></span></a></li>
+							                	<li><a href="javascript:;" class="btn-delete"><span class="icon icon-delete"></span></a></li>
+							                </ul>
+						                </div>
+										<div class="collapse-pannel hide">
+											<div class="user-info-block clearfix pr z5">
+												<div class="info-key">
+													<label><span class="red">*</span>在职时间：</label>
+												</div>
+												<div class="info-value">
+													<select class="select-year year-start"></select>
+													<span> 年</span>
+			                                        <select class="select-month month-start"></select>
+			                                        <span> 月</span><span> - </span>
+													<select class="select-year year-end" >
+														<option>至今</option>
+													</select>
+													<span class="work-today">
+														<span> 年</span>
+				                                        <select class="select-month month-end"></select>
+				                                        <span> 月</span>
+			                                    	</span>
+													<span class="tips tips-right work-date-tips"></span>
+												</div>
+											</div>
+											<div class="user-info-block clearfix">
+												<div class="info-key">
+													<label><span class="red">*</span>公司名称：</label>
+												</div>
+												<div class="info-value">
+													<input type="text" class="txt txt-long txt-verify input-company" maxlength="64">
+													<span class="tips tips-right"></span>
+												</div>
+											</div>
+											<div class="user-info-block clearfix">
+												<div class="info-key">
+													<label><span class="red">*</span>职位名称：</label>
+												</div>
+												<div class="info-value">
+													<input type="text" class="txt txt-long txt-verify input-work" maxlength="64">
+													<span class="tips tips-right"></span>
+												</div>
+											</div>
+                                            <div class="user-info-block clearfix">
+                                                <div class="info-key">
+                                                    <label>职务描述：</label>
+                                                </div>
+                                                <div class="info-value">
+                                                    <textarea class="textarea text-workInfo" maxlength="500"
+                                                              placeholder="请提供与职位相关的细节，以便用户快速了解职位信息。"></textarea>
+                                                    <div class="tips tips-bottom introduction-tips"></div>
+                                                </div>
+                                            </div>
+											<div class="user-info-block clearfix">
+												<div class="info-key">&nbsp;</div>
+												<div class="info-value">
+													<input type="button" class="btn-default btn-green btn-lg btn-save" value="完成编辑"/>
+													<input type="button" class="btn-default btn-lg btn-white collapse-close-btn" value="取消"/>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								}
+							}else{
+	                            <div class="no-exp"><em class="icon icon-no-exp"></em><br/>请添加您的职业生涯！</div>
+	                        }
+							</div>
+						</div>
+
+						<div class="collapse work-collapse">
+							<span class="save-ok save-ok-list none"><em class="icon"></em><span></span></span>
+							<div class="collapse-pannel hide">
+                                <div class="user-info-block clearfix z5">
+                                    <div class="info-key">
+                                        <label><span class="red">*</span>在职时间：</label>
+                                    </div>
+                                    <div class="info-value">
+                                        <select class="select-year year-start" id="work-year-select1"></select>
+                                        <span> 年</span>
+                                        <select class="select-month month-start" id="work-month-select1"></select>
+                                        <span> 月 - </span>
+                                        <select class="select-year year-end" id="work-year-select2"><option>至今</option></select>
+                                        <span class="work-today">
+                                            <span> 年</span>
+                                            <select class="select-month month-end" id="work-month-select2"></select>
+                                            <span> 月</span>
+                                        </span>
+                                        <span class="tips tips-right work-date-tips"></span>
+                                    </div>
+                                </div>
+                                <div class="user-info-block clearfix">
+                                    <div class="info-key">
+                                        <label><span class="red">*</span>公司名称：</label>
+                                    </div>
+                                    <div class="info-value">
+                                        <input type="text" class="txt txt-long txt-verify input-company" id="workCompany" maxlength="64">
+                                        <span class="tips tips-right"></span>
+                                    </div>
+                                </div>
+                                <div class="user-info-block clearfix">
+                                    <div class="info-key">
+                                        <label><span class="red">*</span>职位名称：</label>
+                                    </div>
+                                    <div class="info-value">
+                                        <input type="text" class="txt txt-long txt-verify input-work" id="workIn" maxlength="64">
+                                        <span class="tips tips-right"></span>
+                                    </div>
+                                </div>
+                                <div class="user-info-block clearfix">
+                                    <div class="info-key">
+                                        <label>职务描述：</label>
+                                    </div>
+                                    <div class="info-value">
+                                        <textarea class="textarea text-workInfo" id="workInfo" maxlength="500"
+                                                  placeholder="请提供与职位相关的细节，以便用户快速了解职位信息。"></textarea>
+                                        <div class="tips tips-bottom introduction-tips"></div>
+                                    </div>
+                                </div>
+								<div class="user-info-block clearfix">
+									<div class="info-key">&nbsp;</div>
+									<div class="info-value">
+										<input type="button" class="btn-default btn-lg btn-green btn-padding-50 btn-addWorkExp" value="添加"/>
+										<input type="button" class="btn-default btn-lg btn-white btn-padding-50 collapse-close-btn" value="取消"/>
+									</div>
+								</div>
+							</div>
+							<div class="collapse-btn-box">
+								<div class="user-info-block clearfix">
+									<div class="info-key">&nbsp;</div>
+									<div class="info-value">
+										<span class="icon icon-add-info collapse-show-btn"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--搜索中间结束-->
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('userWorkInfoJs','js');
+    </script>
+}
+

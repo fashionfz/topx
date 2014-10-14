@@ -1,0 +1,155 @@
+@(tags:List[models.SkillTag])
+@main("新建群组 -- 我的群组 -- 个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('userGroupWriteInfoCss','css');
+    </script>
+} {
+    <div id="content" class="clearfix">
+        @usercenter.left("groups")
+        <div class="main">
+            <div class="user-info">
+                <ul class="tab-menu clearfix">
+                    <li class="tab-menu-btn current"><a class="tab-menu-left" href="javascript:;">我建立的</a></li>
+                    <li class="tab-menu-btn"><a href="/user/group/join">我加入的</a></li>
+                    <li class="tab-menu-btn"><a href="/user/group/multi">多人会话</a></li>
+                </ul>
+                <div class="user-content user-base clearfix color-blue-grey">
+                    <div class="user-info-block">
+                        <div class="f16 user-nav">
+                            <strong>填写群组信息 <a href="groupList" class="color-blue f12"><< 返回我建立的列表</a></strong>
+                        </div>
+                        <div class="f16">
+                            <strong>
+                                新建群组成功后,将同时拥有“<span class="color-blue">群详情页</span>
+                                ”和右下角聊天“<span class="color-blue">群组</span>”
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="user-info-block clearfix">
+                        <div class="info-key special">
+                            <span class="red">*</span>名称：
+                        </div>
+                        <div class="info-value pl15 w600">
+                            <input type="text" class="txt txt-long right-txt txt-verify" value="" id="groupName" maxlength="32"/>
+                            <span class="tips tips-right"></span>
+                            <p class="pt5 color-blue-light">不能使用“嗨啰”“helome”做为群名称</p>
+                        </div>
+                    </div>
+
+                    <div class="user-info-block clearfix">
+                        <div class="info-key special">
+                            <span class="red"></span>头像：
+                        </div>
+                        <div class="info-value pl15 clearfix">
+                            <div class="user-group-head fl">
+                                <img id="groupHeadImage" src="@routes.Assets.at("misc/images/group-default190x190.png")" width="128" height="128">
+                                <input type="hidden" id="groupHeadUrl" value="">
+                            </div>
+                            <div class="user-group-upload-head fl">
+                                <input id="J-upload-gHead" class="btn-default btn-white btn-lg btn-upload-head" type="button" value="上传头像">
+                                <div class="f14 pt10 color-blue-light">支持JPG、PNG格式，大小不超过2M</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-info-block clearfix">
+                        <div class="info-key">
+                            <span class="red">*</span>所属分类：
+                        </div>
+                        <div class="info-value pl15">
+                            <select id="industry">
+                                <option value="">请选择</option>
+                                    @for(tag <- tags){
+                                    <option value="@tag.id">@tag.tagName</option>
+                                    }
+                            </select>
+                            <span class="pl5 color-blue-light">选择行业将对应一张默认头部背景图</span>
+                        </div>
+                    </div>
+
+                    <div class="user-info-block clearfix">
+                        <div class="info-key special">
+                            <span class="red"></span>群说明：
+                        </div>
+                        <div class="info-value pl15 w600">
+                            <textarea class="textarea" id="instruction" style="resize: none"></textarea>
+                            <span class="tips tips-right"></span>
+                        </div>
+                    </div>
+
+                    <div class="user-info-block clearfix">
+                        <div class="info-key special">
+                            <span class="red"></span>头部背景：
+                        </div>
+                        <div class="info-value pl15 w600">
+
+                            <div class="pr">
+                                <span class="pa p10 color-blue-light" style="left: 150px">支持JPG、PNG格式，大小不超过2M,推荐尺寸“1920X250”像素</span>
+                                <form action="/user/group/uploadHeadBackGround" method="post" enctype="multipart/form-data">
+                                    <input type="file" id="groupBackUp" name="headbackgroud" value="上传背景">
+                                </form>
+                            </div>
+                            <input type="hidden" id="groupBackUrl" value="">
+                            <input type="hidden" id="groupBackRelationUrl" value="">
+                            <span class="tips tips-right"></span>
+                        </div>
+                    </div>
+
+                    <div class="user-info-block clearfix">
+                        <div class="info-key">
+                            权限：
+                        </div>
+                        <div class="info-value pl15">
+                            <label>
+                                <input name="authority" class="" type="radio" value="0" checked>
+                                <span>公开自由加入</span>
+                            </label>
+                            <label>
+                                <input name="authority" class="ml20" type="radio" value="1">
+                                <span>需要申请加入</span>
+                            </label>
+                            <span class="tips tips-right"></span>
+                        </div>
+                    </div>
+
+                    <div class="user-info-block skill-tags clearfix">
+                        <div class="info-key special">
+                            <label><span class="red">*</span>群标签：</label>
+                        </div>
+                        <div class="info-value pl15 w600">
+                            <ul class="textbox" id="skillTags">
+                                <li><input type="text" class="textbox-input" id="tags-input" placeholder="输入标签并按回车键添加"></li>
+                            </ul>
+                            <div class="tips tips-bottom"></div>
+                        </div>
+                    </div>
+
+                    <div class="user-info-block clearfix">
+                        <div class="info-key">&nbsp;</div>
+                        <div class="info-value pl15">
+                            <label>
+                                <input type="checkbox" class="agreement">
+                                <span>我已经阅读并接受</span>
+                            </label>
+                            <a href="/groupagreement" target="_blank">《helome群组服务协议》</a>
+                            <span class="tips tips-right"></span>
+                        </div>
+                    </div>
+
+                    <div class="user-info-block clearfix">
+                        <div class="info-key">&nbsp;</div>
+                        <div class="info-value pl15">
+                            <input type="button" value="保存" class="btn-default btn-lg btn-green btn-padding-50 btn-group-info-save">
+                            <input type="button" value="取消" class="btn-default btn-lg btn-white btn-padding-50 btn-group-info-clean ml5">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('userGroupWriteInfoJs','js');
+    </script>
+}

@@ -1,0 +1,151 @@
+/* 下载样式 */
+body {
+	padding: 0;
+	margin: 0;
+	background: #e5e8ec;
+}
+
+.content {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 35px 0 50px 0;
+}
+.dev-cont {
+	width: 930px;
+	height: 510px;
+	margin: 0 auto;
+	border: 1px solid #d3d3d3;
+	box-shadow: 0 2px 1px #d4d7da;
+	background: #fff;
+}
+.dev-cont-top {
+	width: 882px;
+	height: 59px;
+	border-bottom: 1px solid #e6e6e6;
+	background: linear-gradient(top, #f7f7f7, #f0f0f0);
+    background: -moz-linear-gradient(top, #f7f7f7, #f0f0f0);
+    background: -ms-linear-gradient(top,  #f7f7f7 0%,#f0f0f0 100%);/*适合IE10+ */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f7f7f7), to(#f0f0f0));
+    FILTER: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorStr=#f7f7f7,endColorStr=#f0f0f0); /*IE*/	 
+}
+.cont-top-font {
+	font-family: "Microsoft YaHei";
+	font-size: 24px;
+	color: #333;
+	font-weight: bold;
+	padding-left: 48px;
+	line-height: 60px; 
+}
+.dev-cont-left {
+	width: 465px;
+	float: left;
+
+	
+}
+.android-down {
+	width: 400px;
+	padding: 32px 0 40px 65px;
+}
+.dev-cont img {
+	float: left;
+	padding-top: 13px;
+}
+.android-down-txt {
+	width: 200px;
+	float: left;
+	padding-left: 20px;
+}
+.android-down-txt a {
+	width: 165px;
+	text-decoration: none;
+	display: block;
+}
+.android-down-txt a:hover {
+	text-decoration: none;
+}
+.android-down-txt h4{	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 26px;
+	color: #333;	
+}
+.android-down-txt p {
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	color: #999;
+}
+.but-down {
+	width: 165px;
+	height: 50px;
+	margin-top: 17px;	
+	background: linear-gradient(left, #40c287, #3bb57f);
+    background: -moz-linear-gradient(left, #40c287, #3bb57f);
+    background: -ms-linear-gradient(left,  #40c287 0%,#3bb57f 100%);/*适合IE10+ */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#40c287), to(#3bb57f));
+    FILTER: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorStr=#40c287,endColorStr=#3bb57f); /*IE*/
+	border-radius: 4px;
+	text-align: center;
+	line-height: 50px;
+	font-family: "Microsoft YaHei";
+	font-size: 24px;
+	color: #fff;
+	text-shadow: 1px 1px 1px #38aa77;
+	cursor: pointer;
+}
+.micro-letter-down {
+	width: 366px;
+	height: 156px;
+	border-top: 1px dashed #e4e4e4;
+	margin: 0 auto;
+	padding-top: 25px;
+	padding-left: 35px;
+	
+}
+.micro-letter-txt {
+	padding-top: 20px;
+}
+.dev-cont-right {
+	/*width: 409px;*/
+	border-left: 1px solid #e6e6e6;
+	height: 418px;
+	float: left;
+	padding: 32px 0 0 55px;
+}
+.dev-cont-right-txt {
+	padding-left: 50px;
+}
+.but-apple {
+	background: linear-gradient(left, #49bbde, #46b2d2);
+    background: -moz-linear-gradient(left, #49bbde, #46b2d2);
+    background: -ms-linear-gradient(left,  #49bbde 0%,#46b2d2 100%);/*适合IE10+ */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#49bbde), to(#46b2d2));
+    FILTER: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorStr=#49bbde,endColorStr=#46b2d2); /*IE*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

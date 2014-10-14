@@ -1,0 +1,11 @@
+@(detail:vo.ExpertDetail, current: String)
+
+<div class="developer-tab">
+    <ul class="clearfix">
+        <li><a class='@if("detail".equals(current)){current}' href="/expert/detail/@detail.getUserId()"><em class="icon icon-user-gray"></em>Ta的信息</a></li>
+        <li class="tab-line"></li>
+        <li><a class='@if("service".equals(current)){current}' href="/expert/service/@detail.getUserId()"><em class="icon icon-service-gray"></em>Ta的服务</a></li>
+        <li class="tab-line"></li>
+        <li><a class='@if("require".equals(current)){current}' href="/expert/require/@detail.getUserId()"><em class="icon icon-require-gray"></em>Ta的需求</a></li>
+    </ul>
+</div>

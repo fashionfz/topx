@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+<fields>
+		<field name="industryId" type="int" stored="true" indexed="true"/>
+		<field name="groupPrivId" type="int" stored="true" indexed="true"/>
+		<field name="groupName" type="text_ik" stored="true" indexed="true"/>
+		<field name="groupInfo" type="text_ik" stored="true" indexed="true"/>
+		<field name="tags" type="text_ik" stored="true" indexed="true"/>
+		<field name="countMem" type="long" stored="true" indexed="true"/>
+		<field name="headUrl"  type="string" stored="true" indexed="true"/>
+		<field name="ownerId"  type="long" stored="true" indexed="true"/>
+		<field name="ownerName"  type="string" stored="true" indexed="true"/>
+		<field name="createDate" type="long" stored="true" indexed="true"/>
+</fields>
+</config>

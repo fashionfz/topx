@@ -1,0 +1,46 @@
+/**
+ * @description: 需求服务首页样式
+ * @author: TinTao (tintao.li@helome.com)
+ * @update:
+ */
+
+.list-block {
+    padding-top: 5px;
+    visibility: hidden;
+}
+.list-block .search-block {
+    border-bottom: dashed 1px #d4d9df;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.require-banner {
+    background: url("i/require_banner.jpg") no-repeat 500px bottom;
+}
+.services-banner {
+    background: url("i/services_banner.jpg") no-repeat 500px bottom;
+}
+
+.service-list .reqSer-info {
+    width: 398px;
+    padding-left: 20px;
+}
+
+.no-item {
+	color: #c0c6ce;
+	font-weight: 800;
+	font-size: 14px;
+	width: 100%;
+	text-align: center;
+	margin: 20px 0;
+}
+
+.no-item .icon-no-item {
+	background-position: -134px -76px;
+	height: 48px;
+	width: 48px;
+}
+.load-wrapper{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: none;
+}

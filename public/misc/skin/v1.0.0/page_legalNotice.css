@@ -1,0 +1,60 @@
+@charset "utf-8";
+/*
+* @description: 关于我们样式
+* @author: Young Foo (young.foo@helome.com)
+* @update: Young Foo (young.foo@helome.com)
+*/
+
+.legal-top {
+	margin: 50px auto 30px auto;
+	overflow: hidden;
+}
+
+.legal-top h1 {
+	font-size: 40px;
+	color: #40526a;
+	width: 160px;
+	float: left;
+	font-weight: normal;
+}
+
+.legal-top .legal-center {
+	width: 628px;
+	height: 3px;
+	float: left;
+	margin-top: 30px;
+	margin-left: 5px;
+	background: #c2dbff;
+	border-radius: 45px;
+}
+.legal-top .legal-right {
+	width: 137px;
+	float: left;
+	margin-left: 10px;
+}
+.legal-right .legal-save {
+	 width: 60px;
+	 height: 60px;
+	 float: left;
+	 border-radius: 30px;
+	 background: #3a75d7;
+	 margin-right: 6px;
+}
+.legal-right .legal-save img {
+	margin: 13px 14px 30px 12px;
+}
+
+.remind {
+	text-indent: 2em;
+	color: #627690;
+	font-weight: bold;
+	padding-top: 7px;
+}
+.box-list {
+	margin-bottom: 30px;
+}
+.signed {
+	width: 150px;
+	float: right;
+	text-align: right;
+}

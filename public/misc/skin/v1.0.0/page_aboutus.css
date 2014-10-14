@@ -1,0 +1,156 @@
+@charset "utf-8";
+/*
+* @description: 关于我们样式
+* @author: Young Foo (young.foo@helome.com)
+* @update: Young Foo (young.foo@helome.com)
+*/
+
+.about-us{
+	color: #627690;
+}
+/** about us 页面产品模块 **/
+.intro-inner {
+	border-bottom: 1px dashed #e0e0e0;
+	margin-top: 20px;
+}
+
+.intro-inner .index-intro {
+	width: 312px;
+	border-right: 1px dashed #e0e0e0;	
+	float: left;
+	margin-bottom: 20px;
+}
+
+.intro-inner .intro-bg{
+	height: 97px;
+	width: 97px;
+	display: block;
+	margin: 0 auto;
+	background-image: url(i/about-us.png);
+}
+
+.intro-inner .intro-bg-serv {
+	background-position: 0px -19px;
+}
+.intro-inner .intro-bg-video {
+	background-position: -97px -19px;
+}
+.intro-inner .intro-bg-platform {
+	background-position: -194px -19px;
+}
+
+.intro-inner .intro-info {
+	margin-top: 18px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.intro-inner .intro-title-title {
+	color: #40526A;
+	font-size: 18px;
+}
+
+.intro-inner .intro-title-text {
+	color: #91a0b3;
+	font-size: 14px;
+}
+
+/*联系我们开始*/
+.contact-us {
+	line-height: 25px;
+	margin: 40px 0 40px 0;
+	overflow: hidden;
+}
+.contact-us p {
+	margin-left: 25px;
+}
+.contact-us h3 {
+	font-size: 20px;
+	color: #3a75d7;
+}
+.contact-us h4 {
+	padding-left: 25px;
+}
+.contact-us i{
+	background-image: url(i/about-us.png);
+	height: 16px;
+	width: 16px;
+	position: absolute;
+	left: 1px;
+	top: 3px;
+	display: block;
+}
+.contact-us .a-icon-company{
+	background-position: 0px 0px;
+}
+.contact-us .a-icon-cooperate{
+	background-position: -16px 0px;
+}
+.contact-us .a-icon-tel{
+	background-position: -32px 0px;
+}
+.contact-us .a-icon-weibo{
+	background-position: -48px 0px;
+}
+.contact-us .a-icon-weixin{
+	background-position: -64px 0px;
+}
+.contact-us-block{
+	margin: 11px 30px 0 0;
+	float: left;
+	position: relative;
+}
+
+/*联系我们结束*/
+
+
+/*工作机会开始*/
+.job-chance .job-header {
+	height: 40px;
+	border-top: 1px dashed #e0e0e0;
+	padding-top: 30px;
+}
+.job-chance h3 {
+	float: left;
+	font-size: 20px;
+	color: #3a75d7;
+	line-height: 40px;
+}
+
+.job-chance .dev-fillet {
+	width: 355px;
+	background: url(i/aboutus-bg_03.png) repeat-x;	
+	border-radius: 45px;
+	margin-left: 20px;
+	float: left;
+}
+.job-chance .dev-fillet span {
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	top: 0;
+	left: 22px;
+	font-size: 14px;
+	text-shadow: 0 1px 1px #3a6bb1;
+	color: #fff;
+	font-weight: bold;
+	display: inline-block;
+}
+.job-chance .dev-fillet span i {
+	background-image: url(i/about-us.png);
+	background-position: 0px -125px;
+	margin: 0 5px;
+	width: 25px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+}
+/*工作机会结束*/
+
+
+.about-us .doc-list .doc-list-block{
+	margin: 5px 0px 10px 0px;
+}
+.about-us .doc-list h2{
+	cursor: pointer;
+}

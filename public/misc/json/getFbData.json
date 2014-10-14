@@ -1,0 +1,38 @@
+{
+    "status" : 1,
+    "login" : 1,
+    "cusers" : [
+        {
+            "cuserHeadUrl" : "http://172.16.4.96/topx/uploadfile/avatar/851/avatar_22.jpg",
+            "cuserName" : "马云",
+            "cuserId" : 851
+        },
+        {
+            "cuserHeadUrl" : "http://172.16.4.96/topx/uploadfile/avatar/851/avatar_22.jpg",
+            "cuserName" : "马化腾",
+            "cuserId" : 841
+        },
+        {
+            "cuserHeadUrl" : "http://172.16.4.96/topx/uploadfile/avatar/851/avatar_22.jpg",
+            "cuserName" : "麻花藤",
+            "cuserId" : 831
+        }
+    ],
+    "numbers" : [
+        {
+            "cuserId" : 851,
+            "merchandiseId" : 43,
+            "number" : "43,2013-12-26,12:30"
+        },
+        {
+            "cuserId" : 841,
+            "merchandiseId" : 42,
+            "number" : "42,2013-12-27,12:30"
+        },
+        {
+            "cuserId" : 831,
+            "merchandiseId" : 41,
+            "number" : "41,2013-12-28,12:30"
+        }
+    ]
+}

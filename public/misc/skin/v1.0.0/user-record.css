@@ -1,0 +1,176 @@
+@charset "utf-8";
+/*
+* @description: 个人中心交易列表样式
+* @author:Young Foo(young.foo@helome.com)
+* @update:Young Foo(young.foo@helome.com)
+*/
+/*时间td的宽度*/
+.w120{width: 120px}
+.cp{cursor: pointer;}
+/*banner*/
+.user-info-map-content .username{
+    display: inline-block;
+    max-width: 220px;
+    vertical-align: middle;
+}
+.cr-content{
+    text-align: left;
+    vertical-align: middle;
+    color: #40526a;
+}
+.cr-content td{
+    line-height: 25px;
+    text-align: left
+}
+.cr-content .cr-name{
+    padding: 0 10px 0 20px;
+}
+
+.cr-content .username{
+    font-weight: bold;
+    max-width: 120px;
+    color: #3a75d7;
+}
+.me  .cr-name strong.username{color: #40526a!important; }
+
+.tab-table .btn-default {
+    padding: 5px 15px 7px 15px;
+    border-radius: 14px;
+    margin: auto 10px;
+}
+.cr-content .cr-text {
+    color: #40526a;
+    overflow: hidden;
+    display: inline-block;
+    /*max-width: 455px;*/
+    text-overflow: ellipsis;
+}
+.cr-content a{
+    display: inline-block;
+}
+.cr-content .cr-text a{
+    color: #627690;
+}
+.cr-content .cr-text .emotion{vertical-align: text-bottom}
+.cr-content .cr-time {
+    width: 120px;
+    color: #91a0b3;
+    padding: 0 20px 0 20px;
+}
+.wrap-gray{
+    background-color: #e6eaef;
+    display: inline-block;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+/*for search*/
+.search-date{
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+    background-position: -179px 0;
+}
+.search-delete{
+    width: 19px;
+    height: 19px;
+    background-position: -220px -325px;
+}
+.search-left-body{
+    z-index: 99;
+    border-top: 0 none;
+    width: 632px;
+    border-radius: 0 0 5px 5px;
+}
+.search-body-title{
+    display: inline-block;
+    vertical-align: middle;
+    height: 38px;
+    line-height: 38px;
+}
+.search-left-body .like-txt{
+    width: 240px;
+}
+.search-left-body .search-time{
+    width: 210px;
+}
+.search-left-body .text{
+    padding-left: 11px;
+    height: 38px;
+}
+#searchName ,#keyWord2{
+    width: 180px;
+}
+.search-left-body .name-list{
+
+    position: absolute;
+    z-index: 99;
+    border: 1px solid #ccc;;
+    width: 238px;
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #ffffff;
+}
+.search-left-body .name-list li{
+    display: block;
+    max-width: 200px;
+    vertical-align: middle;
+    padding: 4px 0px 4px 6px;
+    color: #40526A;
+}
+.search-left-body .name-list li:hover{
+    background-color: #cccccc;
+}
+.search-left-body .name-list .selected{
+    background-color: #cccccc;
+}
+.advanced{
+    width: 37px;
+    height: 37px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/***end search*/
+.cr-name .ellipsis{
+    max-width: 120px;
+}
+
+
+/* 展开收起按钮 */
+.cr-text-panel{
+    width: 44px;
+    padding: 0px 0px 0 20px;
+    cursor: pointer;
+    color: #3a75d7;
+}
+.cr-text-panel .panel-up{
+    width: 12px;
+    height: 7px;
+    background-position: -62px -61px;
+}
+.cr-text-panel .panel-down{
+    width: 12px;
+    height: 7px;
+    background-position: -62px -72px;
+}
+.tab-table .cr-content-left,.tab-table .cr-content-right ,.tab-table .td{
+    vertical-align: top!important;
+    height: auto!important;
+    padding: 15px 0 5px 0;
+    line-height: 25px;
+}
+.tab-table .cr-content-left{
+    width: 638px;
+}
+.tab-table .cr-content-left td{
+    vertical-align: top!important;
+    height: auto!important;
+}
+.tab-table .cr-content-left .cr-text{
+    width: auto!important;
+}
+.cr-content-left td {
+    border-bottom: 0 none;
+}

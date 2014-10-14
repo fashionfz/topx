@@ -1,0 +1,94 @@
+@(page:vo.page.Page[vo.RequireListVO],cts:org.apache.commons.collections.map.ListOrderedMap,currCategoryId:Long)
+@import org.apache.commons.collections.CollectionUtils
+@main("需求 -- helome服务交流平台"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('requireCss','css');
+    </script>
+} {
+    <div class="banner">
+        <div class="banner-inner require-banner container">
+            <div class="banner-text">
+                <h1>Me2Me  呈现你的需求</h1>
+                <h4>做够了乙方当甲方，把自己的问题发布到全世界，看全世界做你的乙方</h4>
+                <a href="/user/require/write" target="_blank" class="btn-default btn-lg btn-blue">立即发布需求</a>
+            </div>
+        </div>
+    </div>
+    <div id="content" class="clearfix">
+        <div class="sub-left">
+            <input type="hidden" name="currentCatId" id="currentCatId" value="@currCategoryId">
+            <div class="panel">
+                <div class="panel-title">分类</div>
+                <div class="panel-list">
+                    <ul>
+                         @for((key, value) <- cts) {
+                  		  	@if(currCategoryId == key){
+                            <li class="current"><a href="/require?categoryId=@key.toString()">@value</a></li>
+                            } else {
+                            <li><a href="/require?categoryId=@key.toString()">@value</a></li>
+                            }
+                         }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sub-right">
+            <div class="list-block">
+                @if(CollectionUtils.isNotEmpty(page.getList())){
+                    @for(svo <- page.getList()) {
+                        <div class="search-block clearfix">
+                            <div class="reqSer-info">
+                                <div class="reqSer-title">
+                                <a href="/require/detail/@svo.getId" target="_blank">@svo.getTitle</a></div>
+                                <div class="reqSer-introduction">
+                                 	@svo.getInfo
+                                </div>
+                                <div class="reqSer-user clearfix">
+
+                                    <a href="@routes.ExpertApp.detail(svo.getOwnerUserId)" class="user-head" target="_blank">
+                                        <em></em>
+                                        <img src="@svo.getHeadUrl" width="41" height="41">
+                                    </a>
+                                    <div class="user-name"><a href="@routes.ExpertApp.detail(svo.getOwnerUserId)" target="_blank">@svo.getOwnerUserName</a></div>
+                                    <div class="user-job">@svo.getJob</div>
+
+                                    <div class="user-country flag @svo.getCountryUrl" title="@svo.getCountry()"></div>
+                                                               @if(svo.getGender().name() == "MAN"){
+                                        <img alt="男" title="男" src="@routes.Assets.at("misc/images/male.png")" class="user-gender" width="13" height="13">
+                                    }else{
+                                        <img alt="女" title="女" src="@routes.Assets.at("misc/images/female.png")" class="user-gender" width="13" height="13">
+                                    }
+                                </div>
+                            </div>
+                            <div class="reqSer-right">
+                                <div class="reqSer-price">
+                                    @if(svo.getBudget == null || svo.getBudget == ""){
+                                        面议
+                                    }else{
+                                        @if(svo.getBudget == 0.0 || svo.getBudget == "0.0"){
+                                            免费
+                                        }else{
+                                            ￥@svo.getBudget
+                                        }
+                                    }
+                                </div>
+                                <div class="reqSer-date"> @svo.getCreateDate 发布</div>
+                            </div>
+
+                        </div>
+                    }
+                }else {
+                    <div class="no-item"><em class="icon icon-no-item"></em><br>暂时没有此类需求！</div>
+                }
+                <div class="mt20 mb20 J-load-wrapper">
+                    <div class="btn-default btn-white btn-lg load-more-btn">加载更多</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('requireJs','js');
+	</script>
+}

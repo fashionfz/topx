@@ -1,0 +1,64 @@
+/**
+  service and require
+  create by zhiqiang.zhou@helome.com on  2014-8-8
+*/
+
+.add-service{
+    width: 29px;
+    height: 21px;
+    background-position: -116px -355px;
+}
+.add-require{
+    width: 22px;
+    height: 22px;
+    background-position: -90px -356px;
+}
+.content-title{
+    text-align: center;
+    padding: 20px;
+}
+.content-title .btn-default{
+    padding: 8px 26px;
+}
+.tab-title{
+    width: 100%;
+    color: #3a75d7;
+    font-weight: bold;
+}
+.tab-title tr{
+    border-bottom: 1px solid #ddd;
+    /* 和user-info-map 重复 */
+    /*border-top: dashed 1px #ddd;*/
+    height: 50px;
+}
+.tab-title th,.tab-table td{text-align: center}
+.tab-table tr{
+    height: 50px;
+    vertical-align: middle;
+}
+
+.time{
+    padding-left: 20px;
+    width: 115px;
+}
+.industry{
+    width: 120px;
+    padding-left: 10px;
+}
+.title{
+    width: 300px;
+    padding-left: 10px;
+}
+.title a{
+    color: #40526a;
+}
+.price{
+    width: 85px;
+    padding-left: 10px;
+}
+.tab-table .operate{
+    text-align: center;
+}
+.title .ellipsis{
+    max-width: 300px;
+}

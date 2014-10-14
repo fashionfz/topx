@@ -1,0 +1,73 @@
+@charset "utf-8";
+/*
+* @description: 个人中心个人资料与开发者详情公共布局样式
+* @author:Zhang Guanglin(@maesinfo.com)
+* @update:
+*/
+.user-info,
+.user-service {
+	font-size: 14px;
+}
+.user-info-left {
+	float: left;
+	width: 500px;
+}
+
+.user-content{
+	padding: 10px 20px 10px 10px;
+}
+.user-info-block {
+    margin-bottom: 15px;
+}
+.user-info-block .info-key {
+	float: left;
+	width: 80px;
+	min-width: 80px;
+	text-align: right;
+	color: #434343;
+}
+
+.info-long-key .info-key{
+	width: 120px;
+}
+
+.info-long-value .info-value{
+	width: 740px;
+}
+
+.user-info-block .info-value {
+	float: left;
+	text-align: left;
+	color: #8c8c8c;
+	width: 630px;
+}
+
+.user-info-block .info-value input[type="button"],
+.user-info-block .info-value input[type="submit"]{
+	top:-2px;
+}
+.user-info-block .info-value .tips{
+    display: inline-block;
+    padding-left: 10px;
+    color: red;
+}
+.user-info-right {
+	float: left;
+	margin-left: 40px;
+	width: 200px;
+}
+.user-info-right p {
+	text-align: left;
+	color: #1b1b1b;
+	font-size: 14px;
+}
+.skill-tags .info-value span {
+	border-radius: 3px;
+	padding: 3px 8px;
+	color: #666;
+	border: 1px solid #e5e5e5;
+	background: #e5e5e5;
+	font-size: 13px;
+	margin: 0 5px 5px 0;
+	display: inline-block;
+}

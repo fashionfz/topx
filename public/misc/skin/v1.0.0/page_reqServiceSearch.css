@@ -1,0 +1,79 @@
+/**
+ * @description: 需求服务列表页样式
+ * @author: TinTao (tintao.li@helome.com)
+ * @update:
+ */
+.search-list {
+    margin: 20px auto 0px auto;
+    position: relative;
+    width: 940px;
+}
+.search-block {
+    border-bottom: dashed 1px #d4d9df;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.service-list .reqSer-info {
+    width: 538px;
+    padding-left: 20px;
+}
+
+.require-list .reqSer-info{
+    width: 730px;
+}
+
+.page-bottom {
+    float: right;
+    margin: 0px 18px 0px 0px;
+}
+/* 搜索无结果 */
+.no-result {
+    clear: both;
+    /*width: 375px;*/
+    margin: 30px auto auto 250px;
+    display: inline-block;
+}
+.no-result-one {
+}
+.no-result-one span{
+    height: 43px;
+    line-height: 43px;
+    font-size: 16px;
+    font-family: 'Microsoft Yahei';
+    color: #1b1b1b;
+    display: inline-block;
+    float: left;
+}
+.no-result-one em {
+    height: 43px;
+    width: 42px;
+    display: inline-block;
+    background: url(i/icon-red.png) -57px -130px no-repeat;
+    margin-right: 20px;
+    float: left;
+}
+.no-result-two {
+    color: #e06b64;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0px auto auto 63px;
+}
+.no-result-three {
+    font-size: 14px;
+    color: #8a8a8a;
+    margin: 5px auto auto 50px;
+}
+.no-result-three a {
+    color: #4083a9;
+    font-size: 14px;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+.noMore {
+    text-align: center;
+    padding: 10px 0;
+    background: #EEE;
+    border-radius: 5px;
+    color: #666;
+}

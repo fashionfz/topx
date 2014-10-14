@@ -1,0 +1,149 @@
+@()
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title>使用说明 -- helome服务交流平台</title>
+    <meta name="keywords" content="如何使用helome,使用说明,服务交易,服务咨询,在线视频咨询,在线服务,服务交流平台">
+    <meta name="description" content="helome是一个涵盖IT、教育、医疗、法律等众多领域的Me2Me模式综合服务交流平台。helome，来源于英文中的”Hello, Me”，寓意在互联网世界里的每个Me（个体）都可以参与到服务中，提升自我，实现价值。">
+    <script type="text/javascript" src="@routes.Assets.at("misc/dist/v20131021/ued.import.js")" charset="utf-8"></script>
+    <link rel="icon" href="@routes.Assets.at("/misc/images/favicon.ico")"/>
+    <!--[if IE]><script type="text/javascript"> ued_import('canvasJs','js'); </script><![endif]-->
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('tradeProcessCss','css');
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <!--头部开始-->
+    @head("")
+    <!--头部结束-->
+    <div id="container">
+        <!--banner开始-->
+        @banner()
+        <!--banner结束-->
+        <!--法律声明内容开始-->
+        <div class="dev-content">
+            <div class="dev-one">
+                <div class="about-us">
+                    <p class="about-us-one">使用说明</p>
+                    <p class="about-us-two">只需4步，手把手教你学会使用<p>
+                </div>
+                <div class="menuFixed">
+                    <div class="dev-icon">
+                        <div class="icon-one">
+                            <div class="input-intr">
+                                <a href="#a1" ><div class="dev-trade login-one"></div><p class="login-txt">注册登录</p></a>
+                            </div>
+                            <div class="dev-border icon-border"></div>
+                        </div>
+                        <div class="icon-one">
+                            <div class="input-intr">
+                                <a href="#a2"><div class="dev-trade login-two"></div><p class="login-txt">搜索服务者</p></a>
+                            </div>
+                            <div class="dev-border icon-border"></div>
+                        </div>
+                        <div class="icon-one">
+                            <div class="input-intr">
+                                <a href="#a3"><div class="dev-trade login-three"></div><p class="login-txt">在线咨询</p></a>
+                            </div>
+                            <div class="dev-border icon-border"></div>
+                        </div>
+                        <div class="icon-one">
+                            <div class="input-intr">
+                                <a href="#a4"><div class="dev-trade login-four"></div><p class="login-txt">评价完成</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dev-two">
+                <div class="doc-box">
+                    <a name="a1" id="a1"><div class="dev-left title-txt">1</div> </a>
+                    <div class="dev-right"></div>
+                    <div class="dev-center">
+                        <img src="@routes.Assets.at("misc/images/login.png")" alt="注册">
+                        <div class="dev-txt">
+                            <h2 class="title-icon-one">获得helome用户账号</h2>
+                            <div class="title-input">
+                                <ul>
+                                    <li><div class="title-icon"></div>只需一个邮箱账号即可完成
+                                        <a href="/login">登录</a> / <a href="/register">注册</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doc-box">
+                    <a name="a2" id="a2"><div class="dev-left title-txt">2</div></a>
+                    <div class="dev-right"></div>
+                    <div class="dev-center">
+                        <img src="@routes.Assets.at("misc/images/searcher.png")" alt="搜索">
+                        <div class="dev-txt">
+                            <h2 class="title-icon-two">用户和服务者</h2>
+                            <div class="title-input">
+                                <ul>
+                                    <li><div class="title-icon"></div>用户希望获得服务，请搜索服务者姓名或服务标签</li>
+                                </ul>
+                                <div class="search-one">
+                                    <form action="@routes.ExpertApp.search" method="GET">
+                                        <input type="text" class="txt J-search-input" name="ft" placeholder="请输入姓名或服务标签"/>
+                                        <button type="submit" value="" class="trade-btn-search" >
+                                            <i class="icon icon-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                                <ul>
+                                    <li><div class="title-icon"></div>如果您是服务者，请尽可能完善个人资料，其中最重要的内容是姓名和服务标签</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="doc-box">
+                    <a name="a3" id="a3"><div class="dev-left title-txt">3</div></a>
+                    <div class="dev-right"></div>
+                    <div class="dev-center">
+                        <img src="@routes.Assets.at("misc/images/veio.png")" alt="视频">
+                        <div class="dev-txt">
+                            <h2 class="title-icon-three">文字/视频/语音</h2>
+                            <div class="title-input">
+                                <ul>
+                                    <li><div class="title-icon"></div>用户可以和服务者文字、视频、语音多钟方式聊天,服务者也许会需要收取一定费用</li>
+                                    <!--<li><div class="title-icon"></div>用户也可以通过服务者开放的时间，来预约服务者</li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="doc-box">
+                    <a name="a4" id="a4"><div class="dev-left title-txt">4</div></a>
+                    <div class="dev-right"></div>
+                    <div class="dev-center">
+                        <img src="@routes.Assets.at("misc/images/Evaluate.png")" alt="评价">
+                        <div class="dev-txt">
+                            <h2 class="title-icon-four">评价，交易完成</h2>
+                            <div class="title-input">
+                                <ul>
+                                    <li><div class="title-icon"></div>获得满意服务后，请给服务者打出5星好评！</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @foot()
+    <!--法律声明内容开始--> 
+</div>
+<script type="text/javascript">
+    ued_import('commonJs','js');
+    ued_import('tradeProcessJs','js');
+</script>
+</body>
+</html>
+

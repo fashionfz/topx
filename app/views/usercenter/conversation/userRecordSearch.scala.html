@@ -1,0 +1,82 @@
+@main("会话记录 -- 个人中心"){
+<script type="text/javascript">
+    ued_import('commonCss','css');
+    ued_import('userRecordCss','css');
+</script>
+} {
+<div id="content" class="clearfix">
+    @usercenter.left("usertrade")
+    <div class="main">
+        <div class="user-info J-chat-page">
+            <ul class="tab-menu clearfix">
+                <li class="tab-menu-btn current"><a class="tab-menu-left" href="javascript:;">联系人</a></li>
+                <li class="tab-menu-btn"><a href="/record/group">群组</a></li>
+            </ul>
+            <div class="tab-loading hide">
+                <span></span>
+                <em></em>
+            </div>
+            <div class="search-box">
+                <div class="txt search-left  dib">
+                    <div class="search-left-top like-txt pl5">
+                        <input class="p10" id="keyWord"  type="text" value="" placeholder="请输入关键字">
+                        <div class="fr advanced"><span class="icon select-i"></span></div>
+                    </div>
+                    <div class="search-left-body like-txt pa none">
+                        <div class="p10">
+                            <span class="search-body-title mr5 fl">姓名</span>
+                            <span class="like-txt dib mr10 J-name pr fl">
+                                <label for="searchName" class="fr J-name-show"><em class="icon select-i"></em></label>
+                                <input id="searchName" name="searchName" class="text" type="text" placeholder="姓名">
+                                <ul class="name-list none"></ul>
+                            </span>
+                            <span class="search-body-title mr5">时间</span>
+                            <span class="dib search-time">
+                                <select id="searchTime">
+                                    <option value="all">全部</option>
+                                    <option value="-1d">最近1天</option>
+                                    <option value="-3d">最近3天</option>
+                                    <option value="-7d">最近7天</option>
+                                    <option value="-1m">最近1月</option>
+                                    <option value="-3m">最近3月</option>
+                                    <option value="-6m">最近半年</option>
+                                    <option value="-1y">最近1年</option>
+                                </select>
+                            </span>
+                            <span class="search-date icon none"></span>
+                            <span class="search-delete icon fr"></span>
+                        </div>
+                        <div class="p10">
+                            <span class="search-body-title mr5 fl">内容</span>
+                            <span class="like-txt dib mr10 fl"><input id="keyWord2" class="text" type="text"placeholder="内容"></span>
+                            <span class="search-body-title mr5">类型</span>
+                            <span class="dib">
+                                 <select id="searchType">
+                                     <option value="3">文本</option>
+                                     <option value="2">文件</option>
+                                     <option value="1">图片</option>
+                                     <option value="4">语音</option>
+                                 </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <span id="searchBtn" class="btn-default btn-blue btn-lg fr" type="button" value="&nbsp;"><em class="icon"></em></span>
+            </div>
+            <div class="user-info-map"><p class="user-info-map-content"><strong>联系人会话搜索结果</strong>
+                <a href="/record/person" class="color-blue f12 dib pl10">&lt;&lt;返回</a></p>
+            </div>
+            <div class="J-tab-content clearfix">
+                <table class="tab-table trade-message" width="100%">
+                </table>
+                <div class="page page-user-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    ued_import('commonJs','js');
+    ued_import('userRecordSearchJs','js');
+</script>
+}

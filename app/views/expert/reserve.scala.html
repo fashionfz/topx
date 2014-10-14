@@ -1,0 +1,44 @@
+@(expert: vo.ExpertDetail)
+@main("预约 -- helome服务交流平台"){
+    <script type="text/javascript">
+        var serviceTime = "@expert.getServerDate()".replace(/-/g, '/'),
+            clientTime = new Date();
+        ued_import('commonCss','css');
+        ued_import('userOrderCss','css');
+    </script>
+} {
+	<div id="content" class="user-order">
+        <input type="hidden" name="expenses" id="expenses" value="@expert.getExpenses()">
+        <input type="hidden" name="expertId" id="expertId" value="@expert.getId()">
+		<div class="search-block clearfix">
+			<div class="search-left">
+				<div class="search-head"><a href="/expert/detail/@expert.getId()/@expert.getUserId()" target="_blank"><img src="@expert.getHeadUrl()" height="190" width="190" alt=""></a></div>
+			</div>
+			<div class="search-center">
+				<p class="name clearfix">
+                    <span class="cost">
+                          <span> 资费：@expert.getExpenses()</span>
+                    </span>
+                    <a href="/expert/detail/@expert.getId()/@expert.getUserId()" target="_blank" title="@expert.getUserName()">@expert.getUserName()</a>
+                    <span class="job" title="@expert.getJob()">@expert.getJob()</span><span class="country flag @expert.getCountryUrl()" title="@expert.getCountry()"></span>
+                </p>
+				<!--<p class="date">加入日期：@expert.getJoinDate()</p>-->
+				<pre class="introduce">@if(expert.getPersonalInfo() != null){@expert.getPersonalInfo()}else{这个家伙很懒，什么也没有留下。}</pre>
+				<p class="skill">
+                    @if(expert.getSkillsTags() != null && expert.getSkillsTags().size() != 0) {
+                        @for(skillTag <- expert.getSkillsTags()) {
+                            <a href="@controllers.routes.ExpertApp.search()?ft=@skillTag.getNoMarkedTag" target="_blank">@skillTag.getTag</a>
+                        }
+                    }
+				</p>
+			</div>
+		</div>
+		<div id="orderContainer">
+			
+		</div>
+	</div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('userOrderJs','js');
+    </script>
+}

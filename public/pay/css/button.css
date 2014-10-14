@@ -1,0 +1,223 @@
+.btn-default{
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    border:0px;
+    position: relative;
+    line-height: 1em;
+}
+
+.btn-default:hover{
+    text-decoration: none;
+}
+
+.btn-default:active{
+    text-decoration: none;
+}
+
+.btn-lock{
+    width: 120px;
+    height: 40px;
+    line-height: 40px !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.btn-lg{
+    padding: 13px 35px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.btn-mid{
+    padding: 10px 18px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-sm{
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.btn-xs{
+    padding: 5px 7px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.btn-red{
+    background-color: #fc6e51;
+    box-shadow: 0px 4px 0px #d5462f;
+    text-shadow: 0px 1px 0px #d5462f; 
+}
+.btn-green{
+    background-color: #45ab21;
+    box-shadow: 0px 4px 0px #107500;
+    text-shadow: 0px 1px 0px #107500;
+}
+.btn-yellow{
+    background-color: #d3ba43;
+    box-shadow: 0px 4px 0px #ad8a14;
+    text-shadow: 0px 1px 0px #ad8a14;
+}
+
+.btn-gray{
+    background-color: #a4a9ae;
+    box-shadow: 0px 4px 0px #697077;
+    text-shadow: 0px 1px 0px #697077;
+}
+
+.btn-white{
+    color: #434343 !important;
+    background-color: #e1e4e9;
+    box-shadow: 0px 4px 0px #ced2da;
+    text-shadow: 0px 1px 0px #ced2da; 
+}
+
+.btn-red:hover{
+
+}
+.btn-red:active{
+
+}
+.btn-red:focus{
+
+}
+
+.btn-white:hover{
+
+}
+.btn-white:active{
+
+}
+.btn-white:focus{
+
+}
+.btn-disabled{
+    background-color: #efefef;
+    color: #fff !important;
+    box-shadow: 0px 4px 0px #e0e0e0;
+    text-shadow: 0px 1px 0px #e0e0e0; 
+}
+
+/* btn 边界 */
+.btn-padding-60 {
+    padding-left: 60px;
+    padding-right: 60px;
+    +padding-left: 58px;
+    +padding-right: 59px;
+}
+.btn-padding-48 {
+    padding-left: 48px;
+    padding-right: 48px;
+    +padding-left: 46px;
+    +padding-right: 47px;
+}
+.btn-padding-0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* 其他 */
+/*按钮框样式开始*/
+
+.btn-one {
+    height: 44px;
+    width: 102px;
+    background: url(i/icon-red.png) left top no-repeat;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+}
+.btn-two {
+    border: 1px solid #d76059;
+    cursor: pointer;
+    padding: 12px 45px;
+    box-shadow: 0 1px 0 #d7d7d7;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 1px #d14e49;
+    background: #e06b64;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e06b64', endColorstr='#d76059');
+    background: linear-gradient(top, #e06b64, #d76059);
+    background: -moz-linear-gradient(top, #e06b64, #d76059);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e06b64), to(#d76059));
+}
+.btn-two:active {
+    border-color:#b03e37;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b03e37', endColorstr='#e06b64');
+    background: linear-gradient(top, #b03e37, #e06b64);
+    background: -moz-linear-gradient(top, #b03e37, #e06b64);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b03e37), to(#e06b64));
+    box-shadow:inset 0 1px 1em rgba(0, 0, 0, .3), inset 0 1px 1em rgba(0, 0, 0, .1);
+}
+.btn-two:focus {
+    outline:none 0;
+    border-color:#b03e37;
+    box-shadow:0 0 8px rgba(176, 62, 55, .9);
+}
+.btn-three:focus {
+    outline:none 0;
+    border-color:#adadad;
+    box-shadow:0 0 8px rgba(187, 187, 187, .9);
+}
+.btn-three {
+    border: 1px solid #d4d4d4;
+    cursor: pointer;
+    padding: 12px 45px;
+    box-shadow: 0 1px 0 #e0e0e0;
+    border-radius: 4px;
+    color: #707070;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    background: #f8f8f8;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#e7e7e7');
+    background: linear-gradient(top, #f8f8f8, #e7e7e7);
+    background: -moz-linear-gradient(top, #f8f8f8, #e7e7e7);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#e7e7e7));
+}
+.btn-three:hover {
+    background: #f1f1f1;
+}
+.btn-three:active {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDDDDD', endColorstr='#FFFFFF');
+    background: linear-gradient(top, #DDD, #FFF);
+    background: -moz-linear-gradient(top, #DDD, #FFF);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDD), to(#FFF));
+    box-shadow:inset 0 1px 1em rgba(0, 0, 0, .3), inset 0 1px 1em rgba(0, 0, 0, .1);
+}
+.btn-three-ie7 {
+    +padding-top: 8px;
+    +padding-bottom: 7px;
+}
+
+.btn-five {
+    background: #eee;
+    border: 1px solid #b6b6b6;
+    cursor: pointer;
+    height: 24px;
+    padding: 2px 15px;
+    border-radius: 3px;
+    color: #707070;
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    font-weight: 600;
+}
+.btn-five:hover {
+    background: #f1f1f1;
+}
+
+/*按钮框样式结束*/

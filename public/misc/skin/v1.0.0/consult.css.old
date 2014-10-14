@@ -1,0 +1,169 @@
+@charset "utf-8";
+/*
+* @description: 视频咨询页面
+* @author:Zhang Guanglin(@maesinfo.com)
+* @update:
+*/
+
+.search  {
+	width: 750px;
+	margin: 0 auto
+}
+#content {
+	margin: 10px auto;
+	text-align: center;
+	width: 980px;
+}
+.chat-container {
+	width: 430px;
+	float: left;
+}
+
+.chat {
+	border:1px solid #ddd;
+	background: #fff;
+	margin-top: 20px;
+	text-align: left;
+}
+.chat-util {
+	height: 100px;
+	height: 56px;
+	position: relative;
+	background: #f3f3f3;
+	background: -moz-linear-gradient(top, #ffffff, #e7e7e7);
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff), to(#e7e7e7));
+}
+.chat-util .file,
+.chat-util .file-upload,
+.chat-util .chat-txt,
+.chat-util .send {
+	position: absolute;
+	top: 10px;
+}
+.chat-util span.file {
+	left: 5px;
+	padding: 8px 20px;
+	z-index: 90;
+	cursor: pointer;
+}
+.chat-util .file-upload {
+	z-index: 100;
+	top: 10px;
+	display: inline-block;
+	height: 42px;
+	width: 76px;
+	cursor: pointer;
+}
+.chat-util input.chat-txt {
+	left: 83px;
+	width: 250px;
+	height: 28px;
+	z-index: 110;
+}
+.chat-util span.send {
+	right: 5px;
+	padding: 8px 20px;
+}
+.chat-content {
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+	height: 272px;
+	overflow-y: auto;
+}
+.chat-body {
+	margin: 5px auto;
+}
+.user-head {
+	height: 80px;
+	width: 80px;
+	overflow: hidden;
+	position: relative;
+	border: 1px solid #ddd;
+	background: #eee;
+}
+.chat-left .user-head{
+	float: left;
+}
+.chat-right .user-head{
+	float: right;
+}
+.user-head img {
+	height: 72px;
+	width: 72px;
+	margin: 4px auto auto 4px;
+	overflow: hidden;
+}
+.chat-msg {
+	line-height: 24px;
+	border-radius: 5px;
+	color: #424242;
+	font-size: 12px;
+	padding: 5px 10px;
+	position: relative;
+	max-width: 307px;
+	word-wrap:break-word;
+}
+.chat-left .chat-msg {
+	float: left;
+	margin-left: 16px;
+	border:1px solid #c4c4c4;
+	background: #fff;
+}
+.chat-right .chat-msg {
+	float: right;
+	margin-right: 16px;
+	border:1px solid #9ed691;
+	background: #c1ffbf;
+}
+
+.chat-msg em {
+	height: 12px;
+	width: 6px;
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+}
+.chat-left .chat-msg em{
+	left: -6px;
+	background: url(i/icon-red.png) -43px -100px no-repeat;
+}
+.chat-right .chat-msg em{
+	right: -6px;
+	background: url(i/icon-red.png) -307px -105px no-repeat;
+}
+.file-send {
+	text-align: center;
+}
+.file-send span {
+	display: inline-block;
+	height: 32px;
+	width: 24px;
+	background: url(i/icon-red.png) -275px -92px no-repeat;
+}
+.file-progress span {
+	position: relative;
+	height: 6px;
+	display: inline-block;
+}
+.file-progress span em{
+	display: inline-block;
+	height: 4px;
+	width: 90px;
+	border-radius: 4px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.file-progress span .base {
+	background: #8fd68d;
+	border:1px solid #8fd68d;
+	z-index: 10;
+}
+.file-progress span .on {
+	background: #046f00;
+	border:1px solid #046f00;
+	z-index: 11;
+}
+.chat-file .chat-msg{
+	min-width: 94px;
+}

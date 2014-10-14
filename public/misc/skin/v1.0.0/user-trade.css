@@ -1,0 +1,97 @@
+@charset "utf-8";
+/*
+* @description: 个人中心交易列表样式
+* @author:Young Foo(young.foo@helome.com)
+* @update:Young Foo(young.foo@helome.com)
+*/
+.cr-content{
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+    vertical-align: middle;
+}
+.cr-content .cr-name{
+    height: 45px;
+}
+.cr-content .cr-name .btn-default{
+    display: none;
+}
+.cr-content .cr-name:hover .btn-default{
+    display: inline-block;
+}
+.cr-content .cr-name strong {
+    max-width: 120px;
+    color: #3a75d7;
+}
+.cr-content .cr-name .btn-default {
+    padding: 5px 15px 7px 15px;
+    border-radius: 14px;
+}
+.cr-content .cr-text {
+    color: #40526a;
+    white-space: nowrap;
+    max-width: 370px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cr-content .cr-time {
+    color: #91a0b3;
+}
+
+/*for search*/
+.search-date{
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+    background-position: -179px 0;
+}
+.search-delete{
+    width: 19px;
+    height: 19px;
+    background-position: -220px -325px;
+}
+.search-left-body{
+    border-top: 2px solid #d4d9df;
+}
+.search-body-title{
+    display: inline-block;
+    vertical-align: middle;
+    height: 18px;
+}
+.search-left-body .like-txt{
+    width: 240px;
+}
+.search-left-body .search-time{
+    width: 210px;
+}
+.search-left-body .text{
+    padding: 11px;
+}
+.search-left-body .name-list{
+    display: table;
+    position: absolute;
+    border: 1px solid #ccc;;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+.search-left-body .name-list li{
+    vertical-align: middle;
+    padding: 4px 0px 4px 6px;
+    color: #40526A;
+}
+.search-left-body .name-list li:hover{
+    background-color: #cccccc;
+}
+.search-left-body .name-list .selected{
+    background-color: #cccccc;
+}
+
+.ellipsis{
+    display: inline-block;
+    text-decoration: none;
+    word-break: break-all;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

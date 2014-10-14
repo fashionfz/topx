@@ -1,0 +1,278 @@
+@charset "utf-8";
+/*
+* @description: 所有技能标签页样式
+* @author: Zhang Guanglin
+*/
+html{
+	height: 100%;
+}
+body {
+	background: #fff;
+	height: 100%;
+	position: relative;
+}
+.search  {
+	width: 750px;
+	margin: 0 auto
+}
+
+.tags-experts {
+	width: 980px;
+	margin-top: 20px;
+}
+
+.tags-category {
+	background: #3a75d7;
+	padding: 10px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: solid 3px #195dbf;
+}
+.tags-category a {
+	color: #fff;
+	font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 5px 2px 0;
+	padding: 0 10px;
+    border: solid 1px #3a75d7;
+	display: inline-block;
+    float: left;
+    white-space: nowrap;
+}
+.tags-category a:hover {
+    background: #1b63ca;
+    text-decoration: none;
+    border-radius: 4px;
+    border: solid 1px #1b63ca;
+}
+.tags-category a.current {
+	background: #195dbf;
+	text-decoration: none;
+	border-radius: 4px;
+    border: solid 1px #6c9ee5;
+}
+.tags-panel {
+    width: 958px;
+    padding: 13px 10px;
+    overflow: hidden;
+    border: 1px solid #e1e1e1;
+    border-top: 0;
+    border-bottom: 0;
+}
+.tags-list {
+    float: left;
+	font-size: 12px;
+	overflow: hidden;
+    width: 858px;
+    max-height: 90px;
+    min-height: 50px;
+}
+.tags-list a {
+	display: inline-block;
+    float: left;
+	color: #6d93c5;
+    height: 25px;
+    line-height: 24px;
+    padding: 0 8px;
+	margin: 0 5px 8px 0;
+    white-space: nowrap;
+}
+.tags-list a:hover {
+    color: #ff5d1a;
+    text-decoration: none;
+}
+.tags-list a.current {
+    color: #FFFFFF;
+    background: #3a75d7;
+    border-radius: 4px;
+}
+.tags-change {
+    float: right;
+    width: 100px;
+    text-align: center;
+}
+.tags-change a.changeTags {
+    display: inline-block;
+    font-weight: bolder;
+    color: #4372ca;
+    position: relative;
+    border: solid 1px #ffffff;
+    padding: 0 10px 0 21px;
+    height: 24px;
+    line-height: 24px;
+}
+.tags-change a.changeTags:hover {
+    border-color: #cccccc;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.tags-change a.changeTags .search-icon-refresh {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+}
+.no-tags,
+.no-expert {
+    text-align: center;
+    font-weight: 800;
+    color: #c0c6ce;
+    font-size: 14px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+.icon-no-tags {
+    height: 32px;
+    width: 32px;
+    background-position: -96px -92px;
+}
+.icon-no-expert {
+    height: 48px;
+    width: 48px;
+    background-position: -134px -76px;
+}
+.tags-line {
+    width: 958px;
+    height: 1px;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-bottom: dashed 1px #d4d9df;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+.more-tags {
+	position: absolute;
+	right: 18px;
+	top: 20px;
+	color: #4372ca;
+	cursor: pointer;
+	font-weight: 600;
+}
+.more-tags .icon-tag-more,
+.more-tags .icon-tag-slideup {
+	width: 10px;
+	height: 5px;
+	margin-left: 5px;
+}
+.icon-tag-more {
+	background-position: -104px -76px;
+}
+.icon-tag-slideup {
+	background-position: -104px -67px;
+}
+.experts {
+	border: 1px solid #e1e1e1;
+	border-top:none;
+}
+.expert-list {
+    padding: 10px 0 10px 10px;
+}
+.expert {
+    display: inline-block;
+	float: left;
+	text-align: center;
+    padding: 10px;
+	margin: 10px 0 10px 10px;
+    height: 120px;
+    width: 205px;
+    border: solid 1px #d4d9df;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.expert:hover {
+    text-decoration: none;
+    border-color: #6c9ee5;
+}
+.expert-head {
+	width: 60px;
+    height: 50px;
+    overflow: hidden;
+	text-align: center;
+    float: left;
+    position: relative;
+    padding-top: 6px;
+}
+.expert-head em {
+    width: 41px;
+    height: 41px;
+    background: url(i/small002.png) no-repeat center center;
+    position: absolute;
+    left: 9px;
+}
+.expert-head img {
+	width: 41px;
+	height: 41px;
+    border-radius: 20px;
+    left: 9px;
+}
+.expert-info {
+    text-align: left;
+}
+.expert-name {
+	color: #5287cd;
+	font-weight: bolder;
+	font-size: 12px;
+    height: 20px;
+}
+.expert-name span {
+    display: inline-block;
+    max-width: 126px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url("ellipsis.xml#ellipsis");
+}
+.expert-name em {
+    position: relative;
+    top: -1px;
+    *top: 1px;
+}
+.expert-job {
+	color: #40526a;
+	font-size: 12px;
+    width: 120px;
+    height: 19px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url("ellipsis.xml#ellipsis");
+}
+.expert-expense {
+    color: #e06b64;
+    font-weight: bolder;
+}
+.expert-tags {
+    padding-top: 5px;
+    height: 63px;
+    overflow: hidden;
+}
+.expert-tags span {
+    display: inline-block;
+    float: left;
+    padding: 0 10px;
+    height: 24px;
+    line-height: 24px;
+    margin: 5px 5px 0 0;
+    background: #6c9ee5;
+    border-radius: 3px;
+    color: #ffffff;
+    max-width: 185px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url("ellipsis.xml#ellipsis");
+}
+.star-num {
+    font-size: 14px;
+    font-weight: 600;
+    color: #e06b64;
+    top: -2px;
+    position: relative;
+    margin-left: 8px;
+}

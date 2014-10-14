@@ -1,0 +1,35 @@
+@(user: models.User)
+@main("邀请-- 个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('userInvitationCss','css');
+    </script>
+} {
+    <div id="content" class="clearfix">
+        @usercenter.left("invitation")
+        <div class="main">
+            <div class="user-info">
+                <ul class="tab-menu clearfix">
+                    <li class="tab-menu-btn current"><a class="tab-menu-left" href="javascript:;">邀请</a></li>
+                </ul>
+                <div class="tab-loading hide">
+                    <span></span>
+                    <em></em>
+                </div>
+                <div class="invited-box">
+                    <div class="invited-top">好友还没登录helome？那就复制以下链接邀请他加入吧！</div>
+                    <div class="clearfix">
+                        <div id="invitedUrl" class="invited-left fl">http://www.helome.com/register/@user.getId()</div>
+                        <div class="invited-right fr">
+                            <a id="copyInvited" class="btn-default btn-blue btn-lg" href="javascript:">复 制</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('userInvitationJs','js');
+    </script>
+}

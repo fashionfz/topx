@@ -1,0 +1,133 @@
+@()
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <title>反馈建议 -- helome服务交流平台</title>
+    <meta name="keywords" content="helome反馈建议,me2me,服务交易,服务咨询,在线视频咨询,在线服务,服务交流平台">
+    <meta name="description" content="在helome遇到的问题或者对helome有更好的建议请直接告诉我们，感谢大家对helome的支持！">
+    <script type="text/javascript" src="@routes.Assets.at("misc/dist/v20131021/ued.import.js")" charset="utf-8"></script>
+    <link rel="icon" href="@routes.Assets.at("/misc/images/favicon.ico")"/>
+    <!--[if IE]><script type="text/javascript"> ued_import('canvasJs','js'); </script><![endif]-->
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('feedbackCss','css');
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <!--头部开始-->
+    @head("")
+    <!--头部结束-->
+    <div id="container" class="doc">
+        <!--banner开始-->
+        @banner()
+        <!--banner结束-->
+        <div class="container">
+            <div class="doc-title"><p>反馈建议</p></div>
+            <p class="doc-title-s">因为您的宝贵意见，我们会更快成长</p>
+            <div class="back-body f14">
+                <div class="back-left fl tl">
+                    <p class="item">
+                        <span class="item-title fl pt15"><strong class="txt-red">*&nbsp;</strong>具体描述：</span>
+                        <span class="item-input fb-textarea">
+                            <textarea class="suggestion" maxlength="500" placeholder="请尽可能详细描述您的反馈或建议"></textarea>
+                            <span class="limit dashed gray-light">内容限制500个字符，还可以输入<b class="fb-count">500</b>个字符&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        </span>
+                    </p>
+                    <p class="item">
+                        <span class="item-title">超链地址：</span>
+                        <span class="item-input">
+                            <input type="text" id="url" class="txt" maxlength="64" placeholder="例如：http://www.helome.com">
+                        </span>
+                    </p>
+
+                    <div class="item upload-box">
+                        <div class="item-title fl mt10">图片上传：</div>
+                        <div class="fl ml5">
+                            <div class="image-limit">
+                                <span class="gray-light">最多可上传5张，支持JPG、PNG格式，大小不超过2M</span>
+                            </div>
+                            <form action="/attach/upload/suggestion" method="post" enctype="multipart/form-data">
+                                <input type="file" id="certificate" name="certificate" value="上传凭证" multiple="multiple">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="dashed pt20 pb10 mt10">
+                        <h4>联系方式</h4>
+                        以下信息我们将严格保密，请填写真实有效的信息，方便必要时联系您！
+                    </div>
+                    <p class="item">
+                        <span class="item-title">&nbsp;&nbsp;姓名：</span>
+                        <span class="item-input-s">
+                            <input id="name" class="txt" type="text" maxlength="64" placeholder="姓名">
+                        </span>
+                        <span class="item-title">&nbsp;&nbsp;电话：</span>
+                        <span class="item-input-s">
+                            <input id="phone" class="txt" type="text" maxlength="64" placeholder="电话">
+                        </span>
+                    </p>
+                    <p class="item">
+                        <span class="item-title">&nbsp;&nbsp;邮箱：</span>
+                        <span class="item-input-s">
+                            <input id="mail" class="txt" type="text" maxlength="64" placeholder="邮箱">
+                        </span>
+                        <span class="item-title">&nbsp;&nbsp;QQ：</span>
+                        <span class="item-input-s">
+                            <input id="qq" class="txt" type="text" maxlength="64" placeholder="QQ">
+                        </span>
+                    </p>
+                    <div class="dashed pt20 mt20">
+                        <span class="item-title"></span>
+                        <input id="submitFeedback" type="button" value="提交" class="btn-default btn-lg btn-green btn-padding-50">
+                        <br><br>
+                    </div>
+                </div>
+                <div class="back-right fr">
+                    <div class="right-block">
+                        <div class="right-block-title">常见帮助</div>
+                        <ul class="right-block-body f12">
+                            <li class="">·&nbsp;<a href="/questions#account3" target="_blank">目前提供哪些注册方式？</a></li>
+                            <li class="mt5">·&nbsp;<a href="/questions#account7" target="_blank">如何绑定手机？</a></li>
+                            <li class="mt5">·&nbsp;<a href="/questions#account10" target="_blank">如何提高账号安全性？</a></li>
+                            <li class="mt5">·&nbsp;<a href="/questions#account11" target="_blank">为什么找回密码后在绑定邮箱找不到邮件？</a></li>
+                            <li class="mt5">·&nbsp;<a href="/questions#trade2" target="_blank">如何在helome中赚钱？</a></li>
+                            <li class="mt5">·&nbsp;<a href="/questions#trade3" target="_blank">如何充值？</a></li>
+                            <li class="mt5">·&nbsp;<a href="/questions#guide1" target="_blank">如何找到服务者？</a></li>
+                            <li class="mt5">·&nbsp;<a href="/questions#guide2" target="_blank">如何提供服务？</a></li>
+                            <li class="mt5">·&nbsp;<a href="/questions#guide5" target="_blank">为什么无法打开咨询页面？</a></li>
+                            <li class="mt5">·&nbsp;<a href="/questions#guide7" target="_blank">找不到视频设备，如何设置？</a></li>
+                        </ul>
+                        <div class="right-block-bottom"><a href="/questions" target="_blank"><strong>更多常见帮助</strong>&gt;&gt;</a></div>
+                    </div>
+                    <a href="/tagsearch?st=嗨啰在线客服"><div class="service fb-icon"></div></a>
+                    <div class="right-block">
+                        <div class="right-block-title">联系我们</div>
+                        <ul class="right-block-body">
+                            <li class="pb10"><span class="fb-icon weight address fl"></span><span class="">四川·成都武侯区<br>世纪城南路599号软件园D7</span></li>
+                            <li class="pb10"><span class="fb-icon weight phone fl"></span><span class="lh40">400-869-3599</span></li>
+                            <li class="pb10"><span class="fb-icon weight email fl"></span><span class="lh40">me@@helome.com</span></li>
+                            <li class="pb10"><span class="fb-icon weight weibo fl"></span><span class="lh40">@@helome服务交易平台</span></li>
+                            <li class="">
+                                <span class="fb-icon weight weixin fl"></span>
+                                <div class="qr-code fb-icon tc none"><img class="mt20" src="@routes.Assets.at("/misc/images/2code.png")"></div>
+                                <span class="lh40">helome服务交易平台</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    @foot()
+</div>
+<script type="text/javascript">
+    ued_import('commonJs','js');
+    ued_import('feedbackJs','js');
+</script>
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+@(email : String, code : String)
+@main("设置密码 -- helome服务交流平台"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('singleCss','css');
+    </script>
+} {
+ 	<div id="content">
+        <div class="main clearfix">
+
+            <!--重设密码表单开始-->
+            <div class="main-panel reset-password-main">
+                <h2 class="main-slogan">重置您的密码!</h2>
+                <form class="reset-password-form">
+
+                    <div class="left reset-password-mail main-block">您的登录邮箱：<span>@email</span>
+                    </div>
+
+                    <div class="main-block">
+                        <div class="tag-container">
+                            <input type="password" class="txt" name="sPwd" id="sPwd" placeholder="新密码" />
+                        </div>
+                    </div>
+
+                    <div class="main-block">
+                        <div class="tag-container">
+                            <input type="password" class="txt" name="sConfirmPwd" id="sConfirmPwd" placeholder="确认密码" />
+                        </div>
+                    </div>
+
+                    <div class="main-block">
+                        <div class="error-msg hide"></div>
+                    </div>
+                    
+                    <div class="main-block">
+                    	<input type="hidden" value="@email" name="email" id="email"/>
+                    	<input type="hidden" value="@code" name="code" id="code"/>
+                        <input type="button" value="确认" class="btn-default btn-lg btn-green btn-resetPwd" />
+                    </div>
+
+
+                </form>
+            </div>
+
+            @downloadBlock()
+            <!--重设密码表单结束-->
+        </div>
+    </div>
+	<script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('resetPwdJs','js');
+	</script>
+}

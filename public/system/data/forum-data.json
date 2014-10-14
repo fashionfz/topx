@@ -1,0 +1,56 @@
+{
+    "id": 1,
+    "tagName": "计算机行业",
+    "parentTagName": "",
+    "hits": 11,
+    "tagType": "分类",
+    "seq": "1",
+    "leaf": false,
+    "children": [
+        {
+        "id": 2,
+    	"tagName": "软件研发",
+   		"parentTagName": "计算机行业",
+    	"hits": 11,
+    	"tagType": "标签",
+    	"seq": "1",
+    	"leaf": false,
+    	"children": [{
+			    "id": 1,
+			   	"tagName": "计算机行业",
+			    "parentTagName": "",
+			    "hits": 11,
+			    "tagType": "分类",
+			    "seq": "1",
+			    "leaf": true
+    		}]
+    	},
+    	{
+        "id": 3,
+    	"tagName": "软件研发",
+   		"parentTagName": "计算机行业",
+    	"hits": 11,
+    	"tagType": "标签",
+    	"seq": "1",
+    	"leaf": true
+    	},
+    	{
+        "id": 4,
+    	"tagName": "软件研发",
+   		"parentTagName": "计算机行业",
+    	"hits": 11,
+    	"tagType": "标签",
+    	"seq": "1",
+    	"leaf": true
+    	},
+    	{
+        "id": 5,
+    	"tagName": "软件研发",
+   		"parentTagName": "计算机行业",
+    	"hits": 11,
+    	"tagType": "标签",
+    	"seq": "1",
+    	"leaf": true
+    	}
+ 	]
+} 

@@ -1,0 +1,21 @@
+@(title: String)(headResource: Html)(content: Html)
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn" xml:lang="zh-cn">
+	<head>
+    	<meta charset="utf-8" />
+        <title>@title</title>
+    	<script type="text/javascript" src="@routes.Assets.at("misc/dist/v20131021/ued.import.js")" charset="utf-8"></script>
+        <link rel="icon" href="@routes.Assets.at("/misc/images/favicon.ico")"/>
+        <!--[if IE]><script type="text/javascript"> ued_import('canvasJs','js'); </script><![endif]-->
+        @headResource
+    </head>
+    <body>
+        <div id="wrap">
+            @head("")
+            <div id="container">
+                @content
+            </div>
+        </div>
+        @foot()
+    </body>
+</html>

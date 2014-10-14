@@ -1,0 +1,177 @@
+@(serviceInfoVO:vo.ServiceInfoVO,args:Map[Integer, Long])
+@import org.apache.commons.collections.CollectionUtils
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn" xml:lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="baidu-site-verification" content="Xlb3LlwZJV" />
+    <title>@serviceInfoVO.getServiceDetailVO().getTitle() -- 服务 -- helome服务交流平台</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <script type="text/javascript" src="@routes.Assets.at("misc/dist/v20131021/ued.import.js")" charset="utf-8"></script>
+    <link rel="icon" href="@routes.Assets.at("/misc/images/favicon.ico")"/>
+    <!--[if IE]><script type="text/javascript"> ued_import('canvasJs','js'); </script><![endif]-->
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('servicesDetailCss','css');
+    </script>
+</head>
+<body>
+<div id="wrap">
+    @head("")
+    <div id="container">
+
+        <div id="content">
+            <div class="reqService clearfix">
+                <div class="doc-list reqService-detail">
+                    <div class="doc-list-block">
+                        <h1><em></em><span class="title">@serviceInfoVO.getServiceDetailVO().getTitle()</span></h1>
+                        <div class="content">
+                            <div class="reqService-top clearfix">
+                                <div class="reqService-industry fl">所属行业：<span>@serviceInfoVO.getServiceDetailVO().getIndustryName()</span></div>
+                                <div class="reqService-share fl clearfix">
+                                    <span class="db fl share-txt pl20">分享：</span>
+                                    <div class="bdsharebuttonbox fl">
+                                        <a href="#" class="bds_more" data-cmd="more"></a>
+                                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                                        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                                        <a href="#" class="bds_t163" data-cmd="t163" title="分享到网易微博"></a>
+                                        <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                                        <a href="#" class="bds_tsohu" data-cmd="tsohu" title="分享到搜狐微博"></a>
+                                        <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                                        <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reqService-price clearfix">
+                                @if(serviceInfoVO.getServiceDetailVO().getPrice() == null){
+                                    <span class="reqService-costs">面议</span>
+                                }else{
+                                    @if(serviceInfoVO.getServiceDetailVO().getPrice() == 0.0){
+                                        <span class="reqService-costs">免费</span>
+                                    }else{
+                                        <span class="reqService-currency fl"><em class="icon icon-currency-cny"></em></span>
+                                        <span class="reqService-charges fl">@serviceInfoVO.getServiceDetailVO().getPrice()</span>
+                                    }
+                                }
+                            </div>
+
+                            @if(CollectionUtils.isNotEmpty(serviceInfoVO.getServiceDetailVO().getAttachList())){
+                            <div class="reqService-slide">
+                                <div id="slide">
+                                    <ul class="slide-list">
+                                        @for(attach <- serviceInfoVO.getServiceDetailVO().getAttachList()){
+                                        <li><img src="@attach.getPathsource()"></li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                            }
+                            
+                        </div>
+                    </div>
+                    <div class="doc-list-block">
+                        <h2><em></em><span class="title">服务说明</span></h2>
+                        <div class="content">
+                           @serviceInfoVO.getShortInfo()
+                        </div>
+                    </div>
+                    <div class="doc-list-block">
+                        <h2><em></em><span class="title">标签</span></h2>
+                        <div class="content clearfix skill-tags">
+                        @if(serviceInfoVO.getServiceDetailVO().getSkillsTags().size() != 0) {
+                            @for(skillTag <- serviceInfoVO.getServiceDetailVO().getSkillsTags()) {
+                             <a href="/services/search?ft=@skillTag.getNoMarkedTag" target="_blank">@skillTag.getTag</a>
+                            }
+                        }else{
+                            暂未填写
+                        }
+                        </div>
+                    </div>
+                    <div class="doc-list-block">
+                        <h2><em></em><span class="title">服务评价</span></h2>
+                        <div class="content">
+                            @if(!serviceInfoVO.getServiceOwner().getIsSelf()){
+                            <div class="reqService-toComment">
+                                请对该用户服务进行评价!&nbsp;&nbsp;
+                                <a class="btn-default btn-green btn-lg btn-toComment" href="javascript:">评价</a>
+                            </div>
+                            }
+                            <div class="reqService-comment" id="comments">
+                                <input type="hidden" name="servicesId" id="servicesId" value="@serviceInfoVO.getServiceDetailVO().getId()">
+                                <div class="tab">
+                                    <p class="tab-head clearfix">
+                                    <span class="tab-menu">
+                                        <span class="tab-menu-btn current" data-level="0">全部评价<em></em></span>
+                                        <span class="tab-menu-btn" data-level="5">五星(@args.get(5))<em></em></span>
+                                        <span class="tab-menu-btn" data-level="4">四星(@args.get(4))<em></em></span>
+                                        <span class="tab-menu-btn" data-level="3">三星(@args.get(3))<em></em></span>
+                                        <span class="tab-menu-btn" data-level="2">二星(@args.get(2))<em></em></span>
+                                        <span class="tab-menu-btn" data-level="1">一星(@args.get(1))<em></em></span>
+                                    </span>
+                                    </p>
+                                    <div class="tab-loading hide">
+                                        <span></span>
+                                        <em></em>
+                                    </div>
+                                    <div class="comment-list clearfix">
+
+                                    </div>
+                                </div>
+                                <div class="page page-comment clearfix">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reqService-right ml30">
+                    <div class="reqService-posted">
+                        <div class="posted-title">发布者信息</div>
+                        <div class="posted-detail clearfix">
+                            <a class="posted-head fl" target="_blank" href="/expert/detail/@serviceInfoVO.getServiceOwner().getUserId()" title="@serviceInfoVO.getServiceOwner().getUserName()">
+                                <em></em>
+                                <img src="@serviceInfoVO.getServiceOwner().getHeadUrl()" height="41" width="41" alt="">
+                            </a>
+                            <div class="posted-info">
+                                <a class="posted-name txt-bold" target="_blank" href="/expert/detail/@serviceInfoVO.getServiceOwner().getUserId()" title="@serviceInfoVO.getServiceOwner().getUserName()">@serviceInfoVO.getServiceOwner().getUserName()</a>
+                                <span class="posted-job" title="@serviceInfoVO.getServiceOwner().getJob()">@serviceInfoVO.getServiceOwner().getJob()</span>
+                                <p class="posted-stars">
+                                        <span class="icon icon-star-base" title="平均分：@serviceInfoVO.getServiceOwner().getAverageScore()">
+                                            <span class="icon icon-star-on" style="width:@{serviceInfoVO.getServiceOwner().getAverageScore()/5*73}px;"></span>
+                                        </span>
+                                    <a href="/expert/detail/@serviceInfoVO.getServiceOwner().getUserId()#comments" class="star-num" target="_blank">(@serviceInfoVO.getServiceOwner().getCommentCount())</a>
+                                </p>
+                            </div>
+                        </div>
+                        @*************************
+                        <div class="posted-description">
+                            @serviceInfoVO.getOwnerPersonalInfo()
+                        </div>
+                        <div class="posted-tags clearfix">
+                        @for(skillTag <- serviceInfoVO.getServiceOwner().getSkillsTags()){
+                        	<a href="@controllers.routes.ExpertApp.search()?ft=@skillTag.getNoMarkedTag" title="@skillTag.getTag()" target="_blank">@skillTag.getTag()</a>
+                        }
+                        </div>
+                        **********************@
+                        @if(serviceInfoVO.getServiceOwner()!=null && serviceInfoVO.getServiceOwner().getUserId()!=null){
+	                        <div class="posted-chat">
+                                @if(!serviceInfoVO.getServiceOwner().getIsSelf()){
+	                            <div data-id="@serviceInfoVO.getServiceOwner().getUserId()" id="consult" class="btn-default btn-green btn-lg btn-cooperation"><i class="index-icon icon-btn-chat"></i>联系</div>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@foot()
+<script type="text/javascript">
+    ued_import('commonJs','js');
+    ued_import('servicesDetailJs','js');
+    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["weixin","sqq","tsina","t163","tqq","tsohu","renren","douban"],"viewText":"分享到：","viewSize":"16"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+</body>
+</html>

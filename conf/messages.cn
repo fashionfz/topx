@@ -1,0 +1,62 @@
+#####################################################################
+# 业务操作成功的代码为2XX
+# 各业务模块根据自己的情况制定代码及消息规则
+# 消息结构为
+# domain.mothed.success or domain.mother.error.xxxxx=业务代码|业务信息
+# 此文件供前台开发人员及后台开发人员参考
+#####################################################################
+#用户登录成功消息
+user.login.uperror=200001:用户名或密码错误
+user.login.forbidden=200002:当前用户已经被禁用
+user.login.logouted=221001:用户已注销
+user.login.error.forbidden=100001:系统错误
+
+#用户注册
+user.register.emailerror=201001:{0}账户格式错误
+user.register.emailexist=201003:{0}账号名已经存在
+user.register.emailrequire=201004:账号名必填
+user.register.passvalition=201002:密码不能小于6位
+user.register.captchaerror=201005:验证码错误
+user.register.error.usercenter=100001:用户中心接口注册失败{0}
+
+
+#消息
+msg.pushts.error.notenoughparam=502:传入的参数不够或有值为空
+msg.pushts.error.nofounduser=503:传入的{0}账号没有在系统中找到
+msg.pushts.error.token=504:传入的{0}token无效
+
+
+#用户建议
+suggestion.success=200:谢谢你的建议
+suggestion.error.require=502:请填写建议内容!
+
+
+#找回密码邮件
+forgetpasswd.success=200:邮件发送成功
+forgetpasswd.error.formatemail=204001:邮箱格式不符合要求!
+forgetpasswd.error.notexist=204002:{0}邮箱不存在
+forgetpasswd.error.captcha=204003:验证码错误!
+forgetpasswd.error.usercenter=100001:调用平台接口验证邮箱是否存在失败{0}
+
+#上传头像
+useravatar.error.uploadcreate=501:图片路径创建失败请检查权限或配置
+
+#APK升级版本信息
+mobile.apk.version.nofounddata=279001:未获取到版本信息，请重试，或联系管理员
+
+#用户第三方授权
+useroauth.login.notfoundauth=500:授权过期，请重新登录授权
+useroauth.login.fail=501:登录失败，请尝试重新登录
+
+
+#用户资料保存
+userinfo.save.legalcharacter=502:不能填写系统定义"嗨啰翻译"及"嗨啰客服"关键字
+userinfo.save.unknowntimezone=503:未知时区
+
+#群组错误
+group.error.nofound=502:此消息群组已删除或已过期
+
+
+
+
+

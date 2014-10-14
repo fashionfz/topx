@@ -1,0 +1,133 @@
+# System manager
+GET        	/                 			system.controllers.Application.index()
+GET        	/main                       system.controllers.Application.index()
+GET        	/main/:uuid                 system.controllers.Application.main(uuid:String)
+
+POST       	/login                		system.controllers.Application.login()
+
+###服务标签
+GET       	/tag/querycate              system.controllers.TagApp.queryCate()
+POST       	/tag/updatecate             system.controllers.TagApp.updateCate()
+GET       	/tag/queryind               system.controllers.TagApp.queryInd()
+POST      	/tag/saveOrUpdate           system.controllers.TagApp.saveOrUpdate()
+GET         /tag/get/:id            	system.controllers.TagApp.get(id:Long)
+POST        /tag/delete/:id            	system.controllers.TagApp.delete(id:Long)
+GET         /tag/deleteAttach           system.controllers.TagApp.deleteAttach()
+
+
+###用户帐号
+GET         /user                       system.controllers.UserApp.list()
+GET         /userCountry                system.controllers.UserApp.getCountry()
+POST        /userState                  system.controllers.UserApp.saveUserState()
+POST        /user/top                   system.controllers.UserApp.top()
+POST        /user/untop                 system.controllers.UserApp.untop()
+#GET       	/user/queryUserind/:userId  system.controllers.UserApp.queryUserInd(userId:Long)
+
+###用户反馈
+GET         /suggestion                 system.controllers.SuggestionApp.list()
+GET         /feedback                   system.controllers.FeedbackApp.list()
+POST        /feedbackstatus             system.controllers.FeedbackApp.modifyStatus()
+
+#关键词
+POST		/k/ku                       system.controllers.KeywordApp.update()
+GET		    /k/kget                     system.controllers.KeywordApp.get()
+
+#关键词
+POST		/sensitiveWords/update      system.controllers.SensitiveCharacterApp.update()
+GET		    /sensitiveWords/get         system.controllers.SensitiveCharacterApp.get()
+
+###评论和回复管理
+GET       	/comment/queryComment       system.controllers.CommentApp.queryComment()
+GET       	/comment/queryReply         system.controllers.CommentApp.queryReply()
+POST        /comment/delete/:id         system.controllers.CommentApp.delete(id:Long)
+
+#操作记录
+GET         /operatelog                 system.controllers.OperateLogApp.list()
+GET			/operateModule              system.controllers.OperateLogApp.operateModules()
+
+###系统日志
+GET         /sysLog/list                 					system.controllers.SysLogApp.list()
+GET         /sysLog/download/:fileName/:subFileName       	system.controllers.SysLogApp.download(fileName:String,subFileName:String)
+
+
+##配置管理
+GET         /config/listall             system.controllers.ConfigApp.list()
+POST        /config/create              system.controllers.ConfigApp.create()
+POST        /config/update              system.controllers.ConfigApp.update()
+POST        /config/destroy             system.controllers.ConfigApp.delete()
+GET        /config/syn                  system.controllers.ConfigApp.syn()
+
+#移动端首页轮播图片
+POST        /introimg/saveorupdate      system.controllers.IntroImgApp.saveOrUpdate()
+GET         /introimg/list              system.controllers.IntroImgApp.list()
+POST        /introimg/delete/:id        system.controllers.IntroImgApp.delete(id:Long)
+
+
+###海外简历
+GET         /resume/list                system.controllers.ResumeApp.list()
+GET         /resume/toCompleted         system.controllers.ResumeApp.toCompleted()
+GET         /resume/toInvalid           system.controllers.ResumeApp.toInvalid()
+GET         /resume/publishTask         system.controllers.ResumeApp.publishTask()
+
+#移动端客户端日志
+GET         /mobileclientlog/list       system.controllers.MobileClientLogApp.getByPage()
+
+#######################
+#用户视图
+GET			/user_url			system.controllers.UserView.getView()
+#菜单功能查询
+GET			/menu				system.controllers.MenuApp.getAll()
+#获取所有系统后台用户
+GET			/get_admin			system.controllers.MenuApp.getAllAdmin()
+#获取所有系统角色
+GET			/get_role			system.controllers.MenuApp.getAllRole()
+#根据用户获取授权和未授权的角色
+GET			/get_role_by_user	system.controllers.MenuApp.getAllRoleByUser()
+#新增角色
+POST	    /add_role			system.controllers.MenuApp.addRole()
+#删除角色
+POST		/del_role			system.controllers.MenuApp.delRole(id:Long)
+#用户授权角色
+GET			/auth_user			system.controllers.MenuApp.authUser(userName:String,roleIds:String)
+#新增后台用户
+POST 		/add_admin			system.controllers.MenuApp.addAdmin()
+#删除后台用户
+GET			/del_admin			system.controllers.MenuApp.delAdmin(id:Long)
+#获取系统功能菜单
+GET			/url_tree			system.controllers.UserView.urlTree(parentId:String)
+#根据角色获取授权和未授权的功能
+GET			/url_tree_by_role	system.controllers.UserView.urlTreeByRole(roleId:Long,parentId:String)
+
+GET			/url_tree_role		system.controllers.UserView.urlTreeRole(roleId:Long)
+#角色授权功能
+GET			/auth_role			system.controllers.UserView.authRole(id:Long,menuIds:String)
+#根据id获取子功能菜单信息
+GET			/get_child			system.controllers.MenuApp.getChild()
+#根据id获取菜单信息
+GET			/get_menu_by_id		system.controllers.MenuApp.getMenuById(id:Long)
+#修改菜单功能
+POST		/update_menu		system.controllers.MenuApp.updateMenu()
+#删除菜单功能
+GET			/del_menu			system.controllers.MenuApp.delMenu(id:Long)
+#新增功能菜单
+POST		/add_menu			system.controllers.MenuApp.addMenu()
+#获取邮件模板
+GET			/get_template		system.controllers.TemplateApp.getTemplate()
+#保存邮件模板
+POST		/save_template		system.controllers.TemplateApp.saveTemplate()
+#测试群发邮件
+#GET			/test				system.controllers.TemplateApp.test()
+#用户信息导出excel
+GET			/downloadExcel		system.controllers.UserApp.downloadExcel(searchText:String,isEnable:String,gender:String,country:String,isTop:String,inId:String,userType:String,startDate:String,endDate:String)
+#关键字统计查询
+GET			/keyword			system.controllers.KeywordApp.keyword()
+#邮件变量获取
+GET			/get_variable		system.controllers.TemplateApp.getVariable(templateId:Long)
+#关键字统计导出excel
+GET			/keyWordExcel		system.controllers.KeywordApp.keyWordExcel(type:String,startDate:String,endDate:String,searchText:String)
+
+GET			/logout				system.controllers.Application.logout()
+
+GET			/config_key_word	system.controllers.KeywordApp.getConfig()
+
+POST		/saveKeyWordConfig 	system.controllers.KeywordApp.saveKeyWordConfig()

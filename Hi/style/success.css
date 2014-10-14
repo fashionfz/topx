@@ -1,0 +1,130 @@
+/* 成功案例样式 */
+body {
+	margin: 0;
+	padding: 0;
+}
+.content {
+	width: 100%;
+	min-width: 1000px;
+	background: #e5e8ec;
+	padding: 50px 0;
+}
+.content-top {
+	width: 858px;
+	height: 60px;
+	margin: 0 auto 20px;
+	background: #fff;
+	padding: 0 35px 0 35px;	
+	font-family: "Microsoft YaHei";
+	font-size: 24px;
+	color: #333;
+	font-weight: bold;
+	line-height:60px;
+	border: 1px solid #d4d4d5;
+}
+.dev-cont {
+	width: 930px;
+	margin: 0 auto;
+	height: 195px;
+	padding: 0 35px 10px 35px;
+}
+.dev-cont-left {
+	width: 458px;
+	height: 195px;
+	border: 1px solid #d4d5d6;
+	background: #fff;
+	float: left;	
+}
+.dev-cont img {
+	float: left;
+	padding: 6px;
+}
+.cont-txt {
+	width: 245px;
+	float: left;
+	padding-left: 15px;
+	color: #666;
+	position: relative;
+}
+.txt-list {
+	width: 213px;
+	height: 115px;
+	text-align: left;
+	display: block;
+	padding: 0 29px 0 0;	
+	line-height: 22px;
+	font-size: 12px;
+	word-break: break-all;
+	overflow: hidden;
+}
+.cont-txt .marks-top{
+	width: 25px;
+	height: 13px;
+	display: block;
+	background:url(../images/marks.png) no-repeat left center;
+	padding-top: 13px;
+	margin-left: -10px;
+	/*position: absolute;
+	top: 10px;
+	left: -4px;*/
+}
+.marks-bottom {
+	width: 25px;
+	height: 13px;
+	display: block;
+	background:url(../images/marks.png) no-repeat -22px 0px;
+	margin-left: 200px;
+	/*position: absolute;
+	top: 125px;
+	left: 210px;*/
+}
+.dev-cont-right {
+	width: 457px;
+	height: 195px;
+	border: 1px solid #d4d5d6;
+	background: #fff;
+	float: left;
+	margin-left: 10px;
+}
+
+#right-box {
+	width: 56px;
+	position: fixed;
+	right: 100px;
+	bottom: 103px;
+	z-index: 100;
+}
+.go-top {
+	display: block;
+	background: url(../images/icon-top.png) no-repeat;
+	cursor: pointer;
+	height: 109px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

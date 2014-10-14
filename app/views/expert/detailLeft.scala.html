@@ -1,0 +1,45 @@
+@(expert:vo.ExpertDetail)
+
+<div class="search-left" id="@expert.getUserId()">
+    <div class="search-head search-head-lg">
+        <img src="@expert.getHeadUrl()" height="190" width="190" alt="@expert.getUserName()" class="search-head-img"/>
+        <div class="search-country">
+            <span class="country-flag flag @expert.getCountryUrl()" title="@expert.getCountry()"></span>
+            @if(expert.getGender().name() == "MAN"){
+            <img alt="男" title="男" src="@routes.Assets.at("misc/images/male.png")" class="country-sex" width="13" height="13">
+            }
+            @if(expert.getGender().name() == "WOMAN"){
+            <img alt="女" title="女" src="@routes.Assets.at("misc/images/female.png")" class="country-sex" width="13" height="13">
+            }
+        </div>
+    </div>
+    <p class="name">@expert.getUserName()
+        @if(expert.getIsOnline){
+            <em class="search-icon search-icon-online" title="在线"></em>
+        }
+    </p>
+
+    <p class="profession">@expert.getJob()</p>
+
+    @if(!expert.getIsSelf){
+
+        <div data-id="@expert.getUserId()" id="consult" class="btn-default btn-green btn-lg btn-cooperation"><i class="index-icon icon-btn-chat"></i>联系</div>
+        @if(expert.getIsFriend()){
+            <div data-id="@expert.getUserId()" class="btn-default btn-white btn-lg btn-ated"><i class="icon icon-btn-at"></i>已圈 Ta</div>
+        }else{
+            <div data-id="@expert.getUserId()" class="btn-default btn-white btn-lg btn-at"><i class="icon icon-btn-at"></i>圈 Ta</div>
+        }
+
+    }
+
+    <p class="stars">
+        <span class="icon icon-star-base" title="平均分：@expert.getAverageScore()">
+            <span class="icon icon-star-on" style="width:@(expert.getAverageScore()/5*73)px;"></span>
+        </span>
+        <a href="/expert/detail/@expert.getUserId()#comments" class="star-num">(@if(expert.getCommentCount()==0){<b>暂无评价</b>}else{@expert.getCommentCount()})</a>
+
+    </p>
+    <p class="tariff">
+        资费：<span>@expert.getExpenses()</span>
+    </p>
+</div>

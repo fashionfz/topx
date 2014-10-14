@@ -1,0 +1,99 @@
+@charset "utf-8";
+/*
+* @description: 咨询消息窗口样式
+* @author:TinTao(tintao.li@helome.com)
+* @update:
+*/
+
+#consultMsgBox {
+    width: 400px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    z-index: 999;
+}
+#consultMsgBox .cmb-tit {
+    background: #e06b64;
+    height: 22px;
+    line-height: 22px;
+    padding: 8px;
+    border-radius: 5px 5px 0 0;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 14px;
+    text-shadow: 0 1px 1px #c52d27;
+}
+#consultMsgBox .cmb-tit a {
+    background: #ffd4d9;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    color: #ed5565;
+    border-radius: 12px;
+    float: right;
+    text-shadow: none;
+}
+#consultMsgBox .cmb-tit a:hover {
+    background: #ffffff;
+    text-decoration: none;
+}
+#consultMsgBox .cmb-table {
+    padding: 20px;
+    border: solid #ffd4d9 1px;
+    border-radius: 0 0 5px 5px;
+}
+#consultMsgBox .cmb-content {
+    font-size: 14px;
+    padding-left: 10px;
+    color: #666666;
+}
+#consultMsgBox .pl0{
+    padding-left: 0px;
+}
+.tips-text {
+    position: relative;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+#consultMsgBox .cmb-user {
+    color: #4083a9;
+    padding: 0 1px;
+    font-weight: bold;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    max-width: 144px;
+    height: 20px;
+}
+#consultMsgBox .cmb-button {
+    text-align: center;
+    padding-top: 20px;
+}
+#consultMsgBox .cmb-button button {
+    margin: 0 5px;
+}
+#consultMsgBox .icon-consult {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-position: -27px -3px;
+    position: relative;
+    top: 2px;
+}
+#consultMsgBox .icon-contact {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    background-position: -71px -3px;
+    position: relative;
+    top: 5px;
+}
+#consultMsgBox .tips-red {
+    color: #e06b64;
+    font-size: 12px;
+}

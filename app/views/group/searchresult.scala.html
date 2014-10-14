@@ -1,0 +1,128 @@
+@(page:vo.expertpage.GPage[vo.GroupListVO],cts:org.apache.commons.collections.map.ListOrderedMap)
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn" xml:lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="baidu-site-verification" content="Xlb3LlwZJV" />
+    <title>群组搜索@page.getFt()的结果 -- helome服务交流平台</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <script type="text/javascript" src="@routes.Assets.at("misc/dist/v20131021/ued.import.js")" charset="utf-8"></script>
+    <link rel="icon" href="@routes.Assets.at("/misc/images/favicon.ico")"/>
+    <!--[if IE]><script type="text/javascript"> ued_import('canvasJs','js'); </script><![endif]-->
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('searchGroupCss','css');
+    </script>
+</head>
+<body>
+<div id="wrap">
+    @head(page.getFt())
+    <div id="container">
+        <div id="content" class="clearfix">
+
+            <div class="filter-block">
+                <span class="filter">
+                    <span class="filter-select">
+                        <span class="filter-name icon-more">
+                            <span class="filter-name-area">@page.getInfStr<em class="search-icon search-icon-direction-down"></em></span>
+                            <ul class="filter-list">
+                            <li><a href="@page.getInfHref("")">全部</a></li>
+                             @for((key, value) <- cts) {
+                                <li><a href="@page.getInfHref(key.toString())">@value</a></li>
+                             }
+                            </ul>
+                        </span>
+                    </span>
+                    <span class="filter-select">
+                        <span class="filter-name icon-more">
+                            <span class="filter-name-area">@page.getGpf<em class="search-icon search-icon-direction-down"></em></span>
+                            <ul class="filter-list">
+                            	<li><a href="@page.getGpfHref("")">全部</a></li>
+                                <li><a href="@page.getGpfHref("0")">公开自由加入</a></li>
+                                <li><a href="@page.getGpfHref("1")">需要申请加入</a></li>
+                            </ul>
+                        </span>
+                    </span>
+                </span>
+                <span class="filter">
+                    <a class="sort-name @page.getOClass("")" id="averageDefault" href="@page.getOHref("")">
+                        默认排序
+                    </a>
+                    <a class="sort-name @page.getOClass("countMem")" id="dealNum" href="@page.getOHref("countMem")">
+                        按人数<em class="search-icon search-icon-sort-down" ></em>
+                    </a>
+                    <a class="sort-name @page.getOClass("createDate")" id="averageScore" href="@page.getOHref("createDate")">
+                        按创建时间<em class="search-icon search-icon-sort-down"></em>
+                    </a>
+
+                </span>
+                <span class="page page-top">
+                </span>
+            </div>
+
+    	    @if(page.getTotalRowCount != 0) {
+                <div class="search-list">
+          			<input type="hidden" name="totalCount" id="totalCount" value="@page.getTotalRowCount">
+                    <input type="hidden" name="curPage" id="curPage" value="@page.getPageIndex">
+        			@for(groupListVO <- page.getList()) {
+                    <div class="search-block clearfix">
+                        <a href="/group/detail/@groupListVO.getId" target="_blank" class="search-head"><img src="@groupListVO.getHeadUrl" height="190" width="190" class="search-head-img" /></a>
+
+                        <div class="search-center">
+                            <div class="name clearfix">
+                                @if(groupListVO.getGroupPrivId() == 1){
+                                    <span class="icon icon-group-lock" title="需要申请加入"></span>
+                                }    
+                                <a href="/group/detail/@groupListVO.getId" target="_blank" title="">@Html(groupListVO.getGroupName)</a>
+                            </div>
+
+                            <div class="info">
+                                <span>分类：@groupListVO.getIndustryName </span>
+                                <span>成员数：@groupListVO.getCountMem 人</span>
+                                <span>创建时间：@groupListVO.getCreateDate</span>
+                            </div>
+
+                            <p class="introduce">
+                            @Html(groupListVO.getGroupInfo)
+                            </p>
+                            <div class="skill clearfix">
+                            
+                            @for(st <- groupListVO.getTags()){
+                                <a href="@controllers.group.routes.GroupApp.searchResult()?ft=@st.getNoMarkedTag">@Html(st.getTag)</a>
+        					}
+                               
+                            </div>
+                        </div>
+                        <div class="search-right">
+                            <div class="btn-block">
+                                @if(groupListVO.getIsJoin){
+                                    <span class="btn-default btn-green btn-lg btn-contact" group-id="@groupListVO.getId" group-name="@groupListVO.getGroupName" group-islock="@groupListVO.getGroupPrivId"><i class="index-icon icon-btn-chat"></i>群 聊</span>
+                                }
+        						@if(!groupListVO.getIsJoin){
+                                    <span class="btn-default btn-green btn-lg btn-join" group-id="@groupListVO.getId" group-name="@groupListVO.getGroupName" group-islock="@groupListVO.getGroupPrivId"><i class="icon icon-btn-add-group"></i>加 入</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+        			}
+                </div>
+            }else{
+                <div class="no-result">
+                    <p class="no-result-one clearfix"><em></em><span>抱歉！没有找到相关的群组</span></p>
+                    <p class="no-result-two">建议您：</p>
+                    <p class="no-result-three">·看看文字是否输入有误</p>
+                    <p class="no-result-three">·调整关键字</p>
+                    <p class="no-result-three">·去其他地方逛逛<a href="@controllers.skilltag.routes.SkillTagApp.list()">群组分类浏览</a></p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+    @foot()
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('searchGroupJs','js');
+    </script>
+</body>
+</html>

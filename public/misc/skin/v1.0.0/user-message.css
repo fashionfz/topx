@@ -1,0 +1,117 @@
+@charset "utf-8";
+/*
+* @description: 个人中心消息系统
+* @author:Zhang Guanglin(@maesinfo.com)
+* @update:
+*/
+.trade-message td,.system-message td {
+	height: auto;
+	line-height: 1.5;
+	padding: 20px;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #40526a;
+}
+.trade-message .btn-delete,.system-message .btn-delete {
+    color: #df6962;
+}
+.trade-message .left a {
+    color: #4083a9;
+    display: inline;
+}
+.message-status {
+    width: 16px;
+    padding: 20px 0 20px 23px!important;
+}
+.message-status span {
+	display: inline-block;
+	width: 16px;
+	background: url(i/icon-red.png);
+}
+.message-status .status-original {
+    background-position: -169px -326px;
+    height: 16px;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+}
+.message-status .status-highlight {
+    background-position: -169px -326px;
+    height: 16px;
+}
+.system-message-content a {
+	color: #4083a9;
+	font-weight: 600;
+    display: inline;
+    padding-left: 5px;
+}
+.system-message-content a.user-name {
+    color: #3a7cdb;
+    font-weight: 800;
+    padding: 0 5px 0 0;
+    float: left;
+}
+.system-message-content span {
+    color: #91a0b3;
+}
+.system-message-time {
+    color: #91a0b3;
+}
+.operate {
+	width: 80px;
+    height: 20px!important;
+    overflow: hidden;
+}
+.operate .text-right{
+    color: #91a0b3;
+}
+.icon-msg-item {
+    position: relative;
+    top: 2px;
+}
+.cr-head {
+    width: 41px;
+}
+.cr-head a {
+    display: inline-block;
+    width: 41px;
+    height: 41px;
+    position: relative;
+    overflow: hidden;
+}
+.cr-head a em {
+    background: url(i/small002.png) no-repeat;
+    width: 41px;
+    height: 41px;
+    position: absolute;
+}
+.cr-content {
+    padding-left: 0!important;
+}
+.cr-content .cr-toChat {
+    text-decoration: none;
+}
+.cr-name {
+    height: 23px;
+}
+.cr-name .cr-userName {
+    font-size: 14px;
+    font-weight: bolder;
+    float: left;
+}
+.cr-name .home-num {
+    position: relative;
+    float: left;
+    top: 0;
+    left: 5px;
+}
+.cr-text {
+    line-height: 18px;
+    padding: 2px 0;
+    color: #40526a;
+}
+.cr-time {
+    color: #91a0b3;
+}

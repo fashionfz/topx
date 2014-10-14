@@ -1,0 +1,285 @@
+@charset "utf-8";
+/*
+* @description: 全局样式
+* @author:TinTao(tintao.li@maesinfo.com)
+* @update:Zhang Guanglin(@maesinfo.com) 2013-10-21
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section{
+    margin:0;padding:0;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+th{
+    text-align:inherit;
+}
+caption,th{
+    text-align:left;
+}
+img{
+    border:0;
+}
+img{
+    -ms-interpolation-mode:bicubic;
+}
+iframe{
+    display:block;
+}
+ul,
+ol,
+li{
+    list-style:none;
+}
+hr{
+    -moz-box-sizing:content-box;
+    box-sizing:content-box;
+    height:0;
+}
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
+    font-size:100%;
+    vertical-align:middle;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+}
+textarea{
+    overflow:auto;
+    vertical-align:top;
+}
+button,input{
+    *overflow:visible;
+    line-height:normal;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"]{
+    cursor:pointer;
+}
+button[disabled],
+input[disabled]{
+    cursor:default;
+}
+input[type="checkbox"],
+input[type="radio"]{
+    box-sizing:border-box;
+    padding:0;
+    *background-color:transparent;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary{
+    display:block;
+}
+audio,
+canvas,
+video{
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+}
+audio:not([controls]){
+    display:none;
+    height:0;
+}
+.clearfix{
+    *zoom:1;
+}
+.clearfix:before,
+.clearfix:after{
+    display:table;
+    content:"";
+}
+.clearfix:after{
+    clear:both;
+}
+.inline-block{
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+}
+.hide{
+    display:none;
+}
+.text-overflow{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+html,
+body{
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+    font-size:12px;
+    font-family:Verdana,Tohoma,simsun;
+    line-height:1.5;
+    position: relative;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    line-height:1.5;
+}
+h1{
+    font-size:20px;
+}
+h2{
+    font-size:18px;
+}
+h3{
+    font-size:16px;
+}
+h4{
+    font-size:14px;
+}
+h5,
+h6{
+    font-size:12px;
+}
+a{
+    color:#005ea7;
+    text-decoration:none;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration:underline;
+}
+input[type="text"],
+.ipt,
+textarea{
+    /*border:1px solid #999;
+    padding:4px 5px;*/
+}
+input[type="text"].error,
+.ipt.error,
+textarea.error{
+    /*border-color:#C00;*/
+}
+input[type="text"]:focus,
+.ipt:focus,
+textarea:focus,
+input[type="text"].focus,
+.ipt.focus,
+textarea.focus{
+    /*border-width:2px;
+    border-color:#FFD300;
+    padding:3px 4px;*/
+}
+input[type="text"][disabled],
+.ipt[disabled],
+textarea[disabled],
+input[type="text"].disabled,
+.ipt.disabled,
+textarea.disabled{
+    /*border-color:#CCC;
+    background-color:#F7F7F7;*/
+}
+.txt-link{
+    color:#666;
+}
+.txt-link:hover{
+    color:#ff5600;
+}
+.txt-light{
+    color:#666666;
+}
+.txt-lighter{
+    color:#999999;
+}
+.txt-bold{
+    font-weight:700;
+}
+.txt-char{
+    font-family:Verdana,Tohoma;
+}
+.txt-red {
+	color: #ec0000;
+}
+.txt-orange {
+	color: #005ea7;
+}
+input::-webkit-input-placeholder{
+    color:#999;
+}
+input:-moz-placeholder{
+    color:#999;
+}
+/* -- placeholder -- */
+input::-webkit-input-placeholder {
+    color: #999;
+    font-weight: normal;
+}
+input:-moz-placeholder {
+    color: #999;
+    font-weight: normal;
+}
+.placeholder {
+	color: #999;
+	font-weight: normal;
+}
+.none {
+	display: none!important;
+}
+table .right {
+	text-align: right!important;
+}
+table .left {
+    text-align: left!important;
+}

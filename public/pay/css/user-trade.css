@@ -1,0 +1,70 @@
+@charset "utf-8";
+/*
+* @description: 个人中心交易列表样式
+* @author:Zhang Guanglin(@maesinfo.com)
+* @update:Young Foo(young.foo@helome.com)
+*/
+
+/*交易列表表格样式开始*/
+.trade-status {
+	width: 40px;
+}
+.trade-status span {
+	display: inline-block;
+	background: url(i/icon-red.png) no-repeat;
+}
+.trade-status .status-one {
+	background-position: -180px -136px;
+	width: 15px;
+	height: 16px;
+}
+.trade-status .status-two {
+	background-position: -180px -157px;
+	width: 24px;
+	height: 25px;
+}
+.trade-status .status-three {
+	background-position: -206px -157px;
+	width: 24px;
+	height: 25px;
+}
+.trade-status .status-four {
+	background-position: -206px -136px;
+	width: 15px;
+	height: 16px;
+}
+
+/*交易列表表格样式结束*/
+
+.share-block{
+	overflow: hidden;
+	position: relative;
+	width: 470px;
+}
+
+.share-block .skill a{
+	font-size: 12px;
+	padding: 2px 5px;
+}
+
+.share-block .textarea{
+	box-sizing: border-box;
+	-webkitbox-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
+.share-btn-box{
+	margin-top: 12px;
+}
+.share-btn-box .share{
+	display: inline-block;
+	float: none;
+}
+.share-title{
+	font-size: 14px;
+	color: #666;
+	display: inline-block;
+	position: relative;
+	top: -12px;
+}

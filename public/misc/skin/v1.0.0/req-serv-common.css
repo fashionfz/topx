@@ -1,0 +1,119 @@
+.reqSer-head{
+    display: table-cell;
+    float: left;
+    width: 171px;
+    height: 129px;
+    border: 1px solid #ced1d8;
+    text-align: center;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.reqSer-head img{
+    max-width: 171px;
+    min-height: 129px;
+    vertical-align: middle;
+}
+.reqSer-info {
+    width: 590px;
+    float: left;
+    margin-right: 8px;
+}
+
+.reqSer-info .reqSer-title a {
+    font-size: 14px;
+    font-weight: bolder;
+    color: #40526a;
+    word-wrap: break-word;
+}
+.reqSer-info .reqSer-introduction {
+    color: #627690;
+    margin: 14px 0;
+    /* height: 34px; */
+    min-height: 36px;
+    overflow: hidden;
+    position: relative;
+    padding-right: 10px;
+    word-wrap: break-word;
+}
+.reqSer-info .reqSer-introduction > .ellipsis {
+    position: absolute;
+    right: 4px;
+    top: 19px;
+}
+.reqSer-info .reqSer-user {
+    height: 41px;
+    font-size: 14px;
+}
+
+.reqSer-user .user-head {
+    margin: 0 10px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.reqSer-user .user-head em {
+    height: 41px;
+    width: 41px;
+    overflow: hidden;
+    border-radius: 22px;
+    background: url(i/small002.png) no-repeat;
+    position: absolute;
+}
+.reqSer-user .user-head img {
+    height: 41px;
+    width: 41px;
+    overflow: hidden;
+    border-radius: 22px;
+}
+.reqSer-user .user-name {
+    font-weight: bolder;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 135px;
+}
+.reqSer-user .user-job {
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 135px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url("ellipsis.xml#ellipsis");
+}
+.reqSer-user .user-country {
+    margin-right: 5px;
+    line-height: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.reqSer-user .user-gender {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.reqSer-right {
+    text-align: center;
+    float: left;
+    width: 200px;
+}
+.reqSer-right .reqSer-price {
+    font-size: 30px;
+    color: #ed5565;
+    padding: 25px 0px 5px 0px;
+    text-align: center;
+}
+.reqSer-right .reqSer-date {
+    color: #40526a;
+}
+
+.reqSer-right .reqSer-level {
+    padding-top: 15px;
+}
+.reqSer-right .star-num {
+    position: relative;
+    top: -2px;
+}

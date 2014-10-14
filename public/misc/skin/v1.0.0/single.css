@@ -1,0 +1,271 @@
+@charset "utf-8";
+/*
+* @description: 独立登录注册找回密码样式
+* @author: Young Foo(Young.foo@helome.com)
+* @update: Young Foo(Young.foo@helome.com)
+*/
+
+.main {
+    padding-bottom: 25px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    *zoom: 1;
+}
+
+.main-block{
+    margin: 10px 0;
+}
+.main-block-text{
+    color: #40526a;
+    font-size: 14px;
+    text-align: center;
+}
+.main-block-rel {
+    position: relative;
+    z-index: 2;
+}
+.main-block-code img,
+.main-block-code a{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main .main-panel {
+    border: 1px #e5e5e5 solid;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #ffffff;
+    padding: 20px 30px;
+    float: left;
+    width: 280px;
+}
+
+.main .main-panel-center {
+    margin: auto;
+    float: none !important;
+    width: 410px !important;
+}
+.main .main-panel-center .btn-default{
+    width: auto !important;
+}
+
+.main-panel-center .main-panel-tips {
+    margin: 30px 0 20px 50px;
+    color: #666;
+    line-height: 2;
+    position: relative;
+}
+
+.main-panel-center .main-panel-tips .dialog-msg-bg {
+    left: -50px;
+    top: 0; 
+}
+
+.main input.txt{
+    width: 239px;
+}
+
+.main .main-show{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -174px;
+}
+
+.main-pic{
+    background-image: url("i/login-download.jpg");
+    width: 578px;
+    height: 328px;
+    position: relative;
+    margin-left: 10px;
+}
+
+.main-pic .main-pic-info{
+    margin-left: 270px;
+    width: 300px;
+}
+
+.main-pic .main-pic-info .main-pic-title{
+    background-image: url("i/login-download-title.jpg");
+    width: 236px;
+    height: 48px;
+}
+
+.main-pic .main-pic-info .main-pic-download{
+    margin-top: 20px;
+}
+.main-pic .qrcode{
+    background-image: url("i/login-download-qrcode.jpg");
+    height: 113px;
+    width: 112px;
+    display: block;
+    float: left;
+    margin: 5px 6px 5px 0;
+}
+
+.main-pic .android{
+    background-image: url("i/login-download-android.jpg");
+    height: 58px;
+    width: 176px;
+    display: block;
+}
+
+.main-pic .iphone{
+    background-image: url("i/login-download-iphone.jpg");
+    height: 58px;
+    width: 176px;
+    display: block;
+    margin-top: 5px;
+}
+
+.main-head{
+    
+}
+
+.main-head .span-left{
+    color: #40526a;
+    font-size: 16px;
+}
+
+.main-head .span-right{
+    float: right;
+}
+
+.main-title{
+    background-color: #3373d0;
+    border:1px solid #4781d5;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+
+.main-title-txt{
+    color: #fff;
+    text-shadow: 0px 1px 1px #0a34aa;
+    font-size: 16px;
+    padding: 5px 0px;
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.main-title-txt.highlight{
+    text-shadow: 0px 1px 1px #2f6df3;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #7db3fe),
+        color-stop(1, #5796f1)
+    );
+    background-image: -o-linear-gradient(bottom, #7db3fe 0%, #5796f1 100%);
+    background-image: -moz-linear-gradient(bottom, #7db3fe 0%, #5796f1 100%);
+    background-image: -webkit-linear-gradient(bottom, #7db3fe 0%, #5796f1 100%);
+    background-image: -ms-linear-gradient(bottom, #7db3fe 0%, #5796f1 100%);
+    background-image: linear-gradient(to bottom, #7db3fe 0%, #5796f1 100%);
+    background-color: #6ba5f8;
+}
+
+.main-slogan{
+    color: #91a0b3;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.main .error-msg{
+    color: #d5544e;
+    background: #ffe4e3;
+    border-radius: 4px;
+    margin-top: 5px;
+    padding: 5px 10px;
+}
+
+.main .error-msg em{
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url(i/icon-red.png) no-repeat -140px -45px;
+    margin-right: 6px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.main .btn-default {
+    width: 280px;
+}
+
+.main a.btn-default{
+    display: block;
+    width: 210px;
+}
+
+/* 找回密码成功页面 */
+.find-password-succeed-main {
+    width: 380px;
+}
+.find-password-succeed-main .forword-mail {
+    margin-bottom: 40px;
+}
+
+.find-password-succeed-tips {
+    text-align: center;
+    line-height: 2;
+    height: 90px;
+    margin-top: 40px;
+}
+
+
+/* 重置密码页面 */
+.reset-password-main {
+    font-size: 14px;
+    color: #434343;
+}
+.reset-password-main span {
+    color: #e06b64;
+    font-weight: 600;
+}
+
+/* 找回密码成功 */
+.find-password-succeed-main .password-congr {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4caa49;
+    position: relative;
+    top: -8px;
+    margin-left: 10px;
+}
+.find-password-succeed-main .seconds-return {
+    color: #8c8c8c;
+}
+
+
+/* 密码设置强弱 */
+.password-status {
+    margin-left: 10px;
+    color: #a0a0a0;
+    font-size: 12px;
+}
+.password-strength {
+    display: inline-block;
+    height: 6px;
+    width: 106px;
+    background: url(i/icon-red.png) no-repeat;
+    overflow: hidden;
+    margin-right: 10px;
+}
+/* 密码强弱 */
+.password-one {
+    background-position: 0 -238px;
+}
+.password-two {
+    background-position: 0 -244px;
+}
+.password-three {
+    background-position: 0 -250px;
+}

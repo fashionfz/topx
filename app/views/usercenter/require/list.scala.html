@@ -1,0 +1,54 @@
+@main("需求管理 -- 个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('userServiceCss','css');
+    </script>
+} {
+    <div id="content" class="clearfix">
+        @usercenter.left("require")
+        <div class="main">
+            <div class="user-info">
+                <ul class="tab-menu clearfix">
+                    <li class="tab-menu-btn current"><a class="tab-menu-left" href="javascript:;">需求管理</a></li>
+                </ul>
+                <div class="tab-loading hide">
+                    <span></span>
+                    <em></em>
+                </div>
+                <div class="search-box">
+                    <div class="txt search-left like-txt dib">
+                        <div class="search-left-top tl">
+                            <input class="p10 w600" id="keyRequire" type="text" value="" placeholder="搜索需求">
+                        </div>
+                    </div>
+                    <span id="searchRequire" class="btn-default btn-blue btn-lg fr"><em class="icon"></em></span>
+                </div>
+                <div class="content-title">
+                    <a href="/user/require/write" class="btn-default btn-white btn-lg">
+                        <em class="icon add-require fl"></em><span class="pl10">发布需求</span>
+                    </a>
+                </div>
+                <div class="user-info-map"><p class="user-info-map-content"><strong>我的需求列表</strong></p></div>
+                <div class="J-tab-content clearfix">
+                    <table class="tab-title">
+                        <tr>
+                            <th class="time">发布时间</th>
+                            <th class="industry">所属行业</th>
+                            <th class="title"> 需求标题</th>
+                            <th class="price">预算</th>
+                            <th class="tc">操作</th>
+                        </tr>
+                    </table>
+                    <table class="tab-table system-message" width="100%">
+                    </table>
+                    <div class="page page-user-bottom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('userRequireJs','js');
+    </script>
+}

@@ -1,0 +1,227 @@
+@(expert: vo.ExpertDetailInfo, ss : List[vo.STagVo],isForbidAddResumeTask:java.lang.String)
+@()
+@main("个人信息 -- 我的资料 -- 个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('userDetailCss','css');
+    </script>
+} {
+	<div id="content" class="clearfix">
+		@usercenter.left("userdetail")
+		<div class="main">
+			<input type="hidden" id="isForbidAddResumeTask" value="@isForbidAddResumeTask"/>
+			<div class="user-info user-detail" id="user-info">
+				<ul class="tab-menu clear">
+					<li class="current"><a class="tab-menu-left" href="javascript:;">个人信息</a></li>
+					<li><a href="/user/userdetail/userhead">个人头像</a></li>
+					<li><a href="/user/userdetail/workinfo">职业经历</a></li>
+					<li><a href="/user/userdetail/eduinfo">教育经历</a></li>
+				</ul>
+				<div class="user-content user-base clearfix">
+					<div class="user-info-block">
+						<div class="base-top">
+                            <p>
+                            <strong id="J-base-top-name">@expert.getUserName()</strong>，
+                            填写真实资料会更方便让大家了解您，以下信息将显示在
+                            <a href="/expert/detail/@expert.getUserId()" target="_blank">个人详情页</a>。
+                            </p>
+                            <p>
+                            <span>发布海外简历：个人简历将发布到helome国际版，方便国外用户找到您。</span>
+                            <a href="/questions#question_translate" target="_blank" title="查看帮助"><i class="icon icon-tips" title=""></i></a>
+                            </p>
+                        </div>
+					</div>
+					<div class="user-info-block clearfix">
+						<div class="info-key">
+							<span><span class="red">*</span>姓名：</span>
+						</div>
+						<div class="info-value w600">
+							<input type="hidden" name="userId" value="@expert.getUserId()" id="userId"/>
+							<input type="text" name="userName" class="txt txt-long right-txt txt-verify" value="@expert.getUserName()" id="userName" maxlength="32"/>
+							<span class="tips tips-right"></span>
+						</div>
+					</div>
+					<div class="user-info-block clearfix">
+						<div class="info-key"><label>性别：</label></div>
+						<div class="info-value">
+							@if(expert.getGender() == Gender.MAN) {
+
+								<label>
+									<input id="man" type="radio" name="sex" class="original-radio" checked value="0"/>
+									<span>男</span>
+								</label>
+
+								<label>
+									<input id="woman" type="radio" name="sex" class="original-radio" value="1"/>
+									<span>女</span>
+								</label>
+
+							} else {
+
+								<label>
+									<input id="man" type="radio" name="sex" class="original-radio" value="0"/>
+									<span>男</span>
+								</label>
+
+								<label>
+									<input id="woman" type="radio" name="sex" class="original-radio" checked value="1"/>
+									<span>女</span>
+								</label>
+
+							}
+						</div>
+					</div>
+					<div class="user-info-block clearfix" style="z-index:10">
+						<div class="info-key"><label>国家：</label></div>
+						<div class="info-value">
+							<p class="filter-select">
+								<a href="javascript:;" class="filter-name user-country-choice icon-more" id="userCountry">
+									<span class="filter-name-area"><span class="user-country">@if(expert.getCountry()==null){中国}else{@expert.getCountry()}</span><em class="search-icon search-icon-direction-down"></em></span>
+									<span class="continent none">
+										<span class="continent-tit clearfix">
+											<span class="continent-name current" data-continent="often">常选国家</span>
+											<span class="continent-name" data-continent="asia">亚洲</span>
+											<span class="continent-name" data-continent="europe">欧洲</span>
+											<span class="continent-name" data-continent="america">美洲</span>
+											<span class="continent-name" data-continent="africa">非洲</span>
+											<span class="continent-name" data-continent="oceania">大洋洲</span>
+										</span>
+										<span class="continent-line"></span>
+									</span>
+                                </a>
+							</p>
+						</div>
+					</div>
+					<div class="user-info-block clearfix" style="z-index:9">
+						<div class="info-key"><label>时区：</label></div>
+						<div class="info-value">
+							<select id="userTimeZome" class="fl" disabled data-value="@expert.getTimeZone()">
+                                @for(timezone <- utils.TimeZoneUtils.getTimezones()) {
+                                    @if(timezone.equalsUid(expert.getTimeZone)) {
+                                        <option offset="@timezone.getOffset()" value="@timezone.getUid()" selected="selected">@timezone.getDisplayName()</option>
+                                    } else {
+                                        <option offset="@timezone.getOffset()" value="@timezone.getUid()">@timezone.getDisplayName()</option>
+                                    }
+                                }
+							</select>
+						</div>
+					</div>
+					<div class="user-info-block clearfix">
+						<div class="info-key">
+							<label>职业：</label>
+						</div>
+						<div class="info-value">
+							<input type="text" name="job" id="userJob" class="txt txt-long right-txt txt-verify" value="@expert.getJob()" maxlength="32"/>
+                        	<span class="tips tips-right"></span>
+						</div>
+					</div>
+					<div class="user-info-block clearfix">
+						<div class="info-key">个人说明：</div>
+						<div class="info-value">
+							<textarea name="introduction" class="textarea right-txt" id="userIntroduction" maxlength="500">@expert.getPersonalInfo()</textarea>
+							<div class="tips tips-bottom introduction-tips"></div>
+						</div>
+					</div>
+					<div class="user-info-block clearfix">
+						<div class="info-key vt">
+							<label>所属行业：</label>
+						</div>
+						<div class="info-value">
+							<p class="industry-tips">最多选择三个所属行业</p>
+							<p class="industry-checkbox">
+							
+							@for(s <- ss) {
+							<label>
+								@if(s.getIsMarked){
+									<input type="checkbox" name="userIndustry" value="@s.getSid" checked="checked" />
+								}else{
+									<input type="checkbox" name="userIndustry" value="@s.getSid" />
+								}
+								<span class="radio-title">@s.getTag</span>
+							</label>
+							}
+
+							</p>
+							<div class="tips tips-bottom"></div>
+						</div>
+					</div>
+					<div class="user-info-block skill-tags clearfix">
+						<div class="info-key vt">
+							<label><span class="red">*</span>服务标签：</label>
+						</div>
+						<div class="info-value">
+							<p class="tags-tips">“服务标签”自动匹配技能和服务的搜索，提高您的搜索排名，让客户更快、更精准地找到您，为您创造更多价值！</p>
+							<ul class="textbox" id="skillTags">
+								@if(expert.getSkillsTags() != null && expert.getSkillsTags().size() != 0) {
+									@for(skillTag <- expert.getSkillsTags()) {
+									<li class="textbox-item" data-value="@skillTag">
+							            <span>@skillTag</span>
+							            <i title="删除标签"></i>
+							        </li>
+									}
+								}
+								<li><input type="text" class="textbox-input" id="tags-input" placeholder="输入标签并按回车键添加"></li>
+							</ul>
+							<div class="tips tips-bottom"></div>
+						</div>
+					</div>
+                    <div class="user-info-block clearfix">
+                        <div class="info-key">收费标准：</div>
+                        <!-- 如果为预约状态 <div class="info-value txt-red">空闲</div> -->
+                        <div class="info-value info-value-service clearfix">
+                            <p class="clearfix none">
+                                <span class="mr10">
+                                    <span class="user-pay-text">￥</span>
+
+                                    @if(expert.getPayType().equals("NEGOTIABLE")){
+                                        <input type="text" id="service-input-money" name="cost" placeholder="金额" class="txt txt-short" value="面议" maxlength="7"/>
+                                    }
+                                    @if(expert.getPayType().equals("TIMEBILL")){
+                                        <input type="text" id="service-input-money" name="cost" placeholder="金额" class="txt txt-short" value="@expert.getExpenses()" maxlength="7"/>
+                                    }
+                                    <span class="user-pay-text">/分钟</span>
+                                    <i class="icon icon-tips cost-detail"></i>
+                                </span>
+                            </p>
+                            <p class="clearfix">
+                                <label for="service-free">
+
+                                    <input id="service-free" type="radio"
+                                    @if(expert.getPayType() == "TIMEBILL"){
+                                     checked="checked"
+                                    }
+                                    name="cost" value="0" />
+                                    <span>免费</span>
+                                </label>
+
+                                <label for="service-discuss">
+                                    <input id="service-discuss" type="radio"
+                                    @if(expert.getPayType() == "NEGOTIABLE"){
+                                     checked="checked"
+                                    }
+                                    name="cost" value="-1" />
+                                    <span>面议</span>
+                                </label>
+                                <i class="icon icon-tips cost-discuss"></i>
+                            </p>
+                            <span class="tips tips-right tips-set-money fl"></span>
+                        </div>
+                    </div>
+					<div class="user-info-block clearfix">
+						<div class="info-key">&nbsp;</div>
+						<div class="info-value">
+							<input type="button" value="保存" class="btn-default btn-lg btn-green btn-padding-50 btn-user-info-save">
+							<span class="save-ok none"><em class="icon"></em><span></span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--搜索中间结束-->
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('userBaseInfoJs','js');
+    </script>
+}
+

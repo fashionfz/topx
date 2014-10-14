@@ -1,0 +1,415 @@
+@charset "utf-8";
+/*
+* @description: 开发者详情页样式
+* @author: Young Foo (young.foo@helome.com)
+* @update: Young Foo (young.foo@helome.com)
+*/
+#content {
+    margin-top: 0;
+}
+.developer{
+	position: relative;
+}
+.developer .search-left{
+	position: absolute;
+    padding-top: 30px;
+}
+
+.developer-detail{
+	float: right;
+	width: 700px;
+	margin-left: 20px;
+    padding-top: 20px;
+}
+.developer-tab {
+    border-bottom: solid 1px #d4d9df;
+    position: relative;
+    height: 42px;
+}
+.developer-tab ul {
+    position: absolute;
+    left: 20px;
+    bottom: -1px;
+    border-radius: 5px 5px 0 0;
+    border: solid 1px #d4d9df;
+    border-bottom: 0;
+    overflow: hidden;
+}
+.developer-tab li {
+    float: left;
+    display: inline-block;
+}
+.developer-tab li.tab-line {
+    background: #d4d9df;
+    width: 1px;
+    height: 42px;
+    overflow: hidden;
+}
+.developer-tab li a {
+    display: inline-block;
+    height: 41px;
+    line-height: 41px;
+    padding: 0 10px;
+    color: #627690;
+    font-size: 16px;
+    font-weight: bolder;
+    border-bottom: solid 1px #d4d9df;
+}
+.developer-tab li a:hover {
+    text-decoration: none;
+    color: #3a7cdb;
+}
+.developer-tab li a.current {
+    color: #3a7cdb;
+    border-bottom-color: #ffffff;
+}
+.developer-tab li a em {
+    position: relative;
+    margin-right: 5px;
+}
+.developer-tab li a em.icon-user-gray,
+.developer-tab li a em.icon-require-gray {
+    top: 3px;
+    *top: 0;
+}
+.developer-tab li a:hover em.icon-user-gray,
+.developer-tab li a.current em.icon-user-gray{
+    background-position: 1px -325px;
+}
+.developer-tab li a:hover em.icon-service-gray,
+.developer-tab li a.current em.icon-service-gray{
+    background-position: -44px -356px;
+}
+.developer-tab li a:hover em.icon-require-gray,
+.developer-tab li a.current em.icon-require-gray{
+    background-position: -74px -368px;
+}
+.developer .skill-tags a {
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    display: inline-block;
+    background: #6191df;
+    float: left;
+    margin-right: 5px;
+    white-space: nowrap;
+}
+.developer .skill-tags a:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #3a75d7;
+}
+
+.user-exp{
+	margin:10px 0 15px 0;
+}
+.user-exp .user-exp-index{
+	width: 20px;
+	text-align: center;
+	float: left;
+	margin-right: 10px;
+}
+.user-exp .user-exp-index .icon{
+	background-position: -167px -304px;
+	height: 19px;
+	width: 20px;
+	color: #fff;
+	font-size: 12px;
+	line-height: 1.5em;
+}
+.user-exp .user-exp-main{
+	float: left;
+	width: 640px;
+}
+.user-exp .user-exp-main .duty {
+    color: #40526a;
+    font-weight: bold;
+}
+.user-exp .user-exp-main .prof {
+    padding-right: 10px;
+}
+.user-exp .user-exp-text span {
+    float: left;
+    display: inline-block;
+}
+
+/***********  comment   ***********/
+.comment {
+	margin-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px dashed #d4d9df;
+}
+.comment-left {
+	float: left;
+	width: 80px;
+}
+
+.comment .comment-head {
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	position: relative;
+	background: #e1e1e1;
+	text-align: left!important;
+	border-radius: 114px;
+	margin: 0px auto 5px auto;
+	border: 1px solid #e1e1e1;
+}
+.comment .comment-head img {
+	height: 40px;
+	width: 40px;
+}
+
+.comment .dev-name {
+	text-align: center;
+	color: #707070;
+	font-size: 12px;
+    width: 80px;
+    overflow: hidden;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.comment .dev-name a {
+    color: #3a7cdb;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    height: 22px;
+    white-space: nowrap;
+}
+.comment-right {
+	float: left;
+	width: 585px;
+	position: relative;
+	font-size: 12px;
+	color: #999;
+	margin-left: 10px;
+}
+
+.comment-tit .comment-rank {
+	float: left;
+	margin-top: 2px;
+	line-height: 1em;
+}
+
+.comment-tit .comment-date {
+	float: right;
+}
+.comment-cont {
+	margin-top: 5px;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: #40526a;
+}
+.comment-cont .cont-more {
+	float: right;
+	text-decoration: underline;
+	color: #5287cd;
+	margin-top: 2px;
+}
+
+.page-comment {
+	float: right;
+	margin: 20px 3px 0 0;
+}
+
+/* 无评价 */
+.no-comment {
+    line-height: 30px;
+    padding-top: 20px;
+    color: #c0c6ce;
+    font-weight: 800;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+.no-comment .icon-no-comment {
+    background-position: -134px -76px;
+    height: 48px;
+    width: 48px;
+}
+
+/** 用户评价弹窗 **/
+.developer-toComment {
+	border: solid 1px #d4d9df;
+	border-radius: 5px;
+	color: #434343;
+	font-size: 14px;
+	text-align: center;
+	padding: 16px;
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=#ffffff, endColorStr=#f0f0f0);
+	background: linear-gradient(top,#fff,#f0f0f0);
+	background: -moz-linear-gradient(top,#fff,#f0f0f0);
+	background: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#f0f0f0));
+	background: -ms-linear-gradient(top,#fff,#f0f0f0);
+}
+
+.comm-right .icon-star-base,
+.comm-right .icon-star-on-red {
+	width: 14px;
+	vertical-align: top;
+}
+
+.comment-panel{
+	padding: 20px;
+}
+.comment-table td {
+	padding-top: 10px;
+}
+.comment-table .comm-tr-two td{
+    padding: 0;
+}
+
+
+/* service */
+.service-block{
+    margin: 20px 0px 0px 20px;
+    min-height: 490px;
+}
+.service-item{
+    border: 1px solid #d9dde3;
+    width: 198px;
+    float: left;
+    margin:0px 25px 20px 0px;
+}
+
+.service-item a{
+    display: block;
+    text-decoration: none;
+}
+
+.service-item img{
+    width: 198px;
+    height: 148px;
+    display: block;
+}
+
+.service-main{
+    font-size: 14px;
+    padding: 5px 10px 8px 10px;
+}
+
+.service-price{
+    color: #ed5565;
+    line-height: 14px;
+    font-weight: bold;
+}
+
+.service-star{
+    font-size: 14px;
+    line-height: 12px;
+}
+
+.service-star .icon-star-base{
+    vertical-align: middle;
+}
+
+.service-star .star-num{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 13px;
+    top: 0px;
+    margin-left: 5px;
+}
+
+.service-main .service-intro{
+    line-height: 18px;
+    margin: 5px 0px;
+    font-size: 12px;
+    color: #40526a;
+    /* max-height: 36px; */
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+}
+
+/* require block */
+.require-block{
+    margin: 10px 0px 0px 20px;
+    min-height: 460px;
+}
+
+.require-item{
+    color: #40526a;
+    padding: 12px 0px;
+    border-bottom: 1px dashed #d4d9df;
+}
+
+.require-index-box{
+    float: left;
+    width: 20px;
+    text-align: center;
+    padding-right: 20px;
+    position: relative;
+    top: -2px;
+}
+
+.require-index-box .require-index{
+    background-position: -167px -304px;
+    height: 19px;
+    width: 20px;
+    color: #fff;
+    line-height: 19px;
+}
+
+.require-title{
+    float: left;
+    display: block;
+    color: #40526a;
+    width: 440px;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+}
+.require-item-info{
+    float: right;
+}
+.require-item-info li{
+    float: left;
+    vertical-align: middle;
+}
+.require-price{
+    color: #ed5565;
+    font-weight: bold;
+    font-size: 13px;
+    margin-right: 20px;
+}
+
+.require-date{
+
+}
+
+.no-msg{
+    color: #c0c6ce;
+    font-weight: 800;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+.no-msg .icon-no-msg {
+    background-position: -134px -76px;
+    height: 48px;
+    width: 48px;
+}
+.add-require{
+    width: 22px;
+    height: 22px;
+    background-position: -90px -356px;
+    display: inline-block;
+    margin: -6px 5px 0px 0px;
+    vertical-align: middle;
+}
+.add-service {
+    width: 29px;
+    height: 21px;
+    background-position: -116px -355px;
+    vertical-align: middle;
+    margin: -6px 5px 0px 0px;
+}

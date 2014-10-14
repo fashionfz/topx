@@ -1,0 +1,103 @@
+@charset "utf-8";
+/*
+ * @description: 支付中心
+ * @author: YoungFoo(young.foo@helome.com)
+ * @update: YoungFoo(young.foo@helome.com)
+ * @data: 2013/11/2
+ */
+
+.charge-money-left{
+	font-size: 14px;
+	margin-top: 10px;
+	float: left;
+}
+
+.charge-money-left .money{
+    font: 18px "microsoft yahei";
+}
+
+.charge-btn-box{
+	float: right;
+	margin-top: 22px;
+}
+
+/*
+ * @description: 充值，转账，支付页面
+ * @author: YoungFoo(young.foo@helome.com)
+ * @update: YoungFoo(young.foo@helome.com)
+ * @data: 2013/11/4
+ */
+
+.pay-form{
+	border:1px solid #e6e6e6;
+	background-color: #fff;
+	margin-top: 10px;
+	font-size: 14px;
+	padding: 20px;
+}
+
+.chose-more{
+	top:-15px;
+	position: relative;
+}
+
+.bank-card{
+	width: 150px !important;
+	margin-bottom: 10px;
+	background-position-x: 15px !important; 
+}
+
+.bank-card input[type="radio"]{
+	top: 5px;
+	position: relative;
+}
+
+/* 充值成功页面 */
+.pay-success{
+	position: relative;
+	position: relative;
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+.pay-success-icon{
+	background-image: url(i/charge-success.png);
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	position: absolute;
+	left: 10px;
+	top: -3px;
+}
+
+.pay-success-text{
+	font-size: 16px;
+	color: #48ab23;
+	display: inline-block;
+	font-weight: bold;
+	margin-left: 50px;
+}
+
+/* 提现成功页面 */
+.withdraw-success{
+	position: relative;
+	position: relative;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.withdraw-success-icon{
+	background-image: url(i/withdraw-success.png);
+	width: 29px;
+	height: 29px;
+	display: inline-block;
+	position: absolute;
+	left: 10px;
+	top: -3px;
+}
+
+.withdraw-success-text{
+	font-size: 16px;
+	color: #787878;
+	display: inline-block;
+	font-weight: bold;
+	margin-left: 50px;
+}

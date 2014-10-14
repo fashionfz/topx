@@ -1,0 +1,14 @@
+﻿{
+    "status":1,
+    "user":{
+        "id":1,
+        "name":"zhouchun",
+        "headUrl": "/misc/images/dev-head2.png",
+        "messageInfo": {
+            "count":21,
+            "account":1,
+            "transaction":3,
+            "message":27,
+            "attention":0}
+    }
+}

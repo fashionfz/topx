@@ -1,0 +1,75 @@
+@main("提现—个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('chargePayCss','css');
+    </script>
+} {
+    @chargetop("提现")
+    <div id="content" class="clearfix">
+        @chargepayinfo()
+        <div class="pay-form info-long-key">
+            <div class="user-info-block clearfix">
+                <div class="info-key">
+                    <div class="top6">提现支付平台：</div>
+                </div>
+                <div class="info-value">
+                    <label class="bank-card icon-pay icon-pay-ali">
+                        <input type="radio" name="payment" checked value="0" onclick="changeWithdraw(1)"/>
+                    </label>
+                    <label class="bank-card icon-pay icon-pay-caifu">
+                        <input type="radio" name="payment" value="1"  onclick="changeWithdraw(1)"/>
+                    </label>
+                </div>
+            </div>
+
+            <div class="user-info-block info-long-value clearfix">
+                <div class="info-key">
+                    <div class="top6">网上银行：</div>
+                </div>
+                <div class="info-value">
+                    <label class="bank-card icon-bank icon-bank-gongshang">
+                        <input type="radio" name="payment" value="0"  onclick="changeWithdraw(2)"/>
+                    </label>
+                    <label class="bank-card icon-bank icon-bank-jianshe">
+                        <input type="radio" name="payment" value="1"  onclick="changeWithdraw(2)"/>
+                    </label>
+                    <label class="bank-card icon-bank icon-bank-nongye">
+                        <input type="radio" name="payment" value="1"  onclick="changeWithdraw(2)"/>
+                    </label>
+                    <label class="bank-card icon-bank icon-bank-zhongguo">
+                        <input type="radio" name="payment" value="1"  onclick="changeWithdraw(2)"/>
+                    </label>
+                    <label class="bank-card icon-bank icon-bank-minsheng">
+                        <input type="radio" name="payment" value="1"  onclick="changeWithdraw(2)"/>
+                    </label>
+                    <label class="bank-card icon-bank icon-bank-zhada">
+                        <input type="radio" name="payment" value="1"  onclick="changeWithdraw(2)"/>
+                    </label>
+                    <label class="bank-card icon-bank icon-bank-xingye">
+                        <input type="radio" name="payment" value="1"  onclick="changeWithdraw(2)"/>
+                    </label>
+                    <label class="bank-card icon-bank icon-bank-nongye">
+                        <input type="radio" name="payment" value="1"  onclick="changeWithdraw(2)"/>
+                    </label>
+                    <label class="bank-card icon-bank icon-bank-shanghai">
+                        <input type="radio" name="payment" value="1"  onclick="changeWithdraw(2)"/>
+                    </label>
+                    <label class="bank-card icon-bank icon-bank-nongshang">
+                        <input type="radio" name="payment" value="1"  onclick="changeWithdraw(2)"/>
+                    </label>
+                    <a href="#" class="top6">选择更多</a>
+                </div>
+            </div>
+            <div class="user-info-block clearfix">
+                <div class="info-key">&nbsp;</div>
+                <div class="info-value">
+                    <a href="/charge/withdraw?t=1" id="btn-withdraw" class="btn-default btn-lg btn-green">提现</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('chargePayJs','js');
+    </script>
+}

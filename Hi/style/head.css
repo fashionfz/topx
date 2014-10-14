@@ -1,0 +1,139 @@
+/* 头部样式 */
+.header {
+	width: 100%;
+	height: 70px;
+	min-width: 1000px;
+	background: #1d2026;	 
+}
+.dev-head {
+	width: 100%;
+	height: 70px;
+	background:url(../images/head-bg.png) no-repeat center center;
+	position: relative;	
+}
+.head-top {
+	width: 930px;
+	margin: 0 auto;
+	padding: 0 35px 0 35px;
+	color: #ccc;
+}
+.head-logo {
+	float: left;
+	width: 100px;
+	padding-top: 10px;
+}
+.logo {
+	width: 57px;
+	float: left;
+}
+
+/*更多产品样式开始*/
+.dev-more {
+	width: 35px;
+	height: 28px;
+	float: left;
+	margin-top: 11px;
+	background:url(../images/more.png) no-repeat -35px 0px;
+}
+/*更多产品样式*/
+.box-show {
+	width: 308px;
+    display: none;
+    position: absolute;
+    /*left: 18px;
+    top: 15px;*/
+    z-index: 30;
+    height: 300px;
+}
+
+.box-show .box-wrap{
+    background-color: #eff3f6;
+    top: 49px;
+	left: -50px;
+    position: absolute;   
+    border-radius: 5px;
+    width: 306px;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
+}
+/*.more:hover .box-show {
+    display:block;
+}*/
+.box-show .box-delta {
+    border-style:solid;
+    border-color: #252f39 #252f39 #e0e3e5;
+    border-width: 0 8px 8px 8px;
+    width:0;
+    height:0;
+    position: absolute;
+    top: 42px;
+    left: 12px;
+}
+.box-goods {
+	background: #e0e3e5;
+	height: 34px;	
+	-webkit-border-radius: 5px 5px 0 0 ;
+	-moz-border-radius: 5px 5px 0 0 ;
+	border-radius: 5px 5px 0 0;
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	color: #999;
+	padding-left: 9px;
+	line-height: 36px;
+}
+.box-icon img {
+	width: 61px;
+	height: 53px;
+	padding: 17px 123px 0;
+}
+.box-wrap p {
+	text-align: center;
+	line-height: 30px;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+	color: #666;
+}
+.box-icon {
+    width: 306px;
+    height: 113px;
+	border-bottom: 1px solid #e0e3e5;  
+}
+.box-download img {
+	width: 203px;
+	height: 54px;
+	padding: 20px 50px 0;
+}
+.box-download {
+    width: 308px;
+    height: 117px;
+}
+
+/*更多产品样式结束*/
+.head-nev {
+	float: right;
+}
+.ul-nev {
+	height: 70px;
+	line-height: 70px;
+}
+.ul-nev li {
+	float: left;
+	padding-left: 40px;
+}
+.ul-nev li a {
+	font-family: "Microsoft YaHei";
+	font-size: 16px;
+	color: #fff;
+	text-decoration: none;
+}
+.ul-nev li a.convert {
+	color: #ff9e5e;
+}
+
+
+
+
+
+
+
+
+

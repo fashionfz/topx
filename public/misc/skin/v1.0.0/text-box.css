@@ -1,0 +1,61 @@
+.textbox{
+	margin: 0;
+	border: 2px solid #d4d9df;
+	list-style: none;
+	overflow: hidden;
+	height: auto !important;
+	height: 1%;
+	padding: 5px 5px 3px 5px;
+	border-radius: 5px;
+}
+.textbox li{
+	display: inline-block;
+	position: relative;
+	list-style: none;
+}
+
+.textbox li.textbox-item{
+	background: #6c9ee5;
+	margin: 0 4px 5px 0;
+	border: 1px solid #6191df;
+	border-radius: 3px;
+	padding: 3px 20px 3px 8px;
+	*float: left;
+	*margin: 0 6px 5px 0;
+	white-space:nowrap;
+    cursor: default;
+}
+.textbox li.textbox-item:hover {
+    background: #3a75d7;
+    border-color: #3a75d7;
+}
+.textbox li.textbox-item span{
+	color: #fff;
+	font-size: 13px;
+	word-break: break-all;
+}
+
+.textbox li.textbox-item i{
+	position: absolute;
+	display: inline-block;
+	cursor: pointer;
+	height: 7px;
+	width: 7px;
+	background: url("i/icon-red.png") no-repeat scroll -42px -91px transparent;
+	top: 12px;
+	right: 6px;
+}
+
+.textbox li.textbox-info{
+	padding: 4px 4px 8px 4px;
+	border: 0px;
+	outline: 0px;
+	color: #666;
+}
+
+.textbox-input{
+	padding: 4px 4px 8px 4px;
+	border: 0px;
+	outline: 0px;
+	color: #666;
+}

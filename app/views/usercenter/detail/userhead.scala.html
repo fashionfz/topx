@@ -1,0 +1,32 @@
+@(isForbidAddResumeTask:java.lang.String)
+@main("个人头像 -- 我的资料 -- 个人中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('userDetailCss','css');
+    </script>
+} {
+	<div id="content" class="clearfix">
+		@usercenter.left("userdetail")
+		<div class="main">
+			<input type="hidden" id="isForbidAddResumeTask" value="@isForbidAddResumeTask"/>
+			<div class="user-info user-detail" id="user-info">
+				<ul class="tab-menu clear">
+					<li><a class="tab-menu-left" href="/user/userdetail/base">个人信息</a></li>
+					<li class="current"><a href="javascript:;">个人头像</a></li>
+					<li><a href="/user/userdetail/workinfo">职业经历</a></li>
+					<li><a href="/user/userdetail/eduinfo">教育经历</a></li>
+					<!--<li><a href="/user/userdetail/serviceinfo">收费方式</a></li>-->
+				</ul>
+				<div class="user-content clearfix">
+					<div id="altContent"></div>
+                	<div id="avatar_priview"></div>
+                	<span class="save-ok save-ok-head none"><em class="icon"></em><span></span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('userHeadJs','js');
+    </script>
+}

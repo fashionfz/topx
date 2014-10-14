@@ -1,0 +1,57 @@
+!!ext.sns.config.SNSConfig
+authRedirectUri: 'http://www.helome.com/user/auth'
+
+providerConfigList:
+- !!ext.sns.config.DefaultProviderConfig
+  accessTokenURI: 'https://open.t.qq.com/cgi-bin/oauth2/access_token'
+  authURI: 'https://open.t.qq.com/cgi-bin/oauth2/authorize?forcelogin=true'
+  clientId: '801483675'
+  clientSecret: '695c5dcdcdaf5d79172b363ca8d32cb1'
+  specialParam:
+    mobileDisplay: 'wap=2'
+  name: 'tencentWeibo'
+  scope: ''
+  type: 'SNS'
+  
+- !!ext.sns.config.DefaultProviderConfig
+  accessTokenURI: 'https://api.weibo.com/oauth2/access_token'
+  authURI: 'https://api.weibo.com/oauth2/authorize?forcelogin=true'
+  clientId: '658957468'
+  clientSecret: 'ea421db261ad7d00336f68bf34a96b74'
+  specialParam:
+    mobileDisplay: 'display=mobile'
+  name: 'sinaWeibo'
+  scope: ''
+  type: 'SNS,LOGIN'
+  
+- !!ext.sns.config.DefaultProviderConfig
+  accessTokenURI: 'https://graph.qq.com/oauth2.0/token'
+  authURI: 'https://graph.qq.com/oauth2.0/authorize'
+  clientId: '101035122'
+  clientSecret: '9ea265b091ef6ab1fa455b2436d9397b'
+  specialParam:
+    mobileDisplay: 'display=mobile'
+  name: 'qq'
+  scope: 'add_t'
+  type: 'LOGIN'
+  
+- !!ext.sns.config.special.DoubanConfig
+  accessTokenURI: 'https://www.douban.com/service/auth2/token'
+  authURI: 'https://www.douban.com/service/auth2/auth'
+  clientId: '014eb1294949e01603ec137bdbdda042'
+  clientSecret: '21e6d1442bab68e6'
+  specialParam: null
+  name: 'douban'
+  scope: ''
+  type: 'SNS,LOGIN'
+  
+- !!ext.sns.config.DefaultProviderConfig
+  accessTokenURI: 'https://graph.renren.com/oauth/token'
+  authURI: 'https://graph.renren.com/oauth/authorize'
+  clientId: '777e166f982a4548a2d4086e1daf2cc7'
+  clientSecret: '1fefd449a66b4c93ac9f2124223a992d'
+  specialParam:
+    mobileDisplay: 'display=touch'
+  name: 'renren'
+  scope: 'status_update'
+  type: 'SNS,LOGIN'

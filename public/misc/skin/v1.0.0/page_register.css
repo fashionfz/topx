@@ -1,0 +1,130 @@
+@charset "utf-8";
+/*
+* @description: 注册样式
+* @author: Young Foo (Young.Foo@heleme.com)
+* @update: Young Foo (Young.Foo@heleme.com)
+*/
+
+.register-page .header-login{
+    display: none;
+}
+
+#register-container {
+	margin: 40px auto;
+	position: relative;
+	text-align: left;
+	width: 680px;
+}
+
+.reg-main [data-id="regAgreement"]{
+	float: none;
+}
+
+.reg-suc{
+	border: 1px solid #d6dbe0;
+	border-radius: 5px;
+	margin: 30px 20px;
+}
+.reg-suc-top{
+	padding: 0px 40px;
+}
+.reg-suc-top h1{
+	color: #627690;
+	font-size: 30px;
+	float: left;
+	margin-top: 17px;
+}
+
+.success-msg {
+	margin-top: 20px;
+	width: 300px;
+	float: left;
+}
+.success-msg .bg {
+	background: url(i/icon-dialog.png) -29px 0 no-repeat;
+	height: 32px;
+	width: 32px;
+	float: left;
+	margin-top: 7px;
+}
+.success-msg .ctn{
+	float: left;
+	margin-left: 10px;
+}
+
+.success-msg .txt {
+	font-size: 16px;
+	color: #627690;
+	margin-bottom: 5px;
+}
+.success-msg .acc{
+	color: #91a0b3;
+}
+.success-msg .acc strong{
+	color: #e06b64;
+}
+
+.reg-suc-handle{
+	border-top: 1px dashed #d4d9df;
+	margin-top: 25px;
+}
+
+.reg-suc-block{
+	width: 428px;
+	padding-top: 30px;
+	height: 320px;
+	position: relative;
+	border-right: 1px dashed #d4d9df;
+	float: left;
+	margin-left: 40px;
+}
+.reg-suc-block.reg-suc-block-require{
+	border-right: 0px;
+}
+.reg-suc-block h2{
+	color: #3a75d7;
+	margin-bottom: 10px;
+	font-weight: normal;
+	font-size: 24px;
+}
+.reg-suc-block h3,
+.reg-suc-block p{
+	color: #91a0b3;
+	font-size: 12px;
+	line-height: 1.6em;
+}
+.reg-suc-block p{
+	height: 57px;
+}
+.reg-suc-btnblock{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 145px;
+}
+.reg-suc-btnblock a{
+    display: block;
+    margin-bottom: 10px;
+}
+.reg-suc-btnblock a i{
+	vertical-align: middle;
+	margin: -4px 3px 0px 0px;
+	width: 20px;
+}
+.reg-suc-btnblock a .icon-require-white{
+	width: 12px;
+	margin-left: 3px;
+	margin-right: 5px;
+}
+.reg-suc-img{
+	width: 246px;
+	height: 177px;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+.reg-suc-service-img{
+	background-image: url("i/reg-suc-service.jpg");
+}
+.reg-suc-require-img{
+	background-image: url("i/reg-suc-require.jpg");
+}

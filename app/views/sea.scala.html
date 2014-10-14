@@ -1,0 +1,28 @@
+@(ft:String)
+<form id="searchForm" action="@routes.ExpertApp.search" method="GET" class="search-form clearfix">
+    <div class="search-logo-right">
+        <p class="search-one">
+            <input type="hidden" name="p" value="1|1" />
+            <span class="txt-s-warp">
+            <input type="text" name="ft" id="ft" value="@ft" class="txt-search" maxlength="100" placeholder="请输入服务标签或关键词"/>
+            </span>
+            <input type="hidden" name="type" value="html" />
+            <button type="submit" value="" class="btn-default btn-green btn-search" ><i class="icon icon-search"></i></button>
+        </p>
+        <p class="search-two clearfix">
+            <span class="search-hot-title">热门搜索：</span>
+            <span class="search-hot-tag">
+                <a href="/expertsearch?ft=%E5%8C%BB%E5%AD%A6">医学</a>
+                <a href="/expertsearch?ft=%E6%95%99%E8%82%B2">教育</a>
+                <a href="/expertsearch?ft=%E7%A4%BE%E4%BC%9A">社会</a>
+                <a href="/expertsearch?ft=Java">Java</a>
+                <a href="/expertsearch?ft=CEO">CEO</a>
+                <a href="/expertsearch?ft=%E6%91%84%E5%BD%B1">摄影</a>
+                <a href="/expertsearch?ft=%E5%BB%BA%E7%AD%91">建筑</a>
+                <a href="/expertsearch?ft=%E5%85%A8%E8%83%BD">全能</a>
+                <a href="/expertsearch?ft=%E6%B3%95%E5%BE%8B">法律</a>
+            </span>
+            <span class="search-hot-change"><a href="/skilltags" target="_blank">更多</a></span>
+        </p>
+    </div>
+</form>

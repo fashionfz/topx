@@ -1,0 +1,47 @@
+@charset "utf-8";
+/*
+* @description: Tab切换公用样式
+* @author:Zhang Guanglin(@maesinfo.com)
+* @update:
+*/
+.tab {
+    position: relative;
+}
+.tab-head {
+	border-bottom: 1px solid #df6962;
+	padding-bottom: 0px;
+	margin-top: 18px;
+}
+.tab-head .tab-menu {
+	float: left;
+	margin-left: 20px;
+}
+.tab-menu span {
+	display: inline-block;
+	height: 34px;
+	line-height: 34px;
+	color: #787878;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0 15px 0 17px;
+	cursor: pointer;
+	position: relative;
+}
+.tab-menu span em {
+	height: 34px;
+	width: 2px;
+	display: inline-block;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.tab-menu span.current,
+.tab-menu span:hover {
+	background:url(i/icon-red.png) -235px -135px no-repeat;
+	color: #fff;
+}
+.tab-menu span.current em,
+.tab-menu span:hover em {
+	background:url(i/icon-red.png) -397px -135px no-repeat;
+}

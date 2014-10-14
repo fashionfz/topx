@@ -1,0 +1,66 @@
+@(current: String)
+<div class="left-bar">
+    <h2 class="user-center-title">个人中心</h2>
+    <ul class="title-list">
+        <li>
+            <a class='title-one @if("userdetail".equals(current)){current}'  href="/user/userdetail/base">
+            <em></em><span>我的资料</span>
+            </a>
+        </li>
+        <li>
+            <a class='title-two @if("usertrade".equals(current)){current}' href="/record/person">
+            <em></em><span>会话记录</span>
+            </a>
+        </li>
+        <li>
+            <a class='title-three @if("usermessage".equals(current)){current}' href="/user/usermessage">
+            <em></em><span>我的消息</span>
+            </a>
+        </li>
+        <li>
+            <a class='title-service @if("service".equals(current)){current}' href="/user/service">
+                <em></em><span>服务管理</span>
+            </a>
+        </li>
+        <li>
+            <a class='title-require @if("require".equals(current)){current}' href="/user/require">
+                <em></em><span>需求管理</span>
+            </a>
+        </li>
+        <li><a class='title-groups @if("groups".equals(current)){current}' href="/user/group/groupList">
+            <em></em><span>我的群组</span>
+            </a>
+        </li>
+        <li>
+            <a class='title-at @if("at".equals(current)){current}' href="/user/at">
+            <em></em><span>我的圈</span>
+            </a>
+        </li>
+        
+<!--         <li><a class="title-four @if("userfavorite".equals(current)){current}" href="@controllers.user.routes.UserFavoriteApp.view()">
+            <em></em>
+            <span>收藏夹</span>
+        </a></li> -->
+        <li>
+            <a class='title-invitation @if("invitation".equals(current)){current}' href="/user/invitation">
+                <em></em><span>邀请</span>
+            </a>
+        </li>
+        <li>
+            <a class='title-five @if("tradecenter".equals(current)){current}'
+            href="@controllers.charge.routes.ChargeApp.chargeCenter()">
+            <em></em><span>我的钱包</span>
+            </a>
+        </li>
+        <li>
+            <a class='title-six @if("usersetting".equals(current)){current}' href="/user/usersetting">
+            <em></em><span>设置</span>
+            </a>
+        </li>
+        <li>
+            <a class="title-seven bbn" href="@controllers.user.routes.UserApp.logout()" id="logoutLink">
+            <em></em><span>安全退出</span>
+            </a>
+        </li>
+    </ul>
+</div>

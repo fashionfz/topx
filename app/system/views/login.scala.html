@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+	<head>
+    	<meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>嗨啰应用管理平台登录</title>
+    	<script type="text/javascript" src="@routes.Assets.at("system/ext/shared/include-ext.js?theme=classic")" charset="utf-8"></script>
+    	<script type="text/javascript" src="@routes.Assets.at("system/ext/ext-lang-zh_CN.js")" charset="utf-8"></script>
+		<script type="text/javascript">
+				Ext.require([
+		             'Ext.form.*',
+		             'Ext.tip.QuickTipManager'
+		          ]);
+
+		         Ext.onReady(function() {
+		             var required = '<span style="color:red;font-weight:bold" data-qtip="Required">*</span>';
+		             Ext.tip.QuickTipManager.init();
+                     var form = Ext.widget('form', {
+                         layout: {
+                             type: 'vbox',
+                             align: 'stretch'
+                         },
+                         border: false,
+                         bodyPadding: 10,
+                         fieldDefaults: {
+                             labelAlign: 'top',
+                             labelWidth: 100,
+                             labelStyle: 'font-weight:bold'
+                         },
+                         items: [{
+                        	 id: 'userAccount',
+                             xtype: 'textfield',
+                             fieldLabel: '账号',
+                             afterLabelTextTpl: required,
+                             listeners : {
+                                 specialkey : function(field, e) {
+                                     if (e.getKey() == Ext.EventObject.ENTER) {
+                                       	Ext.getCmp('loginbtn').el.dom.click();
+                                     }
+                                 }
+                             },
+                             allowBlank: false
+                         }, {
+                        	 id: 'password',
+                             xtype: 'textfield',
+                             fieldLabel: '密码',
+                             inputType:'password',
+                             afterLabelTextTpl: required,
+                             listeners : {
+                                 specialkey : function(field, e) {
+                                     if (e.getKey() == Ext.EventObject.ENTER) {
+                                       	Ext.getCmp('loginbtn').el.dom.click();
+                                     }
+                                 }
+                             },
+                             allowBlank: false
+                         }],
+                         buttons: [{
+                        	 id:'loginbtn',
+                        	 text: '登录',
+                             handler: function() {
+                                 if (this.up('form').getForm().isValid()) {
+                                     var myMask = new Ext.LoadMask(Ext.getBody(), { msg: "正在登陆，请稍后..." });
+                                     myMask.show();
+                                	 Ext.Ajax.timeout = 60000;
+                                	 Ext.Ajax.request({
+                                		    url: '/system/login',
+                                		    params: {
+                                		    	userAccount: Ext.getCmp('userAccount').getValue(),
+                                		    	password : Ext.getCmp('password').getValue()
+                                		    },
+                                		    success: function(response){
+                                		    	var result = Ext.decode(response.responseText);
+                                		    	if(result.status == "200"){
+                                		    		 myMask.hide();
+                                                     window.location.href = "/system/main/" + result.uuid;
+                                		    	}else{
+                                		    		 myMask.hide();
+                                                     Ext.Msg.alert("提示", "登陆失败,用户名或密码错误！");
+                                		    	}
+                                		    },
+                                		    failure: function (response, opts) {
+                                                myMask.hide();
+                                                Ext.Msg.alert("提示", "登陆失败,内部错误！");
+                                            }
+                                	});
+                                 }
+                             }
+
+                         }, {
+                             text: '关闭',
+                             handler: function() {
+                                 this.up('form').getForm().reset();
+                                 this.up('window').hide();
+                             }
+                         }]
+                     });
+
+	                 Ext.widget('window', {
+	                         title: '登录嗨啰应用管理平台',
+	                         closeAction: 'hide',
+	                         width: 350,
+	                         height: 180,
+	                         modal: true,
+	                         items: form,
+	                         defaultFocus: 'userAccount'
+	                 }).show();
+		         });
+		</script>
+    </head>
+    <body>
+    </body>
+</html>

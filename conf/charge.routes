@@ -1,0 +1,22 @@
+
+# Charge
+GET        /center                 controllers.charge.ChargeApp.chargeCenter()
+GET        /choice                 controllers.charge.ChargeApp.chargeChoice()
+
+GET        /alipay                 controllers.charge.ChargeApp.fromAlipay()
+GET        /bank                   controllers.charge.ChargeApp.fromBank()
+GET        /credit                 controllers.charge.ChargeApp.fromCredit()
+
+GET        /pay                    controllers.charge.ChargeApp.pay()
+
+
+GET        /withdraw/choice        controllers.charge.ChargeApp.withdrawChoice()
+GET        /withdraw/alipay        controllers.charge.ChargeApp.withdrawToAlipay()
+GET        /withdraw/bank          controllers.charge.ChargeApp.withdrawToBank()
+
+GET        /withdraw               controllers.charge.ChargeApp.withdraw()
+
+
+GET        /transfer         controllers.charge.ChargeApp.transfer()
+#iframe解决跨域问题
+GET        /iframecrossdomain  controllers.charge.ChargeApp.iframecrossdomain()

@@ -1,0 +1,135 @@
+@(requireInfoVO:vo.RequireInfoVO)
+@import org.apache.commons.collections.CollectionUtils
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn" xml:lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="baidu-site-verification" content="Xlb3LlwZJV" />
+    <title>需求详细 -- helome服务交流平台</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <script type="text/javascript" src="@routes.Assets.at("misc/dist/v20131021/ued.import.js")" charset="utf-8"></script>
+    <link rel="icon" href="@routes.Assets.at("/misc/images/favicon.ico")"/>
+    <!--[if IE]><script type="text/javascript"> ued_import('canvasJs','js'); </script><![endif]-->
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('requireDetailCss','css');
+    </script>
+</head>
+<body>
+<div id="wrap">
+    @head("")
+    <div id="container">
+        <div id="content">
+            <div class="reqService clearfix">
+                <div class="doc-list reqService-detail">
+                    <div class="doc-list-block">
+                        <h1><em></em><span class="title">@requireInfoVO.getRequireDetailVO().getTitle()</span></h1>
+                        <div class="content">
+                            <div class="reqService-top clearfix">
+                                <div class="reqService-industry fl">所属行业：<span>@requireInfoVO.getRequireDetailVO().getIndustryName()</span></div>
+                                <div class="reqService-addTime fl pl20">发布时间：<span class="red">@requireInfoVO.getRequireDetailVO().getCreateDate()</span></div>
+                                <div class="reqService-share fl pl20 clearfix">
+                                    <span class="db fl share-txt">分享：</span>
+                                    <div class="bdsharebuttonbox fl">
+                                        <a href="#" class="bds_more" data-cmd="more"></a>
+                                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                                        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                                        <a href="#" class="bds_t163" data-cmd="t163" title="分享到网易微博"></a>
+                                        <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                                        <a href="#" class="bds_tsohu" data-cmd="tsohu" title="分享到搜狐微博"></a>
+                                        <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                                        <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reqService-price clearfix">
+                                @if(requireInfoVO.getRequireDetailVO().getBudget() == null){
+                                    <span class="reqService-costs">面议</span>
+                                }else{
+                                    @if(requireInfoVO.getRequireDetailVO().getBudget() == 0.0){
+                                        <span class="reqService-costs">免费</span>
+                                    }else{
+                                        <span class="reqService-currency fl"><em class="icon icon-currency-cny"></em></span>
+                                        <span class="reqService-charges fl">@requireInfoVO.getRequireDetailVO().getBudget()</span>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doc-list-block">
+                        <h2><em></em><span class="title">需求说明</span></h2>
+                        <div class="content">
+                            @requireInfoVO.getRequireDetailVO().getInfo()
+                        </div>
+                    </div>
+                    @if(CollectionUtils.isNotEmpty(requireInfoVO.getRequireDetailVO().getAttachList())){
+                    <div class="doc-list-block">
+                        <h2><em></em><span class="title">需求附件</span></h2>
+                        <div class="content reqService-attachments clearfix">
+                        	@for(attach <- requireInfoVO.getRequireDetailVO().getAttachList()){
+                            	<a href="@attach.getPathsource()" download="@attach.getPathsource()">@attach.getFileName()</a>
+                        	}
+                        </div>
+                    </div>
+                    }
+                    <div class="doc-list-block">
+                        <h2><em></em><span class="title">标签</span></h2>
+                        <div class="content clearfix skill-tags">
+                        @for(tag <- requireInfoVO.getRequireDetailVO().getTags()){
+                            <a href="/require/search?ft=@tag" target="_blank">@tag</a>
+                        }
+                        </div>
+                    </div>
+                </div>
+                <div class="reqService-right ml30">
+                    <div class="reqService-posted">
+                        <div class="posted-title">发布者信息</div>
+                        <div class="posted-detail clearfix">
+                            <a class="posted-head fl" href="" target="_blank">
+                                <em></em>
+                                <img src="@requireInfoVO.getRequireOwnerVO().getHeadUrl()" height="41" width="41" alt="">
+                            </a>
+                            <div class="posted-info">
+                                <a class="posted-name txt-bold" target="_blank" href="/expert/detail/@requireInfoVO.getRequireOwnerVO().getUserId()" title="@requireInfoVO.getRequireOwnerVO().getUserName()">@requireInfoVO.getRequireOwnerVO().getUserName()</a>
+                                <span class="posted-job" title="@requireInfoVO.getRequireOwnerVO().getJob()">@requireInfoVO.getRequireOwnerVO().getJob()</span>
+                                <p class="posted-stars">
+                                    <span class="icon icon-star-base" title="平均分：@requireInfoVO.getRequireOwnerVO().getAverageScore()">
+                                        <span class="icon icon-star-on" style="width:@{requireInfoVO.getRequireOwnerVO().getAverageScore()/5*73}px;"></span>
+                                    </span>
+                                    <a href="/expert/detail/@requireInfoVO.getRequireOwnerVO().getUserId()#comments" class="star-num" target="_blank">(@requireInfoVO.getRequireOwnerVO().getCommentCount())</a>
+                                </p>
+                            </div>
+                        </div>
+                        @*************************
+                        <div class="posted-description">
+                          @requireInfoVO.getOwnerPersonalInfo()
+                        </div>
+                        <div class="posted-tags clearfix">
+                         @for(skillTag <- requireInfoVO.getRequireOwnerVO().getSkillsTags()){
+                            <a href="@controllers.routes.ExpertApp.search()?ft=@skillTag.getNoMarkedTag" target="_blank" title="@skillTag.getTag()">@skillTag.getTag()</a>
+                         }
+                        </div>
+                        **********************@
+                        @if(requireInfoVO.getRequireOwnerVO()!=null&&requireInfoVO.getRequireOwnerVO().getUserId()!=null){
+	                        <div class="posted-chat">
+                                @if(!requireInfoVO.getRequireOwnerVO().getIsSelf()){
+	                            <div data-id="@requireInfoVO.getRequireOwnerVO().getUserId()" id="consult" class="btn-default btn-green btn-lg btn-cooperation"><i class="index-icon icon-btn-chat"></i>联系</div>
+	                            }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@foot()
+<script type="text/javascript">
+    ued_import('commonJs','js');
+    ued_import('requireDetailJs','js');
+    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["weixin","sqq","tsina","t163","tqq","tsohu","renren","douban"],"viewText":"分享到：","viewSize":"16"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+</body>
+</html>

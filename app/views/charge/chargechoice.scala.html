@@ -1,0 +1,21 @@
+@import _root_.common.Global
+@import ext.usercenter.UserAuthService
+@main("网银充值—充值中心"){
+    <script type="text/javascript">
+        ued_import('commonCss','css');
+        ued_import('chargeCss','css');
+        function payChange(t) {
+            $('#btn-next' ).attr('href', '/charge/pay?t=' + t);
+        }
+    </script>
+}  {
+    @chargetop("网银充值")
+        <!-- 搜索框结束 -->
+    <div id="content" class="clearfix">
+        <iframe src="@Global.payCenterUrl/pay/account/records?token=@UserAuthService.getTokenInSession(session())" name="ibox" id="ibox" frameborder="0" framescroll="no" width="780" height="320"></iframe>
+    </div>
+    <script type="text/javascript">
+        ued_import('commonJs','js');
+        ued_import('chargeJs','js');
+    </script>
+}
